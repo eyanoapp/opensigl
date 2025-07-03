@@ -4,16 +4,16 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>BHIMA</title>
+  <title>OpenSIGL</title>
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
   <!-- Compiled bootstrap style definition -->
-  <link rel="stylesheet" href="css/bhima-bootstrap.css">
-  <link rel="stylesheet" href="css/bhima.min.css">
+  <link rel="stylesheet" href="css/opensigl-bootstrap.css">
+  <link rel="stylesheet" href="css/opensigl.min.css">
 </head>
 
-<body ng-app="bhima" ng-strict-di>
+<body ng-app="opensigl" ng-strict-di>
 
 <div
   id="app-container"
@@ -101,11 +101,11 @@
 
 <!-- scripts loaded in body to prevent page from 'hanging'-->
 <script src="js/vendor/vendor.min.js"></script>
-<script src="js/bhima/bhima.min.js"></script>
+<script src="js/opensigl/opensigl.min.js"></script>
 
 <!-- this is templated in with variables from gulp-template -->
 <script>
-  angular.module('bhima')
+  angular.module('opensigl')
     .config(['$compileProvider', function ($compileProvider) {
       $compileProvider.debugInfoEnabled(<%= isDevelopment %>);
     }])

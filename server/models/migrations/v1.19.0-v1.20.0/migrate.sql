@@ -1,4 +1,4 @@
-/* migrate BHIMA from v1.19.0 to v1.20.0 */
+/* migrate OpenSIGL from v1.19.0 to v1.20.0 */
 
 /**
  * Inventory tags table

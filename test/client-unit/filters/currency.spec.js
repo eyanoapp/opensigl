@@ -9,8 +9,8 @@ describe('test/client-unit/filters/currency filter', () => {
   let currency;
 
   beforeEach(module(
-    'bhima.services',
-    'bhima.filters',
+    'opensigl.services',
+    'opensigl.filters',
     'angularMoment',
     'ngStorage',
     'ui.router',

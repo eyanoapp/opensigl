@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDebtorGroupHistory', {
     templateUrl : 'modules/templates/bhDebtorGroupHistory.tmpl.html',
     controller : bhDebtorGroupHistoryController,

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhClear', {
     template : `
       <span style="display:inline-block;" class="pull-right">

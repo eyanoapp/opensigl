@@ -2,7 +2,7 @@
 describe('test/client-unit/services/util', () => {
   let util;
 
-  beforeEach(module('angularMoment', 'bhima.services'));
+  beforeEach(module('angularMoment', 'opensigl.services'));
 
   beforeEach(inject(_util_ => {
     util = _util_;

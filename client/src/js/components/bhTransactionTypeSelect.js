@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhTransactionTypeSelect', {
     templateUrl : 'modules/templates/bhTransactionTypeSelect.tmpl.html',
     controller  : transactionTypeSelectController,

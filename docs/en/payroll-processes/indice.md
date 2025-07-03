@@ -2,9 +2,9 @@
 # Scenario Analysis for Payroll Calculation in the Index System
 
 
-# 💰 Payroll Calculation with BHIMA
+# 💰 Payroll Calculation with OpenSIGL
 
-The **BHIMA** system provides a robust and flexible method for calculating employee payrolls, including the allocation (or "ventilation") of local allowances and bonuses. This system is based on a series of **index-based constants** that allow accurate and individualized payroll computation, especially in environments where **grade and experience** significantly affect earnings.
+The **OpenSIGL** system provides a robust and flexible method for calculating employee payrolls, including the allocation (or "ventilation") of local allowances and bonuses. This system is based on a series of **index-based constants** that allow accurate and individualized payroll computation, especially in environments where **grade and experience** significantly affect earnings.
 
 ## ⚙️ Core Payroll Calculation Constants
 
@@ -313,7 +313,7 @@ The adjustment of the base index is calculated according to the **annual index g
 
 ## 📊 Base Index Progression Over 10 Years
 
-In the BHIMA payroll system, the **Base Index** evolves annually based on the configured **Base Index Growth Rate**, which in this case is **5% per year**. Below is the year-by-year growth for the employee **Olivier Benjamin Hensley**:
+In the OpenSIGL payroll system, the **Base Index** evolves annually based on the configured **Base Index Growth Rate**, which in this case is **5% per year**. Below is the year-by-year growth for the employee **Olivier Benjamin Hensley**:
 
 | 📆 Year | 🗓️ Payroll Year | 📈 Base Index |
 |--------|------------------|----------------|
@@ -332,7 +332,7 @@ In the BHIMA payroll system, the **Base Index** evolves annually based on the co
 ---
 ## 💼 Payroll Simulation for the Year 2025 (Indexed Payroll System)
 
-For the year **2025**, the employee **Olivier Benjamin Hensley** has a **Base Index** of **326**. Let’s simulate his payroll using the indexed system in BHIMA, assuming the following conditions:
+For the year **2025**, the employee **Olivier Benjamin Hensley** has a **Base Index** of **326**. Let’s simulate his payroll using the indexed system in OpenSIGL, assuming the following conditions:
 
 ### 🎁 Additional Benefits for the Payroll Period
 

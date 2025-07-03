@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhAccountConfigSelect', {
     templateUrl : 'modules/templates/bhAccountConfigSelect.tmpl.html',
     controller  : AccountConfigSelectController,

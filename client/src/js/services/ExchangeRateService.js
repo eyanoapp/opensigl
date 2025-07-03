@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('ExchangeRateService', ExchangeRateService);
 
 ExchangeRateService.$inject = [

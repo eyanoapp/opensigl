@@ -27,7 +27,7 @@ function ControllerTests() {
 
   beforeEach(module(
     'pascalprecht.translate', 'ngStorage', 'angularMoment', 'ui.bootstrap',
-    'bhima.services', 'bhima.components', 'templates', 'bhima'
+    'opensigl.services', 'opensigl.components', 'templates', 'opensigl'
   ));
 
   // component setup

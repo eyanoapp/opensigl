@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('ClosingFiscalYearModalController', ClosingFYModalCtrl);
 
 // dependencies injection

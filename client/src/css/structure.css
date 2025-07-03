@@ -1,5 +1,5 @@
 /**
- * Primary structural class definitions for BHIMA
+ * Primary structural class definitions for OpenSIGL
  *
  * @todo Some elements use display: flex after it was researched and prototyped,
  * now that we are using this it can be used to make all component definitions
@@ -202,7 +202,7 @@
   min-height: 35px;
 }
 
-.bhima-title {
+.opensigl-title {
   display : flex;
   -webkit-box-orient : vertical;
   -webkit-box-direction : normal;

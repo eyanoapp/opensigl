@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('ohada_profit_lossController', OhadaProfitLossReportConfigController);
 
 OhadaProfitLossReportConfigController.$inject = [

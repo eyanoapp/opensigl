@@ -1,6 +1,6 @@
 # La finance
 
-Les modules de finance dans BHIMA constituent le noyau de l'application.
+Les modules de finance dans OpenSIGL constituent le noyau de l'application.
 
 1. [Aperçu](./overview.md)
 2. [Comptes](./accounts.md)

@@ -3,7 +3,7 @@
 # Gestion de la taxe IPR
 
 <div style='text-align: justify;'>
-Le module Payroll du système BHIMA, permet de calculer automatiquement la taxe IPR (Impôt Professionnel sur rémunérations) par rapport à la République Démocratique du Congo, l’interface principale de ce module se présente de la manière suivante.</div>
+Le module Payroll du système OpenSIGL, permet de calculer automatiquement la taxe IPR (Impôt Professionnel sur rémunérations) par rapport à la République Démocratique du Congo, l’interface principale de ce module se présente de la manière suivante.</div>
 
 ![gest_ipr](../../images/payroll/gest_ipr.jpg)
 

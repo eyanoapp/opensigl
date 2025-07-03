@@ -4,7 +4,7 @@
 
 La valeur de stock est un document qui renseigne sur les quantités et les coût des produits disponibles dans chaque dépôts, ainsi on peut savoir la valeur en terme d'argent d'un dépôt donné.
 
-Dans BHIMA, le rapport sur la valeur de stock est généré automatiquement en fonction des mouvements des stocks.
+Dans OpenSIGL, le rapport sur la valeur de stock est généré automatiquement en fonction des mouvements des stocks.
 
 Pour acceder au rapport sur la valeur du stock :
 

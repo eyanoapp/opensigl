@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhBadge', {
     templateUrl : 'modules/voucher-tools/shared/voucher-tools.badge.tmpl.html',
     bindings : {

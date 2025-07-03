@@ -9,7 +9,7 @@ ALTER TABLE `posting_journal` ADD COLUMN `created_at` TIMESTAMP NOT NULL DEFAULT
 ALTER TABLE `posting_journal` ADD COLUMN `updated_at` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP;
 
 /*
-Roles were a major addition to the BHIMA ecosystem.  They allow the re-use of
+Roles were a major addition to the OpenSIGL ecosystem.  They allow the re-use of
 the same permissions structure for multiple users.
 
 This migration script sets up a role per user in the name of the user.  This

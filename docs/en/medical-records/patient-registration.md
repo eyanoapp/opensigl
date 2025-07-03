@@ -1,10 +1,10 @@
 # Patient Management
 
-The vast majority of clients of the hospital are patients.  Since BHIMA is primarily focused on the accounting and managerial aspects of the hospital, the medical records component of BHIMA are underdeveloped.  Instead the primary function of patients is to create a debtor to attach a financial history to.  Despite the emphasis on finance, BHIMA supports a few purely medical features, including demographic and biometric data associated with patients, a tool to attach documents to patients, management of patient groups, and management of patient visits.
+The vast majority of clients of the hospital are patients.  Since OpenSIGL is primarily focused on the accounting and managerial aspects of the hospital, the medical records component of OpenSIGL are underdeveloped.  Instead the primary function of patients is to create a debtor to attach a financial history to.  Despite the emphasis on finance, OpenSIGL supports a few purely medical features, including demographic and biometric data associated with patients, a tool to attach documents to patients, management of patient groups, and management of patient visits.
 
 <div class="bs-callout bs-callout-primary">
 <h4>Have a recommendation?</h4>
-If you have any recommendations for features lacking in BHIMA or ways the medical records might be improved, please get in touch with the developers.  We would love to hear about it!
+If you have any recommendations for features lacking in OpenSIGL or ways the medical records might be improved, please get in touch with the developers.  We would love to hear about it!
 </div>
 
 Patients play the duel role of being both a sick person in need of treatment and a debtor that develops a financial history.  It is useful to separate these two concepts since they have different concerns.  The diagrams below attempt to distinguish these concepts:
@@ -33,7 +33,7 @@ graph LR
 
 ## Patient Registration
 
-BHIMA expects that Patient Registration is the first step in the start of a patient's treatment.  The Patient Registration module divides the registration page into _required_ information and _optional_ information.  These panels function as their name implies - a successful registration must contain at minimum the required information.  Once the required information is completed, click the blue button to register the patient.
+OpenSIGL expects that Patient Registration is the first step in the start of a patient's treatment.  The Patient Registration module divides the registration page into _required_ information and _optional_ information.  These panels function as their name implies - a successful registration must contain at minimum the required information.  Once the required information is completed, click the blue button to register the patient.
 
 <div class="bs-callout bs-callout-primary">
 <h4>What is the difference between origin and current location?</h4>

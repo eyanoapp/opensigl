@@ -117,6 +117,6 @@ INSERT INTO `analysis_tool_type` (`id`, `label`, `rank`, `is_balance_sheet`) VAL
 INSERT INTO `analysis_tool_type` (`id`, `label`, `rank`, `is_balance_sheet`) VALUES (3, 'FORM.LABELS.ANALYSIS_TOOLS.PROFITS', 2, 0);
 INSERT INTO `analysis_tool_type` (`id`, `label`, `rank`, `is_balance_sheet`) VALUES (4, 'FORM.LABELS.ANALYSIS_TOOLS.DEBTS', 3, 1);
 
--- core BHIMA reports
+-- core OpenSIGL reports
 INSERT INTO `report` (`report_key`, `title_key`) VALUES
   ('configurable_analysis_report', 'REPORT.CONFIGURABLE_ANALYSIS_REPORT.TITLE');

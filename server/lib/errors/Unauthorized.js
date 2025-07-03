@@ -36,7 +36,7 @@ function Unauthorized(description, key) {
   // HTTP status code
   this.status = 401;
 
-  // bhima status code (for $translation)
+  // opensigl status code (for $translation)
   this.code = key || 'ERRORS.UNAUTHORIZED';
 
   // default to an empty string if no description passed in

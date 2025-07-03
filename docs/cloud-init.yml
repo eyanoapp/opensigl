@@ -4,7 +4,7 @@
 # This script uses several custom variables configured at the top of the run_cmd block:
 #   BH_DOMAIN - domain name where the server will be deployed. Used in nginx and letsencrypt config
 #   NODE_VERSION - node version to install.  This should be an integer (e.g. 12, 13, 14)
-#   BH_DATABASE_NAME - the name of the BHIMA database.  Often tied to the domain name.
+#   BH_DATABASE_NAME - the name of the OpenSIGL database.  Often tied to the domain name.
 #   BH_DATABASE_PASSWORD - the password of the database. Defaults to $(uuid).
 #   BH_DATABASE_USER - the name of the database user
 
@@ -24,13 +24,13 @@ package-update: true
 package_upgrade: true
 
 users:
-  - name: bhima
+  - name: opensigl
     groups: sudo
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
 
 write_files:
-  - path: /tmp/bhima-mysql-user.sql
+  - path: /tmp/opensigl-mysql-user.sql
     content: |
       CREATE USER 'BH_DATABASE_USER'@'localhost' IDENTIFIED BY 'BH_DATABASE_PASSWORD';
       GRANT ALL PRIVILEGES ON BH_DATABASE_NAME.* TO 'BH_DATABASE_USER'@'localhost';
@@ -54,15 +54,15 @@ write_files:
       character-set-server = utf8mb4
 
 
-  - path: /tmp/bhima-latest-release.sh
+  - path: /tmp/opensigl-latest-release.sh
     content: |
-      wget --quiet -O bhima-latest-release.zip $(curl -s https://api.github.com/repos/IMA-WorldHealth/bhima/releases/latest | jq -r '.zipball_url');
-      mkdir bhima
-      unzip -qq bhima-latest-release.zip -d bhima
-      FOLDER=$(ls bhima |sort -n|head -1);
-      cp -r ./bhima/$FOLDER/. ./bhima
-      rm -r ./bhima/$FOLDER
-      rm bhima-latest-release.zip
+      wget --quiet -O opensigl-latest-release.zip $(curl -s https://api.github.com/repos/IMA-WorldHealth/opensigl/releases/latest | jq -r '.zipball_url');
+      mkdir opensigl
+      unzip -qq opensigl-latest-release.zip -d opensigl
+      FOLDER=$(ls opensigl |sort -n|head -1);
+      cp -r ./opensigl/$FOLDER/. ./opensigl
+      rm -r ./opensigl/$FOLDER
+      rm opensigl-latest-release.zip
 
   - path: /tmp/99_mysql.cnf
     content: |
@@ -76,26 +76,26 @@ write_files:
       character-set-server=utf8mb4
       sql-mode="STRICT_ALL_TABLES,NO_UNSIGNED_SUBTRACTION"
 
-  - path: /tmp/bhima.service
+  - path: /tmp/opensigl.service
     content: |
       [Unit]
-      Description=The Basic Hospital Information Management Application (BHIMA)
+      Description=The Basic Hospital Information Management Application (OpenSIGL)
       Documentation=https://docs.bhi.ma
       After=network.target
 
       [Service]
       Environment=NODE_ENV=production
-      WorkingDirectory=/opt/bhima/bin/
+      WorkingDirectory=/opt/opensigl/bin/
       Type=simple
-      User=bhima
-      WorkingDirectory=/opt/bhima/bin
-      ExecStart=/usr/bin/node /opt/bhima/bin/server/app.js
+      User=opensigl
+      WorkingDirectory=/opt/opensigl/bin
+      ExecStart=/usr/bin/node /opt/opensigl/bin/server/app.js
       Restart=on-failure
 
       [Install]
       WantedBy=multi-user.target
 
-  - path: /tmp/nginx-bhima
+  - path: /tmp/nginx-opensigl
     content: |
       server {
 
@@ -124,8 +124,8 @@ runcmd:
 
 # latest LTS NodeJS version
   - export NODE_VERSION="12"
-  - export BH_DATABASE_NAME="bhima"
-  - export BH_DATABASE_USER="bhima"
+  - export BH_DATABASE_NAME="opensigl"
+  - export BH_DATABASE_USER="opensigl"
   - export BH_DATABASE_PASSWORD="$(uuid)"
 
 # configure UFW
@@ -142,12 +142,12 @@ runcmd:
   - DEBIAN_FRONTEND=noninteractive apt-get install mysql-server mysql-client -y
 
 # use environmental variables to set user/password
-  - sed -i "s/BH_DATABASE_PASSWORD/$BH_DATABASE_PASSWORD/g" /tmp/bhima-mysql-user.sql
-  - sed -i "s/BH_DATABASE_USER/$BH_DATABASE_USER/g" /tmp/bhima-mysql-user.sql
-  - sed -i "s/BH_DATABASE_NAME/$BH_DATABASE_NAME/g" /tmp/bhima-mysql-user.sql
+  - sed -i "s/BH_DATABASE_PASSWORD/$BH_DATABASE_PASSWORD/g" /tmp/opensigl-mysql-user.sql
+  - sed -i "s/BH_DATABASE_USER/$BH_DATABASE_USER/g" /tmp/opensigl-mysql-user.sql
+  - sed -i "s/BH_DATABASE_NAME/$BH_DATABASE_NAME/g" /tmp/opensigl-mysql-user.sql
 
 # build the database users/permissions
-  - mysql -u root  mysql < /tmp/bhima-mysql-user.sql
+  - mysql -u root  mysql < /tmp/opensigl-mysql-user.sql
   - mv /tmp/99_mysql.cnf /etc/mysql/conf.d/
   - service mysql restart
   - sed -i "s/PASSWORD/$BH_DATABASE_PASSWORD/g" /tmp/.my.cnf
@@ -159,13 +159,13 @@ runcmd:
   - apt-get install -y nodejs
 
 
-# clone and set up BHIMA repository
+# clone and set up OpenSIGL repository
   - cd /opt/
-  - bash /tmp/bhima-latest-release.sh
+  - bash /tmp/opensigl-latest-release.sh
 
 
-# set the bhima environmental variables
-  - cd bhima
+# set the opensigl environmental variables
+  - cd opensigl
   - cp .env.sample .env
   - sed -i "/DB_PASS/d" .env
   - sed -i "/DB_USER/d" .env
@@ -178,18 +178,18 @@ runcmd:
   - bash ./sh/build-init-database.sh
   - npm install
   - NODE_ENV=production npm run build
-  - chown -R bhima:bhima .
+  - chown -R opensigl:opensigl .
 
-# set up bhima to start on reboot
-  - cp /tmp/bhima.service /lib/systemd/system/
+# set up opensigl to start on reboot
+  - cp /tmp/opensigl.service /lib/systemd/system/
   - systemctl daemon-reload
-  - systemctl start bhima
-  - systemctl enable bhima
+  - systemctl start opensigl
+  - systemctl enable opensigl
 
 # update nginx configuration
   - rm /etc/nginx/sites-enabled/default
-  - sed -i "s/BH_DOMAIN/$BH_DOMAIN/g" /tmp/nginx-bhima
-  - mv /tmp/nginx-bhima /etc/nginx/sites-enabled/bhima
+  - sed -i "s/BH_DOMAIN/$BH_DOMAIN/g" /tmp/nginx-opensigl
+  - mv /tmp/nginx-opensigl /etc/nginx/sites-enabled/opensigl
   - service nginx restart
 
 # add monthly letsencrypt renewal script

@@ -2,7 +2,7 @@
  * @overview server
  * Basic Hospital Information Management Application
  *
- * This is the central server of bhima.  It is responsible for setting up the
+ * This is the central server of opensigl.  It is responsible for setting up the
  * HTTP server, logging infrastructure, and environmental variables.  These are
  * global throughout the application, and are configured here.
  *

@@ -15,7 +15,7 @@
  * </bh-date-interval>
  * ```
  */
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDateInterval', {
     templateUrl : '/modules/templates/bhDateInterval.tmpl.html',
     controller : bhDateInterval,

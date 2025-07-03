@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhWeekendConfigSelect', {
     templateUrl : 'modules/templates/bhWeekendConfigSelect.tmpl.html',
     controller  : WeekConfigSelectController,

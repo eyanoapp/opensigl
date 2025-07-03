@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFindInvoice', {
     controller : FindInvoiceComponent,
     templateUrl : 'modules/templates/bhFindInvoice.tmpl.html',

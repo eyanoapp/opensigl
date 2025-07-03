@@ -1,4 +1,4 @@
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhUnique', UniqueDirective);
 
 UniqueDirective.$inject = ['$q', 'UniqueValidatorService'];

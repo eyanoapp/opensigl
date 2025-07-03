@@ -3,7 +3,7 @@
  *
  * <input type="text" bh-blur="action()">
  */
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhBlur', () => {
     return (scope, elem, attrs) => {
       const ENTER_KEY = 13;

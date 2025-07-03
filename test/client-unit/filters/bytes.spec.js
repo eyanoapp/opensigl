@@ -3,7 +3,7 @@ describe('test/client-unit/filters/bytes filter', () => {
 
   let bytes;
 
-  beforeEach(module('pascalprecht.translate', 'bhima.filters'));
+  beforeEach(module('pascalprecht.translate', 'opensigl.filters'));
 
   beforeEach(inject(($filter) => {
     bytes = $filter('bytes');

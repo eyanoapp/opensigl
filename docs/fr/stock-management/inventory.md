@@ -4,7 +4,7 @@
 
 Les inventaires sont les informations sur des produits ou services qui peuvent être facturable, ou encore qui peuvent être stocké dans des dépots.
 
-La différence entre inventaire et stock dans BHIMA est que l'inventaire est une information sur un produit (ou service) sans tenir compte de la quantité et du dépot concerné, alors qu'un stock concerne une inventaire, son lot, sa quantité et son dépôt.
+La différence entre inventaire et stock dans OpenSIGL est que l'inventaire est une information sur un produit (ou service) sans tenir compte de la quantité et du dépot concerné, alors qu'un stock concerne une inventaire, son lot, sa quantité et son dépôt.
 
 ### Registre des inventaires
 
@@ -56,9 +56,9 @@ Un groupe d'inventaires est un regroupement d'inventaires qui partagent les mêm
 - Compte de charge
 - Compte de stock
 
-Si au sein de l'entreprise, il y a des inventaires qui partagent ces trois comptes (produit, charge et stock) ou qui ont ces trois comptes en commun, il faut qu'il y ait un groupe d'inventaires dans BHIMA qui a ces trois comptes, et les inventaires concernés doivent avoir comme groupe d'inventaires ce groupe.
+Si au sein de l'entreprise, il y a des inventaires qui partagent ces trois comptes (produit, charge et stock) ou qui ont ces trois comptes en commun, il faut qu'il y ait un groupe d'inventaires dans OpenSIGL qui a ces trois comptes, et les inventaires concernés doivent avoir comme groupe d'inventaires ce groupe.
 
-Les groupes d'inventaires ont comme pré-requis : les comptes, il faut que les comptes (produit, charge et stock) puissent exister dans BHIMA; s'ils n'existent pas, il faudrait les créer.
+Les groupes d'inventaires ont comme pré-requis : les comptes, il faut que les comptes (produit, charge et stock) puissent exister dans OpenSIGL; s'ils n'existent pas, il faudrait les créer.
 
 <div class = "bs-callout bs-callout-warning">
   <h4>Pré-requis</h4>
@@ -67,7 +67,7 @@ Les groupes d'inventaires ont comme pré-requis : les comptes, il faut que les c
 
 #### Les types d'inventaires
 
-Dans BHIMA les inventaires peuvent être soit : 
+Dans OpenSIGL les inventaires peuvent être soit : 
 - Des articles
 - Des services
 - Des assemblages

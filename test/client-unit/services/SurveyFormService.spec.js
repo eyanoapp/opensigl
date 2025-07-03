@@ -4,9 +4,9 @@ describe('test/client-unit/services/SurveyFormService', () => {
   let $httpBackend;
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
-    'bhima.mocks',
+    'opensigl.mocks',
     'ngStorage'
   ));
 

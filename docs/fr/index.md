@@ -1,6 +1,6 @@
-# BHIMA - Manuel d'utilisation
+# OpenSIGL - Manuel d'utilisation
 
-Bienvenue! Ce manuel est destiné à l’application de base de gestion des informations hospitalières \(BHIMA\). BHIMA est une suite d'outils interdépendants destinés à aider les administrateurs d'hôpitaux ruraux dans quatre domaines: la gestion financière, la gestion des stocks, les dossiers médicaux et les rapports. Il s'agit d'un projet de recherche d'IMA World Health depuis 2013 et la base de code actuelle est en développement depuis la fin de 2015.
+Bienvenue! Ce manuel est destiné à l’application de base de gestion des informations hospitalières \(OpenSIGL\). OpenSIGL est une suite d'outils interdépendants destinés à aider les administrateurs d'hôpitaux ruraux dans quatre domaines: la gestion financière, la gestion des stocks, les dossiers médicaux et les rapports. Il s'agit d'un projet de recherche d'IMA World Health depuis 2013 et la base de code actuelle est en développement depuis la fin de 2015.
 
 Ce manuel est divisé en chapitres:
 
@@ -13,14 +13,14 @@ Ce manuel est divisé en chapitres:
 7. [Ressources humaines](./payroll)
 8. [Seuil de rentabilité](./break-even)
 9. Rapports et statistiques
-10. [Application mobile BHIMA-STOCK](./bhima-stock/)
+10. [Application mobile OpenSIGL-STOCK](./opensigl-stock/)
 11. [Référence développeur](./for-developers/)
 
 ## A propos
 
-BHIMA est un logiciel libre, publié sous la licence GPL-2.0. En tant que tel, il est distribué tel quel, sans aucune garantie, bien que nous nous efforcions de créer le meilleur produit possible. Vous pouvez utiliser l'application à vos risques et périls, sans aucune responsabilité assumée par IMA World Health, le principal sponsor du développement de BHIMA.
+OpenSIGL est un logiciel libre, publié sous la licence GPL-2.0. En tant que tel, il est distribué tel quel, sans aucune garantie, bien que nous nous efforcions de créer le meilleur produit possible. Vous pouvez utiliser l'application à vos risques et périls, sans aucune responsabilité assumée par IMA World Health, le principal sponsor du développement de OpenSIGL.
 
-> Ceci est un document vivant écrit par les auteurs de BHIMA et le matériel peut parfois être dense et flou. Si quelque chose ne vous dit rien, parlez-nous-en! Vous pouvez laisser un commentaire directement sur ce site ou nous envoyer un email à [developers@imaworldhealth.org](mailto:developers@imaworldhealth.org). Merci!
+> Ceci est un document vivant écrit par les auteurs de OpenSIGL et le matériel peut parfois être dense et flou. Si quelque chose ne vous dit rien, parlez-nous-en! Vous pouvez laisser un commentaire directement sur ce site ou nous envoyer un email à [developers@imaworldhealth.org](mailto:developers@imaworldhealth.org). Merci!
 
 ## Contributions
 
@@ -36,10 +36,10 @@ Si vous êtes un administrateur d’hôpital, veuillez donner votre avis sur le 
 
 ### Développeurs
 
-Si vous êtes un développeur, nous apprécions les contributions de code - un bon endroit pour commencer est notre [Premier contributeur](https://github.com/Third-Culture-Software/bhima/wiki/Getting-Started) sur GitHub.
+Si vous êtes un développeur, nous apprécions les contributions de code - un bon endroit pour commencer est notre [Premier contributeur](https://github.com/Third-Culture-Software/opensigl/wiki/Getting-Started) sur GitHub.
 
 Vous pouvez généralement contacter notre équipe pour toute question via l'adresse électronique [developers@imaworldhealth.org](mailto: developers@imaworldhealth.org).
 
-Vous pensez avoir trouvé un bug? Faites-nous savoir en [déposant un problème](https://github.com/Third-Culture-Software/bhima/issues/new) et nous le corrigerons dès que possible!
+Vous pensez avoir trouvé un bug? Faites-nous savoir en [déposant un problème](https://github.com/Third-Culture-Software/opensigl/issues/new) et nous le corrigerons dès que possible!
 
-Quelque chose manque-t-il dans ce manuel? Consultez le [wiki du développeur](https://github.com/Third-Culture-Software/bhima/wiki), nous l’aurions peut-être couvert ici.
+Quelque chose manque-t-il dans ce manuel? Consultez le [wiki du développeur](https://github.com/Third-Culture-Software/opensigl/wiki), nous l’aurions peut-être couvert ici.

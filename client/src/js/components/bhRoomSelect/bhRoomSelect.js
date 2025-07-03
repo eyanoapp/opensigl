@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhRoomSelect', {
     templateUrl : 'js/components/bhRoomSelect/bhRoomSelect.html',
     controller  : RoomSelectController,

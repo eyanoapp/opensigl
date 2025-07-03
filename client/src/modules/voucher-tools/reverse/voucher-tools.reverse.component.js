@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhVoucherToolsReverse', {
     templateUrl : 'modules/voucher-tools/reverse/voucher-tools.reverse.tmpl.html',
     controller : bhVoucherToolsReverse,

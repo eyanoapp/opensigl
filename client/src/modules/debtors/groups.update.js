@@ -2,7 +2,7 @@
  * @todo complex page should require loading resolve before displaying, a lot of
  *       data is fetched per page load
  */
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('DebtorGroupUpdateController', DebtorGroupsUpdateController);
 
 DebtorGroupsUpdateController.$inject = [

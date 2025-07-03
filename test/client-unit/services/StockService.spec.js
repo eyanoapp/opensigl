@@ -4,9 +4,9 @@ describe('test/client-unit/services/StockService', () => {
 
   // define modules
   beforeEach(module(
-    'bhima.services',
-    'bhima.constants',
-    'bhima.StockMocks',
+    'opensigl.services',
+    'opensigl.constants',
+    'opensigl.StockMocks',
     'ngStorage',
     'tmh.dynamicLocale',
     'angularMoment',

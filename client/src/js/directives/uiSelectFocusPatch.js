@@ -11,7 +11,7 @@
  * <ui-select-choices ui-select-focus-patch>
  * </ui-select-choices>
  */
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('uiSelectFocusPatch', ['$animate', ($animate) => {
     return {
       link(scope, element) { $animate.enabled(element, false); },

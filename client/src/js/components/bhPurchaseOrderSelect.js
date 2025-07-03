@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPurchaseOrderSelect', {
     templateUrl : 'modules/templates/bhPurchaseOrderSelect.tmpl.html',
     controller  : PurchaseOrderComponentsController,

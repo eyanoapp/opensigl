@@ -16,14 +16,14 @@ describe('test/client-unit/components/bhDateEditor', () => {
 
   // make sure the modules are correctly loaded.
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
     'ngStorage',
     'pascalprecht.translate',
-    'bhima.components',
-    'bhima.constants',
+    'opensigl.components',
+    'opensigl.constants',
     'templates',
-    'bhima.mocks',
+    'opensigl.mocks',
     'ui.router',
   ));
 

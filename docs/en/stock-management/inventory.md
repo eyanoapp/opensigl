@@ -2,13 +2,13 @@
 
 # Inventory
 
-In BHIMA, "inventory" refers to information about products or services are sold to clients, or any assets or material that must be tracked over time.
+In OpenSIGL, "inventory" refers to information about products or services are sold to clients, or any assets or material that must be tracked over time.
 
-The difference between inventory and stock in BHIMA is that inventory is the description of a product (or service), whereas stock is the physical asset stored in the depot.
+The difference between inventory and stock in OpenSIGL is that inventory is the description of a product (or service), whereas stock is the physical asset stored in the depot.
 
 For example, an inventory item might be a "Appendectomy" which is a service and will not have a representation in stock.  However, the inventory item "Quinine 500mg" will have a representation in stock as pills bought on a given date with a quantity and expiration date.  Similarly, a computer used in a specific department would be an **asset** that might assigned to someone but still considered to be in a "depot".
 
-There are two modules that compose BHIMA's inventory management:
+There are two modules that compose OpenSIGL's inventory management:
 
 1. [Inventory Registry](#inventory-registry)
 2. [Configuration](#configuration)
@@ -45,8 +45,8 @@ There are also some optional properties:
 
 1. **Consumable** - determines whether consumption information should be tracked for stock items.  Defaults to `false`.
 2. **Default Quantity** - the default quantity given in an invoice.  Defaults to `0`.
-3. **Weight** - the weight of the item.   Defaults to `0`. _Note: BHIMA currently does not use this field for anything._
-4. **Volume** - the volume of the item.  Defaults to `0`. _Note: BHIMA currently does not use this field for anything._
+3. **Weight** - the weight of the item.   Defaults to `0`. _Note: OpenSIGL currently does not use this field for anything._
+4. **Volume** - the volume of the item.  Defaults to `0`. _Note: OpenSIGL currently does not use this field for anything._
 5. **Delay** - the delivery lag time (in months) of the item.  Defaults to `1 month`.
 6. **Average Consumption** - manually set the average consumption of an item.  If left blank, the average consumption will be automatically calculated.
 7. **Purchase Interval** - (?)
@@ -112,7 +112,7 @@ There are also the following optional properties:
 
 #### Inventory Types
 
-In BHIMA the inventories can be either:
+In OpenSIGL the inventories can be either:
 
 - Articles
 - Services

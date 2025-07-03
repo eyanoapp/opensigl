@@ -6,9 +6,9 @@ describe('test/client-unit/services/PrototypeApiService', () => {
   let httpBackend;
   const url = '/bizarre/';
 
-  // load bhima.services
+  // load opensigl.services
   beforeEach(() => {
-    module('bhima.services');
+    module('opensigl.services');
     module('angularMoment');
   });
 

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockPanelAtRiskOutStock', {
     templateUrl : 'modules/templates/bhStockPanelAtRiskOutStock.tmpl.html',
     controller  : StockPanelAtRiskOutStockController,

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFilters', {
     templateUrl : 'modules/templates/bhFilters.tmpl.html',
     controller  : bhFiltersController,

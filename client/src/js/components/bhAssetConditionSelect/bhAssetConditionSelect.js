@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhAssetConditionSelect', {
     templateUrl : 'js/components/bhAssetConditionSelect/bhAssetConditionSelect.tmpl.html',
     controller  : AssetConditionSelectController,

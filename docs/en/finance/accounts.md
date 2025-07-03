@@ -2,7 +2,7 @@
 
 _Located in: **Finance > Account Management**_
 
-BHIMA allows a user to create a detailed chart of accounts.  All accounts must specify the following points of information:
+OpenSIGL allows a user to create a detailed chart of accounts.  All accounts must specify the following points of information:
  1. **Number** - a unique number to identify the account.  The length shouldn't exceed 12 characters.
  2. **Label** - a textual label that is often displayed with the account number to identify the purpose of the account.
  3. **Type** - the account type determines how the account will behave.  An account type can be:
@@ -17,7 +17,7 @@ BHIMA allows a user to create a detailed chart of accounts.  All accounts must s
 
 ## Navigating the Accounts List
 
-BHIMA presents the list of accounts has a tree of parent and child accounts.  Parent accounts are _title_ accounts, are presented in bold, and can contain zero or more child accounts. These child accounts are displayed slightly indented underneath the parent accounts.
+OpenSIGL presents the list of accounts has a tree of parent and child accounts.  Parent accounts are _title_ accounts, are presented in bold, and can contain zero or more child accounts. These child accounts are displayed slightly indented underneath the parent accounts.
 
 <div class="bs-callout bs-callout-primary">
 <h4>Note!</h4>
@@ -38,7 +38,7 @@ Only two properties of accounts may be updated after an account is created - the
 
 ## Removing an Account
 
-If an account hasn't been used before, it can be removed via the dropdown on the account grid.  However, BHIMA will block the user from removing the account if it is used anywhere in the system.  The safeguard is in place to prevent users from accidentally deleting critical accounts that either are used for debtors or may contain balances.
+If an account hasn't been used before, it can be removed via the dropdown on the account grid.  However, OpenSIGL will block the user from removing the account if it is used anywhere in the system.  The safeguard is in place to prevent users from accidentally deleting critical accounts that either are used for debtors or may contain balances.
 
 ## Other Actions
 

@@ -43,8 +43,8 @@ function DomTests() {
     'ngStorage',
     'angularMoment',
     'ui.bootstrap',
-    'bhima.services',
-    'bhima.components',
+    'opensigl.services',
+    'opensigl.components',
     'templates',
     'webcam'));
 

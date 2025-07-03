@@ -51,7 +51,7 @@ function Forbidden(description) {
   // HTTP status code
   this.status = 403;
 
-  // bhima status code (for $translation)
+  // opensigl status code (for $translation)
   this.code = 'ERRORS.FORBIDDEN';
 
   // default to an empty string if no description passed in

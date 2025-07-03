@@ -1,6 +1,6 @@
 # General Ledger
 
-All valid transactions will one day end up in the General Ledger.  It contains all financial transactions made since the installation of the system and powers the reporting capabilities of BHIMA.  The term "General Ledger" refers to all transactions that have been approved and posted from the Journal.  However, BHIMA also contains a module called "General Ledger".  This section describes the General Ledger module.
+All valid transactions will one day end up in the General Ledger.  It contains all financial transactions made since the installation of the system and powers the reporting capabilities of OpenSIGL.  The term "General Ledger" refers to all transactions that have been approved and posted from the Journal.  However, OpenSIGL also contains a module called "General Ledger".  This section describes the General Ledger module.
 
 The General Ledger module is a matrix of every account in the enterprise in rows by every period in a Fiscal Year in columns.  The cells of the matrix contain the balance of the account on the row for the period on the column.  There are two additional columns: the **Opening Balance** column and the **Balance **column.  The opening balance, as the name implies, is the balance at the beginning of the Fiscal Year, while the balance column sums the values of the opening balance and every period.  See the below table for a simplified representation:
 

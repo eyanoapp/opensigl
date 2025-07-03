@@ -35,9 +35,9 @@ describe('test/client-unit/components/bhFindInvoice', () => {
     'ui.bootstrap',
     'angularMoment',
     'tmh.dynamicLocale',
-    'bhima.services',
-    'bhima.components',
-    'bhima.constants',
+    'opensigl.services',
+    'opensigl.components',
+    'opensigl.constants',
     'templates',
     'ui.router',
   ));

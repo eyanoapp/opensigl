@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('ShipmentService', ShipmentService);
 
 ShipmentService.$inject = ['PrototypeApiService', '$httpParamSerializer', 'LanguageService'];

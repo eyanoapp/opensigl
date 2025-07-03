@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDepotSearchSelect', {
     templateUrl : 'js/components/bhDepotSelectSearch/bhDepotSelectSearch.html',
     controller  : DepotSearchSelectController,

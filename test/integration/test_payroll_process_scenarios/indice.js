@@ -7,7 +7,7 @@ const helpers = require('../helpers');
  * The /multiplePayroll  API
  *
  * Scenario Analysis for Payroll Calculation in the Index System
- * The BHIMA system provides a robust and flexible method for calculating employee payrolls,
+ * The OpenSIGL system provides a robust and flexible method for calculating employee payrolls,
  * including the allocation (or "ventilation") of local allowances and bonuses. This system is based on a series of
  * index-based constants that allow accurate and individualized payroll computation, especially in environments where
  * grade and experience significantly affect earnings.

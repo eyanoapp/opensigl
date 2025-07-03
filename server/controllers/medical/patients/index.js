@@ -26,7 +26,7 @@
  */
 
 const _ = require('lodash');
-const debug = require('debug')('bhima:patient:find');
+const debug = require('debug')('opensigl:patient:find');
 
 const distance = require('jaro-winkler');
 
@@ -360,7 +360,7 @@ function lookupByDebtorUuid(debtorUuid) {
 }
 
 /**
- * This method implements the bhima unique API for hospital numbers; it is
+ * This method implements the opensigl unique API for hospital numbers; it is
  * responsible for informing the client if a hospital number has been used (is
  * found) or is available (is not found)
  *

@@ -52,7 +52,7 @@ module.exports = {
 
     // at this point, the datepicker is still open, and will intercept all
     // clicks that are made to any elements it is covering.  In order to make
-    // the dropdown go away, we will click on the top-left bhima logo to blur
+    // the dropdown go away, we will click on the top-left opensigl logo to blur
     // in default option, If not, the click will be on an element of the form,
     // if and only if the logo is not visible, for example for the modal window
     // the dropdown and remove it.

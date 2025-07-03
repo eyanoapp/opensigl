@@ -5,7 +5,7 @@
 1.<strong><u> Bulletin de paie de la France </u></strong>
 
 <div style='text-align: justify;'>
-Cette première pratique consistera à Analyser le bulletin de paie d’une entreprise de la République Française dans le but de le configurer dans le système BHIMA.</div>
+Cette première pratique consistera à Analyser le bulletin de paie d’une entreprise de la République Française dans le but de le configurer dans le système OpenSIGL.</div>
 
 ![gest_vacances](../../images/payroll/payslip_france.jpg)
 
@@ -21,7 +21,7 @@ En visualisant ce bulletin de paie voici les rubriques que nous avons décelé</
 - <strong>Divers</strong> : cette rubrique sera créée dans Bhima et sera classifié comme <strong>addition</strong> ou <strong>avantage</strong>.
 
 <div class = "bs-callout bs-callout-success">
-Dans le système BHIMA, nous n’assigneront la propriété <strong>cotisation</strong> qu’à la CNSS ancien INSS en vigueur  à la République Démocratique du Congo, en ce qui concerne les cotisations existant dans d’autre pays, nous allons le considéré tout simplement comme étant des <strong>taxes</strong>. 
+Dans le système OpenSIGL, nous n’assigneront la propriété <strong>cotisation</strong> qu’à la CNSS ancien INSS en vigueur  à la République Démocratique du Congo, en ce qui concerne les cotisations existant dans d’autre pays, nous allons le considéré tout simplement comme étant des <strong>taxes</strong>. 
 </div>
 
 - <strong>CSG non imposable</strong> : cette rubrique sera classifiée comme étant une taxe prise en charge par les employés.
@@ -48,7 +48,7 @@ Voici un aperçu de la création de la rubrique Heure Supplémentaires, le compt
 
 <div style='text-align: justify;'>
 Vont être créé de la même façon que la rubrique Heures supplémentaires car, tous ses rubriques sont des additions ou avantages et tous sont Imposable raison pour laquelle 
-<strong>Attention</strong>. Sur ce bulletin de paie il existe une rubrique «absences », cette rubrique réduit le total du salaire brut, or le système BHIMA calcul le salaire de base en multipliant le taux journalier (Salaire de Base divisé par le nombre de jours ouvrables de la période de paie) par le nombre des jours de prestations Or sur ce bulletin, le salaire de base est défini par heures, donc pendant la configuration nous allons définir une période de paie de 22 jours tout en supposant que le nombre d’heure de travail est de 8 heures, du faite que cette employée a eu 8 heures cela reviendrai à dire que ce dernier a eu 1 jour d’absence ce qui reviendrai à dire qu’il n’a travaillé que pendant 21 jours. Le salaire de base de cet employé sera initialisé à 3 520€, le taux journalier dans sera (3 520€ / 22 = 160€).</div> 
+<strong>Attention</strong>. Sur ce bulletin de paie il existe une rubrique «absences », cette rubrique réduit le total du salaire brut, or le système OpenSIGL calcul le salaire de base en multipliant le taux journalier (Salaire de Base divisé par le nombre de jours ouvrables de la période de paie) par le nombre des jours de prestations Or sur ce bulletin, le salaire de base est défini par heures, donc pendant la configuration nous allons définir une période de paie de 22 jours tout en supposant que le nombre d’heure de travail est de 8 heures, du faite que cette employée a eu 8 heures cela reviendrai à dire que ce dernier a eu 1 jour d’absence ce qui reviendrai à dire qu’il n’a travaillé que pendant 21 jours. Le salaire de base de cet employé sera initialisé à 3 520€, le taux journalier dans sera (3 520€ / 22 = 160€).</div> 
 
 ![extrait_payslip](../../images/payroll/extrait_payslip.jpg)
 
@@ -101,13 +101,13 @@ Nous allons faire la configuration manuelle du paiement d’un employé conform�
 
 ![apercu_paie_slip](../../images/payroll/apercu_paie_slip.jpg)
 
-Voici un aperçu du bulletin de paie ainsi que le rapport générale générer par le système BHIMA.
+Voici un aperçu du bulletin de paie ainsi que le rapport générale générer par le système OpenSIGL.
 ![aperc_rapport_paie](../../images/payroll/aperc_rapport_paie.jpg)
 
 2.<strong><u> Bulletin de paie de la RD CONGO </u></strong>
 
 <div style='text-align: justify;'>
-Veuillez créer les configurations nécessaires pour que le système BHIMA puisse générer le bulletin de paie suivant.</div>
+Veuillez créer les configurations nécessaires pour que le système OpenSIGL puisse générer le bulletin de paie suivant.</div>
 
 ![payslip_drc](../../images/payroll/payslip_drc.jpg)
 

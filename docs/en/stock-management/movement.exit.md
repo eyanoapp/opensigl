@@ -2,7 +2,7 @@
 
 # Stock Exit
 
-Any movement of stock out of a depot is a stock "exit" in BHIMA. Stock exits
+Any movement of stock out of a depot is a stock "exit" in OpenSIGL. Stock exits
 can happen from any depot, including the stock and dispensing pharmacies.
 
  - **Movements of stock out of the stock pharmacies or depots** fall into the

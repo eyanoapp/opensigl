@@ -1,7 +1,7 @@
 /* eslint no-console:"off" */
-const bhima = angular.module('bhima', [
-  'bhima.controllers', 'bhima.services', 'bhima.directives', 'bhima.filters',
-  'bhima.components', 'bhima.routes', 'bhima.constants', 'ui.bootstrap',
+const opensigl = angular.module('opensigl', [
+  'opensigl.controllers', 'opensigl.services', 'opensigl.directives', 'opensigl.filters',
+  'opensigl.components', 'opensigl.routes', 'opensigl.constants', 'ui.bootstrap',
   'pascalprecht.translate', 'ngStorage',
   'tmh.dynamicLocale', 'ngFileUpload', 'ui.grid', 'ui.grid.saveState',
   'ui.grid.selection', 'ui.grid.autoResize', 'ui.grid.resizeColumns',
@@ -170,17 +170,17 @@ function uiModalConfig($uibModalProvider) {
 }
 
 // configure services, providers, factories
-bhima.config(['$urlMatcherFactoryProvider', bhimaConfig]);
-bhima.config(['$translateProvider', translateConfig]);
-bhima.config(['uiSelectConfig', uiSelectConfig]);
-bhima.config(['tmhDynamicLocaleProvider', localeConfig]);
-bhima.config(['$localStorageProvider', localStorageConfig]);
-bhima.config(['$httpProvider', httpConfig]);
-bhima.config(['$animateProvider', animateConfig]);
-bhima.config(['$uibModalProvider', uiModalConfig]);
-bhima.config(['$compileProvider', compileConfig]);
+opensigl.config(['$urlMatcherFactoryProvider', bhimaConfig]);
+opensigl.config(['$translateProvider', translateConfig]);
+opensigl.config(['uiSelectConfig', uiSelectConfig]);
+opensigl.config(['tmhDynamicLocaleProvider', localeConfig]);
+opensigl.config(['$localStorageProvider', localStorageConfig]);
+opensigl.config(['$httpProvider', httpConfig]);
+opensigl.config(['$animateProvider', animateConfig]);
+opensigl.config(['$uibModalProvider', uiModalConfig]);
+opensigl.config(['$compileProvider', compileConfig]);
 
 // run the application
-bhima.run([
+opensigl.run([
   '$state', 'SessionService', 'amMoment', 'NotifyService', 'InstallService', '$transitions', startupConfig,
 ]);

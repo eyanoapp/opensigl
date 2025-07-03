@@ -37,7 +37,7 @@ INSERT INTO imck.unit VALUES
   (105, 'Cashbox Management','TREE.CASHBOX_MANAGEMENT','',1,'/modules/cash/cashbox/','/cashboxes'),
   (107, 'Debtor Groups Management', 'TREE.DEBTOR_GROUP', 'Debtor Groups Management module', 1, '/modules/debtors/groups/', '/debtors/groups'),
   (134, 'Simple Journal Vouchers', 'TREE.SIMPLE_VOUCHER', 'Creates a simple transfer slip between two accounts', 5, '/modules/vouchers/simple', '/vouchers/simple'),
-  (135, 'Invoicing Fee', 'TREE.INVOICING_FEES', 'Configures invoicing Fee for bhima', 1, '/modules/invoicing_fees', '/invoicing_fees'),
+  (135, 'Invoicing Fee', 'TREE.INVOICING_FEES', 'Configures invoicing Fee for opensigl', 1, '/modules/invoicing_fees', '/invoicing_fees'),
   (137, 'Complex Journal Vouchers', 'TREE.COMPLEX_JOURNAL_VOUCHER', 'Complex Journal vouchers module', 5, '/modules/vouchers/complex', '/vouchers/complex'),
   (138, 'Inventory Module', 'TREE.INVENTORY', 'Inventory management module', 0, '/modules/inventory/index', '/INVENTORY_FOLDER'),
   (139, 'Inventory Registry', 'TREE.INVENTORY_REGISTRY', 'Inventory Registry module', 138, '/modules/inventory/list', '/inventory'),

@@ -10,7 +10,7 @@
  *  };
  * });
  */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('focus', Focus);
 
 Focus.$inject = ['$timeout', '$window'];

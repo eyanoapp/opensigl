@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCurrencyInput', {
     templateUrl : 'modules/templates/bhCurrencyInput.tmpl.html',
     controller : CurrencyInputController,

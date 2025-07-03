@@ -1,4 +1,4 @@
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhSubmit', bhSubmitDirective);
 
 function bhSubmitDirective() {

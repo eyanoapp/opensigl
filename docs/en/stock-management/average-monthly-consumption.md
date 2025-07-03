@@ -9,12 +9,12 @@ For dispensing pharmacies, the Average Monthly Consumption is calculated based
 on the distributions/exits to _patients_ or _services_.  These are considered
 consumption of the depot and factor into the average monthly consumption.
 
-For warehouses, BHIMA considers transfers to other depots as consumption in
-addition to the exits to patients and services.  By including transfers, BHIMA
+For warehouses, OpenSIGL considers transfers to other depots as consumption in
+addition to the exits to patients and services.  By including transfers, OpenSIGL
 can estimate when to refill stock in warehouses when they otherwise would not
 be considered.
 
-BHIMA offers two choices of algorithm that differ slighty:
+OpenSIGL offers two choices of algorithm that differ slighty:
 
   1. **Default Algorithm** - The average monthly consumption is obtained by
   dividing the quantity consumed during the period by the number of days with

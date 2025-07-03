@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhAccountTypeaheadInline', {
     templateUrl : 'modules/templates/bhAccountTypeaheadInline.html',
     controller  : AccountTypeaheadInlineController,

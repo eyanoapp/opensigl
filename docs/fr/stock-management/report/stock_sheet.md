@@ -4,7 +4,7 @@
 
 La fiche de stock est un document (souvent tenu par le magasinier) permettant de suivre par article stocké les mouvements affectant l'existant en magasin.
 
-Dans BHIMA, la fiche de stock est générée automatiquement en fonction des mouvements des stocks.
+Dans OpenSIGL, la fiche de stock est générée automatiquement en fonction des mouvements des stocks.
 
 Pour acceder à la fiche de stock :
 

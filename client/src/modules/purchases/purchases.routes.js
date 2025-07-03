@@ -1,4 +1,4 @@
-angular.module('bhima.routes')
+angular.module('opensigl.routes')
   .config(['$stateProvider', function purchaseRoutes($stateProvider) {
     $stateProvider
       // purchases/create

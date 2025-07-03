@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockPanelMinimumReached', {
     templateUrl : 'modules/templates/bhStockPanelMinimumReached.tmpl.html',
     controller  : StockPanelMinimumReachedController,

@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('TransactionTypeStoreService', TransactionTypeStoreService);
 
 TransactionTypeStoreService.$inject = ['$q', 'TransactionTypeService', 'Store'];

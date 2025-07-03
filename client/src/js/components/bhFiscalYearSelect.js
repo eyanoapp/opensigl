@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFiscalYearSelect', {
     templateUrl : 'modules/templates/bhFiscalYearSelect.tmpl.html',
     controller : FiscalYearSelect,

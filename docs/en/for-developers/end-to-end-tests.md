@@ -1,6 +1,6 @@
 # End-to-end Tests
 
-BHIMA has a large collection of end-to-end tests using the [Playwright testing environment](https://playwright.dev/docs/intro).  The following guidelines how to get the tests working in your environment.  This description assumes that you have already set up BHIMA development environment (see [Installation](./installing-bhima.md)).
+OpenSIGL has a large collection of end-to-end tests using the [Playwright testing environment](https://playwright.dev/docs/intro).  The following guidelines how to get the tests working in your environment.  This description assumes that you have already set up OpenSIGL development environment (see [Installation](./installing-opensigl.md)).
 
 1. Install Playwwright (the tests currently only use the chromium browser):
 ```bash

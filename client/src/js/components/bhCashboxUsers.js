@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCashboxUsers', {
     templateUrl : 'modules/templates/bhCashboxUsers.tmpl.html',
     controller : bhCashboxUsers,

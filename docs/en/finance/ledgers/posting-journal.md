@@ -1,14 +1,14 @@
 # Journal Module
 
-The Journal is the central module of the BHIMA software - all transactions must flow through the Journal to enter the [General Ledger](/general-ledger.md) and appear in subsequent reports.  It is a gatekeeper for all proposed transactions, a ledger where the accountant can validate, correct, and approve transactions that enter the system.  No financial transaction is considered finalized until it is _posted_ from the Journal into the General Ledger.
+The Journal is the central module of the OpenSIGL software - all transactions must flow through the Journal to enter the [General Ledger](/general-ledger.md) and appear in subsequent reports.  It is a gatekeeper for all proposed transactions, a ledger where the accountant can validate, correct, and approve transactions that enter the system.  No financial transaction is considered finalized until it is _posted_ from the Journal into the General Ledger.
 
 ## Financial Operations as Transactions
 
-In the introduction, we noted that all financial operations are represented as both a record and a transaction.  In this section, we will discuss the properties of transactions in BHIMA.
+In the introduction, we noted that all financial operations are represented as both a record and a transaction.  In this section, we will discuss the properties of transactions in OpenSIGL.
 
 As described in [Double Entry Bookkeeping](/finance-modules/overview.md#double-entry-bookkeeping), transactions are composed of two or more lines.  Some information, such as the transaction date is shared across all lines; others, like the accounts, are specific to a line.  The list below contains all properties of a transaction.  Shared properties are denoted by the tag **\[shared\]**.
 
-* **ID**: used only for internal purposes.  This 36 character string uniquely identifies the line in the transaction.  It is really only meant to be used when reporting issues to BHIMA support.
+* **ID**: used only for internal purposes.  This 36 character string uniquely identifies the line in the transaction.  It is really only meant to be used when reporting issues to OpenSIGL support.
 * **Period \[shared\]**: a human readable version of the period.
 * **Project \[shared\]**: the project associated with the record.
 * **Transaction ID \[shared\]**: a human readable identifier associated with the transaction.  It is composed in the following way: `${project abbreviation}${increment}`.  For example, the first transaction of a project abbreviated by "TST" will be `TST1`.  This allows transactions between projects to be differentiated.
@@ -31,7 +31,7 @@ As described in [Double Entry Bookkeeping](/finance-modules/overview.md#double-e
 
 Financial operations do not often occur in isolation, but are motivated by previous engagements or anticipate future operations.  For example, the expectation when a client incurs debt is that they will eventually pay off their debt, or when stock is purchased that a subsequent delivery will increase the value and quantity of the stock in a warehouse.
 
-To reflect this real-world property, transactions in BHIMA are _linked_ by their **record** and **reference** columns.  As discussed above, the record column is the identifier for the underlying cash payment, invoice or voucher.  The reference column, however, points to the record column of another transaction somewhere in the Journal or General Ledger.  This links the two transactions, with the interpretation of that particular line in the second transaction having been motivated by the referenced first transaction.
+To reflect this real-world property, transactions in OpenSIGL are _linked_ by their **record** and **reference** columns.  As discussed above, the record column is the identifier for the underlying cash payment, invoice or voucher.  The reference column, however, points to the record column of another transaction somewhere in the Journal or General Ledger.  This links the two transactions, with the interpretation of that particular line in the second transaction having been motivated by the referenced first transaction.
 
 The concept of linked transactions is best demonstrated by an example.  Below are two simplified transactions, the latter linking the former.
 
@@ -50,7 +50,7 @@ The first transaction is an invoice \(denoted by `IV.TPA.1`\) for a patient \(de
 
 ### Analysis with Linked Transactions
 
-Since BHIMA links transactions in this way, we can perform the following analyses:
+Since OpenSIGL links transactions in this way, we can perform the following analyses:
 
 1. What is the balance of patient `PA.HEV.1`'s account after these operations?
 
@@ -105,6 +105,6 @@ A transaction can only have a single transaction type.  You can add your own tra
 
 ## Showing Full Transactions
 
-Because BHIMA is a double-entry accounting system, sometimes you need to find the opposite side of a transaction whilst only knowing one side.  For example, you may want to know accounts have interacted with the cash account, or find the other side of a transaction by the debit or credit value.  BHIMA facilitates these lookups in the usual way via the search modal.
+Because OpenSIGL is a double-entry accounting system, sometimes you need to find the opposite side of a transaction whilst only knowing one side.  For example, you may want to know accounts have interacted with the cash account, or find the other side of a transaction by the debit or credit value.  OpenSIGL facilitates these lookups in the usual way via the search modal.
 
 In the search modal, put any identifying information of the transaction (or group of transactions) sought, then enable the "show full transactions" option in the default filters.  This will ensure the entire transaction is returned, no matter which rows are matched by the search criteria.  This may result in the `limit` property not applying, since it is being explicitly overridden to show the entirety of the transaction.

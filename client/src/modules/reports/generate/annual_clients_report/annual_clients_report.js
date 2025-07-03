@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('annual_clients_reportController', AnnualClientsReportController);
 
 AnnualClientsReportController.$inject = [

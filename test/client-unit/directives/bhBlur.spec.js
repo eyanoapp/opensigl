@@ -19,8 +19,8 @@ describe('test/client-unit/directives/bhBlur directive', () => {
   };
 
   beforeEach(module(
-    'bhima.directives',
-    'bhima.services'
+    'opensigl.directives',
+    'opensigl.services'
   ));
 
   beforeEach(inject((_$compile_, _$rootScope_) => {

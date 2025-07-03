@@ -71,12 +71,12 @@ the hospital financial activities are taking place.
 include drugs for treating patients, medical equipment and supplies, and
 administrative supplies.  "Stock" items are often purchased in "Lots" which
 include a number of the stock items.  Note that "Lot Numbers" are sometimes
-given by manufacturers and are not necessarily unique to BHIMA.
+given by manufacturers and are not necessarily unique to OpenSIGL.
 
 #### STOCK ADJUSTMENT
 When a physical inventory of stock reveals that the actual count of stock
-items in a depot or pharmacy differs from the count in the BHIMA software,
-then an "Stock Adjustment" should be performed to update the BHIMA software.
+items in a depot or pharmacy differs from the count in the OpenSIGL software,
+then an "Stock Adjustment" should be performed to update the OpenSIGL software.
 
 #### STOCK ENTRY
 "Stock entries" occur when an item of stock is added to a Depot.  Types of

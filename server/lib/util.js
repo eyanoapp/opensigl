@@ -280,7 +280,7 @@ exports.uuid = () => randomUUID().toUpperCase().replace(/-/g, '');
  * @function getPeriodIdForDate
  *
  * @description
- * This function gets the BHIMA formated period given a date object and
+ * This function gets the OpenSIGL formated period given a date object and
  * returns it.  Since periods can be zero-prefixed, it is a string.
  *
  * @returns {String} the period_id

@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('InventoryGroupsActionsModalController', InventoryGroupsActionsModalController);
 InventoryGroupsActionsModalController.$inject = [
   'InventoryGroupService', 'NotifyService', '$uibModalInstance', 'data', 'SessionService', 'bhConstants',

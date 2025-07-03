@@ -1,5 +1,5 @@
 /* eslint no-useless-escape:off */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('PasswordMeterService', PasswordMeterService);
 
 PasswordMeterService.$inject = ['SessionService'];

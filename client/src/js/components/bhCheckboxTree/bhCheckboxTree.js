@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCheckboxTree', {
     templateUrl : 'js/components/bhCheckboxTree/bhCheckboxTree.html',
     controller  : bhCheckboxTreeController,

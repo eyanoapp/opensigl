@@ -11,7 +11,7 @@ describe('test/client-unit/services/Focus', () => {
   const find = (elm, selector) => elm[0].querySelector(selector);
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
   ));
 
   beforeEach(inject((_$compile_, _$rootScope_, _$timeout_, _$window_, _focus_) => {

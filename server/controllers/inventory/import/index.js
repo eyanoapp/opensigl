@@ -5,7 +5,7 @@
  * a template file to show how the inventory schema must be modeled for the user to fill out.
  */
 const path = require('path');
-const debug = require('debug')('bhima:inventory');
+const debug = require('debug')('opensigl:inventory');
 const db = require('../../../lib/db');
 const util = require('../../../lib/util');
 const BadRequest = require('../../../lib/errors/BadRequest');

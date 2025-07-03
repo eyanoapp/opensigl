@@ -13,15 +13,15 @@ describe('test/client-unit/services/PurchaseOrderForm', () => {
   const EUR = 3;
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
     'ui.bootstrap',
     'ui.router',
     'ngStorage',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'bhima.StockMocks',
-    'bhima.mocks',
+    'opensigl.StockMocks',
+    'opensigl.mocks',
   ));
 
   beforeEach(inject((

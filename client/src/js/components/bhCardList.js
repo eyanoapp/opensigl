@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCardList', {
     templateUrl : 'modules/templates/bhCardList.tmpl.html',
     controller : bhCardList,

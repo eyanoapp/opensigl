@@ -9,7 +9,7 @@
 * JSON instance or 404 NOT FOUND.  The others return an array of
 * results.
 *
-* TODO: We should migrate the inventory to using the regular bhima guidelines.
+* TODO: We should migrate the inventory to using the regular opensigl guidelines.
 */
 const _ = require('lodash');
 const core = require('./inventory/core');

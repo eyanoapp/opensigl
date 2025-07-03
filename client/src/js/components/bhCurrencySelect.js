@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCurrencySelect', {
     controller  : bhCurrencySelect,
     templateUrl : 'modules/templates/bhCurrencySelect.tmpl.html',

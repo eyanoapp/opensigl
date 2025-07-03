@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('GridAggregatorService', GridAggregatorService);
 
 GridAggregatorService.$inject = [
@@ -8,7 +8,7 @@ GridAggregatorService.$inject = [
 /**
  * Grid Aggregator Service
  *
- * This service contains all aggregators used in bhima, keyed on the column ID.  These should
+ * This service contains all aggregators used in opensigl, keyed on the column ID.  These should
  * provide enough detail, along with the aggregation detail.
  *
  * @todo - finish aggregation for footers

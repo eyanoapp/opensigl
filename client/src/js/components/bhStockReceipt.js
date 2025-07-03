@@ -3,7 +3,7 @@ const bhStockReceiptTemplate = `
     {{ $ctrl.displayValue }}
   </a>`;
 
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockReceipt', {
     template : bhStockReceiptTemplate,
     controller  : bhStockReceiptController,

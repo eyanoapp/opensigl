@@ -4,7 +4,7 @@
 
 L'état du stock est un document qui renseigne sur les quantités des produits disponibles dans chaque dépôts.
 
-Dans BHIMA, le rapport sur l'état du stock est généré automatiquement en fonction des mouvements des stocks.
+Dans OpenSIGL, le rapport sur l'état du stock est généré automatiquement en fonction des mouvements des stocks.
 
 Pour acceder à l'état du stock :
 

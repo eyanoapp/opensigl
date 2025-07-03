@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhWardSelect', {
     templateUrl : 'js/components/bhWardSelect/bhWardSelect.html',
     controller  : WardSelectController,

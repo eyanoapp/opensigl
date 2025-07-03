@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('LoginController', LoginController);
 
 LoginController.$inject = [
@@ -9,7 +9,7 @@ LoginController.$inject = [
 /**
  * Login Controller
  *
- * The login controller powers the bhima login page.
+ * The login controller powers the opensigl login page.
  */
 function LoginController(AppCache, Session, Languages, Projects, Helpdesk, Notify, Install, $state) {
   const vm = this;

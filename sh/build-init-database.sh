@@ -3,10 +3,10 @@
 # bash strict mode
 set -o pipefail
 
-# This script is for building the initial database of bhima application
-# this database is supposed to be the starting point of any bhima installation
+# This script is for building the initial database of opensigl application
+# this database is supposed to be the starting point of any opensigl installation
 
-echo "[ build ] Building BHIMA Database"
+echo "[ build ] Building OpenSIGL Database"
 
 set -a
 source .env || { echo "[build-init-database.sh] could not load .env, using variables from environment." ; }
@@ -45,7 +45,7 @@ mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/m
 
 echo "[ build ] default data"
 mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/05-icd10.sql || { echo "failed to import default data into DB 1/2" ; exit 1; }
-mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/06-bhima.sql || { echo "failed to import default data into DB 2/2" ; exit 1; }
+mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/06-opensigl.sql || { echo "failed to import default data into DB 2/2" ; exit 1; }
 
 echo "[build] recomputing mappings"
 mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" -e "Call zRecomputeEntityMap();" || { echo "failed to recompute mappings 1/2" ; exit 1; }

@@ -2,7 +2,7 @@
 
 # Les outils additionnels
 
-En ce qui concerne la gestion de stock BHIMA dispose aussi d'autre outils pour faciliter cette gestion et repondre à d'autres besoins.
+En ce qui concerne la gestion de stock OpenSIGL dispose aussi d'autre outils pour faciliter cette gestion et repondre à d'autres besoins.
 
 Parmi ces outils, nous avons :
 - [L'importation de stock](./stock_import.md) à partir d'un fichier CSV

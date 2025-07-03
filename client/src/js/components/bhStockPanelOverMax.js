@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockPanelOverMax', {
     templateUrl : 'modules/templates/bhStockPanelOverMax.tmpl.html',
     controller  : StockPanelOverMaxController,

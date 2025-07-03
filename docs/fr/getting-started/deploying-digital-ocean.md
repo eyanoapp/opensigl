@@ -18,7 +18,7 @@
 </style>
 
 
-# Deploying BHIMA on DigitalOcean
+# Deploying OpenSIGL on DigitalOcean
 
 <i> Suivez ces étapes ci-dessous posté à https://docs.opendatakit.org/aggregate-digital-ocean</i>
 
@@ -76,7 +76,7 @@ Les Droplets de DigitalOcean utilisent des adresses IP qui peuvent changer si vo
  </li>
 </ul>
 
-2. Ouvrez un navigateur Web et vérifiez périodiquement le domaine jusqu'à ce que vous voyiez le site Web BHIMA. Vous ne pourrez pas continuer l’installation tant que vous ne verrez pas le chargement du site Web.
+2. Ouvrez un navigateur Web et vérifiez périodiquement le domaine jusqu'à ce que vous voyiez le site Web OpenSIGL. Vous ne pourrez pas continuer l’installation tant que vous ne verrez pas le chargement du site Web.
 
 # Autoriser le HTTPS
 
@@ -103,7 +103,7 @@ Lets Encrypt utilise l'adresse mail que vous avez fourni pour envoyer des notifi
 </li>
 </ul>
 
-# Lancez BHIMA sur le navigateur
+# Lancez OpenSIGL sur le navigateur
 1. Tapez https://votre.domaine et vérifiez si Bhima tourne.
 
 2. Vous pouvez maintenant commencer à configurer vos informations d'interprise en cliquant sur le bouton <span class='guilabel'>installer</span>

@@ -1,4 +1,4 @@
-angular.module('bhima.constants')
+angular.module('opensigl.constants')
   .constant('bhConstants', constantConfig());
 
 /**

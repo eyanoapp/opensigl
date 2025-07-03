@@ -4,7 +4,7 @@
 
 Le rapport des sorties des stocks est un document qui renseigne sur toutes les sorties des stocks qui ont eu lieu dans différent dépots.
 
-Dans BHIMA, le rapport sur les sorties des stocks est généré automatiquement en fonction des mouvements des stocks.
+Dans OpenSIGL, le rapport sur les sorties des stocks est généré automatiquement en fonction des mouvements des stocks.
 
 Pour acceder au rapport sur les sorties des stocks :
 

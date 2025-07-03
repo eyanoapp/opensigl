@@ -1,7 +1,7 @@
 /**
  * Component Test Wrappers
  *
- * This module exposes individual test wrappers for components created in bhima.
+ * This module exposes individual test wrappers for components created in opensigl.
  * The idea is to prevent collisions when updating or working on individual
  * component's tests suites.
  *

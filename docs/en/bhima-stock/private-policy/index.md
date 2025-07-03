@@ -1,7 +1,7 @@
 ## Privacy Policy
 
 ### 1 Introduction
-This Privacy Policy describes how BHIMA STOCK (‘App’) collects, uses and shares your information when you use our App, in accordance with Google Play requirements and applicable laws (GDPR, CCPA).
+This Privacy Policy describes how OpenSIGL STOCK (‘App’) collects, uses and shares your information when you use our App, in accordance with Google Play requirements and applicable laws (GDPR, CCPA).
 
 ### 2. Data collected
 We collect the following information:

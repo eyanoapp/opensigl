@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFluxSelect', {
     templateUrl : 'modules/templates/bhFluxSelect.tmpl.html',
     controller  : FluxSelectController,

@@ -3,7 +3,7 @@ describe('test/client-unit/filters/telephone filter', () => {
 
   let telephone;
 
-  beforeEach(module('pascalprecht.translate', 'bhima.filters'));
+  beforeEach(module('pascalprecht.translate', 'opensigl.filters'));
 
   beforeEach(inject(($filter) => {
     telephone = $filter('telephone');

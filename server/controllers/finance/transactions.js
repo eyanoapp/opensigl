@@ -11,7 +11,7 @@
  * @requires controllers/finance/patientInvoice
  */
 
-const debug = require('debug')('bhima:controller:transactions');
+const debug = require('debug')('opensigl:controller:transactions');
 const shared = require('./shared');
 const db = require('../../lib/db');
 const Unauthorized = require('../../lib/errors/Unauthorized');

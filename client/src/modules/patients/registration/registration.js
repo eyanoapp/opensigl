@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('PatientRegistrationController', PatientRegistrationController);
 
 PatientRegistrationController.$inject = [
@@ -112,7 +112,7 @@ function PatientRegistrationController(
    * @function lookupReturningPatient
    *
    * @description
-   * Opens a modal to find a patient via their hospital number, BHIMA identifer,
+   * Opens a modal to find a patient via their hospital number, OpenSIGL identifer,
    * or name.  If the patient is found, they can be checked into the hospital.
    */
   function lookupReturningPatient() {

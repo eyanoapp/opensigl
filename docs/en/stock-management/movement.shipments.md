@@ -2,14 +2,14 @@
 
 # Shipments
 
-When stock is transferred from one depot to another, it is called a "shipment".  This could be involve collecting stock in one depot and shipping it via truck to another depot in an entirely different location.  Or it could simply be taking some stock from one depot to another in the same building.   For instance, purchasing and receiving stock from external suppliers is often done through a primary depot, while a pharmacy is also considered a "depot" in BHIMA. So once stock is received in the primary depot, transferring it to a pharmacy in the same building would still be considered a shipment.
+When stock is transferred from one depot to another, it is called a "shipment".  This could be involve collecting stock in one depot and shipping it via truck to another depot in an entirely different location.  Or it could simply be taking some stock from one depot to another in the same building.   For instance, purchasing and receiving stock from external suppliers is often done through a primary depot, while a pharmacy is also considered a "depot" in OpenSIGL. So once stock is received in the primary depot, transferring it to a pharmacy in the same building would still be considered a shipment.
 
-Shipments are restricted to transferring stock from one depot to another.   These involve stock exits (from the sending depot) and stock entry (into the receiving depot).   Technically, transferring stock from one depot to another could be done by directly using the Stock Exit and Stock Entry interfaces and not directly using the Shipping interface.  However, users should be aware that even if the shipment interface is not directly used, a shipment is still created when stock is exited from one depot and sent to another.  Other types of stock exits (such as exit to "Loss") or stock entries (such as entry by "Integration") do not involve BHIMA "Shipments".
+Shipments are restricted to transferring stock from one depot to another.   These involve stock exits (from the sending depot) and stock entry (into the receiving depot).   Technically, transferring stock from one depot to another could be done by directly using the Stock Exit and Stock Entry interfaces and not directly using the Shipping interface.  However, users should be aware that even if the shipment interface is not directly used, a shipment is still created when stock is exited from one depot and sent to another.  Other types of stock exits (such as exit to "Loss") or stock entries (such as entry by "Integration") do not involve OpenSIGL "Shipments".
 
 
-## The BHIMA Shipments interface
+## The OpenSIGL Shipments interface
 
-In the BHIMA interface, there is  "Shipments" menu entry in the top-level menu:
+In the OpenSIGL interface, there is  "Shipments" menu entry in the top-level menu:
 <img src="./images/shipments-menu.png" alt="Main shipments menu" align="right" width="200">
 
 There are two entries under the "Shipments" menu:
@@ -41,13 +41,13 @@ During creation, it is still possible to update the packing list of items in the
 4. **Departure from sending depot** - After the stock exit for a shipment is complete, it is marked as *in transit*.  It is possible for a shipment to be present in the origin depot and still be *in transit*.  When transportation has been arranged, it will physically depart from the origin depot.
 6. **Transit** - The physical movement of the stock could be as complicated as sending the shipment in a container and by truck or airplane to another location.  Or it could be as simple as walking a few items to another room in the same building.  While this occurs it is in transit.  There are means in the Shipment Registry for updating the location and condition while it is in transit.
 7. **Arrival at the Receiving Depot** - Once the shipment arrives at the destination depot, the personnel of the destination depot will indicate that the shipment has been received.  The shipment is then marked as *delivered*.  At this point it is ready for stock entry by the destination depot.   However, until stock entry occurs, the stock is still not officially in any depot.
-8. **Stock Entry** - As the shipment is deposited in the receiving depot, the BHIMA software needs to be updated.  This is accomplished by doing the "Stock Entry" for the receiving depot.  Generally, once the stock entry occurs, the shipment is marked as complete.  Once the stock entry has occurred at the destination depot for for **all items** in a shipment, the shipment is automatically marked as *complete* -- otherwise it is marked as *Partial*.  Note that it is possible that some shipment items are lost in transit due to spoilage or theft.  The shipment could still be marked as complete in that case, but that would need to be done manually via the Shipments Registry action menu.
+8. **Stock Entry** - As the shipment is deposited in the receiving depot, the OpenSIGL software needs to be updated.  This is accomplished by doing the "Stock Entry" for the receiving depot.  Generally, once the stock entry occurs, the shipment is marked as complete.  Once the stock entry has occurred at the destination depot for for **all items** in a shipment, the shipment is automatically marked as *complete* -- otherwise it is marked as *Partial*.  Note that it is possible that some shipment items are lost in transit due to spoilage or theft.  The shipment could still be marked as complete in that case, but that would need to be done manually via the Shipments Registry action menu.
 
 ## Example Shipment Process
-The purpose of this example is to show the basic use of the BHIMA interface for shipments and how using the Shipments interface simplifies the process of sending stock from one depot to another.
+The purpose of this example is to show the basic use of the OpenSIGL interface for shipments and how using the Shipments interface simplifies the process of sending stock from one depot to another.
 
 ### Creating the shipment
-Suppose you want to ship several articles of stock from the "Primary Depot" to a "Secondary Depot".  Start by going to the BHIMA `New Shipment` page.
+Suppose you want to ship several articles of stock from the "Primary Depot" to a "Secondary Depot".  Start by going to the OpenSIGL `New Shipment` page.
 <div class="bs-callout bs-callout-success">
   <p>
   <i>menu</i> > Shipments > <strong>New Shipment</strong> <br>
@@ -101,7 +101,7 @@ At this point, the shipment is ready to to be shipped and a stock exit should be
 Notice the new entry on the menu: "Exit stock for this shipment".  When you click on this action, it will take you directly to the Stock Exit page with the articles of stock in the shipment configured for quick approval. 
 
 ### Transit
-Once the stock exit for a shipment has been performed, the the shipment (and contained stock) is considered to be in transit.  As far as BHIMA software is concerned this is a sort of "in limbo" state -- the items are tracked by the BHIMA software (via the shipment itself) but are no in any depot.   It is possible that the shipment will sit on the loading dock of the origin depot until it is loaded on a vehicle and physically leaves the sending facility.   Once the shipment leaves the sending depot, its transportation progress can be logged using the "Tracking Log" in the Shipments Registry action menu.
+Once the stock exit for a shipment has been performed, the the shipment (and contained stock) is considered to be in transit.  As far as OpenSIGL software is concerned this is a sort of "in limbo" state -- the items are tracked by the OpenSIGL software (via the shipment itself) but are no in any depot.   It is possible that the shipment will sit on the loading dock of the origin depot until it is loaded on a vehicle and physically leaves the sending facility.   Once the shipment leaves the sending depot, its transportation progress can be logged using the "Tracking Log" in the Shipments Registry action menu.
 
 ### Arrival at the Receiving Depot
 Once a shipment arrives at the receiving depot, it will be unpacked and the items entered into the stock for the receiving depot.
@@ -113,14 +113,14 @@ The Shipments interface makes this straightforward.  Go back to the Shipments Re
    1. **Mark as Delivered** - This will change the status of the shipment to *delivered*.  This does NOT mean that stock entry has been performed at the destination depot.  Chosing this option means that the shipment has been received but not unpacked.
 
    2. **Enter stock for this shipment** -
-   Selecting this option will take the user to Stock Entry page for the shipment with all the relevant information set up for easy approval.  Note that marking the item as *delivered* can be skipped if the shipment has already been unpacked when the stock entry into BHIMA is ready to be done.
+   Selecting this option will take the user to Stock Entry page for the shipment with all the relevant information set up for easy approval.  Note that marking the item as *delivered* can be skipped if the shipment has already been unpacked when the stock entry into OpenSIGL is ready to be done.
 
 Note at this point, if the Stock Entry is approved with all items received, the shipment will automatically be closed (marked "Complete").  However, if any items are missing or lost due to damage, the shipment status will be marked as "Partial".  It can remain in the "partial" state as appropriate, but it can be manually closed (via the action menu after the stock exit).
 
 ### Creating Shipments with Containers
 
 The examples above assume that all items in a shipment will be sent in one
-container.   BHIMA also supports breaking a shipment into multiple separate
+container.   OpenSIGL also supports breaking a shipment into multiple separate
 containers.  There are additional controls on the interface to create
 shipments to support this.  For example:
 <img src="./images/shipment-containers.png" alt="Create a shipment with containers" width="100%">

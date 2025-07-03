@@ -18,7 +18,7 @@ const template = `
  * @description
  * Renders a consistent search button presentation and behavior across the application.
  */
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhSearchButton', {
     template,
     bindings : { onClick : '&' },

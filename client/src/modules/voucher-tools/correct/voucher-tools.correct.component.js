@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhVoucherToolsCorrect', {
     templateUrl : 'modules/voucher-tools/correct/voucher-tools.correct.tmpl.html',
     controller : bhVoucherToolsCorrect,

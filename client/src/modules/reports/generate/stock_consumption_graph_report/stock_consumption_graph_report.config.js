@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('stock_consumption_graph_reportController', StockConsGraphReportConfigCtrl);
 
 StockConsGraphReportConfigCtrl.$inject = [

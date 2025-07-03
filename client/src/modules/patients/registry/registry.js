@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('PatientRegistryController', PatientRegistryController);
 
 PatientRegistryController.$inject = [

@@ -1,7 +1,7 @@
-angular.module('bhima.controllers', []);
-angular.module('bhima.services', []);
-angular.module('bhima.directives', []);
-angular.module('bhima.components', []);
-angular.module('bhima.filters', []);
-angular.module('bhima.routes', ['ui.router']);
-angular.module('bhima.constants', []);
+angular.module('opensigl.controllers', []);
+angular.module('opensigl.services', []);
+angular.module('opensigl.directives', []);
+angular.module('opensigl.components', []);
+angular.module('opensigl.filters', []);
+angular.module('opensigl.routes', ['ui.router']);
+angular.module('opensigl.constants', []);

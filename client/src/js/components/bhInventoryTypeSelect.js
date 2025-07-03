@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhInventoryTypeSelect', {
     templateUrl : 'modules/templates/bhInventoryTypeSelect.tmpl.html',
     controller  : InventoryTypeSelectController,

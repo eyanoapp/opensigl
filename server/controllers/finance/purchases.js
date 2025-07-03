@@ -12,7 +12,7 @@
  * @requires debug
  */
 
-const debug = require('debug')('bhima:purchases');
+const debug = require('debug')('opensigl:purchases');
 const { uuid } = require('../../lib/util');
 const db = require('../../lib/db');
 const barcode = require('../../lib/barcode');
@@ -28,7 +28,7 @@ const util = require('../../lib/util');
 // PURCHASES.STATUS.RECEIVED
 // PURCHASES.STATUS.PARTIALLY_RECEIVED
 // PURCHASES.STATUS.EXCESSIVE_RECEIVED_QUANTITY
-// in the bhima.sql data
+// in the opensigl.sql data
 
 const PURCHASE_STATUS_WAITING_CONFIRMATION = 1;
 const PURCHASE_STATUS_CONFIRMED_ID = 2;

@@ -5,8 +5,8 @@ describe('test/client-unit/components/bhCheckboxTree', () => {
 
   beforeEach(module(
     'pascalprecht.translate',
-    'bhima.services',
-    'bhima.components',
+    'opensigl.services',
+    'opensigl.components',
     'templates',
   ));
 

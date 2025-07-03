@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhIprScale', {
     templateUrl : 'modules/templates/bhIprScale.tmpl.html',
     controller  : IprScaleController,

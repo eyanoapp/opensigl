@@ -10,15 +10,15 @@ describe('test/client-unit/services/PatientInvoiceForm', () => {
   let $timeout;
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
     'ui.bootstrap',
     'ui.router',
-    'bhima.constants',
+    'opensigl.constants',
     'ngStorage',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'bhima.mocks',
+    'opensigl.mocks',
   ));
 
   beforeEach(inject((

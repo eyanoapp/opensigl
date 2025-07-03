@@ -36,7 +36,7 @@ function NotFound(description) {
   // HTTP status code
   this.status = 404;
 
-  // bhima status code (for $translation)
+  // opensigl status code (for $translation)
   this.code = 'ERRORS.NOT_FOUND';
 
   // default to an empty string if no description passed in

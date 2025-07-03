@@ -2,7 +2,7 @@
  * @overview identifiers
  *
  * @description
- * This file contains the identifier mapping for each entity for which BHIMA
+ * This file contains the identifier mapping for each entity for which OpenSIGL
  * generates a receipt.  It provides an identifier that is templated into the
  * human readable ID on HTTP requests to provide more context than the simple
  * {project_id}.{increment} schema previously used.

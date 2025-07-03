@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('ReceiptService', ReceiptService);
 
 ReceiptService.$inject = ['$http', 'util', 'LanguageService', 'AppCache', 'SessionService'];

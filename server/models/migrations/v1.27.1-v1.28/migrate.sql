@@ -21,6 +21,6 @@ INSERT IGNORE INTO `status` VALUES
 INSERT INTO unit VALUES
   (317, 'Satisfaction Rate Report','TREE.SATISFACTION_RATE_REPORT','Satisfaction Rate Report',282,'/reports/satisfaction_rate_report');
 
--- core BHIMA reports
+-- core OpenSIGL reports
 INSERT IGNORE INTO `report` (`report_key`, `title_key`) VALUES
   ('satisfaction_rate_report', 'TREE.SATISFACTION_RATE_REPORT');

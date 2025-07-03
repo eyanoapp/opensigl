@@ -32,7 +32,7 @@ describe('test/client-unit/components/bhCardList', () => {
   const find = (elm, selector) => elm[0].querySelector(selector);
   const findAll = (elm, selector) => elm[0].querySelectorAll(selector);
 
-  beforeEach(module('bhima.components', 'templates'));
+  beforeEach(module('opensigl.components', 'templates'));
 
   beforeEach(inject((_$compile_, _$rootScope_, _$templateCache_) => {
     $compile = _$compile_;

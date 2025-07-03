@@ -933,7 +933,7 @@ INSERT INTO `unit` VALUES
   (222, 'Fee Center Report', 'TREE.COST_CENTER_REPORT', 'Fee Center Report', 144, '/modules/reports/feeCenter', '/reports/feeCenter'),
   (223, 'Distribution keys', 'TREE.DISTRIBUTION_KEYS', 'Distribution keys', 218, '/modules/distribution_center/distribution_key', '/distribution_center/distribution_key');
 
--- core BHIMA reports
+-- core OpenSIGL reports
 INSERT INTO `report` (`report_key`, `title_key`) VALUES
   ('feeCenter', 'REPORT.COST_CENTER.TITLE');
 

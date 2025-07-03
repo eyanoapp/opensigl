@@ -495,15 +495,15 @@ async function movementsFromMobile(params) {
       };
     });
 
-    const [bhima] = movements;
+    const [opensigl] = movements;
     return validLots.length ? {
-      document_uuid : bhima.document_uuid,
+      document_uuid : opensigl.document_uuid,
       description : mobile.description,
       flux_id : mobile.fluxId,
       is_exit : mobile.isExit,
       depot_uuid : mobile.depotUuid,
       date : mobile.date,
-      from_depot : bhima.depot_uuid,
+      from_depot : opensigl.depot_uuid,
       to_depot : mobile.depotUuid,
       lots : validLots,
     } : {};

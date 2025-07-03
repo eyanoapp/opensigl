@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCronEmailReport', {
     templateUrl : 'js/components/bhCronEmailReport/bhCronEmailReport.html',
     controller  : bhCronEmailReportController,

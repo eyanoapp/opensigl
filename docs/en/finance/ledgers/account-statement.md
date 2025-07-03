@@ -10,5 +10,5 @@ The module requires the standard[ default filters ](/grid-features.md)of limit a
 
 #### Grid
 
-The heart of the module is a grid supporting many of the [grid features](/grid-features.md) found in BHIMA.  This view differs from the Journal by limiting the records to only a single account.  Typically, the view will show a single side of a transaction.  To show the other side of the transaction, you can follow the links in the **Transaction ID** column to view the transaction in the [Journal](/journal-module.md).
+The heart of the module is a grid supporting many of the [grid features](/grid-features.md) found in OpenSIGL.  This view differs from the Journal by limiting the records to only a single account.  Typically, the view will show a single side of a transaction.  To show the other side of the transaction, you can follow the links in the **Transaction ID** column to view the transaction in the [Journal](/journal-module.md).
 

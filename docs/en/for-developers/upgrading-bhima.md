@@ -1,12 +1,12 @@
-# Upgrading BHIMA
+# Upgrading OpenSIGL
 
-This page provides notes on how upgrades to BHIMA work.  Note that these steps are quite manual, and we would like to automate them in the future.
+This page provides notes on how upgrades to OpenSIGL work.  Note that these steps are quite manual, and we would like to automate them in the future.
 
-## BHIMA Versions
+## OpenSIGL Versions
 
-BHIMA uses git tags to tag changes on the master branch and [Github Releases](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) to cut releases.  The latest version is always the latest tag/release on git and Github respectively.  The [latest release](https://github.com/Third-Culture-Software/bhima/releases/latest) is always available from the link `https://github.com/Third-Culture-Software/bhima/releases/latest`.
+OpenSIGL uses git tags to tag changes on the master branch and [Github Releases](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) to cut releases.  The latest version is always the latest tag/release on git and Github respectively.  The [latest release](https://github.com/Third-Culture-Software/opensigl/releases/latest) is always available from the link `https://github.com/Third-Culture-Software/opensigl/releases/latest`.
 
-While git effectively manages changes with code, some changes require changes to underlying production data - for example, adding a column to a database table, reassigning foreign keys, etc.  These changes are kept in the `server/models/migrations/` directory in the BHIMA repository.  Within this directory are a series of folders, named in the form `v.old.release-v.new.release`.  They contain a single SQL file (generally called `migrate.sql`) that is needed to upgrade from `v.old.release` to `v.new.release`.  For example, the file `v1.12.1-v1.13.0/migrate.sql` would migrate the database from version `1.12.1` to version `1.13.0`.
+While git effectively manages changes with code, some changes require changes to underlying production data - for example, adding a column to a database table, reassigning foreign keys, etc.  These changes are kept in the `server/models/migrations/` directory in the OpenSIGL repository.  Within this directory are a series of folders, named in the form `v.old.release-v.new.release`.  They contain a single SQL file (generally called `migrate.sql`) that is needed to upgrade from `v.old.release` to `v.new.release`.  For example, the file `v1.12.1-v1.13.0/migrate.sql` would migrate the database from version `1.12.1` to version `1.13.0`.
 
 New changes (e.g. unreleased changes) are kept in `server/models/migrations/next/` folder.  In preparation for a new release, these changes are combined and renamed into the format `v.old-release-v.new-release` described above.
 
@@ -18,7 +18,7 @@ When upgrading from an old version to a new version, it is important to run all 
 
 Changes to stored procedures, triggers, and functions are **not** tracked in migration scripts.  This is because they are due to frequent change and are already stored in the `server/models` directory.  Therefore, it is sufficient to simply rebuild them from source.
 
-To help with this operation, BHIMA provides a [migration helper script](https://github.com/Third-Culture-Software/bhima/blob/master/sh/setup-migration-script.sh) that can be invoked with `npm run migrate`.  This script does several things:
+To help with this operation, OpenSIGL provides a [migration helper script](https://github.com/Third-Culture-Software/opensigl/blob/master/sh/setup-migration-script.sh) that can be invoked with `npm run migrate`.  This script does several things:
 
 1. Drops all the triggers
 2. Drops all routines
@@ -40,6 +40,6 @@ The basic steps to upgrade now are:
 3. Run `NODE_ENV=production npm run build` to compile the latest client-side code
 4. Run `npm run migrate` to create the migration script.
 5. Run `mysql $DATABASE < migration-$DATABASE.sql` as described above.
-6. Restart any running BHIMA instances
+6. Restart any running OpenSIGL instances
 
-This should complete the steps to upgrading an existing BHIMA installation.
+This should complete the steps to upgrading an existing OpenSIGL installation.

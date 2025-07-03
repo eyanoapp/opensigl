@@ -1,6 +1,6 @@
 # Tests de bout en bout
 
-BHIMA dispose d'une large collection de tests de bout en bout utilisant le [Environnement de test de Playwright](https://playwright.dev/docs/intro).  Les directives suivantes pour faire fonctionner les tests dans votre environnement.  Cette description suppose que vous avez déjà configuré l'environnement de développement BHIMA (voir [Installation](./installing-bhima.md)).
+OpenSIGL dispose d'une large collection de tests de bout en bout utilisant le [Environnement de test de Playwright](https://playwright.dev/docs/intro).  Les directives suivantes pour faire fonctionner les tests dans votre environnement.  Cette description suppose que vous avez déjà configuré l'environnement de développement OpenSIGL (voir [Installation](./installing-opensigl.md)).
 
 1. Installer Playwwright:
 ```bash

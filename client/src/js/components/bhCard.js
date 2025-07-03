@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhCard', {
     templateUrl : 'modules/templates/bhCard.tmpl.html',
     transclude : {

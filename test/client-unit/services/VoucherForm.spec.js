@@ -9,15 +9,15 @@ describe('test/client-unit/services/VoucherForm', () => {
   let $timeout;
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
     'ui.bootstrap',
     'ui.router',
-    'bhima.constants',
+    'opensigl.constants',
     'ngStorage',
     'pascalprecht.translate',
     'tmh.dynamicLocale',
-    'bhima.mocks'
+    'opensigl.mocks'
   ));
 
   beforeEach(inject((_VoucherForm_, $httpBackend, _SessionService_, _MockDataService_, _$timeout_) => {

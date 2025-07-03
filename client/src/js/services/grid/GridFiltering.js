@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('GridFilteringService', GridFilteringService);
 
 GridFilteringService.$inject = ['appcache', 'uiGridConstants', 'util', 'moment', 'bhConstants'];

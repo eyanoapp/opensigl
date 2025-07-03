@@ -1,10 +1,10 @@
 # Gestion des patients
 
-La grande majorité des clients de l'hôpital sont des patients. BHIMA se concentrant principalement sur les aspects de comptabilité et de gestion de l’hôpital, la composante dossiers médicaux de BHIMA est sous-développée. Au lieu de cela, la fonction première des patients est de créer un débiteur auquel attacher un historique financier. Malgré l'accent mis sur la finance, BHIMA prend en charge quelques caractéristiques purement médicales, notamment les données démographiques et biométriques associées aux patients, un outil permettant de joindre des documents aux patients, la gestion de groupes de patients et la gestion des visites de patients.
+La grande majorité des clients de l'hôpital sont des patients. OpenSIGL se concentrant principalement sur les aspects de comptabilité et de gestion de l’hôpital, la composante dossiers médicaux de OpenSIGL est sous-développée. Au lieu de cela, la fonction première des patients est de créer un débiteur auquel attacher un historique financier. Malgré l'accent mis sur la finance, OpenSIGL prend en charge quelques caractéristiques purement médicales, notamment les données démographiques et biométriques associées aux patients, un outil permettant de joindre des documents aux patients, la gestion de groupes de patients et la gestion des visites de patients.
 
 <div class = "bs-callout bs-callout-primary">
 <h4> Avez-vous une recommandation? </h4>
-Si vous avez des recommandations sur des fonctionnalités manquant dans BHIMA ou sur les moyens d'améliorer les dossiers médicaux, veuillez contacter les développeurs. Nous aimerions vraiment en savoir plus!
+Si vous avez des recommandations sur des fonctionnalités manquant dans OpenSIGL ou sur les moyens d'améliorer les dossiers médicaux, veuillez contacter les développeurs. Nous aimerions vraiment en savoir plus!
 </div>
 
 Les patients jouent le rôle duel d'être à la fois une personne malade nécessitant un traitement et un débiteur qui développe des antécédents financiers. Il est utile de séparer ces deux concepts car ils ont des préoccupations différentes. Les diagrammes ci-dessous tentent de distinguer ces concepts:
@@ -33,7 +33,7 @@ graphe LR
 
 ## Enregistrement du patient
 
-BHIMA s'attend à ce que l'enregistrement du patient soit la première étape du début du traitement du patient. Le module Enregistrement du patient divise la page d'enregistrement en informations _required_ et informations_optional_. Ces panneaux fonctionnent comme leur nom l'indique: une inscription réussie doit contenir au minimum les informations requises. Une fois les informations requises complétées, cliquez sur le bouton bleu pour enregistrer le patient.
+OpenSIGL s'attend à ce que l'enregistrement du patient soit la première étape du début du traitement du patient. Le module Enregistrement du patient divise la page d'enregistrement en informations _required_ et informations_optional_. Ces panneaux fonctionnent comme leur nom l'indique: une inscription réussie doit contenir au minimum les informations requises. Une fois les informations requises complétées, cliquez sur le bouton bleu pour enregistrer le patient.
 
 <div class = "bs-callout bs-callout-primary">
 <h4> Quelle est la différence entre l'origine et l'emplacement actuel? </h4>

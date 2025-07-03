@@ -58,7 +58,7 @@ Pour procéder à la ventilation par pourcentage:
 <strong><u> Ventilation automatique des factures </u></strong>
 
 <div style='text-align: justify;'>
-Lorsque l’on procède à la facturation dans le système BHIMA, l’on sélectionne naturellement le service, avec la gestion des centres de frais, il est possible faire la liaison entre plusieurs services à un centre principal.
+Lorsque l’on procède à la facturation dans le système OpenSIGL, l’on sélectionne naturellement le service, avec la gestion des centres de frais, il est possible faire la liaison entre plusieurs services à un centre principal.
 La ventilation automatique des factures n’est possible que si et seulement si il existe une liaison entres les factures, les services liés aux factures et les centres principaux.
 </div>
 

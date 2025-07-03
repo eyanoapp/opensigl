@@ -16,7 +16,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const converter = require('json-2-csv');
 const tempy = require('tempy');
-const debug = require('debug')('bhima:lots');
+const debug = require('debug')('opensigl:lots');
 const moment = require('moment');
 
 const { render } = require('@ima-worldhealth/coral');

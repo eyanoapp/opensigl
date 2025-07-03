@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhRenderOption', {
     templateUrl : '/modules/templates/bhRenderOption.tmpl.html',
     controller : RenderOptionController,

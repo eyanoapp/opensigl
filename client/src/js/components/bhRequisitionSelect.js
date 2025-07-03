@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhRequisitionSelect', {
     templateUrl : 'modules/templates/bhRequisitionSelect.tmpl.html',
     controller  : RequisitionSelectController,

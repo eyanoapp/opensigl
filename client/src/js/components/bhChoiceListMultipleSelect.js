@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhChoiceListMultipleSelect', {
     templateUrl : 'modules/templates/bhChoiceListMultipleSelect.tmpl.html',
     controller  : ChoiceListMultipleSelectController,

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhShipmentSelect', {
     templateUrl : 'js/components/bhShipmentSelect/bhShipmentSelect.html',
     controller  : ShipmentSelectController,

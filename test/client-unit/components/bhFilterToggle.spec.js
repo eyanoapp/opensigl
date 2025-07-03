@@ -9,7 +9,7 @@ describe('test/client-unit/components/bhFilterToggle', () => {
     </bh-filter-toggle>
   `;
 
-  beforeEach(module('templates', 'bhima.components'));
+  beforeEach(module('templates', 'opensigl.components'));
 
   beforeEach(inject(($rootScope, $compile) => {
     $scope = $rootScope.$new();

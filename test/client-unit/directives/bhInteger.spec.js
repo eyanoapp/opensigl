@@ -3,7 +3,7 @@ describe('test/client-unit/directives/bhInteger directive', () => {
   let $scope;
   let form;
 
-  beforeEach(module('bhima.directives'));
+  beforeEach(module('opensigl.directives'));
 
   // $complile and $rootScope are injected using angular name based dependency
   // injection

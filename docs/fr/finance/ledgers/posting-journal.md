@@ -1,14 +1,14 @@
 # Journal Module
 
-Le journal est le module central du logiciel BHIMA - toutes les transactions doivent passer par le journal pour entrer dans le [grand livre](../general-ledger.md) et apparaître dans les rapports ultérieurs. C'est un portier pour toutes les transactions proposées, un grand livre où le comptable peut valider, corriger et approuver les transactions qui entrent dans le système. Aucune transaction financière n'est considérée comme finalisée tant qu'elle n'a pas été postée du journal dans le grand livre.
+Le journal est le module central du logiciel OpenSIGL - toutes les transactions doivent passer par le journal pour entrer dans le [grand livre](../general-ledger.md) et apparaître dans les rapports ultérieurs. C'est un portier pour toutes les transactions proposées, un grand livre où le comptable peut valider, corriger et approuver les transactions qui entrent dans le système. Aucune transaction financière n'est considérée comme finalisée tant qu'elle n'a pas été postée du journal dans le grand livre.
 
 ## Opérations financières en tant que transactions
 
-Dans l'introduction, nous avons noté que toutes les opérations financières sont représentées à la fois comme un enregistrement et une transaction. Dans cette section, nous discuterons des propriétés des transactions en BHIMA.
+Dans l'introduction, nous avons noté que toutes les opérations financières sont représentées à la fois comme un enregistrement et une transaction. Dans cette section, nous discuterons des propriétés des transactions en OpenSIGL.
 
 Comme décrit dans [Comptabilité en partie double](../overview.md#double-entry-bookkeeping), les transactions sont composées de deux lignes ou plus. Certaines informations, telles que la date de transaction, sont partagées sur toutes les lignes. d'autres, comme les comptes, sont spécifiques à une ligne. La liste ci-dessous contient toutes les propriétés d'une transaction. Les propriétés partagées sont désignées par la balise **\[shared\]**.
 
-* **ID**: utilisé uniquement à des fins internes. Cette chaîne de 36 caractères identifie de manière unique la ligne dans la transaction. En réalité, il est uniquement destiné à être utilisé pour signaler des problèmes au support BHIMA.
+* **ID**: utilisé uniquement à des fins internes. Cette chaîne de 36 caractères identifie de manière unique la ligne dans la transaction. En réalité, il est uniquement destiné à être utilisé pour signaler des problèmes au support OpenSIGL.
 * **Période\[partagé\]**: une version lisible par l'homme de la période.
 * **Projet\[partagé\]**: le projet associé à l'enregistrement.
 * **ID de transaction\[partagé\]**: identifiant lisible par l'homme associé à la transaction. Il est composé de la manière suivante: `${project abbreviation}${increment}`. Par exemple, la première transaction d'un projet abrégé en "TST" sera "TST1". Cela permet de différencier les transactions entre les projets.
@@ -31,7 +31,7 @@ Comme décrit dans [Comptabilité en partie double](../overview.md#double-entry-
 
 Les opérations financières ne se déroulent pas souvent de manière isolée, mais sont motivées par des engagements antérieurs ou anticipent des opérations futures. Par exemple, lorsqu'un client contracte une dette, on s'attend à ce qu'il finisse par rembourser sa dette ou, lors de l'achat d'un stock, qu'une livraison ultérieure augmente la valeur et la quantité du stock dans un entrepôt.
 
-Pour refléter cette propriété réelle, les transactions dans BHIMA sont _linked_ par leurs colonnes **enregistrement **et **référence **. Comme indiqué ci-dessus, la colonne d'enregistrement est l'identifiant du paiement en espèces, de la facture ou du bon sous-jacent. La colonne de référence pointe toutefois vers la colonne d'enregistrement d'une autre transaction quelque part dans le journal ou le grand livre. Cela relie les deux transactions, l'interprétation de cette ligne particulière dans la seconde transaction ayant été motivée par la première transaction référencée.
+Pour refléter cette propriété réelle, les transactions dans OpenSIGL sont _linked_ par leurs colonnes **enregistrement **et **référence **. Comme indiqué ci-dessus, la colonne d'enregistrement est l'identifiant du paiement en espèces, de la facture ou du bon sous-jacent. La colonne de référence pointe toutefois vers la colonne d'enregistrement d'une autre transaction quelque part dans le journal ou le grand livre. Cela relie les deux transactions, l'interprétation de cette ligne particulière dans la seconde transaction ayant été motivée par la première transaction référencée.
 
 La notion d'opérations liées est mieux illustrée par un exemple. Vous trouverez ci-dessous deux transactions simplifiées, la dernière liant la première.
 
@@ -50,7 +50,7 @@ La première transaction est une facture \(notée `IV.TPA.1`\] pour un patient \
 
 ### Analyse avec transactions liées
 
-BHIMA liant les transactions de cette manière, nous pouvons effectuer les analyses suivantes:
+OpenSIGL liant les transactions de cette manière, nous pouvons effectuer les analyses suivantes:
 
 1. Quel est le solde du compte du patient `PA.HEV.1` après ces opérations?
 

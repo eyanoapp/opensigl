@@ -2,7 +2,7 @@
 
 # Les rapports
 
-Les rapports de stock sont des documents que l'on peut générer automatiquement avec BHIMA juste en précisant certains paramètres. Parmis ces documents, nous avons :
+Les rapports de stock sont des documents que l'on peut générer automatiquement avec OpenSIGL juste en précisant certains paramètres. Parmis ces documents, nous avons :
 
 - [La fiche de stock](./stock_sheet.md)
 - [L'etat du stock](./stock_status.md)

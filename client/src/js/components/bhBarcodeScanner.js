@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhBarcodeScanner', {
     templateUrl : 'modules/templates/bhBarcodeScanner.html',
     controller  : bhBarcodeScanner,

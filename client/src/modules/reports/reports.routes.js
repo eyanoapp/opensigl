@@ -1,4 +1,4 @@
-angular.module('bhima.routes')
+angular.module('opensigl.routes')
   .config(['$stateProvider', $stateProvider => {
     // a list of all supported reported and their respective keys, this allows
     // the ui-view to be populated with the correct report configuration form

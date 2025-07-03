@@ -2,7 +2,7 @@
 describe('test/client-unit/services/TrialBalanceService', () => {
   let TrialBalance;
 
-  beforeEach(module('bhima.services', 'bhima.mocks', 'angularMoment', 'bhima.constants'));
+  beforeEach(module('opensigl.services', 'opensigl.mocks', 'angularMoment', 'opensigl.constants'));
 
   beforeEach(inject(TrialBalanceService => {
     TrialBalance = TrialBalanceService;

@@ -19,7 +19,7 @@ Il faut noter que chaque opération d'entrée de stock (ou de sortie de stock) c
 </div>
 
 Le module d'entrées de stock dispose de quatre options pour les entrées de stock : 
-- **Achat** _(recommandée)_ : Si vous voulez faire entréer dans un dépôt les produits en provenance d'un achat sur base d'un bon de commande qui se trouve dans BHIMA.
+- **Achat** _(recommandée)_ : Si vous voulez faire entréer dans un dépôt les produits en provenance d'un achat sur base d'un bon de commande qui se trouve dans OpenSIGL.
 
 - **Intégration** : l'intégration concerne des produits qui sont physiquement dans un dépot mais pas encore dans le système, et l'on souhaite les incorporer dans le système.
 

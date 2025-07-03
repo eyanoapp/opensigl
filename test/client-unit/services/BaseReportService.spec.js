@@ -4,14 +4,14 @@ describe('test/client-unit/services/BaseReportService', () => {
   // shared services
   let SavedReports;
 
-  // load bhima.services
+  // load opensigl.services
   beforeEach(module(
     'pascalprecht.translate',
     'tmh.dynamicLocale',
     'ngStorage',
     'angularMoment',
     'ui.bootstrap',
-    'bhima.services',
+    'opensigl.services',
   ));
 
   let parseExtension;

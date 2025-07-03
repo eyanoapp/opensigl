@@ -39,7 +39,7 @@ const LESS_CONFIG = {
   ],
 };
 
-const LESS_PATH = 'client/src/less/bhima-bootstrap.less';
+const LESS_PATH = 'client/src/less/opensigl-bootstrap.less';
 
 /**
  * @function cleanCSS
@@ -47,7 +47,7 @@ const LESS_PATH = 'client/src/less/bhima-bootstrap.less';
  * @description
  * Removes previous CSS builds before beginning a new one.
  */
-const cleanCSS = () => del(`${CLIENT_FOLDER}/css/bhima`);
+const cleanCSS = () => del(`${CLIENT_FOLDER}/css/opensigl`);
 
 /**
  * @function compileCSSForProduction
@@ -58,7 +58,7 @@ const cleanCSS = () => del(`${CLIENT_FOLDER}/css/bhima`);
  */
 function compileCSSForProduction() {
   return src(CSS_PATHS)
-    .pipe(concat('css/bhima.min.css'))
+    .pipe(concat('css/opensigl.min.css'))
     .pipe(postcss([cssnano({ zindex : false })]))
     .pipe(rev())
     .pipe(dest(CLIENT_FOLDER))
@@ -75,7 +75,7 @@ function compileCSSForProduction() {
  */
 function compileCSSForDevelopment() {
   return src(CSS_PATHS)
-    .pipe(concat('css/bhima.min.css'))
+    .pipe(concat('css/opensigl.min.css'))
     .pipe(dest(CLIENT_FOLDER));
 }
 

@@ -1,7 +1,7 @@
 /**
  * @description
  * This server library is responsible for rendering reports in JSON format.
- * It adheres to the standard BHIMA Report Renderer API, accepting data
+ * It adheres to the standard OpenSIGL Report Renderer API, accepting data
  * and options and returning a single compiled object.
  *
  * This renderer demonstrates the API however is mostly a wrapper to be used

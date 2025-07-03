@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhEntityTypeahead', {
     templateUrl : 'modules/templates/bhEntityTypeahead.html',
     controller  : bhEntityTypeaheadController,

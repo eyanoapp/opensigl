@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('aggregated_stock_consumptionController', StockAggregatedConsumptionConfigController);
 
 StockAggregatedConsumptionConfigController.$inject = [

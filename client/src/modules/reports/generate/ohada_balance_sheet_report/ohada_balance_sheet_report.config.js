@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('ohada_balance_sheet_reportController', OhadaBalanceSheetReportConfigController);
 
 OhadaBalanceSheetReportConfigController.$inject = [

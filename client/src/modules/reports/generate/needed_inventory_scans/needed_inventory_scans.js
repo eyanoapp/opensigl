@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('needed_inventory_scansController', NeededInventoryScansReportController);
 
 NeededInventoryScansReportController.$inject = [

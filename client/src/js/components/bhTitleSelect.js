@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhTitleSelect', {
     templateUrl : 'modules/templates/bhTitleSelect.tmpl.html',
     controller  : TitleSelectController,

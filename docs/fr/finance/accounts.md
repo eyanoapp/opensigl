@@ -2,7 +2,7 @@
 
 _Situé à : **Finance> Gestion de compte**_
 
-BHIMA permet à un utilisateur de créer un plan comptable détaillé. Tous les comptes doivent spécifier les points d’information suivants:
+OpenSIGL permet à un utilisateur de créer un plan comptable détaillé. Tous les comptes doivent spécifier les points d’information suivants:
 
 1. **Numéro** - un numéro unique pour identifier le compte. La longueur ne doit pas dépasser 12 caractères.
 
@@ -21,7 +21,7 @@ BHIMA permet à un utilisateur de créer un plan comptable détaillé. Tous les 
 
 ## Navigation dans la liste des comptes
 
-BHIMA présente la liste des comptes avec une arborescence de comptes parents et enfants. Les comptes parents sont des comptes _title_, sont présentés en gras et peuvent contenir zéro ou plusieurs comptes enfants. Ces comptes enfants sont affichés légèrement en retrait sous les comptes parents.
+OpenSIGL présente la liste des comptes avec une arborescence de comptes parents et enfants. Les comptes parents sont des comptes _title_, sont présentés en gras et peuvent contenir zéro ou plusieurs comptes enfants. Ces comptes enfants sont affichés légèrement en retrait sous les comptes parents.
 
 <div class = "bs-callout bs-callout-primary">
 <h4> Remarque! </h4>
@@ -42,7 +42,7 @@ Seules deux propriétés de compte peuvent être mises à jour après la créati
 
 ## Supprimer un compte
 
-Si un compte n'a pas encore été utilisé, il peut être supprimé via le menu déroulant de la grille du compte. Cependant, BHIMA empêchera l'utilisateur de supprimer le compte s'il est utilisé n'importe où dans le système. La protection est en place pour empêcher les utilisateurs de supprimer accidentellement des comptes critiques qui sont utilisés pour des débiteurs ou qui peuvent contenir des soldes.
+Si un compte n'a pas encore été utilisé, il peut être supprimé via le menu déroulant de la grille du compte. Cependant, OpenSIGL empêchera l'utilisateur de supprimer le compte s'il est utilisé n'importe où dans le système. La protection est en place pour empêcher les utilisateurs de supprimer accidentellement des comptes critiques qui sont utilisés pour des débiteurs ou qui peuvent contenir des soldes.
 
 ## D'autres actions
 

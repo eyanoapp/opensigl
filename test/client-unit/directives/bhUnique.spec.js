@@ -10,7 +10,7 @@ describe('test/client-unit/directives/bhUnique directive', () => {
   // already registered in the database
   const existingValues = [100, 110, 120];
 
-  beforeEach(module('bhima.directives', 'bhima.services'));
+  beforeEach(module('opensigl.directives', 'opensigl.services'));
 
   beforeEach(module(($provide) => {
 

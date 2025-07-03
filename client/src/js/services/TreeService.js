@@ -183,5 +183,5 @@ TreeService.common = {
 
 TreeService.$inject = [];
 
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('TreeService', () => TreeService);

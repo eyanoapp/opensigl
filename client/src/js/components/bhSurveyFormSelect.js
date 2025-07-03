@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhSurveyFormSelect', {
     templateUrl : 'modules/templates/bhSurveyFormSelect.tmpl.html',
     controller  : SurveyFormSelectController,

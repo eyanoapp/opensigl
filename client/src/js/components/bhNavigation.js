@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhNavigation', {
     controller : NavigationController,
     templateUrl : 'modules/templates/navigation.tmpl.html',
@@ -158,7 +158,7 @@ function NavigationController($location, $rootScope, Tree, AppCache, Notify, $tr
   /**
    * Track changes to translation and sort units accordingly
    * '$translateChangeSuccess' event will fire when then translation key has
-   * changed within BHIMA - tracking this allows the tree to update without the
+   * changed within OpenSIGL - tracking this allows the tree to update without the
    * page being refreshed
    */
   $$listeners.push($rootScope.$on('$translateChangeSuccess', $ctrl.refreshTranslation));

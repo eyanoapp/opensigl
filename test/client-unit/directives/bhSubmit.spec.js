@@ -4,7 +4,7 @@ describe('test/client-unit/directives/bhSubmit directive', () => {
   let element;
   let deferred;
 
-  beforeEach(module('bhima.directives'));
+  beforeEach(module('opensigl.directives'));
   beforeEach(inject(($q, $rootScope) => {
     $scope = $rootScope;
     deferred = $q.defer();

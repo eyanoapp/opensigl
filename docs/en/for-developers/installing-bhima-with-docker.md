@@ -1,20 +1,20 @@
-# Installing BHIMA with Docker
+# Installing OpenSIGL with Docker
 
-Using Docker and Docker Compose provides a simpler alternative to the traditional [Linux installation method](./installing-bhima.md).  To install Docker and Docker Compose, follow the instructions on [the official Docker website](https://docs.docker.com/engine/install/).  You will need to have installed docker to follow this guide.
+Using Docker and Docker Compose provides a simpler alternative to the traditional [Linux installation method](./installing-opensigl.md).  To install Docker and Docker Compose, follow the instructions on [the official Docker website](https://docs.docker.com/engine/install/).  You will need to have installed docker to follow this guide.
 
 ### System Requirements
 
-Currently, BHIMA is compatible only with the x64 architecture. If you are using other architectures (such as ARM64 or x86), please refer to alternative installation instructions.
+Currently, OpenSIGL is compatible only with the x64 architecture. If you are using other architectures (such as ARM64 or x86), please refer to alternative installation instructions.
 
 ### Installation Steps
 
-1. Clone the BHIMA repository
+1. Clone the OpenSIGL repository
 
 Retrieve the latest Docker Compose file by cloning the repository:
 
 ```bash
-git clone --depth 1 https://github.com/Third-Culture-Software/bhima.git
-cd bhima
+git clone --depth 1 https://github.com/Third-Culture-Software/opensigl.git
+cd opensigl
 ```
 
 2. Configure Environment Variables
@@ -40,4 +40,4 @@ This command builds the application and starts the services defined in the Docke
 
 Open a web browser and go to `http://localhost:<PORT>` to check if the application is running properly. Replace `<PORT>` with the port number you configured earlier.
 
-Enjoy using BHIMA!
+Enjoy using OpenSIGL!

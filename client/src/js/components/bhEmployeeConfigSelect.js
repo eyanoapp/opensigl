@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhEmployeeConfigSelect', {
     templateUrl : 'modules/templates/bhEmployeeConfigSelect.tmpl.html',
     controller  : EmployeeConfigSelectController,

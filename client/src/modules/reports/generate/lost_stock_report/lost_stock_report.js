@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('lost_stock_reportController', LostStockConfigController);
 
 LostStockConfigController.$inject = [

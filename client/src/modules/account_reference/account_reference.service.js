@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('AccountReferenceService', AccountReferenceService);
 
 AccountReferenceService.$inject = ['PrototypeApiService', 'FilterService', '$uibModal', 'appcache'];

@@ -8,7 +8,7 @@
  * @requires debug
  */
 
-const debug = require('debug')('bhima:mailer');
+const debug = require('debug')('opensigl:mailer');
 const nodemailer = require('nodemailer');
 
 // get ENV variables.

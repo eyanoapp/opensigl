@@ -25,7 +25,7 @@
     purchased by itself but for stock tracking purposes, it would be
     considered to be in a lot of 1 stock item.
 
-  - **SERVICE** - In the BHIMA perspective, a "Service" is a department in the
+  - **SERVICE** - In the OpenSIGL perspective, a "Service" is a department in the
     hospital such as "pediatrics", "ophthalmology", "internal medicine",
     "pharmacy", or "administration".  Services can be assigned invoices,
     consume medications, contain staff, and have both profit and loss centers.
@@ -34,14 +34,14 @@
     clinic.  Examples include drugs for treating patients, medical equipment
     and supplies, and administrative supplies.  "Stock" items are often
     purchased in "Lots" which include a number (or identifier) of the stock
-    items.  Where possible BHIMA uses the lot number provided by the
+    items.  Where possible OpenSIGL uses the lot number provided by the
     manufacturer (see this [Wikipedia article](https://en.wikipedia.org/wiki/Lot_number) 
     for more information).
 
   - **STOCK ADJUSTMENT** - When a physical inventory of stock reveals that the
     actual count of stock items differs from the count in the "Theoretical
-    Quantity" (as tracked by the BHIMA system), then an "Stock Adjustment"
-    should be performed to update the BHIMA system (and the "Theoretical
+    Quantity" (as tracked by the OpenSIGL system), then an "Stock Adjustment"
+    should be performed to update the OpenSIGL system (and the "Theoretical
     Quantity".
 
   - **STOCK ENTRY** - "Stock entries" occur when an item of stock is added to a

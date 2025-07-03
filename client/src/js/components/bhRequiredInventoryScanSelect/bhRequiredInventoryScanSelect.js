@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhRequiredInventoryScanSelect', {
     templateUrl : 'js/components/bhRequiredInventoryScanSelect/bhRequiredInventoryScanSelect.tmpl.html',
     controller  : RequiredInventoryScanSelectController,

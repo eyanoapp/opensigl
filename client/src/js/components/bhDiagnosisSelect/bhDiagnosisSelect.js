@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDiagnosisSelect', {
     templateUrl : 'js/components/bhDiagnosisSelect/bhDiagnosisSelect.html',
     controller  : DiagnosisSelectController,

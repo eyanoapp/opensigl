@@ -10,7 +10,7 @@ describe('test/client-unit/components/bhHiddenField', () => {
   `;
 
   // make sure the
-  beforeEach(module('pascalprecht.translate', 'bhima.services', 'bhima.components', 'templates'));
+  beforeEach(module('pascalprecht.translate', 'opensigl.services', 'opensigl.components', 'templates'));
 
   let $scope;
   let $compile;

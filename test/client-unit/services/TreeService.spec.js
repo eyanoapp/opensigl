@@ -8,7 +8,7 @@
 
 describe('test/client-unit/services/TreeService', () => {
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
   ));
 
   let tree;

@@ -3,7 +3,7 @@ describe('test/client-unit/services/ColorService', () => {
 
   let ColorService;
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'pascalprecht.translate'
   ));
 

@@ -1,5 +1,5 @@
 // TODO Handle HTTP exception errors (displayed contextually on form)
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('EmployeeController', EmployeeController);
 
 EmployeeController.$inject = [

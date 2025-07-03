@@ -7,8 +7,8 @@ describe('test/client-unit/services/PasswordMeterService', () => {
   beforeEach(module(
     'ngStorage',
     'angularMoment',
-    'bhima.services',
-    'bhima.mocks',
+    'opensigl.services',
+    'opensigl.mocks',
     'ui.router'
   ));
 

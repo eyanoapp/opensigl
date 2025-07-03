@@ -1,5 +1,5 @@
 /*
-  This file contains all the stored procedures used in bhima's database.  It
+  This file contains all the stored procedures used in opensigl's database.  It
   should be loaded after functions.sql.
 */
 
@@ -1989,7 +1989,7 @@ There is also a special facility for reversing transactions.  In double-entry
 accounting, to reverse a transaction, one only needs to flip the debits and
 credits of a previous transaction.  However, this does not capture the reason
 for which the transaction needed to be reversed.  To overcome this limitation,
-BHIMA implements ReverseTransaction(), which adds special text to the previous
+OpenSIGL implements ReverseTransaction(), which adds special text to the previous
 transaction's description, as well as points the voucher's "reference_uuid"
 column to the reversed transaction.  Despite a similar sounding name, the
 "reference_uuid" column is never written to the posting_journal.  It is used
@@ -2856,7 +2856,7 @@ END $$
 
 /*
 
-This section contains procedures for stock management in BHIMA.
+This section contains procedures for stock management in OpenSIGL.
 
 ---------------------------------------------------
 Import Stock Procedure
@@ -3757,7 +3757,7 @@ END $$
 
 /*
 
-This section contains procedures for the payroll in BHIMA.
+This section contains procedures for the payroll in OpenSIGL.
 
 */
 DROP PROCEDURE IF EXISTS `UpdateStaffingIndices`$$
@@ -4128,7 +4128,7 @@ Retrieves the cost center id for an account by using its account_id. Each accoun
 have one and only one cost center.  If an account does not have a cost center, NULL will be
 returned.
 
-NOTE(@jniles) - Currently, BHIMA does not guarantee that only one cost center is associated with an
+NOTE(@jniles) - Currently, OpenSIGL does not guarantee that only one cost center is associated with an
 account, but when we do make guarantees, we will be able to modify this function to do it.
 */
 DROP FUNCTION IF EXISTS GetCostCenterByAccountId$$
@@ -4149,7 +4149,7 @@ Retrieves the cost center id for a service using its service_uuid.  Each service
 and only one cost center assocaited with it.  If a service does not have a cost center, NULL will
 be returned.
 
-NOTE(@jniles) - Currently, BHIMA does not guarantee that only one cost center is associated with a
+NOTE(@jniles) - Currently, OpenSIGL does not guarantee that only one cost center is associated with a
 service, but when we do make guarantees, we will be able to modify this function to do it.
 */
 DROP FUNCTION IF EXISTS GetCostCenterByServiceUuid$$

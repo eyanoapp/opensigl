@@ -10,4 +10,4 @@ Le module nécessite les [filtres par défaut](/grid-features.md) standard de li
 
 #### La grille
 
-Le cœur du module est une grille supportant un grand nombre des [caractéristiques de la grille](/grid-features.md) présentes dans BHIMA. Cette vue diffère du Journal en limitant les enregistrements à un seul compte. En règle générale, la vue montrera un seul côté d'une transaction. Pour afficher l’autre côté de la transaction, vous pouvez suivre les liens de la colonne **Transaction ID** pour afficher la transaction dans le [Journal](/journal-module.md).
+Le cœur du module est une grille supportant un grand nombre des [caractéristiques de la grille](/grid-features.md) présentes dans OpenSIGL. Cette vue diffère du Journal en limitant les enregistrements à un seul compte. En règle générale, la vue montrera un seul côté d'une transaction. Pour afficher l’autre côté de la transaction, vous pouvez suivre les liens de la colonne **Transaction ID** pour afficher la transaction dans le [Journal](/journal-module.md).

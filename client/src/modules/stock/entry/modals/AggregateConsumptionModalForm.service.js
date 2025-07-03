@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('AggregateConsumptionModalForm', AggregateConsumptionModalForm);
 
 AggregateConsumptionModalForm.$inject = ['uuid', 'moment'];

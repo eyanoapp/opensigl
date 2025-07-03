@@ -25,4 +25,4 @@ Note that the values (debits and credit) of a transaction can be changed, but th
 
 ### Modifying Posted Transactions
 
-If a transaction has been posted, it should not be further modified.  However, in practice, it may be necessary to correct posted mistakes.  To facilitate this procedure, BHIMA lets the user edit transactions as if they were unposted, using the same mechanics as [unposted transactions](#modifying-transactions).  Underneath, the software generates a reversing record and then a new record with the previous and modified values.
+If a transaction has been posted, it should not be further modified.  However, in practice, it may be necessary to correct posted mistakes.  To facilitate this procedure, OpenSIGL lets the user edit transactions as if they were unposted, using the same mechanics as [unposted transactions](#modifying-transactions).  Underneath, the software generates a reversing record and then a new record with the previous and modified values.

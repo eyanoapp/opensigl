@@ -7,7 +7,7 @@
     <b>Attention!</b> A user must be assigned to a depot before it will be visible
     for them to use.
 
-    To avoid user mistakes and fraud, BHIMA requires that each user be individually
+    To avoid user mistakes and fraud, OpenSIGL requires that each user be individually
     assigned to a depot similar to cashboxes.
   </p>
 </div>
@@ -35,12 +35,12 @@ edit form.
 To create a new depot, click on the **[Add Depot]** button in the top right
 corner of the page.  This opens a modal window to enter the depot information.
 While creating a new depot, you will need to specify the supplier.  For more
-details on creating and editing suppliers within BHIMA, please see the
+details on creating and editing suppliers within OpenSIGL, please see the
 [Supplier documentation](./supplier.md).
 
 
 ## Depot Heirarchies
-BHIMA allows sites to structure their depots in a tree hierachary of parents
+OpenSIGL allows sites to structure their depots in a tree hierachary of parents
 and children, similar to the chart of accounts.  This feature exists to allow
 easier permissions management.  If a user is responsible for many depots in a
 region, it may make sense to group these regionally and assign a user the
@@ -71,7 +71,7 @@ Use the **Action** link on the right end of the line for the user you wish to
 update and click on the "Depot Management" menu item.  A form will appear that
 will allow you to enter the name of the depot you want to obtain permission to
 manage. Click in the input box under the "Add:" and begin typing the depot
-name. After you type in a few characters, BHIMA will look up the depot by name
+name. After you type in a few characters, OpenSIGL will look up the depot by name
 and the full name should appear. Click on it to select it. The depot name
 should now be shown.
 

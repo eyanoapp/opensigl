@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('InventoryUnitsController', InventoryUnitsController);
 
 // dependencies injection

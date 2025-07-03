@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('RoleActionsController', RoleActionsController);
 RoleActionsController.$inject = [
   'data', '$uibModalInstance', 'SessionService',

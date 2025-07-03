@@ -1,7 +1,7 @@
-# Step-Down Cost Allocation Analysis with BHIMA
+# Step-Down Cost Allocation Analysis with OpenSIGL
 
 There are several steps necessary to set and perform *step-down* cost
-allocation with BHIMA:
+allocation with OpenSIGL:
 
 1. [Choose the cost centers](#chose-cost-centers)
 2. [Set up allocation bases for each Cost Center](#define-cost-center-allocation-bases)
@@ -12,12 +12,12 @@ allocation with BHIMA:
 ## Chose Cost Centers
 
 Before explaining **Cost Centers**, it is useful to understand the term
-**Service** in BHIMA.  *Services* are often called *departments* in typical
+**Service** in OpenSIGL.  *Services* are often called *departments* in typical
 hospitals.  A *service* is usually focused on a specific function within the
 hospital.  When patients are admitted, they are initially assigned to a
 specific *service*.  Over the course of their visit, patients may interact
 with multiple services.  Employees are assigned to one *Service* and are
-usually managed by someone in that *Service*.  In BHIMA, a *Service* or
+usually managed by someone in that *Service*.  In OpenSIGL, a *Service* or
 *Department* and is often called a *Cost Center*.  However, more than one
 Service can be assigned to a single cost center.  Usually, if multiple
 services are closely related they can be considered as one *Cost Center*.
@@ -30,14 +30,14 @@ and receiving revenue from outside sources -- or is the department primarily
 serving other departments in the hospital?  It is possible there are no
 clear-cut answers to these questions but for this analysis, it is necessary to
 classify each department by whether it is **primarily** a *revenue* department
-(called **principal** in BHIMA) or not (called **auxiliary** in BHIMA).
+(called **principal** in OpenSIGL) or not (called **auxiliary** in OpenSIGL).
 Perhaps a department primarily serves other departments but occasionally
 receives payments for some service.  In this case it would probably make sense
-to consider this a non-revenue department.  In BHIMA, a *Cost Center* can
+to consider this a non-revenue department.  In OpenSIGL, a *Cost Center* can
 either be a *revenue* or *non-revenue* department/service (or combination).
 
 In some cases, deciding whether a department is a *revenue* department or not
-might be difficult.  The BHIMA software makes it straight-forward to
+might be difficult.  The OpenSIGL software makes it straight-forward to
 experiment and try the cost allocation analysis with either choice.
 
 A key end goal in these considerations to produce the total direct and
@@ -59,9 +59,9 @@ the allocation bases (in the next section).
 ## Define Cost Center Allocation Bases
 
 Choosing an *allocation basis* for each non-revenue department is the next
-step.  BHIMA defines several typical allocation bases which can be used as
+step.  OpenSIGL defines several typical allocation bases which can be used as
 needed.  It is also possible to define new allocation bases, if needed.  Here
-are the *allocation bases* predefined in BHIMA along with some examples of the
+are the *allocation bases* predefined in OpenSIGL along with some examples of the
 services (departments) that might use them.
 
 | Name      | Description              | Units         | Could be used by |
@@ -90,7 +90,7 @@ department area).
 It is also necessary to determine the values of each allocation basis for each
 department.  For instance, if a service department (e.g., Housekeeping) uses
 *area* for its allocation basis it will be necessary to determine the area of
-each department.  In some cases, once BHIMA is set up properly, it can
+each department.  In some cases, once OpenSIGL is set up properly, it can
 determine the values of some of these *allocation bases* (eg, Number of
 employees).  In many cases, particularly with *allocation bases* that are
 defined by the user, they will have to be entered manually.
@@ -99,11 +99,11 @@ The result of this step should be a list of *non-revenue* departments (cost
 centers) along with the allocation basis selected for each department.
 
 The following section will show how to construct the cost centers and
-allocation bases in BHIMA.
+allocation bases in OpenSIGL.
 
 ## Set Up Cost Centers
 
-Setting up cost centers in BHIMA includes the following phases:
+Setting up cost centers in OpenSIGL includes the following phases:
 
  1. [Creating the Cost Centers](#create-cost-centers) - Create cost centers
     (from the list constructed in the previous step). This includes assigning
@@ -117,7 +117,7 @@ Setting up cost centers in BHIMA includes the following phases:
  
 ### Create Cost Centers
 
-Open the BHIMA `Cost Centers` registry page.
+Open the OpenSIGL `Cost Centers` registry page.
 <div class="bs-callout bs-callout-success">
   <p>
   <i>menu</i> > Cost Center Management > <strong>Cost Centers</strong> <br>
@@ -319,9 +319,9 @@ cost center.
 #### Account References
 
 **Account References** define sets of accounts that are used in several ways
-in BHIMA, including Cost Centers.  **Account References** are a very flexible
+in OpenSIGL, including Cost Centers.  **Account References** are a very flexible
 way to define a set of accounts be defining accounts to be included and
-accounts that will be excluded.  In BHIMA, accounts are structured in a
+accounts that will be excluded.  In OpenSIGL, accounts are structured in a
 hierarchical way.  So if an account with child accounts is used in an account
 reference, all the child accounts for that parent account will be included --
 unless any accounts are excluded.  To see and edit **account references**,
@@ -395,7 +395,7 @@ selected, if appropriate.
 After making sure that all cost centers have appropriate **Account
 References** and that the **Account References** are defined correctly, an
 additional step is necessary to update the accounts based on the **Account
-Reference** defined for each cost center. Open the BHIMA **Cost Centers**
+Reference** defined for each cost center. Open the OpenSIGL **Cost Centers**
 registry page.
 <div class="bs-callout bs-callout-success">
   <p>

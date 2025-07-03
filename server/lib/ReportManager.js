@@ -3,7 +3,7 @@
  * @overview ReportManager
  *
  * @description
- * The report manager is a wrapper for bhima's reporting capabilities, providing
+ * The report manager is a wrapper for opensigl's reporting capabilities, providing
  * easy ways to create JSON/HTML/PDF reports from templates and data.
  *
  * @todo

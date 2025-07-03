@@ -9,7 +9,7 @@ describe('test/client-unit/components/bhBarcodeScanner', () => {
   `;
 
   // make sure the modules are correctly loaded.
-  beforeEach(module('pascalprecht.translate', 'bhima.services', 'templates', 'bhima.components', 'angularMoment', 'ui.bootstrap'));
+  beforeEach(module('pascalprecht.translate', 'opensigl.services', 'templates', 'opensigl.components', 'angularMoment', 'ui.bootstrap'));
 
   let $scope;
   let $compile;

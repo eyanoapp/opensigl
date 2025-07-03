@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
 
 /**
  * Location Selection Component - bhLocationSelect
@@ -19,7 +19,7 @@ LocationSelectController.$inject = ['LocationService', '$rootScope', '$scope', '
  * Location Select Controller
  *
  * This component allows easy selection and validation of locations to be used
- * throughout bhima.
+ * throughout opensigl.
  *
  * COMPONENT LIFECYCLE
  *

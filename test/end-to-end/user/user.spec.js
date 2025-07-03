@@ -26,7 +26,7 @@ test.describe('User Management Page', () => {
   const mockUserCreate = {
     display_name : 'User test',
     username : 'Login test',
-    email : 'test@bhima.org',
+    email : 'test@opensigl.org',
     project : 'Test Project A',
     password : 'testtest134@IMA',
     passwordConfirm : 'testtest134@IMA',
@@ -35,7 +35,7 @@ test.describe('User Management Page', () => {
   const mockUserEdit = {
     display_name : 'User test edit',
     username : 'Login test edit',
-    email : 'test_edit@bhima.org',
+    email : 'test_edit@opensigl.org',
     project : 'Test Project C',
     password : 'testtestedit1233@D',
   };

@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('BaseReportService', BaseReportService);
 
 BaseReportService.$inject = ['$http', '$uibModal', 'util', 'LanguageService'];

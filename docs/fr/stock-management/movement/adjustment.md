@@ -18,7 +18,7 @@ Il faut noter que chaque opération d'ajustement de stock concerne des dépôts,
   <strong>Vérifier le dépot séléctionné</strong> : vous devez toujours vous rassurer que le dépôt séléctionné est le bon dépôt; si ce n'est pas le cas, allez dans <em>Menu > <strong>Changer de dépôt</strong></em> pour séléctionner le bon dépôt.
 </div>
 
-L'ajustement sert à soit augmenter, soit à diminuer la quantité d'un stock dans le système lorsque il y a une différence entre le stock physique et le stock dans BHIMA
+L'ajustement sert à soit augmenter, soit à diminuer la quantité d'un stock dans le système lorsque il y a une différence entre le stock physique et le stock dans OpenSIGL
 
 - Cliquer sur le bouton `Augmenter` pour une augmentation dans le système ou `Diminuer` pour une diminution dans le système.
 - Vérifier :

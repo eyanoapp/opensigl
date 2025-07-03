@@ -6,8 +6,8 @@ describe('test/client-unit/services/StockExitFormHelper', () => {
 
   //
   beforeEach(module(
-    'bhima.services',
-    'bhima.constants', 'ui.router', 'angularMoment', 'ngStorage', 'pascalprecht.translate',
+    'opensigl.services',
+    'opensigl.constants', 'ui.router', 'angularMoment', 'ngStorage', 'pascalprecht.translate',
     'ui.bootstrap',
     'tmh.dynamicLocale',
   ));

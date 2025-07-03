@@ -1,4 +1,4 @@
-angular.module('bhima.routes')
+angular.module('opensigl.routes')
   .config(['$stateProvider', accountStateProvider]);
 
 function accountStateProvider($stateProvider) {

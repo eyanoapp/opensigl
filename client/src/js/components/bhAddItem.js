@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhAddItem', {
     templateUrl : 'modules/templates/bhAddItem.tmpl.html',
     controller  : addItemController,

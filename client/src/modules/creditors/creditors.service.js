@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('CreditorService', CreditorService);
 
 CreditorService.$inject = ['PrototypeApiService', 'CreditorGroupService'];

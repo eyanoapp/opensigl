@@ -1,4 +1,4 @@
-angular.module('bhima.filters')
+angular.module('opensigl.filters')
   .filter('percentage', PercentageFilter);
 
 /**

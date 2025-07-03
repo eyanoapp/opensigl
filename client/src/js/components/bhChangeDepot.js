@@ -1,4 +1,4 @@
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .component('bhChangeDepot', {
     template : `
     <a href="" ng-click="$ctrl.changeDepot()" data-action="change-depot">

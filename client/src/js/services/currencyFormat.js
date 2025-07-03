@@ -4,7 +4,7 @@
  *
  * @returns {object} Wrapper object exposing request configuration method
  */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('currencyFormat', currencyFormat);
 
 currencyFormat.$inject = [
@@ -19,7 +19,7 @@ function currencyFormat(Currencies, $http, Store) {
   const fetchingKeys = [];
   const invalidCurrency = { supported : false };
 
-  // Request all defined BHIMA currencies
+  // Request all defined OpenSIGL currencies
   Currencies.read()
     .then(currencies => {
       supportedCurrencies.setData(currencies);
@@ -61,7 +61,7 @@ function currencyFormat(Currencies, $http, Store) {
   /**
    * Seach format configuration
    *
-   * @param {number} currencyId - ID of currency to be checked against BHIMA's database
+   * @param {number} currencyId - ID of currency to be checked against OpenSIGL's database
    * @returns {object} Returns format configuration if it has been found and fetched,
    * objects reporting unsupported status if configuration or currency cannot be found
    */

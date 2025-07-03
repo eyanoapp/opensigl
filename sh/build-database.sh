@@ -3,10 +3,10 @@
 # bash strict mode
 set -o pipefail
 
-# This assumes you run tests from the top level bhima directory.
+# This assumes you run tests from the top level opensigl directory.
 
 echo "[build]"
-echo "Building BHIMA Database"
+echo "Building OpenSIGL Database"
 
 set -a
 source .env || { echo '[build-database.sh] did not load .env, using variables from environment.' ; }
@@ -46,7 +46,7 @@ mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/m
 echo "[build] default data"
 mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/05-icd10.sql || { echo 'failed to import default data into DB 1/2' ; exit 1; }
 
-mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/06-bhima.sql || { echo 'failed to import default data into DB 2/2' ; exit 1; }
+mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < server/models/06-opensigl.sql || { echo 'failed to import default data into DB 2/2' ; exit 1; }
 
 echo "[build] test data"
 mysql -u "$DB_USER" -p"$DB_PASS" -h"$DB_HOST" -P"$DB_PORT" "$DB_NAME" < test/data.sql || { echo 'failed to import test data into DB' ; exit 1; }

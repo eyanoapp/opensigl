@@ -7,7 +7,7 @@ const templateStr = `
     <span translate>{{ $ctrl.display }}</span>
   </a>`;
 
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhJournalLink', {
     template : templateStr,
     bindings : { recordUuid : '<', display : '@' },

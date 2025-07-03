@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDateEditor', {
     templateUrl : 'modules/templates/bhDateEditor.tmpl.html',
     controller : bhDateEditorController,

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPatientFinancialActivity', {
     controller   : PatientFinancialActivityCtrl,
     templateUrl  : 'modules/patients/record/bh-patient-financial-activity.html',

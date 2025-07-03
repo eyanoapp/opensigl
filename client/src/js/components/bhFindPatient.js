@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFindPatient', {
     controller : FindPatientComponent,
     templateUrl : 'modules/templates/bhFindPatient.tmpl.html',
@@ -122,7 +122,7 @@ function FindPatientComponent(Patients, AppCache, Notify, Session, bhConstants, 
    *
    * @param {string} ref -patient hospital reference (e.g. HBB123 or 123)
    *
-   * @description This function makes a call to BHIMA API for finding a patient
+   * @description This function makes a call to OpenSIGL API for finding a patient
    * who is identified by a hospital reference. (e.g. HBB123)
    * if the user sends the number XXX instead of HBBXXX, the service will tail the number
    * with the current user project abbreviation to have HBBXXX for example.
@@ -156,7 +156,7 @@ function FindPatientComponent(Patients, AppCache, Notify, Session, bhConstants, 
    *
    * @param {string} text Patient name (display_name)
    *
-   * @description This function make a call to BHIMA API for getting patients
+   * @description This function make a call to OpenSIGL API for getting patients
    * according the name (display_name).
    *
    * @return {Array} An array of patients

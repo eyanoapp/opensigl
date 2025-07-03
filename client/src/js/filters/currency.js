@@ -1,6 +1,6 @@
 /* eslint-disable prefer-template, no-useless-escape, no-param-reassign */
 
-angular.module('bhima.filters')
+angular.module('opensigl.filters')
   .filter('currency', CurrencyFilter);
 
 CurrencyFilter.$inject = [
@@ -11,7 +11,7 @@ function CurrencyFilter(CurrencyFormat, Session, $translate) {
   const requireCurrencyDefinition = false;
 
   /**
-   * BHIMA fork of angular's native currency filter.
+   * OpenSIGL fork of angular's native currency filter.
    * Allows currency to be defined for each filter individually.
    * Currency IDs are used to fetch configuration files asynchronously from the server.
    * Completely separates locale from currency format to facilitate reliable accounting.
@@ -75,7 +75,7 @@ function CurrencyFilter(CurrencyFormat, Session, $translate) {
     return $translate.instant(message).concat(' ', amount || '?');
   }
 
-  // Formatting method directly from angular native filter - does not support BHIMA coding guidelines
+  // Formatting method directly from angular native filter - does not support OpenSIGL coding guidelines
   const DECIMAL_SEP = '.';
 
   /**

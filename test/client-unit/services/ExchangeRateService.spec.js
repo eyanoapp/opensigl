@@ -6,9 +6,9 @@ describe('test/client-unit/services/ExchangeRateService', () => {
   let Mocks;
 
   beforeEach(module(
-    'bhima.services',
+    'opensigl.services',
     'angularMoment',
-    'bhima.mocks',
+    'opensigl.mocks',
     'ngStorage',
     'ui.router',
     'ui.bootstrap',

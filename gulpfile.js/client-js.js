@@ -28,7 +28,7 @@ const {
  * @description
  * Removes previous JS builds from the client.
  */
-const cleanJS = () => del(`${CLIENT_FOLDER}/js/bhima`);
+const cleanJS = () => del(`${CLIENT_FOLDER}/js/opensigl`);
 
 const typescriptConfig = {
   allowJs : true,
@@ -36,18 +36,18 @@ const typescriptConfig = {
   lib : ['es6', 'dom'],
   module : 'none',
   moduleResolution : 'Node',
-  outFile : 'js/bhima/bhima.min.js',
+  outFile : 'js/opensigl/opensigl.min.js',
 };
 
 /**
  * @function compileTypescript
  *
  * @description
- * Collect all BHIMA application code and return a single versioned JS file.
+ * Collect all OpenSIGL application code and return a single versioned JS file.
  */
 function compileTypescriptForDevelopment() {
   return src(CLIENT_JS)
-    .pipe(concat('bhima.concat.js'))
+    .pipe(concat('opensigl.concat.js'))
     .pipe(typescript(typescriptConfig))
     .pipe(iife())
     .pipe(dest(CLIENT_FOLDER));
@@ -62,7 +62,7 @@ function compileTypescriptForDevelopment() {
  */
 function compileTypescriptForProduction() {
   return src(CLIENT_JS)
-    .pipe(concat('bhima.concat.js'))
+    .pipe(concat('opensigl.concat.js'))
     .pipe(typescript(typescriptConfig))
     .pipe(uglify({ mangle : true }))
     .pipe(iife())

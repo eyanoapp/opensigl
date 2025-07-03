@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('StockSettingsService', StockSettingsService);
 
 StockSettingsService.$inject = ['$http', 'util'];

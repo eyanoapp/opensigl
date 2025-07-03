@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhGradeSelect', {
     templateUrl : 'modules/templates/bhGradeSelect.tmpl.html',
     controller  : GradeSelectController,

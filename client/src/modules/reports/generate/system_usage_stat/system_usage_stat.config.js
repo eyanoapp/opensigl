@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('system_usage_statController', systemUsageStatController);
 
 systemUsageStatController.$inject = [

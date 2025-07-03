@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockOut', {
     templateUrl : 'js/components/bhStockOut/bhStockOut.html',
     controller  : bhStockOutController,

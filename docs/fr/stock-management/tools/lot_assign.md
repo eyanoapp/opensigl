@@ -8,7 +8,7 @@ L'assignation signifie que l'on considère que des articles se trouvent chez une
 
 Par exemple, nous sommes dans une entreprise qui donne à ses employés des ordinateurs de travail; ces ordinateurs sont des ordinateurs de l'entreprise mais sont assignés aux employés. Un ordinateur peut être assigné à employé puis à un autre.
 
-Dans BHIMA on assigne des lots à des entités.
+Dans OpenSIGL on assigne des lots à des entités.
 
 Les entités peuvent être :
 - des personnes

@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('VoucherService', VoucherService);
 
 VoucherService.$inject = [
@@ -138,7 +138,7 @@ function VoucherService(
    *
    * @description
    * This method reverses a transaction.
-   * bhima should automatically be able to reverse any transaction in the
+   * opensigl should automatically be able to reverse any transaction in the
    * posting_journal by creating a new transaction that is an exact duplicate of
    * the original transaction with the debits and credits switched.
    */

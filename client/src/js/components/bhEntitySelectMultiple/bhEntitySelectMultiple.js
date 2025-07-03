@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhEntitySelectMultiple', {
     templateUrl : 'js/components/bhEntitySelectMultiple/bhEntitySelectMultiple.tmpl.html',
     controller  : EntitySelectMultipleController,

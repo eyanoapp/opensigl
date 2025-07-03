@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('SupplierController', SupplierController); SupplierController.$inject = [
   'SupplierService', 'CreditorGroupService', 'uiGridConstants',
   'NotifyService', '$uibModal', 'ModalService',

@@ -35,7 +35,7 @@ function InternalServerError(description) {
   // HTTP status code
   this.status = 500;
 
-  // bhima status code (for $translation)
+  // opensigl status code (for $translation)
   this.code = 'ERRORS.INTERNAL_SERVER_ERROR';
 
   // default to an empty string if no description passed in

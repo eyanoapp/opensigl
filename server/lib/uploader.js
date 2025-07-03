@@ -39,7 +39,7 @@ const defaultDir = 'uploads';
 const dir = process.env.UPLOAD_DIR || defaultDir;
 // NOTE: 'dir' must be a relative path (for http requests to work)
 if (path.isAbsolute(dir) || dir.startsWith('..')) {
-  throw new Error(`UPLOAD_DIR (${dir}) must be a relative path within the BHIMA software installation!`);
+  throw new Error(`UPLOAD_DIR (${dir}) must be a relative path within the OpenSIGL software installation!`);
 }
 const rootDir = path.resolve(`${__dirname}/../..`);
 const fsdir = path.join(rootDir, dir); // global path

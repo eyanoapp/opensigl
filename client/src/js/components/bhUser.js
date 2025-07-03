@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhUser', {
     templateUrl : 'modules/templates/bhUser.tmpl.html',
     controller : bhUser,

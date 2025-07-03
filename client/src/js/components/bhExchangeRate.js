@@ -4,7 +4,7 @@
  * @description
  * This component allows to display the exchange rate
  */
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhExchangeRate', {
     templateUrl : 'modules/templates/bhExchangeRate.tmpl.html',
     controller : bhExchangeRateController,

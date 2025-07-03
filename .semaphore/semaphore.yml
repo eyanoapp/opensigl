@@ -24,7 +24,7 @@ blocks:
           - cache restore
       env_vars:
         - name: DB_USER
-          value: bhima
+          value: opensigl
         - name: DB_HOST
           value: 127.0.0.1
         - name: DB_PASS
@@ -84,7 +84,7 @@ blocks:
           - cache restore
       env_vars:
         - name: DB_USER
-          value: bhima
+          value: opensigl
         - name: DB_HOST
           value: 127.0.0.1
         - name: DB_PASS

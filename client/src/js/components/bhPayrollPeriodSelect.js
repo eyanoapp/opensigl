@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPayrollPeriodSelect', {
     templateUrl : 'modules/templates/bhPayrollPeriodSelect.tmpl.html',
     controller  : PayrollPeriodSelectController,

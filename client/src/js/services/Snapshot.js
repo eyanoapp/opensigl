@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('SnapshotService', SnapshotService);
 
 SnapshotService.$inject = ['$uibModal', '$http'];
@@ -30,7 +30,7 @@ function SnapshotService($uibModal, $http) {
 }
 
 // the controler for this service
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('snapshotController', snapshotController);
 
 snapshotController.$inject = ['$uibModalInstance'];

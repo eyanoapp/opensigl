@@ -13,7 +13,7 @@
   </ul>
 
 */
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhDropdownMenuAutoDropup', ['$document', '$window', 'util', ($document, $window, util) => {
     return {
       restrict : 'AC',

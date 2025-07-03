@@ -1,14 +1,14 @@
 # Aperçu des modules financiers
 
-Avant d'entrer dans les détails de chaque module financier, il est important de garder à l'esprit le flux de données global dans BHIMA.
+Avant d'entrer dans les détails de chaque module financier, il est important de garder à l'esprit le flux de données global dans OpenSIGL.
 
 ![Financial Overview](../../images/finance/Financial Overview - Receipts through Reports.svg)
 
-Le diagramme ci-dessus montre le flux de saisie des données dans le système, couvrant les trois enregistrements de base de BHIMA: **Paiements en espèce**, **Factures patient** et **Pièces de journal**.
+Le diagramme ci-dessus montre le flux de saisie des données dans le système, couvrant les trois enregistrements de base de OpenSIGL: **Paiements en espèce**, **Factures patient** et **Pièces de journal**.
 
 Chaque enregistrement est sauvegardé par une transaction écrite dans le [Journal](/ledgers/posting-journal.md). Grâce à un processus de validation appelé balance de contrôle, les transactions dans le journal sont enregistrées dans le [grand livre](/ledgers/general-ledger.md), après quoi la transaction est inaltérable.
 
-Toutes les activités financières enregistrées avec BHIMA sont représentées par deux entités:
+Toutes les activités financières enregistrées avec OpenSIGL sont représentées par deux entités:
 
 1. L'enregistrement d'origine contient tous les détails et métadonnées concernant l'activité. Il peut s'agir d'un paiement en espèces, d'une facture patient ou d'un journal.
 
@@ -25,7 +25,7 @@ La seule exception à cette règle est la suppression. Si une transaction ou un 
 <div class = "bs-callout bs-callout-success">
   <h4> Pour supprimer ou inverser?</h4>
   <p style="text-align:justify">
-  Pour corriger les erreurs, les transactions dans BHIMA peuvent être soit supprimées, soit annulées via une écriture de correction ultérieure. La suppression est une suppression permanente d'une transaction et est souvent utilisée pour les erreurs temporaires des utilisateurs qui sont immédiatement corrigées. Reversal écrit une deuxième transaction qui a la même valeur opposée à la transaction "erronée" d'origine.
+  Pour corriger les erreurs, les transactions dans OpenSIGL peuvent être soit supprimées, soit annulées via une écriture de correction ultérieure. La suppression est une suppression permanente d'une transaction et est souvent utilisée pour les erreurs temporaires des utilisateurs qui sont immédiatement corrigées. Reversal écrit une deuxième transaction qui a la même valeur opposée à la transaction "erronée" d'origine.
   </p>
 
   <p style="text-align:justify">
@@ -40,7 +40,7 @@ Une fois qu'une transaction est créée dans le journal via un coupon, une factu
 ## Comptabilité en partie double
 
 <p style="text-align:justify">
-BHIMA est un logiciel de comptabilité en partie double. Dans la comptabilité en partie double, les transactions sont composées de deux lignes ou plus, chacune correspondant à un seul compte. Les valeurs entrées ou sorties des comptes sont enregistrées sous la forme <em>debits</em> ou <em>credits</em>.
+OpenSIGL est un logiciel de comptabilité en partie double. Dans la comptabilité en partie double, les transactions sont composées de deux lignes ou plus, chacune correspondant à un seul compte. Les valeurs entrées ou sorties des comptes sont enregistrées sous la forme <em>debits</em> ou <em>credits</em>.
 
 Les débits et les crédits sont des opposés, mais leur comportement n'est pas toujours intuitif ni bien défini. En général, on peut considérer les débits comme des nombres positifs et les crédits comme des nombres négatifs.
 </p>

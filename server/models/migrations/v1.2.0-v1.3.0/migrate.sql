@@ -208,4 +208,4 @@ INSERT INTO `survey_form_type` (`label`, `type`, `is_list`) VALUES
   ('FORM.LABELS.CALCULATION', 'calculation', 0),
   ('FORM.LABELS.TEXT_AREA', 'text_area', 0);
 
--- BHIMA DATA COLLECTOR
+-- OpenSIGL DATA COLLECTOR

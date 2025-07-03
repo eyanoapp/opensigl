@@ -6,7 +6,7 @@ describe('test/client-unit/services/AccountService', () => {
   let $interval;
   let $verifyNoPendingTasks;
 
-  beforeEach(module('bhima.services', 'bhima.mocks', 'angularMoment', 'bhima.constants'));
+  beforeEach(module('opensigl.services', 'opensigl.mocks', 'angularMoment', 'opensigl.constants'));
 
   beforeEach(inject((_$httpBackend_, AccountService, MockDataService, _$interval_, _$verifyNoPendingTasks_) => {
     $httpBackend = _$httpBackend_;

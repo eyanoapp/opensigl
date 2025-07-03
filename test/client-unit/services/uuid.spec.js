@@ -2,7 +2,7 @@
 describe('test/client-unit/services/uuid', () => {
 
   let UUID;
-  beforeEach(module('bhima.services'));
+  beforeEach(module('opensigl.services'));
 
   beforeEach(inject(_uuid_ => {
     UUID = _uuid_;

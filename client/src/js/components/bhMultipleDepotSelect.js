@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhMultipleDepotSelect', {
     templateUrl : 'modules/templates/bhMultipleDepotSelect.tmpl.html',
     controller  : MultipleDepotSelectController,

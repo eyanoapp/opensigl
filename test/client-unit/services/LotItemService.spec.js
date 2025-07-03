@@ -60,7 +60,7 @@ describe('test/client-unit/services/LotItemService', () => {
     tracking_consumption : 1,
   }];
 
-  beforeEach(module('bhima.services', 'pascalprecht.translate'));
+  beforeEach(module('opensigl.services', 'pascalprecht.translate'));
 
   beforeEach(inject(_LotItemService_ => {
     Lot = _LotItemService_;

@@ -1,4 +1,4 @@
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhDropdownMenu', () => {
     return {
       restrict : 'E',
@@ -18,7 +18,7 @@ angular.module('bhima.directives')
     };
   });
 
-angular.module('bhima.directives')
+angular.module('opensigl.directives')
   .directive('bhDropdownMenuItem', () => {
     return {
       restrict : 'E',

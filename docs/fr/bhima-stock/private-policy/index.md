@@ -1,7 +1,7 @@
 ## Politique de confidentialité
 
 ### 1. Introduction
-Cette politique de confidentialité décrit comment BHIMA STOCK (ci-après « l’application ») collecte, utilise et partage vos informations lorsque vous utilisez notre application, conformément aux exigences de Google Play et des lois en vigueur (RGPD, CCPA).
+Cette politique de confidentialité décrit comment OpenSIGL STOCK (ci-après « l’application ») collecte, utilise et partage vos informations lorsque vous utilisez notre application, conformément aux exigences de Google Play et des lois en vigueur (RGPD, CCPA).
 
 ### 2. Données collectées
 Nous collectons les informations suivantes :

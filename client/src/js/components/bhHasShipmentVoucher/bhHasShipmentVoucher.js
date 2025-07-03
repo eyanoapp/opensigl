@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhHasShipmentVoucher', {
     templateUrl : 'js/components/bhHasShipmentVoucher/bhHasShipmentVoucher.html',
     controller  : bhHasShipmentVoucherController,

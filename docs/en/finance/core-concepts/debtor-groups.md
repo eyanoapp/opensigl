@@ -4,11 +4,11 @@
   <p><b>Debtors</b> are individuals or organisations that can procure goods and services from the medical institution and are invoiced as a result.  The vast majority of debtors will be patients, though other kinds of clients may also be modeled as debtors in certain contexts.</p>
 </div>
 
-All debtors in BHIMA are organized into Debtor Groups.  Debtor Groups determine the accounts and billing structure for individual debtors.
+All debtors in OpenSIGL are organized into Debtor Groups.  Debtor Groups determine the accounts and billing structure for individual debtors.
 
 ## Required Information
 
-Because debtor groups are principally a financial concept, BHIMA requires certain financial information to create one.  This includes:
+Because debtor groups are principally a financial concept, OpenSIGL requires certain financial information to create one.  This includes:
 
 1. **Name** - the name of the group that will show up in labels and dropdown menus throughout the application.
 2. **Locked** - locks the group to prevent patient assignment and further invoicing of group members.
@@ -26,7 +26,7 @@ Optional information includes:
 
 ## Max Debt
 
-BHIMA implements guards to prevent debtors from largely overdrafting their accounts at the group level.  A maximum amount of debt (measured in the enterprise currency) is specified for debtors in the debtor group.  If the total debt of the group exceeds this amount, no further invoices will be generated for members of the group until the debt is paid down.  
+OpenSIGL implements guards to prevent debtors from largely overdrafting their accounts at the group level.  A maximum amount of debt (measured in the enterprise currency) is specified for debtors in the debtor group.  If the total debt of the group exceeds this amount, no further invoices will be generated for members of the group until the debt is paid down.  
 
 It is important to note that this guard kicks in _after the debt limit is exceeded_.  In other words, it will not protect against transactions for excessive amounts, but instead prevent runaway billing farther than an agreed upon limit.  This is to ensure that institutional and contractual policies are respected, rather than gatekeeping the debt that can be incurred by any single transaction.
 
@@ -34,13 +34,13 @@ It is important to note that this guard kicks in _after the debt limit is exceed
 
 A "convention" is a collective of individuals who are under contract with the medical institution to pay for care of individual members.  It is analogous to a health management organisation (HMO).  Instead of invoicing individual members of the group, the institution will invoice the group for medical care provided to any member of the group.
 
-In BHIMA, conventions are non-cash clients.  This means BHIMA will _block payments at the cash window_ for patients that are in a convention, to prevent double-payment.  Instead, conventions are expected to pay periodically in bulk for their members using [journal vouchers](../bookkeeping/vouchers.md).  Using journal vouchers allows much finer-grained control over payments made by the organisation.
+In OpenSIGL, conventions are non-cash clients.  This means OpenSIGL will _block payments at the cash window_ for patients that are in a convention, to prevent double-payment.  Instead, conventions are expected to pay periodically in bulk for their members using [journal vouchers](../bookkeeping/vouchers.md).  Using journal vouchers allows much finer-grained control over payments made by the organisation.
 
 ## Group Policies
 
 Hospitals often charge patients associated with organizations or health maintenance organisations (HMOs) full price to subsidize care for patients who cannot afford to pay. Conversely, some debtor groups may have agreements with the hospital to waive administrative fees.
 
-To manage these scenarios, BHIMA provides administrators with a "group policies" feature. This feature allows administrators to configure exemptions for specific groups, overriding standard rules for subsidies, discounts, or administrative fees that would otherwise apply to individual group members.
+To manage these scenarios, OpenSIGL provides administrators with a "group policies" feature. This feature allows administrators to configure exemptions for specific groups, overriding standard rules for subsidies, discounts, or administrative fees that would otherwise apply to individual group members.
 
 ## Subscriptions
 

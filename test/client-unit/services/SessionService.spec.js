@@ -10,13 +10,13 @@ describe('test/client-unit/services/SessionService', () => {
   let enterprise;
   let stockSettings;
 
-  // load bhima.services
+  // load opensigl.services
   beforeEach(module(
     'pascalprecht.translate',
     'ngStorage',
     'angularMoment',
-    'bhima.services',
-    'bhima.mocks',
+    'opensigl.services',
+    'opensigl.mocks',
     'ui.router'
   ));
 

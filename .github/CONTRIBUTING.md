@@ -1,16 +1,16 @@
 Contributor's Guide
 =======================
 
- - Project page: https://github.com/Third-Culture-Software/bhima
+ - Project page: https://github.com/Third-Culture-Software/opensigl
  - Email us: developers@imaworldhealth.org
 
-Thank you for your interest!  This document aims to provide a step by step guide for making your first contribution to the bhima codebase.  If you have any questions, feel free to email the team.
+Thank you for your interest!  This document aims to provide a step by step guide for making your first contribution to the opensigl codebase.  If you have any questions, feel free to email the team.
 
 #### Step 1: Obtaining the code
 
 For an in-depth installation guide (including trouble-shooting tips), please refer to the [INSTALL.md](./docs/INSTALL.md) file.  Continue reading for the basic steps.
 
- 1. Clone the official repository onto your local machine: `git clone git@github.com:IMA-WorldHealth/bhima.git bhima`
+ 1. Clone the official repository onto your local machine: `git clone git@github.com:IMA-WorldHealth/opensigl.git opensigl`
  2. Install the development dependencies: `npm install && bower install`
  3. Build the client and server `npm run build`
  4. Startup the server `npm run app`.
@@ -20,7 +20,7 @@ For troubleshooting, please see [the installation guide](./docs/INSTALL.md).
 #### Step 2: Setting up GitHub
 
 All our code contributions are monitored via pull requests on Github.  If you have not already, set up an account on Github and
-fork the bhima repository.
+fork the opensigl repository.
 
 #### Step 3: Determining what to contribute
 
@@ -33,7 +33,7 @@ There are three main areas you can contribute:
 
 #### Step 4: Rinse and Repeat
 
-Thank you!  If you've gotten to this step, you have made a valuable contribution to the bhima codebase.  There is still more work to be done; please recurse to step 3 and repeat!
+Thank you!  If you've gotten to this step, you have made a valuable contribution to the opensigl codebase.  There is still more work to be done; please recurse to step 3 and repeat!
 
 
 Other Forms of Contribution
@@ -42,7 +42,7 @@ Other Forms of Contribution
 #### Translation
 
 Bhima is an international piece of software.  Our development team operates in both French and English, but would love to round out our supported languages!  If you would like to get involved in translation work, you can either translate documentation
-(see the [user manual](https://github.com/Third-Culture-Software/bhima/tree/development/docs/BHIMA%20User%20Guide)) or the application itself.
+(see the [user manual](https://github.com/Third-Culture-Software/opensigl/tree/development/docs/OpenSIGL%20User%20Guide)) or the application itself.
 
 We use [angular-translate](https://github.com/angular-translate/angular-translate) for all client-side translation.  The files are located in `client/src/i18n/{locale}.json`.  Feel free to translate the key-value pairs and store it in your own langage.
 
@@ -65,4 +65,4 @@ Some helpful tips for code organization:
 our team from doubling up effort on code you are working on.  Also, there are no hard feelings if you try and fail, or begin
 and discover that it is grounded in a design decision that cannot be changed immediately.  Give it your best shot!
 
- 4. Check out the [wiki](https://github.com/Third-Culture-Software/bhima/wiki).  We have more tutorials on how to contribute there!  It is kept more up to date than this guide is.
+ 4. Check out the [wiki](https://github.com/Third-Culture-Software/opensigl/wiki).  We have more tutorials on how to contribute there!  It is kept more up to date than this guide is.

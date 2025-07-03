@@ -28,7 +28,7 @@ function reap_zombies() {
 
 reap_zombies
 
-# Kill the BHIMA server when the test is finished
+# Kill the OpenSIGL server when the test is finished
 if [[ -z "${CI:-}" ]]; then
   trap 'jobs -p | xargs -r kill' EXIT
 fi
@@ -45,7 +45,7 @@ echo "[test]"
 # set build timeout
 TIMEOUT=${BUILD_TIMEOUT:-5}
 
-echo "[test] Spawning BHIMA server process..."
+echo "[test] Spawning OpenSIGL server process..."
 
 # build and start the server
 ./node_modules/.bin/gulp build

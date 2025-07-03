@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhGenderSelect', {
     templateUrl : 'js/components/bhGenderSelect/bhGenderSelect.tmpl.html',
     controller  : GenderSelectController,

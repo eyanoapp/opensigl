@@ -38,7 +38,7 @@ INSERT INTO unit VALUES
   (105,'Cashbox Management','TREE.CASHBOX_MANAGEMENT','',1,'/cashboxes'),
   (107,'Debtor Groups Management','TREE.DEBTOR_GROUP','Debtor Groups Management module',1,'/debtors/groups'),
   (134,'Simple Journal Vouchers','TREE.SIMPLE_VOUCHER','Creates a simple transfer slip between two accounts',5,'/vouchers/simple'),
-  (135,'Invoicing Fee','TREE.INVOICING_FEES','Configures invoicing Fee for bhima',1,'/invoicing_fees'),
+  (135,'Invoicing Fee','TREE.INVOICING_FEES','Configures invoicing Fee for opensigl',1,'/invoicing_fees'),
   (137,'Complex Journal Vouchers','TREE.COMPLEX_JOURNAL_VOUCHER','Complex Journal vouchers module',5,'/vouchers/complex'),
   (138,'Inventory Module','TREE.INVENTORY','Inventory management module',0,'/INVENTORY_FOLDER'),
   (139,'Inventory Registry','TREE.INVENTORY_REGISTRY','Inventory Registry module',138,'/inventory'),
@@ -197,7 +197,7 @@ INSERT IGNORE INTO `account_type` VALUES
   (5, 'expense', 'ACCOUNT.TYPES.EXPENSE', 2),
   (6, 'title', 'ACCOUNT.TYPES.TITLE', 4);
 
--- core BHIMA reports
+-- core OpenSIGL reports
 INSERT IGNORE INTO `report` (`report_key`, `title_key`) VALUES
   ('account_reference', 'REPORT.ACCOUNT_REFERENCE.TITLE'),
   ('account_report_multiple', 'REPORT.REPORT_ACCOUNTS_MULTIPLE.TITLE'),

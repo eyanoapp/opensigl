@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhServiceSelect', {
     templateUrl : 'modules/templates/bhServiceSelect.tmpl.html',
     controller  : ServiceSelectController,

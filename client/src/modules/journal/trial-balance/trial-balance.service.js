@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('TrialBalanceService', TrialBalanceService);
 
 TrialBalanceService.$inject = ['util', '$http', 'AccountService', 'bhConstants'];

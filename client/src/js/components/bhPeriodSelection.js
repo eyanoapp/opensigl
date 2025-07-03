@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPeriodSelection', {
     templateUrl : 'modules/templates/bhPeriodSelection.html',
     controller  : PeriodSelectionController,

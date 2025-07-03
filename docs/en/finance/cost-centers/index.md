@@ -10,7 +10,7 @@ hospital as well as the costs that the hospital incurs during is operations.
 
 In a hospital or clinic there are usually several services or departments that
 perform services for patients or to support the operations of the hospital. We
-also call these **centers** in BHIMA.  For example, some typical departments
+also call these **centers** in OpenSIGL.  For example, some typical departments
 are Administration, Surgery, Pharmacy, Maintenance, etc.
 
 Larger hospitals might have all of these departments (or more).  A rural
@@ -24,7 +24,7 @@ reducing the costs of specific department and modifying the prices of the
 services the hospital offers to make the operation of the hospital sustainable
 over the long run.
 
-The BHIMA software supports these types of financial analysis:
+The OpenSIGL software supports these types of financial analysis:
 
 1. [Cost Center Cost Analysis](#cost-center-cost-analysis) -
 
@@ -32,8 +32,8 @@ The BHIMA software supports these types of financial analysis:
      Determine the total cost to operate each department using the
      "step-down" cost allocation technique.
 
-   - [Implementing *step-down* cost allocation analysis in BHIMA](./bhima-step-down-cost-analysis.md) <br>
-     Demonstrate how to set up and perform *step-down* cost allocation analysis in BHIMA.
+   - [Implementing *step-down* cost allocation analysis in OpenSIGL](./opensigl-step-down-cost-analysis.md) <br>
+     Demonstrate how to set up and perform *step-down* cost allocation analysis in OpenSIGL.
 
 2. Break-Even Analysis (TBD)
 
@@ -98,7 +98,7 @@ as a combined cost center.
 
 ### Cost Allocations
 
-One of the questions that we will address with the BHIMA software is how to
+One of the questions that we will address with the OpenSIGL software is how to
 allocate (or divide) the *indirect costs* to specific departments (*centers*)
 in order to determine the the actual, overall cost to operate each department.
 
@@ -116,7 +116,7 @@ In general, we would like to allocate the costs of all *indirect departments*
 to the *direct departments* so we have clear understanding of the total cost
 for each *direct department*.
 
-In the BHIMA software we provide a way to allocate indirect costs using the
+In the OpenSIGL software we provide a way to allocate indirect costs using the
 **Step Down** cost allocation method.  This process works by sequentially
 allocating the costs of each *indirect department* to the rest of the
 succeeding *indirect departments* and *direct departments* until all of the
@@ -203,7 +203,7 @@ drivers for those departments.  As long as the choices for allocation bases
 and step-down order are reasonable, the results will probably be similar and
 will be useful for financial planning.
 
-Visit [*step-down* cost allocation analysis in BHIMA](./bhima-step-down-cost-analysis.md) 
-For details on how to set up and perform *step-down* cost analysis in BHIMA.
+Visit [*step-down* cost allocation analysis in OpenSIGL](./opensigl-step-down-cost-analysis.md) 
+For details on how to set up and perform *step-down* cost analysis in OpenSIGL.
 
 

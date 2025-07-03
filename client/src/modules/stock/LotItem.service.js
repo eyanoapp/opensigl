@@ -1,4 +1,4 @@
-angular.module('bhima.services').service('LotItemService', LotItemService);
+angular.module('opensigl.services').service('LotItemService', LotItemService);
 
 LotItemService.$inject = ['uuid', '$translate'];
 

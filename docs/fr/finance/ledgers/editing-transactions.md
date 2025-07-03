@@ -25,4 +25,4 @@ Notez que les valeurs (débits et crédits) d'une transaction peuvent être modi
 
 ### Modification des transactions publiées
 
-Si une transaction a été enregistrée, elle ne doit plus être modifiée. Cependant, dans la pratique, il peut être nécessaire de corriger les erreurs postées. Pour faciliter cette procédure, BHIMA permet à l'utilisateur de modifier les transactions comme si elles n'étaient pas postées, en utilisant les mêmes mécanismes que les [transactions non postées](#modifying-transactions). En dessous, le logiciel génère un enregistrement inversé, puis un nouvel enregistrement avec les valeurs précédentes et modifiées.
+Si une transaction a été enregistrée, elle ne doit plus être modifiée. Cependant, dans la pratique, il peut être nécessaire de corriger les erreurs postées. Pour faciliter cette procédure, OpenSIGL permet à l'utilisateur de modifier les transactions comme si elles n'étaient pas postées, en utilisant les mêmes mécanismes que les [transactions non postées](#modifying-transactions). En dessous, le logiciel génère un enregistrement inversé, puis un nouvel enregistrement avec les valeurs précédentes et modifiées.

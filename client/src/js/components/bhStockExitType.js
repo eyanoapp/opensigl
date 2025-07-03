@@ -24,7 +24,7 @@ const stockExitTypeTmpl = `
 </div>
 `;
 
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockExitType', {
     template : stockExitTypeTmpl,
     controller : StockExitTypeController,

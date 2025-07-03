@@ -25,7 +25,7 @@ module.exports = {
     TITLE : 6,
   },
   allocationBasis : {
-    /* NOTE: Must match values in bhima.sql */
+    /* NOTE: Must match values in opensigl.sql */
     ALLOCATION_BASIS_DIRECT_COST : 1,
     ALLOCATION_BASIS_NUM_EMPLOYEES : 2,
     ALLOCATION_BASIS_AREA_USED : 3,

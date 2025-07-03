@@ -38,7 +38,7 @@ function BadRequest(description, key) {
   // HTTP status code
   this.status = 400;
 
-  // bhima status code (for $translation)
+  // opensigl status code (for $translation)
   this.code = key || 'ERRORS.BAD_REQUEST';
 
   // default to an empty string if no description passed in

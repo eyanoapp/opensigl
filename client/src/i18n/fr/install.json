@@ -1,7 +1,7 @@
 {
   "INSTALL" : {
     "TITLE" : "Installation de base du système",
-    "DESCRIPTION" : "Veuillez definir la configuration de base du systeme BHIMA, Cette configuration est requise pour pouvoir utiliser BHIMA",
+    "DESCRIPTION" : "Veuillez definir la configuration de base du systeme OpenSIGL, Cette configuration est requise pour pouvoir utiliser OpenSIGL",
     "ALREADY_INSTALLED" : "L'application est déjà installée",
     "SUCCESS_INSTALL" : "Installation réussie avec succès",
     "NO_INSTALLATION" : "Aucune installation n'a été trouvé, veuillez installer le systeme"

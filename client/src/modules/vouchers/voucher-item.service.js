@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('VoucherItemService', VoucherItemService);
 
 VoucherItemService.$inject = ['uuid', 'bhConstants', 'util'];

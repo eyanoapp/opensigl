@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhAnalysisToolTypeSelect', {
     templateUrl : 'modules/templates/bhAnalysisToolTypeSelect.tmpl.html',
     controller  : AnalysisToolTypeSelectController,

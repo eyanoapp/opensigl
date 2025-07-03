@@ -2,7 +2,7 @@
  * @overview Install
  *
  * @description
- * This module is responsible for setting up a new bhima instance
+ * This module is responsible for setting up a new opensigl instance
  * by configuring administrator user, enterprise, project, etc.
  *
  * @requires lib/db

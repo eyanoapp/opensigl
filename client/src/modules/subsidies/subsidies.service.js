@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('SubsidyService', SubsidyService);
 
 SubsidyService.$inject = ['$http', 'util'];

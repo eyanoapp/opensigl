@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('StockExitFormService', StockExitFormService);
 
 StockExitFormService.$inject = [
@@ -11,7 +11,7 @@ StockExitFormService.$inject = [
  * @class StockExitFormService
  *
  * @description
- * This form powers the stock exit form in BHIMA.
+ * This form powers the stock exit form in OpenSIGL.
  */
 function StockExitFormService(
   Store, AppCache, Session, $timeout, bhConstants,

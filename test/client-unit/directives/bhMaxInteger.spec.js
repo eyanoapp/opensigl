@@ -5,7 +5,7 @@ describe('test/client-unit/directives/bhMaxInteger directive', () => {
 
   const MAX_INT = 16777215;
 
-  beforeEach(module('bhima.directives', 'bhima.constants'));
+  beforeEach(module('opensigl.directives', 'opensigl.constants'));
 
   // $complile and $rootScope are injected using angular name based dependency
   // injection

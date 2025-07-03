@@ -1,5 +1,5 @@
 /* eslint-disable */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('uuid', () => {
     return () => {
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {

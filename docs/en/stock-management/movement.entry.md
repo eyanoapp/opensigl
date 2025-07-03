@@ -106,7 +106,7 @@ WARNING: Once a purchase order is confirmed, it can no longer be edited.
 When a delivery stock for a purchase order arrives and the requesting depot,
 it is necessary to "Enter" this stock.  This involves two things: (1)
 Physically unpacking the stock and confirming that all requested stock has
-arrived, and (2) registering the entry of the stock in the BHIMA software.  
+arrived, and (2) registering the entry of the stock in the OpenSIGL software.  
 
 First, we need to open the stock "Entry" form:
 
@@ -204,7 +204,7 @@ First, we need to open the stock "Entry" form:
 
 **What is an integration entry?** Assuming that during an inventory of stock,
   a stock item is found that has never been registered in the stock
-  (inventory) in the BHIMA system.  Since it is neither a purchase nor a
+  (inventory) in the OpenSIGL system.  Since it is neither a purchase nor a
   donation, but it must be included in the stock inventory, we use
   "integration" to do that.
 

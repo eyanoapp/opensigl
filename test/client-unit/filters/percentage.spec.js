@@ -3,7 +3,7 @@ describe('test/client-unit/filters/percentage filter', () => {
 
   let percentage;
 
-  beforeEach(module('pascalprecht.translate', 'bhima.filters'));
+  beforeEach(module('pascalprecht.translate', 'opensigl.filters'));
 
   beforeEach(inject(($filter) => {
     percentage = $filter('percentage');

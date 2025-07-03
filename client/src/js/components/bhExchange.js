@@ -5,7 +5,7 @@
  * This component allows to display the exchange rate list and also
  * a button for changing the exchange rate
  */
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhExchange', {
     templateUrl : 'modules/templates/bhExchange.tmpl.html',
     controller : bhExchangeController,

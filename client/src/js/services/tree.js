@@ -6,7 +6,7 @@
  * @todo End to end tests to ensure the service is always returning
  * expected results
  */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('Tree', Tree);
 
 Tree.$inject = ['$http', '$translate', 'util', 'TreeService'];
@@ -40,7 +40,7 @@ function Tree($http, $translate, util, TreeClass) {
    * @function sortByTranslationKey
    *
    * @description
-   * Recursively sort an array of BHIMA units respecting translation keys.
+   * Recursively sort an array of OpenSIGL units respecting translation keys.
    *
    */
   function sortByTranslationKey(unitArray) {

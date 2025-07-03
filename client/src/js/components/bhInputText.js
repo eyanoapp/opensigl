@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhInputText', {
     templateUrl : 'modules/templates/bhInputText.tmpl.html',
     controller : InputTextController,

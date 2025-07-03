@@ -1,5 +1,5 @@
 (() => {
-  angular.module('bhima.mocks', [])
+  angular.module('opensigl.mocks', [])
     .service('MockDataService', MockDataService);
 
   function MockDataService() {

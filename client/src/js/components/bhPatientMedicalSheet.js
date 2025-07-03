@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPatientMedicalSheet', {
     controller   : PatientMedicalSheetCtrl,
     templateUrl  : 'modules/patients/record/bh-patient-medical-sheet.html',

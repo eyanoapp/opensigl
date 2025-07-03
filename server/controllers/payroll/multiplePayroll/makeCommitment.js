@@ -33,7 +33,7 @@ const CostCenter = require('../../finance/cost_center');
  * Practically, this function is just a switch that reads the enterprise settings
  * and determines which underlying commitment function to call. The work of actually
  * writing data to the database is done by either the commitments, groupedCommitment,
- * or commitmentByEmployee function(s). This is because BHIMA supports three different
+ * or commitmentByEmployee function(s). This is because OpenSIGL supports three different
  * kinds of commitment functions, which affects how the transactions are represented in
  * the Posting Journal.
  *
@@ -75,7 +75,7 @@ async function config(req, res, next) {
     const currencyId = req.session.enterprise.currency_id;
 
     // TODO(@jniles) - eventually, this should be read from the user table.
-    // https://github.com/Third-Culture-Software/bhima/issues/7936
+    // https://github.com/Third-Culture-Software/opensigl/issues/7936
     const { lang } = req.query;
 
     // enterprise settings switches

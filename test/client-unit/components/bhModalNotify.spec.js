@@ -7,7 +7,7 @@ describe('test/client-unit/components/bhModalNotify', () => {
     <bh-modal-notify error="someError"></bh-modal-notify>
   `;
 
-  beforeEach(module('pascalprecht.translate', 'templates', 'bhima.services', 'bhima.components', 'ui.bootstrap'));
+  beforeEach(module('pascalprecht.translate', 'templates', 'opensigl.services', 'opensigl.components', 'ui.bootstrap'));
 
   let $scope;
   let $compile;

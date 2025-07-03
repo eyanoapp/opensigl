@@ -7,7 +7,7 @@ const bhPanelOverlayTemplate = `
 </div>
 `;
 
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPanelOverlay', {
     transclude : true,
     template : bhPanelOverlayTemplate,

@@ -1,25 +1,25 @@
 # Production Deployment with Systemd
 
-This guide will walk through deploying BHIMA using systemd for process and log management and a nginx to load balance between multiple nodejs instances.  These instructions have been tested on Ubuntu 20.04.
+This guide will walk through deploying OpenSIGL using systemd for process and log management and a nginx to load balance between multiple nodejs instances.  These instructions have been tested on Ubuntu 20.04.
 
 ### Process Management with SystemD
 
-Create a file called `bhima@.service` into the directory `/etc/systemd/system/`.  This is a [systemd unit file](https://www.freedesktop.org/software/systemd/man/systemd.unit.html) that will start BHIMA at a specified port.  Assuming the user is `bhima` and the installation of BHIMA is found in `/home/bhima/apps/bhima`, the file's context will be:
+Create a file called `opensigl@.service` into the directory `/etc/systemd/system/`.  This is a [systemd unit file](https://www.freedesktop.org/software/systemd/man/systemd.unit.html) that will start OpenSIGL at a specified port.  Assuming the user is `opensigl` and the installation of OpenSIGL is found in `/home/opensigl/apps/opensigl`, the file's context will be:
 
 ```systemd
-# bhima@.service
+# opensigl@.service
 [Unit]
-Description=The bhima server
+Description=The opensigl server
 Documentation=https://docs.bhi.ma
 After=network.target
 
 [Service]
 Environment=NODE_ENV=production PORT=%i
 Type=simple
-User=bhima
+User=opensigl
 
 # adjust this accordingly
-WorkingDirectory=/home/bhima/apps/bhima/bin/
+WorkingDirectory=/home/opensigl/apps/opensigl/bin/
 
 # adjust this accordingly
 ExecStart=/usr/bin/node server/app.js
@@ -40,10 +40,10 @@ systemctl daemon-reload
 
 In this example, we'll load balance across three downstream nodejs servers.  However, best practice is to use a maximum of `$(nproc - 1)` processes.  Adjust the following file accordingly.
 
-Create a new nginx configuration file named `bhima` in `/etc/nginx/sites-available/`.  Put the following configuration in that file:
+Create a new nginx configuration file named `opensigl` in `/etc/nginx/sites-available/`.  Put the following configuration in that file:
 
 ```nginx
-upstream bhima {
+upstream opensigl {
 
   # make sure to route requests to the server that has the least connections
   # http://nginx.org/en/docs/http/load_balancing.html
@@ -70,7 +70,7 @@ server {
 
  # pass data to upstream server
  location / {
-   proxy_pass http://bhima;
+   proxy_pass http://opensigl;
    proxy_http_version 1.1;
    proxy_set_header Upgrade $http_upgrade;
    proxy_set_header Connection 'upgrade';
@@ -125,7 +125,7 @@ gzip_types
         text/xml;
 ```
 
-This file configures a load balance that proxies requests to three downstream servers on ports 3001, 3002, and 3003.  Create a symlink between `/etc/nginx/sites-available/bhima` into `/etc/nginx/sites-enabled/bhima` to ensure that it is active.  Test the nginx configuration, then reload:
+This file configures a load balance that proxies requests to three downstream servers on ports 3001, 3002, and 3003.  Create a symlink between `/etc/nginx/sites-available/opensigl` into `/etc/nginx/sites-enabled/opensigl` to ensure that it is active.  Test the nginx configuration, then reload:
 
 ```bash
 # test the configuration
@@ -137,25 +137,25 @@ systemctl reload nginx
 
 ### Deployment and automatic restart
 
-The final touch for deployment is setting up automatic start on boot.  This is done easily with `systemctl enable bhima@${PORT}` where `${PORT}` is the desired port to run BHIMA on.  Do this for every downstream server.
+The final touch for deployment is setting up automatic start on boot.  This is done easily with `systemctl enable opensigl@${PORT}` where `${PORT}` is the desired port to run OpenSIGL on.  Do this for every downstream server.
 
 ```bash
 # start the nodejs server
-systemctl start bhima@3001
+systemctl start opensigl@3001
 
 # enable start on boot.
-systemctl enable bhima@3001
+systemctl enable opensigl@3001
 ```
 
-When you curl `http://localhost`, you should now get to the BHIMA server though nginx.
+When you curl `http://localhost`, you should now get to the OpenSIGL server though nginx.
 
 ### Log Management
 
 Because we are using systemd, logs are managed with [journald](https://www.man7.org/linux/man-pages/man8/systemd-journald.service.8.html).  To monitor the logs of the above servers, the following one-liner will display the logs in real-time:
 
 ```bash
-# tail and follow all bhima logs
-journalctl -u bhima@* --follow
+# tail and follow all opensigl logs
+journalctl -u opensigl@* --follow
 ```
 
 It may be important on installation with low-disk space to adjust the `SystemMaxUse` and `SystemMaxFileSize` settings in `/etc/systemd/journald.conf`.

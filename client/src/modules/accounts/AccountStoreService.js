@@ -3,7 +3,7 @@
  *  - function to use to populate the store
  *  - store to use
  */
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('AccountStoreService', AccountStoreService);
 
 AccountStoreService.$inject = [

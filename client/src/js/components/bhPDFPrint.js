@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPdfPrint', {
     bindings : {
       pdfUrl       : '@',
@@ -14,7 +14,7 @@ angular.module('bhima.components')
     controller : bhPDFPrintController,
   });
 
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhPdfLink', {
     bindings : {
       pdfUrl       : '@',
@@ -43,7 +43,7 @@ bhPDFPrintController.$inject = [
  * @class bhPDFPrintController
  *
  * @description
- * This component allows printing of a BHIMA PDF report route. It abstracts the
+ * This component allows printing of a OpenSIGL PDF report route. It abstracts the
  * server request and PDF display directly calling the browser `print()` method.
  * This directive can be used where there are no confirmation or configuration
  * steps for the report and may be abstracted in the future to allow for the

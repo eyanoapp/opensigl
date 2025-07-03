@@ -13,7 +13,7 @@ const STATIC_PATHS = [
   '!client/src/i18n/{en,fr}/*.json',
 ];
 
-// collects all static files from the client (BHIMA src and vendor files)
+// collects all static files from the client (OpenSIGL src and vendor files)
 // and moves them to the build folder, respecting folder structure
 function buildStatic() {
   return src(STATIC_PATHS, { encoding : false })

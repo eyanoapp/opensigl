@@ -20,7 +20,7 @@ describe('test/integration/inventory/metadata The inventory metadata API', () =>
     sellable : 1,
     importance : 2,
     is_asset : 1,
-    manufacturer_brand : 'BHIMA',
+    manufacturer_brand : 'OpenSIGL',
     manufacturer_model : '2.X',
   };
 

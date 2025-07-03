@@ -1,14 +1,14 @@
-# Installation de BHIMA
+# Installation de OpenSIGL
 
-NB: ce sont les instructions pour installer l'environnement de développement BHIMA. Si vous souhaitez déployer BHIMA en production, consultez nos [instructions de déploiement pour Digital Ocean](../getting-started/deploying-digital-ocean.md).
+NB: ce sont les instructions pour installer l'environnement de développement OpenSIGL. Si vous souhaitez déployer OpenSIGL en production, consultez nos [instructions de déploiement pour Digital Ocean](../getting-started/deploying-digital-ocean.md).
 
-Le logiciel BHIMA peut être complexe à installer. Nous ne prenons officiellement en charge que Linux. Le guide suivant suppose donc que vous configurez BHIMA dans un environnement Linux basé sur Debian.
+Le logiciel OpenSIGL peut être complexe à installer. Nous ne prenons officiellement en charge que Linux. Le guide suivant suppose donc que vous configurez OpenSIGL dans un environnement Linux basé sur Debian.
 
-Ce guide vous permettra de vous familiariser avec bhima localement. Veuillez noter que bhima est en développement actif et a tendance à aller vite et à casser des choses. Si vous êtes intéressé par les progrès du développement, envoyez-nous une ligne à [developers@imaworldhealth.org](mailto: developers@imaworldhealth.org).
+Ce guide vous permettra de vous familiariser avec opensigl localement. Veuillez noter que opensigl est en développement actif et a tendance à aller vite et à casser des choses. Si vous êtes intéressé par les progrès du développement, envoyez-nous une ligne à [developers@imaworldhealth.org](mailto: developers@imaworldhealth.org).
 
 ### Dépendances
 
-Avant de commencer le processus d'installation, assurez-vous que toutes les dépendances bhima sont installées localement. Nous ne testons que sous Linux. Il est donc préférable d’utiliser une version de Linux que vous connaissez bien. Assurez-vous d'avoir la version récente de:
+Avant de commencer le processus d'installation, assurez-vous que toutes les dépendances opensigl sont installées localement. Nous ne testons que sous Linux. Il est donc préférable d’utiliser une version de Linux que vous connaissez bien. Assurez-vous d'avoir la version récente de:
 
 1. [MySQL 8.4 LTS](http://dev.mysql.com/downloads/)
 2. [Redis](https://redis.io)
@@ -48,11 +48,11 @@ sudo apt-get install git
 
 ### Obtenir la source
 
-Clonez la source à l'aide de git à partir du [référentiel github](https://github.com/Third-Culture-Software/bhima) à l'aide des commandes suivantes:
+Clonez la source à l'aide de git à partir du [référentiel github](https://github.com/Third-Culture-Software/opensigl) à l'aide des commandes suivantes:
 
 ```bash
-git clone https://github.com/Third-Culture-Software/bhima.git bhima
-cd bhima
+git clone https://github.com/Third-Culture-Software/opensigl.git opensigl
+cd opensigl
 ```
 
 ### Construire à partir de la source
@@ -61,7 +61,7 @@ Tous nos scripts de construction se trouvent dans le fichier `package.json`. Nou
 
 Pour exécuter les scripts de construction, vous pouvez utiliser `yarn` ou` npm`. Nous utiliserons `npm` pour le reste de ce guide.
 ```bash
-# Dans le répertoire bhima /
+# Dans le répertoire opensigl /
 # installer tous les modules de noeuds
 
 npm install
@@ -72,7 +72,7 @@ git config -global url. "https: //" .insteadOf git: //
 
 Les dépendances devraient maintenant être définies!
 
-BHIMA utilise des variables d'environnement pour se connecter à la base de données et basculer entre des fonctionnalités. Ceux-ci se trouvent dans le fichier `.env.sample` inclus dans le niveau supérieur du référentiel. Copiez les elements vers une fichier `.env` avec vos propres variables.
+OpenSIGL utilise des variables d'environnement pour se connecter à la base de données et basculer entre des fonctionnalités. Ceux-ci se trouvent dans le fichier `.env.sample` inclus dans le niveau supérieur du référentiel. Copiez les elements vers une fichier `.env` avec vos propres variables.
 
 Avant de construire, éditez votre `.env` pour configurer vos paramètres de connexion à la base de données MySQL. Leurs variables doivent être explicites.
 
@@ -83,14 +83,14 @@ cp .env.sample .env
 nano .env
 ```
 
-### Configurez l'utilisateur bhima dans MySQL et construisez l'application.
+### Configurez l'utilisateur opensigl dans MySQL et construisez l'application.
 
 ```bash
-# Exécutez les commandes suivantes pour créer l'utilisateur bhima dans MySQL afin qu'il puisse construire la base de données (assurez-vous que l'utilisateur et #password correspondent tous les deux à ce que vous avez défini dans le fichier .env):
+# Exécutez les commandes suivantes pour créer l'utilisateur opensigl dans MySQL afin qu'il puisse construire la base de données (assurez-vous que l'utilisateur et #password correspondent tous les deux à ce que vous avez défini dans le fichier .env):
 
 sudo mysql -u root -p
-CREATE USER 'bhima'@'localhost' IDENTIFIED BY 'mot de passe';
-Accordez tous les privilèges sur *. * TO 'bhima'@'localhost';
+CREATE USER 'opensigl'@'localhost' IDENTIFIED BY 'mot de passe';
+Accordez tous les privilèges sur *. * TO 'opensigl'@'localhost';
 #Utilisez ctrl + z pour revenir à l'invite du terminal principal
 ```
 
@@ -104,7 +104,7 @@ NODE_ENV="development" npm run build
 
 ### Création d'une base de données
 
-_NOTE: BHIMA s'exécute dans _`sql_mode = 'STRICT_ALL_TABLES,NO_UNSIGNED_SUBTRACTION'`_. Bien qu'il ne soit pas nécessaire que cette option soit définie pour générer la base de données, les tests ne seront pas validés à moins que le code SQL correct \_MODE soit défini._
+_NOTE: OpenSIGL s'exécute dans _`sql_mode = 'STRICT_ALL_TABLES,NO_UNSIGNED_SUBTRACTION'`_. Bien qu'il ne soit pas nécessaire que cette option soit définie pour générer la base de données, les tests ne seront pas validés à moins que le code SQL correct \_MODE soit défini._
 
 ```bash
 #Pour configurer MySQL avec ce paramètre, exécutez les commandes suivantes:
@@ -142,14 +142,14 @@ La structure de la base de données est contenue dans les fichiers `server/model
 Ceci configure le schéma de base, les déclencheurs et les routines. Les scripts suivants créeront un ensemble de données de base avec lequel commencer à jouer:
 
 1. `server/models/05-icd10.sql`
-2. `server/models/06-bhima.sql`
+2. `server/models/06-opensigl.sql`
 3. `test/data.sql`
 
 Vous pouvez exécuter tout cela en utilisant la commande suivante: `npm run build:db` Vous pouvez également utiliser le script`./sh/build-database.sh`, personnalisé à l'aide de vos variables d'environnement, comme indiqué ci-dessous:
 
 ```bash
 # installer la base de données
-DB_USER='moi' DB_PASS='MonPassword' DB_NAME='bhima' ./sh/build-database.sh
+DB_USER='moi' DB_PASS='MonPassword' DB_NAME='opensigl' ./sh/build-database.sh
 ```
 
 ### Exécution de l'application
@@ -164,7 +164,7 @@ Accédez à [https://localhost:8080](https://localhost:8080) dans le navigateur 
 
 ### Test de l'application
 
-Nos tests sont répartis en tests unitaires, tests de bout en bout et tests d'intégration. Il y a plus d'informations sur les tests dans le [wiki](https://github.com/Third-Culture-Software/bhima/wiki).
+Nos tests sont répartis en tests unitaires, tests de bout en bout et tests d'intégration. Il y a plus d'informations sur les tests dans le [wiki](https://github.com/Third-Culture-Software/opensigl/wiki).
 
 1. **Tests d'intégration** - Ils testent l'intégration serveur + base de données et généralement nos API. Tous les points de terminaison API accessibles doivent généralement être associés à un test d'intégration. Pour les exécuter, tapez `test de fil: intégration`.
 2. **Tests unitaires de serveur** - Les bibliothèques de serveur sont testées d'unité avec mocha et chai, de manière similaire aux tests d'intégration. Pour les exécuter, tapez
@@ -174,4 +174,4 @@ Nos tests sont répartis en tests unitaires, tests de bout en bout et tests d'in
 
 Vous pouvez exécuter tous les tests en tapant simplement `npm run test`.
 
-Profitez de l'aide bhima!
+Profitez de l'aide opensigl!

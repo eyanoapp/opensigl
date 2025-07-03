@@ -4,7 +4,7 @@ describe('test/client-unit/services/Pool', () => {
   let Pool;
   let data;
 
-  beforeEach(module('bhima.services'));
+  beforeEach(module('opensigl.services'));
 
   beforeEach(inject(_Pool_ => {
     Pool = _Pool_;

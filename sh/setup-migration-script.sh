@@ -11,7 +11,7 @@ log() {
   echo "[${timestamp}] [migrate] ${message}"
 }
 
-# This script creates a migration script to upgrade BHIMA from the previous version of BHIMA
+# This script creates a migration script to upgrade OpenSIGL from the previous version of OpenSIGL
 # to the next version.  It will only pull in data from the next/*.sql folder, so it can only
 # upgrade from the most recent version to the current version.
 
@@ -20,7 +20,7 @@ log() {
 
 # TODO(@jniles) - look up current version, and pull in all versions until present version.
 
-log "Migrating BHIMA database"
+log "Migrating OpenSIGL database"
 
 log "Reading settings from .env."
 
@@ -52,7 +52,7 @@ MIGRATION_FILE="$FILENAME-$DATABASE.sql"
 
 log "Using database \"$DATABASE\" defined in environment file."
 
-# path to the BHIMA application.  Since we are in the context of the repository, it
+# path to the OpenSIGL application.  Since we are in the context of the repository, it
 # is just the directory above.
 BHIMA_PATH="$(pwd)"
 

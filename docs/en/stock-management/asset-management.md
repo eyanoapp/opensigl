@@ -1,17 +1,17 @@
 Relevant issues
-- [[https://github.com/Third-Culture-Software/bhima/issues/6350][Issue 6350]]
+- [[https://github.com/Third-Culture-Software/opensigl/issues/6350][Issue 6350]]
 
 
-# Asset Management in BHIMA
+# Asset Management in OpenSIGL
 
 ## Background
 
 A common need in many organizations and projects is to keep track of valuable
-assets (property) that are used by the organization.  BHIMA provides tools to
+assets (property) that are used by the organization.  OpenSIGL provides tools to
 register such property as it is received, assigned to responsible entities,
 and track its location and condition during the lifetime of the property.
 
-Before going into details about how asset management works in BHIMA, it is
+Before going into details about how asset management works in OpenSIGL, it is
 useful to review some terms that will be used in the following documentation.
 
 - **Asset** - *Assets* are any article of inventory that is considered
@@ -75,10 +75,10 @@ useful to review some terms that will be used in the following documentation.
   department or to individuals in the department.
 
 
-## Asset Management Operations in BHIMA
+## Asset Management Operations in OpenSIGL
 
-Asset management has a top-level menu in BHIMA.  Under it are three options:
-<img src="./images/assets-management-menu.png" alt="BHIMA asset management menu" align="right" width="200">
+Asset management has a top-level menu in OpenSIGL.  Under it are three options:
+<img src="./images/assets-management-menu.png" alt="OpenSIGL asset management menu" align="right" width="200">
   - [**Assets Registry**](#assets-registry) - A listing of assets in the
     organization.  This page also shows the current assignment of each asset
     and supports changing asset assignments.
@@ -233,7 +233,7 @@ Other items in this display are:
 
 In order to track assets effectively, it is important to require that all
 assets are physically scanned on a regular basis.  To facilitate that the
-BHIMA software provides "Required Inventory Scans" which are defined periods
+OpenSIGL software provides "Required Inventory Scans" which are defined periods
 (or campaigns) in which assets are to be scanned.
 
 To see a listing of the required inventory scan campaigns, visit the
@@ -296,7 +296,7 @@ are one that were done between its start and end dates.  This forces a new
 scan of every asset to be done during the campaign.
 
 #### Required Inventory Scan Reports
-The BHIMA software also supports reports that enable tracking the process of a
+The OpenSIGL software also supports reports that enable tracking the process of a
 <img src="./images/assets-needed-scans-report.png" alt="Assets needed inventory scans page" align="right" width="400">
 required inventory scan campaign.  To create these reports, visit the **Needed Inventory Scans**
 report page:

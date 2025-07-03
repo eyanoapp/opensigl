@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('UniqueValidatorService', UniqueValidatorService);
 
 UniqueValidatorService.$inject = ['$http', 'util', 'HttpCacheService'];
@@ -10,7 +10,7 @@ UniqueValidatorService.$inject = ['$http', 'util', 'HttpCacheService'];
  * in a simple Boolean true/false value, both the URL and the value that should
  * be verified are required.
  *
- * The BHIMA `exists` API uses a very simply pattern that must be followed in order
+ * The OpenSIGL `exists` API uses a very simply pattern that must be followed in order
  * for this service to be used. The server route that checks for the entities
  * existence should be defined as follows:
  *

@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDataCollector', {
     templateUrl : 'modules/templates/bhDataCollector.tmpl.html',
     controller  : DataCollectorController,

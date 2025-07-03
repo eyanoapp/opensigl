@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('util', UtilService);
 
 UtilService.$inject = ['moment'];
@@ -68,7 +68,7 @@ function UtilService(moment) {
         }
 
         // any standard ng-model element will provide an $modelValue, according
-        // to the latest 2.x standards more complex bhima components or bhima
+        // to the latest 2.x standards more complex opensigl components or opensigl
         // component wrappers will expose $bhValue
 
         // accounts for empty string values

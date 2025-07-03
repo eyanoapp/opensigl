@@ -1,4 +1,4 @@
-angular.module('bhima.routes')
+angular.module('opensigl.routes')
   .config(['$stateProvider', configureCashBoxRoutes]);
 
 function configureCashBoxRoutes($stateProvider) {

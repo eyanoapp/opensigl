@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('StockExitFormHelperService', StockExitFormHelperService);
 
 StockExitFormHelperService.$inject = [
@@ -9,7 +9,7 @@ StockExitFormHelperService.$inject = [
  * @class StockExitFormHelperService
  *
  * @description
- * This form powers the stock exit form in BHIMA.
+ * This form powers the stock exit form in OpenSIGL.
  */
 function StockExitFormHelperService($q, $translate, Patients, Invoices, Services) {
   const service = {};

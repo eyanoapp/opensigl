@@ -16,7 +16,7 @@ module.exports = (config) => {
       `bin/client/js/vendor/vendor.min.js`,
       'node_modules/angular-mocks/angular-mocks.js',
       'test/client-unit/mocks/*.js',
-      `bin/client/js/bhima/bhima.min.js`,
+      `bin/client/js/opensigl/opensigl.min.js`,
       'bin/client/modules/**/*.html',
       'bin/client/js/components/**/*.html',
       { pattern : 'bin/client/i18n/locale/*.js', included : false, served : true },
@@ -53,7 +53,7 @@ module.exports = (config) => {
     junitReporter : {
       outputDir : 'results',
       outputFile : process.env.KARMA_FILENAME || 'test.xml',
-      suite : 'BHIMA-Tests',
+      suite : 'OpenSIGL-Tests',
       useBrowserName : false,
       nameFormatter : (browser, result) => {
         return result.description;

@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('invoiced_received_stockController', invoicedeceivedStockController);
 
 invoicedeceivedStockController.$inject = [

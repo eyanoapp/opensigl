@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('avg_med_costs_per_patientController', AvgMedCostPerPatientCtrl);
 
 AvgMedCostPerPatientCtrl.$inject = [

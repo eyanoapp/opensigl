@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
 
 // Finance DashBoard Service
 // Performs the HTTP queries for the financial dashboard controller

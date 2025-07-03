@@ -49,7 +49,7 @@ USER node
 
 ENV NODE_ENV=production
 
-LABEL org.opencontainers.image.source="https://github.com/Third-Culture-Software/bhima"
+LABEL org.opencontainers.image.source="https://github.com/Third-Culture-Software/opensigl"
 LABEL org.opencontainers.image.description="A hospital information management application for rural Congolese hospitals"
 LABEL org.opencontainers.image.licenses="GPL-2.0"
 

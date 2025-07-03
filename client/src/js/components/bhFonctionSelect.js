@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhFonctionSelect', {
     templateUrl : 'modules/templates/bhFonctionSelect.tmpl.html',
     controller  : FonctionSelectController,

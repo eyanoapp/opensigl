@@ -2,7 +2,7 @@
 /* eslint no-unused-expressions:off */
 describe('test/client-unit/services/TransactionService', () => {
 
-  beforeEach(module('angularMoment', 'bhima.services', 'ui.bootstrap', 'bhima.constants'));
+  beforeEach(module('angularMoment', 'opensigl.services', 'ui.bootstrap', 'opensigl.constants'));
 
   let Transactions;
   beforeEach(inject(TransactionService => {

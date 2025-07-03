@@ -1,6 +1,6 @@
 # Finance
 
-The finance modules in BHIMA provide the core of the application.
+The finance modules in OpenSIGL provide the core of the application.
 
 1. [Overview](./overview.md)
 2. [Core Concepts](core-concepts/index.md)

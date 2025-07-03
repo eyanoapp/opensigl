@@ -1,4 +1,4 @@
--- Migrate the BHIMA schema from v1.35 to 1.36
+-- Migrate the OpenSIGL schema from v1.35 to 1.36
 
 /**
 * date: 2025-26-01

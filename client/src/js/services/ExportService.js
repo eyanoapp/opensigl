@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('ExportService', ExportService);
 
 ExportService.$inject = ['$httpParamSerializer', 'LanguageService'];

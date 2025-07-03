@@ -2,7 +2,7 @@
  * HTTP END POINT
  * API controller for the table cron_email_report
  */
-const debug = require('debug')('bhima:cron');
+const debug = require('debug')('opensigl:cron');
 const Cron = require('cron').CronJob;
 const pRetry = require('p-retry');
 
@@ -190,12 +190,12 @@ function createEmailReportJob(record, cb, ...params) {
 const content = `
 To whom it may concern,
 
-You are subscribed to automated reports from the BHIMA software installation at %ENTERPRISE%.  Please find attached the following reports:
+You are subscribed to automated reports from the OpenSIGL software installation at %ENTERPRISE%.  Please find attached the following reports:
 
   - %FILENAME%
 
 Thank you,
-The BHIMA team
+The OpenSIGL team
 `;
 /* eslint-enable max-len */
 

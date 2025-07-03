@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('TrialBalanceController', TrialBalanceController);
 
 TrialBalanceController.$inject = ['TrialBalanceService', '$state', 'NotifyService'];

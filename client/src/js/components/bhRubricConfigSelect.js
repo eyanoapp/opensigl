@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhRubricConfigSelect', {
     templateUrl : 'modules/templates/bhRubricConfigSelect.tmpl.html',
     controller  : RubricConfigSelectController,

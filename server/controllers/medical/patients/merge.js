@@ -11,7 +11,7 @@
  * - remove the patient to remove
  * - remove the debtor relate to patient to remove
  */
-const debug = require('debug')('bhima:patients:merge');
+const debug = require('debug')('opensigl:patients:merge');
 const express = require('express');
 const db = require('../../../lib/db');
 

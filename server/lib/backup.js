@@ -2,7 +2,7 @@
  * @overview backup
  *
  * @description
- * This file contains a collection of tools to automate backups of the BHIMA
+ * This file contains a collection of tools to automate backups of the OpenSIGL
  * database.
  */
 

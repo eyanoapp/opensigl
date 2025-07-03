@@ -1,6 +1,6 @@
 # Scenario Descriptions for Payroll Processes
 
-This document describes how the BHIMA payroll process works under a classical payroll structure where employees 
+This document describes how the OpenSIGL payroll process works under a classical payroll structure where employees 
 are retained on contract with a fixed base salary.  This payroll structure is rarely used in most hospitals though,
 due to unpredictable monthly revenue.  Most institutions should opt for the index-based payroll structure that allows 
 the human resources expenses to flex with the institutional revenue.
@@ -23,15 +23,15 @@ There are a total of 74 employees employed at the institution for this payroll p
 3. Harper Elise Whitmore
 4. Olivier Benjamin Hensley
 
-These employees all have unique employment conditions that demonstrate how BHIMA payroll works. Below, we'll walk through the payroll calculations for each of them.
+These employees all have unique employment conditions that demonstrate how OpenSIGL payroll works. Below, we'll walk through the payroll calculations for each of them.
 
 ### Payroll Configuration
 
 Before starting the payroll process, there are a number of important configuration decisions that need to determined.
 
-Firstly, the expense account for payroll transactions needs to be configured.  In the DRC's implementation of OHADA, the account **`[66110011] - Rémunération Personnel`** is the **expense account** that is debited when writing the base salary payroll transaction.  In BHIMA, each line of the payroll transaction is also linked to the employee ID to facilitate lookups and future reports.
+Firstly, the expense account for payroll transactions needs to be configured.  In the DRC's implementation of OHADA, the account **`[66110011] - Rémunération Personnel`** is the **expense account** that is debited when writing the base salary payroll transaction.  In OpenSIGL, each line of the payroll transaction is also linked to the employee ID to facilitate lookups and future reports.
 
-Secondly, The payroll system needs to know the number of workdays are included in the payment period.  BHIMA can automatically calculate the number of workdays in a month based on the _weekend configuration_.  In these scenarios, the **Configuration Semaine Anglaise** was selected for determining workdays within the payroll period.
+Secondly, The payroll system needs to know the number of workdays are included in the payment period.  OpenSIGL can automatically calculate the number of workdays in a month based on the _weekend configuration_.  In these scenarios, the **Configuration Semaine Anglaise** was selected for determining workdays within the payroll period.
 Under this configuration:
 
 - **Saturday** and **Sunday** are not considered working days.  
@@ -41,11 +41,11 @@ Finally, the decision between index-based or classical payroll needs to be confi
 
 ### Payroll Advances
 
-Sometimes, an employee may want to receive a portion of their salary before the end of the month.  The institution is responsible for setting a reasonable policy for the frequency and amount of advances an employee can draw down against their salary.  These are referred to as advances or prepayments in BHIMA, and typically debit the employee account while crediting a cash or bank account.  Advances are usually not taxable.
+Sometimes, an employee may want to receive a portion of their salary before the end of the month.  The institution is responsible for setting a reasonable policy for the frequency and amount of advances an employee can draw down against their salary.  These are referred to as advances or prepayments in OpenSIGL, and typically debit the employee account while crediting a cash or bank account.  Advances are usually not taxable.
 
 During payroll process, the system needs to know how much of the previous advance to withhold from the employee's salary.  It may be that the employee has withdrawn more than their salary this month, in which case the human resources department needs to make determination about the amount to withhold.  Once that figure is determined, the accounting team should configure the rubric to determine this withholding amount.
 
-Unlike other payroll configurations, advances are specific to employees that have received an advance.  Therefore, BHIMA needs to be told this, using the option **"Will be associated with the employee ID"** in the rubric configuration page.
+Unlike other payroll configurations, advances are specific to employees that have received an advance.  Therefore, OpenSIGL needs to be told this, using the option **"Will be associated with the employee ID"** in the rubric configuration page.
 
 #### Configuration Properties (for deductions)
 
@@ -72,7 +72,7 @@ When configuring these rubrics, it is crucial to specify their *non-taxable* sta
 
 #### Example: Social Expense Rubric: **IN-KIND BENEFIT – HOUSING**
 
-In BHIMA, these social expense are configured with the following properties:
+In OpenSIGL, these social expense are configured with the following properties:
 
 - **Rubric Type**: Index  
 - **Monetary Value**: Yes  
@@ -101,7 +101,7 @@ In the payroll configuration, **social contributions** are categorized into two 
 
 ### Payroll Taxes
 
-In the payroll system, **taxes** are classified into two main categories based on who bears the financial responsibility: the **employee** or the **employer**.  In the DRC, the **IMPÔT PROFESSIONNEL SUR LE REVENU (IPR)** represents the primary tax deducted directly from an employee’s gross taxable salary.  These tax rates are pre-determined by brackets set by the DRC Government, and this is controlled in BHIMA by the "is it IPR?" setting.
+In the payroll system, **taxes** are classified into two main categories based on who bears the financial responsibility: the **employee** or the **employer**.  In the DRC, the **IMPÔT PROFESSIONNEL SUR LE REVENU (IPR)** represents the primary tax deducted directly from an employee’s gross taxable salary.  These tax rates are pre-determined by brackets set by the DRC Government, and this is controlled in OpenSIGL by the "is it IPR?" setting.
 
 For the employee's share, once a rubric is flagged as **IPR**, a **dedicated algorithm is automatically triggered** by the system to perform the tax calculation. The algorithm uses the following formula:
 
@@ -205,7 +205,7 @@ Seniority Bonus = Basic Salary × Years of Service × Seniority Index
 
 In the configuration of payroll components, there are cases where an employee may cover the hospitalization costs of third parties (such as dependents or family members). These expenses can also be **withheld directly at the source** during the payroll configuration process.
 
-Once the configuration is complete, the **BHIMA system proceeds with the payroll calculation** without generating the accounting entries. This stage is considered **provisional** and **can still be modified** as long as the accounting entries have not been validated.
+Once the configuration is complete, the **OpenSIGL system proceeds with the payroll calculation** without generating the accounting entries. This stage is considered **provisional** and **can still be modified** as long as the accounting entries have not been validated.
 
 ---
 
@@ -300,7 +300,7 @@ The next stage in the payroll process involves calculating the **deductions** an
 
 ### **Calculation of the Professional Income Tax (IPR)**
 
-The calculation of the **Professional Income Tax (IPR)** is a specific process that requires the configuration of tax brackets defined by the **General Directorate of Taxes**. The **BHIMA system** supports the configuration and automatic calculation of the IPR tax.
+The calculation of the **Professional Income Tax (IPR)** is a specific process that requires the configuration of tax brackets defined by the **General Directorate of Taxes**. The **OpenSIGL system** supports the configuration and automatic calculation of the IPR tax.
 
 #### **Step 1: Determine the IPR Tax Base**
 To calculate the IPR base, the **employee share of the INSS contribution (QPO)** is subtracted from the **taxable gross salary**:
@@ -323,7 +323,7 @@ To determine the **annual cumulative IPR base**, the monthly base is multiplied 
 Annual IPR Base = 566,066.59 × 12 = 6,792,799.05 CDF
 ```
 
-> The BHIMA system then applies the configured progressive tax brackets to this annual base to calculate the monthly IPR deduction.
+> The OpenSIGL system then applies the configured progressive tax brackets to this annual base to calculate the monthly IPR deduction.
 
 ---
 

@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .service('LotService', LotService);
 
 LotService.$inject = ['PrototypeApiService', '$http', 'util', '$window'];

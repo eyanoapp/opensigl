@@ -1,12 +1,12 @@
 &raquo; [Home](../../index.md) / [Inventory & Stock Management](../index.md) / Stock Management & Accounting
 
 # Stock Management & Accounting
-Stock management in BHIMA can be a standalone package or with automated accounting features.  The automated
+Stock management in OpenSIGL can be a standalone package or with automated accounting features.  The automated
 accounting features are enabled in the [Stock Settings](../stock.settings.md#individual-stock-settings) module under
 the "Enable Automatic Stock Accounting" setting.  It is on by default.
 
-BHIMA behaves differently depending on the accounting standard being followed.  For completeness, below we'll present
-the two accounting strategies and discuss how BHIMA automates each.  We'll present an overview, then the purchasing procedure,
+OpenSIGL behaves differently depending on the accounting standard being followed.  For completeness, below we'll present
+the two accounting strategies and discuss how OpenSIGL automates each.  We'll present an overview, then the purchasing procedure,
 then the consumption of medicines.
 
 ## OHADA Stock Accounting

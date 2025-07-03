@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStrengthMeter', {
     template : `
       <div class='strength-meter' ng-if="$ctrl.showStrengthMeter">

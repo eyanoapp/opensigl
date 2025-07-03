@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhDashboardFilter', {
     templateUrl : 'js/components/bhDashboardFilter/bhDashboardFilter.html',
     controller  : DashboardFilterController,

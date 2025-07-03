@@ -14,7 +14,7 @@ const TRANSACTION_DEADLOCK_RESTART_DELAY = 50;
  * Wraps transaction logic in a promise to handle rollback and commits as a
  * single transactional entity.
  *
- * Note that this module is required by the bhima
+ * Note that this module is required by the opensigl
  * database connector and will be exposed via a public API there - controllers
  * should not be using this directly.
  *

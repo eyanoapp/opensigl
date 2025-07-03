@@ -1,4 +1,4 @@
-angular.module('bhima.services')
+angular.module('opensigl.services')
   .factory('PayrollSettingsService', PayrollSettingsService);
 
 PayrollSettingsService.$inject = ['$http', 'util'];

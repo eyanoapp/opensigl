@@ -15,7 +15,7 @@ describe('test/client-unit/services/UniqueValidatorService', () => {
   };
 
   beforeEach(
-    module('pascalprecht.translate', 'angularMoment', 'bhima.services')
+    module('pascalprecht.translate', 'angularMoment', 'opensigl.services')
   );
 
   beforeEach(inject((_$httpBackend_, _UniqueValidatorService_, _$rootScope_) => {

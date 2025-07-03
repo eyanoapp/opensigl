@@ -1,4 +1,4 @@
-angular.module('bhima.controllers')
+angular.module('opensigl.controllers')
   .controller('account_report_multipleController', AccountReportMultipleConfigController);
 
 AccountReportMultipleConfigController.$inject = [

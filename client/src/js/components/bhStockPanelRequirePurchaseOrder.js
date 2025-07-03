@@ -1,4 +1,4 @@
-angular.module('bhima.components')
+angular.module('opensigl.components')
   .component('bhStockPanelRequirePurchaseOrder', {
     templateUrl : 'modules/templates/bhStockPanelRequirePurchaseOrder.tmpl.html',
     controller  : StockPanelRequirePurchaseOrderController,

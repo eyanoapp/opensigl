@@ -268,7 +268,7 @@ module.exports = {
   },
 
   /**
-   * Log into the BHIMA server
+   * Log into the OpenSIGL server
    *
    * @param {string} username - username to log in (optional)
    * @param {string} password - password to log in (optional)
@@ -281,7 +281,7 @@ module.exports = {
 
     // Go to the login page
     await page.goto('/#!/login');
-    expect(page).toHaveTitle(/BHIMA/);
+    expect(page).toHaveTitle(/OpenSIGL/);
 
     // First, switch to English
 
@@ -304,7 +304,7 @@ module.exports = {
   },
 
   /**
-   * Log out of the BHIMA server
+   * Log out of the OpenSIGL server
    *
    * @returns {Promise} promise to return the login page after logging out
    */

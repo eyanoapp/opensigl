@@ -1,5 +1,5 @@
 /*
-  This file contains all the stored functions used in bhima's database and queries.
+  This file contains all the stored functions used in opensigl's database and queries.
   It should be loaded after schema.sql.
 */
 
