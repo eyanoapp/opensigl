@@ -3,7 +3,7 @@
 # Registre des employés
 
 <div style='text-align: justify;'>
-Avec Bhima 2X, nous avons amélioré la manière dont  la grille se présente. Vous pouvez désormais rechercher, modifier, télécharger la liste des employés,</div>
+Avec OpenSIGL 2X, nous avons amélioré la manière dont  la grille se présente. Vous pouvez désormais rechercher, modifier, télécharger la liste des employés,</div>
 
 ![registre_employee](../../images/payroll/registre_employee.jpg)
 

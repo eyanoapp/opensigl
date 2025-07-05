@@ -40,7 +40,7 @@ DigitalOcean vous donnera 100 dollars de crédit à dépenser au cours des 60 pr
 
 <img src='../../images/install/distribution.png' class="left40">
 
-3.Sélectionnez une taille adaptée à votre utilisation prévue. Le <span class='guilabel'>Droplet Standard de 5$</span> devrait être suffisant pour une utilisation légère de Bhima. Si vous avez besoin de plus d’informations, DigitalOcean facilite le redimensionnement en gouttelettes plus grosses.
+3.Sélectionnez une taille adaptée à votre utilisation prévue. Le <span class='guilabel'>Droplet Standard de 5$</span> devrait être suffisant pour une utilisation légère de OpenSIGL. Si vous avez besoin de plus d’informations, DigitalOcean facilite le redimensionnement en gouttelettes plus grosses.
 
 4. Si vous souhaitez des sauvegardes hebdomadaires automatiques, activez-les.
 
@@ -57,12 +57,12 @@ DigitalOcean vous donnera 100 dollars de crédit à dépenser au cours des 60 pr
 
 9. Vous n'aurez pas besoin d'ajouter de clés SSH publiques (sauf si vous savez ce que c'est et que vous voulez).
 
-10. Cliquez sur le bouton Créer. Droplet prend quelques secondes, l'installation réelle de Bhima prend jusqu'à 10 minutes..
+10. Cliquez sur le bouton Créer. Droplet prend quelques secondes, l'installation réelle de OpenSIGL prend jusqu'à 10 minutes..
 
 # Configurez votre domaine
 ## Conseil
 <p>
-Les Droplets de DigitalOcean utilisent des adresses IP qui peuvent changer si vous détruisez la machine. Pour vous assurer que votre installation Bhima sera toujours accessible en utilisant la même adresse IP, utilisez une adresse IP flottante en suivant ces instructions.
+Les Droplets de DigitalOcean utilisent des adresses IP qui peuvent changer si vous détruisez la machine. Pour vous assurer que votre installation OpenSIGL sera toujours accessible en utilisant la même adresse IP, utilisez une adresse IP flottante en suivant ces instructions.
 </p>
 
 1. Une fois le Droplet est créé,copiez son adresse IP publique (ex: 12.34.56.78) et attribué un DNS qui pointe vers ce Droplet.
@@ -104,6 +104,6 @@ Lets Encrypt utilise l'adresse mail que vous avez fourni pour envoyer des notifi
 </ul>
 
 # Lancez OpenSIGL sur le navigateur
-1. Tapez https://votre.domaine et vérifiez si Bhima tourne.
+1. Tapez https://votre.domaine et vérifiez si OpenSIGL tourne.
 
 2. Vous pouvez maintenant commencer à configurer vos informations d'interprise en cliquant sur le bouton <span class='guilabel'>installer</span>

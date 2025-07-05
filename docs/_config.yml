@@ -5,7 +5,7 @@ repository: "IMA-WorldHealth/opensigl"
 title: "Basic Hospital Information Management Application"
 abbreviation: "OpenSIGL"
 logo: "logo.png"
-description: "Bhima is a free, open source accounting and hospital information management system (HIMS) tailored for rural hospitals in Africa. We are an international team based in the Democratic Republic of the Congo."
+description: "OpenSIGL is a free, open source accounting and hospital information management system (HIMS) tailored for rural hospitals in Africa. We are an international team based in the Democratic Republic of the Congo."
 markdown: kramdown
 sass:
   style: compressed

@@ -13,12 +13,12 @@ Cette première pratique consistera à Analyser le bulletin de paie d’une entr
 <div style='text-align: justify;'>
 En visualisant ce bulletin de paie voici les rubriques que nous avons décelé</div>
 
-- <strong>Heures supplémentaires</strong> : cette rubrique sera créée dans Bhima et sera classifié comme addition ou avantage imposable.
-- <strong>Heures supplémentaires ou majorées</strong> : cette rubrique sera créée dans Bhima et sera classifié comme addition ou avantage imposable.
-- <strong>Accueil Occasionnel</strong> : cette rubrique sera créée dans Bhima et sera classifié comme addition ou avantage imposable.
-- <strong>Absences</strong> : cette rubrique devrait être classifié comme retenue, mais dans le système Bhima le nombre d’absence doit être traduit en jour et devrait être déduit du nombre de jour de prestation.
-- <strong>Congés payés</strong> : cette rubrique sera créée dans Bhima et sera classifié comme addition ou avantage.
-- <strong>Divers</strong> : cette rubrique sera créée dans Bhima et sera classifié comme <strong>addition</strong> ou <strong>avantage</strong>.
+- <strong>Heures supplémentaires</strong> : cette rubrique sera créée dans OpenSIGL et sera classifié comme addition ou avantage imposable.
+- <strong>Heures supplémentaires ou majorées</strong> : cette rubrique sera créée dans OpenSIGL et sera classifié comme addition ou avantage imposable.
+- <strong>Accueil Occasionnel</strong> : cette rubrique sera créée dans OpenSIGL et sera classifié comme addition ou avantage imposable.
+- <strong>Absences</strong> : cette rubrique devrait être classifié comme retenue, mais dans le système OpenSIGL le nombre d’absence doit être traduit en jour et devrait être déduit du nombre de jour de prestation.
+- <strong>Congés payés</strong> : cette rubrique sera créée dans OpenSIGL et sera classifié comme addition ou avantage.
+- <strong>Divers</strong> : cette rubrique sera créée dans OpenSIGL et sera classifié comme <strong>addition</strong> ou <strong>avantage</strong>.
 
 <div class = "bs-callout bs-callout-success">
 Dans le système OpenSIGL, nous n’assigneront la propriété <strong>cotisation</strong> qu’à la CNSS ancien INSS en vigueur  à la République Démocratique du Congo, en ce qui concerne les cotisations existant dans d’autre pays, nous allons le considéré tout simplement comme étant des <strong>taxes</strong>. 
@@ -32,7 +32,7 @@ Dans le système OpenSIGL, nous n’assigneront la propriété <strong>cotisatio
 - <strong>Assurance chômage</strong> : cette rubrique sera classifiée comme étant une taxe prise en charge par les employés.
 - <strong>AGFF</strong> : cette rubrique sera classifiée comme étant une taxe prise en charge par les employés.
 
-<strong><u><em> Création des rubriques dans Bhima </em></u></strong>
+<strong><u><em> Création des rubriques dans OpenSIGL </em></u></strong>
 
 <div style='text-align: justify;'>
 Voici un aperçu de la création de la rubrique Heure Supplémentaires, le compte de tiers sera le compte liées aux salaires des employés, le compte de tiers ou compte de charges sera le compte par laquelle l’entreprise supporte la charge <strong>Heures Supplémentaires</strong>.
@@ -54,11 +54,11 @@ Vont être créé de la même façon que la rubrique Heures supplémentaires car
 
 -	En ce qui concerne les taxes nous avions analysé les taxes suivantes <strong>CSG non imposable et CSG+CRDS imposable</strong>, ces deux taxes bien que se calculant en pourcentage respectivement 6.8% et 2.9% par rapport au salaire bruts imposable, la valeur du salaire brut est diminuer de 1,75% ou soit multiplier par 98.25% cette diminution fera en sorte que le pourcentage de la rubrique CSG non imposable deviendra (6.8% x 98.25% = 6.68%) et celui de CSG+CRDS imposable (2.9% x 98.25% = 2.84%),
 
--	pour les autres taxes leur création dans le système Bhima se fera avec les pourcentages qui sont mentionnés sur le bulletin de paie.
+-	pour les autres taxes leur création dans le système OpenSIGL se fera avec les pourcentages qui sont mentionnés sur le bulletin de paie.
 
 ![extrait_payslip](../../images/payroll/extrait_payslip_2.jpg)
 
-Voici un aperçu des différents modules créée avec le système Bhima.
+Voici un aperçu des différents modules créée avec le système OpenSIGL.
 
 ![payslip_apercue_2](../../images/payroll/payslip_apercue_2.jpg)
 

@@ -59,7 +59,7 @@ then
 
     if [[ ! -z "$proc" ]]
     then
-        echo "Deleting zombie node Bhima process $proc"
+        echo "Deleting zombie node OpenSIGL process $proc"
         kill -9 $proc || true
     fi
 fi

@@ -81,7 +81,7 @@ La ventilation automatique des factures n’est possible que si et seulement si 
 <strong><u> Mis à jour de la répartition des centres de frais </u></strong>
 
 <div style='text-align: justify;'>
-Dans le système d’information Bhima, il existe un module qui permet de mettre à jour les répartitions effectuées des centres auxiliaires vers les centres principaux.
+Dans le système d’information OpenSIGL, il existe un module qui permet de mettre à jour les répartitions effectuées des centres auxiliaires vers les centres principaux.
 Lorsqu’on accède à l’interface des répartitions pour la toute première fois, la fenêtre modale ci-après apparait.</div>
 
 

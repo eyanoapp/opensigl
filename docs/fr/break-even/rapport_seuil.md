@@ -20,4 +20,4 @@ Pour visualiser le rapport de centre de frais, il faut sélectionner <strong>l�
 
 
 <div style='text-align: justify;'> 
-Dans le système Bhima, il est aussi possible de visualiser le rapport de seuil de rentabilité par nombre de cas, pour ce il y’a deux possibilité pour obtenir <strong>le nombre de cas d’hospitalisation, soit par le module de gestion des visites des patients soit via le tableau de bords des indicateurs</strong>.</div>
+Dans le système OpenSIGL, il est aussi possible de visualiser le rapport de seuil de rentabilité par nombre de cas, pour ce il y’a deux possibilité pour obtenir <strong>le nombre de cas d’hospitalisation, soit par le module de gestion des visites des patients soit via le tableau de bords des indicateurs</strong>.</div>

@@ -3,7 +3,7 @@
 # Configuration des barèmes IPR
 
 <div style='text-align: justify;'>
-Avec Bhima 2X, la configuration des barèmes IPR permet de gérer plusieurs barèmes à la fois, pour ajouter des  tranches à un barème il suffit de sélectionner le barème dans la liste de barème enregistré. </div>
+Avec OpenSIGL 2X, la configuration des barèmes IPR permet de gérer plusieurs barèmes à la fois, pour ajouter des  tranches à un barème il suffit de sélectionner le barème dans la liste de barème enregistré. </div>
 
 ![bareme_ipr](../../images/payroll/bareme_ipr.jpg)
 

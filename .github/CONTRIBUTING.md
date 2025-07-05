@@ -41,7 +41,7 @@ Other Forms of Contribution
 
 #### Translation
 
-Bhima is an international piece of software.  Our development team operates in both French and English, but would love to round out our supported languages!  If you would like to get involved in translation work, you can either translate documentation
+OpenSIGL is an international piece of software.  Our development team operates in both French and English, but would love to round out our supported languages!  If you would like to get involved in translation work, you can either translate documentation
 (see the [user manual](https://github.com/Third-Culture-Software/opensigl/tree/development/docs/OpenSIGL%20User%20Guide)) or the application itself.
 
 We use [angular-translate](https://github.com/angular-translate/angular-translate) for all client-side translation.  The files are located in `client/src/i18n/{locale}.json`.  Feel free to translate the key-value pairs and store it in your own langage.

@@ -34,7 +34,7 @@ La deuxième partie de cette fenêtre permet de filtrer les employés figurant d
 2.<strong><u> Configuration des employés pour le paiement</u></strong>
 <div style='text-align: justify;'>
 La configuration des employés pour le paiement permet d’enregistré les informations devant figuré sur le bulletin de paie de l’employé. 
-Avec le système Bhima 2X, il existe deux façons pour effectuer cette opération, la procédure manuelle et la procédure automatique.</div>
+Avec le système OpenSIGL 2X, il existe deux façons pour effectuer cette opération, la procédure manuelle et la procédure automatique.</div>
 
 <div class = "bs-callout bs-callout-success">
 La configuration d’un employé pour le paiement n’est pas une opération irréversible

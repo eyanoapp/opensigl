@@ -37,7 +37,7 @@ date
 procs=$(netstat -tulpn |& grep 8080) || true
 proc=$(echo $procs | sed -r 's/.* ([0-9]+)\/node$/\1/g')
 if [[ ! -z "$proc" ]]; then
-  echo "Deleting zombie node Bhima process $proc"
+  echo "Deleting zombie node OpenSIGL process $proc"
   kill -9 $proc || true
 fi
 
