@@ -1,6 +1,6 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <span class="fa fa-clipboard"></span>
+<div class="card ">
+  <div class="card-heading">
+    <span class="bi bi-clipboard"></span>
     <span translate>FORM.LABELS.FINANCIAL_STATUS</span>
     <span class="pull-right">
       <bh-pdf-link
@@ -10,10 +10,10 @@
       </bh-pdf-link>
     </span>
   </div>
-  <div class="panel-body" style="position:relative;">
+  <div class="card-body" style="position:relative;">
 
     <bh-panel-overlay ng-if="$ctrl.loading">
-      <span><span class="fa fa-circle-o-notch fa-spin"></span>
+      <span><span class="bi bi-circle-o-notch fa-spin"></span>
         <span translate>FORM.INFO.LOADING</span>
       </span>
     </bh-panel-overlay>
@@ -28,16 +28,16 @@
       <div class="col-sm-6 col-xs-12">
         <!-- show good financial standing indicator -->
         <h5 ng-show="$ctrl.status.isInGoodStanding" class="text-success" style="margin-top:0;">
-          <i class="fa fa-check-circle"></i> <span translate>PATIENT_RECORDS.FINANCES.IN_GOOD_STANDING</span>
+          <i class="bi bi-check-circle"></i> <span translate>PATIENT_RECORDS.FINANCES.IN_GOOD_STANDING</span>
         </h5>
 
         <h5 ng-show="!$ctrl.status.isInGoodStanding" class="text-danger">
-          <i class="fa fa-exclamation-circle"></i> <span translate>PATIENT_RECORDS.FINANCES.NOT_IN_GOOD_STANDING</span>
+          <i class="bi bi-exclamation-circle"></i> <span translate>PATIENT_RECORDS.FINANCES.NOT_IN_GOOD_STANDING</span>
         </h5>
 
         <ul style="list-style:none;padding-left:0;" class="text-warning" style="margin-top:0;">
           <li ng-show="$ctrl.status.hasCreditorBalance">
-            <i class="fa fa-warning"></i>
+            <i class="bi bi-warning"></i>
             <span
               translate
               translate-values="$ctrl.i18nValues"
@@ -46,7 +46,7 @@
             </span>
           </li>
           <li ng-show="$ctrl.status.hasOldDebt">
-            <i class="fa fa-warning"></i>
+            <i class="bi bi-warning"></i>
             <span
               translate
               translate-values="$ctrl.i18nValues"
@@ -56,7 +56,7 @@
             </span>
           </li>
           <li ng-show="$ctrl.status.hasExcessiveDebt">
-            <i class="fa fa-warning"></i>
+            <i class="bi bi-warning"></i>
             <span
               translate
               translate-values="$ctrl.i18nValues"
@@ -70,13 +70,13 @@
           <dt translate>PATIENT_RECORDS.FINANCES.FIRST_TRANSACTION</dt>
           <dd>
             {{ $ctrl.data.aggregates.since | date:$ctrl.DATE_FORMAT }}
-            (<span am-time-ago="$ctrl.data.aggregates.since"></span> <i class="fa fa-clock-o"></i>)
+            (<span am-time-ago="$ctrl.data.aggregates.since"></span> <i class="bi bi-clock-o"></i>)
           </dd>
 
           <dt translate>PATIENT_RECORDS.FINANCES.LAST_TRANSACTION</dt>
           <dd>
             {{ $ctrl.data.aggregates.until | date:$ctrl.DATE_FORMAT }}
-            (<span am-time-ago="$ctrl.data.aggregates.until"></span> <i class="fa fa-clock-o"></i>)
+            (<span am-time-ago="$ctrl.data.aggregates.until"></span> <i class="bi bi-clock-o"></i>)
           </dd>
         </dl>
 
@@ -119,7 +119,7 @@
                     { key : 'period', value : 'allTime' }
                   ]
                 })">
-                  <i class="fa fa-link"></i>
+                  <i class="bi bi-link"></i>
                   <span translate translate-values="{'numMovements':$ctrl.totalMovementCount}">
                     PATIENT_RECORDS.VIEW_ALL_MOVEMENTS_TO_PATIENT
                   </span>

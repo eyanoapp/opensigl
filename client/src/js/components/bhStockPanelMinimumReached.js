@@ -20,7 +20,7 @@ function StockPanelMinimumReachedController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-battery-quarter text-info';
+    $ctrl.display = 'bi bi-battery-quarter text-info';
 
     StockDashboard.read({ status : 'minimum_reached' })
       .then((data) => {

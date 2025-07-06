@@ -1,7 +1,7 @@
-<div class="panel panel-default">
-  <div class="panel-heading" style="display: flex; justify-content: space-between;">
+<div class="card ">
+  <div class="card-heading" style="display: flex; justify-content: space-between;">
     <span>
-      <i class="fa fa-bed"></i>
+      <i class="bi bi-bed"></i>
       <span translate>BED.LIST</span> ({{ BedCtrl.gridOptions.data.length }})
     </span>
 
@@ -11,13 +11,13 @@
         ng-click="BedCtrl.expandAll()"
         class="btn btn-default"
         type="button" data-expand>
-        <i class="fa fa-sitemap"></i>
+        <i class="bi bi-sitemap"></i>
       </button>
       <button
         ng-click="BedCtrl.createBed()"
         class="btn btn-primary"
         type="button" data-create-bed>
-        <i class="fa fa-plus"></i> <span translate>BED.ADD</span>
+        <i class="bi bi-plus"></i> <span translate>BED.ADD</span>
       </button>
     </div>
   </div>

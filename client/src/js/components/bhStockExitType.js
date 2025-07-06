@@ -1,27 +1,33 @@
 const stockExitTypeTmpl = `
-<div class="col-md-3 col-xs-6" ng-repeat="type in $ctrl.types track by type.label">
-  <button
-    type="button"
-    id="entry-exit-type-{{type.label}}"
-    class="btn-block panel panel-default segment ima-stat-card"
-    ng-class="{ 'ima-stat-card-reversed' : $ctrl.isTypeSelected(type) }"
-    ng-click="$ctrl.selectExitType(type)">
-      <div class="panel-body text-center text-ellipsis">
-        <div class="ui lg statistic">
-          <div class="value" translate>{{type.labelKey}}</div>
-          <div class="ui-hidable-label" ng-hide="$ctrl.isTypeSelected(type)" translate>{{type.descriptionKey}}</div>
-          <div class="ui-hidable-label" ng-show="$ctrl.isTypeSelected(type)" translate>{{$ctrl.destinationLabel}}</div>
+  <div class="row g-3">
+    <div class="col-sm-6 col-md-3" ng-repeat="type in $ctrl.types track by type.label">
+      <div
+        type="button"
+        id="entry-exit-type-{{type.label}}"
+        class="card card-one border"
+        ng-class="{ 'bg-primary-subtle border-primary' : $ctrl.isTypeSelected(type) }"
+        ng-click="$ctrl.selectExitType(type)"
+      >
+        <div class="card-body overflow-hidden text-center">
+          <h2 class="card-value text-primary" translate><i ng-class="type.icon"></i></h2>
+          <h3 class="text-dark text-uppercase fw-semibold mb-1" translate>{{type.labelKey}}</h3>
+          <span class="fs-xs text-secondary mb-0 lh-4" ng-hide="$ctrl.isTypeSelected(type)" translate>
+            {{type.descriptionKey}}
+          </span>
+          <span class="fs-xs text-secondary mb-0 lh-4" ng-show="$ctrl.isTypeSelected(type)" translate>
+            {{$ctrl.destinationLabel}}
+          </span>
         </div>
       </div>
-  </button>
-</div>
+    </div>
+  </div>
 
-<div class="col-xs-12" ng-if="$ctrl.hasNoTypesDefined">
-  <p class="alert alert-danger">
-    <i class="fa fa-warning"></i>
-    <span translate translate-values="$ctrl.depot">STOCK.NO_EXIT_TYPES</span>
-  </p>
-</div>
+  <div ng-if="$ctrl.hasNoTypesDefined">
+    <p class="alert alert-danger">
+      <i class="bi bi-warning"></i>
+      <span translate translate-values="$ctrl.depot">STOCK.NO_EXIT_TYPES</span>
+    </p>
+  </div>
 `;
 
 angular.module('opensigl.components')

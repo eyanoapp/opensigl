@@ -4,7 +4,7 @@
     <span ng-repeat = "depot in $ctrl.depotsSelected">
       <span style="padding: 2px; border: 1px solid #aaa; margin: 1px;">
         <span class="text-primary">{{depot.text}}</span>
-        <i class="fa fa-close text-danger link" ng-click="$ctrl.remove(depot.uuid)" id="{{depot.uuid}}"></i>
+        <i class="bi bi-close text-danger link" ng-click="$ctrl.remove(depot.uuid)" id="{{depot.uuid}}"></i>
       </span>
     </span>
   </div>

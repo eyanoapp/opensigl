@@ -11,7 +11,7 @@
 
     <li>
       <a data-method="lot-schedule" ng-click="grid.appScope.openLotBarcodeModal(row.entity.uuid)" href>
-        <i class="fa fa-barcode"></i> <span translate>BARCODE.BARCODE</span>
+        <i class="bi bi-barcode"></i> <span translate>BARCODE.BARCODE</span>
       </a>
     </li>
 
@@ -19,7 +19,7 @@
 
     <li bh-has-permission="grid.appScope.bhConstants.actions.EDIT_LOT">
       <a data-method="edit" ng-click="grid.appScope.openAssetModal(row.entity.uuid)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.LABELS.EDIT</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.LABELS.EDIT</span>
       </a>
     </li>
 
@@ -33,7 +33,7 @@
           displayValue : row.entity.text,
           cachable : false},
         ]})">
-        <i class="fa fa-info-circle"></i> <span translate>ASSET.VIEW_IN_INVENTORY</span>
+        <i class="bi bi-info-circle"></i> <span translate>ASSET.VIEW_IN_INVENTORY</span>
       </a>
     </li>
 
@@ -45,19 +45,19 @@
         { key : 'depot_uuid', value : row.entity.depot_uuid, displayValue : row.entity.depot_text, cachable : false },
         { key : 'includeEmptyLot', value : 0 },
         ]})">
-        <i class="fa fa-file-text"></i> <span translate>ASSET.VIEW_IN_STOCK</span>
+        <i class="bi bi-file-text"></i> <span translate>ASSET.VIEW_IN_STOCK</span>
       </a>
     </li>
 
     <li >
       <a data-method="scan" ng-click="grid.appScope.createAssetScan(row.entity)" href>
-        <i class="fa fa-edit"></i> <span translate>ASSET.NEW_ASSET_SCAN</span>
+        <i class="bi bi-edit"></i> <span translate>ASSET.NEW_ASSET_SCAN</span>
       </a>
     </li>
 
     <li>
       <a data-method="view-scan-history" ng-click="grid.appScope.showAssetScans(row.entity)" href>
-        <i class="fa fa-list-alt"></i> <span translate>ASSET.SHOW_ASSET_SCANS</span>
+        <i class="bi bi-list-alt"></i> <span translate>ASSET.SHOW_ASSET_SCANS</span>
       </a>
     </li>
 
@@ -65,25 +65,25 @@
 
     <li ng-if="row.entity.assignment_uuid">
       <a data-method="receipt" href ng-click="grid.appScope.showAssignmentReceipt(row.entity.assignment_uuid)">
-        <span><i class="fa fa-file-o"></i> <span translate>ASSET.DOCUMENT</span></span>
+        <span><i class="bi bi-file-o"></i> <span translate>ASSET.DOCUMENT</span></span>
       </a>
     </li>
 
     <li ng-if="!row.entity.assignment_uuid">
       <a data-method="add-record" href ng-click="grid.appScope.addAssignment(row.entity)">
-        <span><i class="fa fa-plus"></i> <span translate>ASSIGN.ADD_ASSIGNMENT</span></span>
+        <span><i class="bi bi-plus"></i> <span translate>ASSIGN.ADD_ASSIGNMENT</span></span>
       </a>
     </li>
 
     <li ng-if="row.entity.assignment_uuid">
       <a data-method="remove-record" href ng-click="grid.appScope.deleteAssignment(row.entity.assignment_uuid)">
-        <span class="text-danger"><i class="fa fa-trash"></i> <span translate>ASSIGN.REMOVE_ASSIGNMENT</span></span>
+        <span class="text-danger"><i class="bi bi-trash"></i> <span translate>ASSIGN.REMOVE_ASSIGNMENT</span></span>
       </a>
     </li>
 
     <li>
       <a data-method="view-assignment-history" ng-click="grid.appScope.openHistoricModal(row.entity.uuid, row.entity.depot_uuid)" href>
-        <i class="fa fa-clock-o"></i> <span translate>ASSET.ASSIGNMENT_HISTORY</span>
+        <i class="bi bi-clock-o"></i> <span translate>ASSET.ASSIGNMENT_HISTORY</span>
       </a>
     </li>
 

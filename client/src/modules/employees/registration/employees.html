@@ -25,9 +25,9 @@
       <div class="row">
         <div class="form-horizontal" ng-form="DetailForm">
           <div class="col-md-7">
-            <div class="panel panel-primary">
-              <div class="panel-heading" translate>EMPLOYEE.EMPLOYEE_DETAILS</div>
-              <div class="panel-body">
+            <div class="card panel-primary">
+              <div class="card-heading" translate>EMPLOYEE.EMPLOYEE_DETAILS</div>
+              <div class="card-body">
                 <div class="form-horizontal" ng-form="DetailForm">
                   <fieldset>
                     <label translate>EMPLOYEE.EMPLOYEE_DETAILS</label>
@@ -71,7 +71,7 @@
                         required>
                         <span class="input-group-btn">
                           <button type="button" class="btn btn-default" ng-click="EmployeeCtrl.dobPopupIsOpen = !EmployeeCtrl.dobPopupIsOpen">
-                            <i class="fa fa-calendar-plus-o"></i>
+                            <i class="bi bi-calendar2"></i>
                           </button>
                         </span>
                       </div>
@@ -145,7 +145,7 @@
                       </ui-select>
 
                       <uib-alert class="text-danger" type="danger" ng-if="EmployeeCtrl.grades.length === 0">
-                      <i class="fa fa-warning"></i>
+                      <i class="bi bi-warning"></i>
                       <span translate>EMPLOYEE.NO_GRADE</span>,
                       <b><span translate>FORM.LABELS.CONTACT_ADMIN</span></b>
                     </uib-alert>
@@ -175,7 +175,7 @@
 
                     <!-- Warning for incomplete data - the page will not be able to continue -->
                     <uib-alert class="text-danger" type="danger" ng-if="EmployeeCtrl.creditorGroups.length === 0">
-                      <i class="fa fa-warning"></i>
+                      <i class="bi bi-warning"></i>
                       <span translate>FORM.LABELS.NO_CREDITOR_GROUP</span> <b><span translate>FORM.LABELS.CONTACT_ADMIN</span></b>
                     </uib-alert>
 
@@ -270,7 +270,7 @@
 
               </div>
                <!-- submit button-->
-                <div class="panel-footer text-right">
+                <div class="card-footer text-right">
                   <bh-loading-button loading-state="EmployeeRegistrationForm.$loading">
                     <span translate>{{EmployeeCtrl.updateEditLabel}}</span>
                   </bh-loading-button>
@@ -278,9 +278,9 @@
             </div>
           </div>
           <div class="col-md-5">
-            <div class="panel panel-default">
-              <div class="panel-heading" translate>FORM.LABELS.OPTIONAL_INFO</div>
-              <div class="panel-body">
+            <div class="card ">
+              <div class="card-heading" translate>FORM.LABELS.OPTIONAL_INFO</div>
+              <div class="card-body">
                 <div class="form-horizontal" ng-form="OptionalForm">
                   <!-- Employee hiring date  -->
                   <div class="form-group"
@@ -301,7 +301,7 @@
                         autocomplete="off">
                         <span class="input-group-btn">
                           <button type="button" class="btn btn-default" ng-click="EmployeeCtrl.dateEmbauchePopupIsOpen = !EmployeeCtrl.dateEmbauchePopupIsOpen">
-                            <i class="fa fa-calendar-plus-o"></i>
+                            <i class="bi bi-calendar2"></i>
                           </button>
                         </span>
                       </div>
@@ -335,7 +335,7 @@
                     ng-class="{'has-error' : DetailForm.service.$invalid && EmployeeRegistrationForm.$submitted}">
 
                     <uib-alert class="text-danger" type="danger" ng-if="EmployeeCtrl.services.length === 0">
-                      <i class="fa fa-warning"></i>
+                      <i class="bi bi-warning"></i>
                       <span translate>FORM.LABELS.SERVICE</span> <b><span translate>FORM.LABELS.CONTACT_ADMIN</span></b>
                     </uib-alert>
 
@@ -359,7 +359,7 @@
                     ng-class="{'has-error' : DetailForm.fonction.$invalid && EmployeeRegistrationForm.$submitted}">
 
                     <uib-alert class="text-danger" type="danger" ng-if="EmployeeCtrl.fonctions.length === 0">
-                      <i class="fa fa-warning"></i>
+                      <i class="bi bi-warning"></i>
                       <span translate>FORM.LABELS.FUNCTION</span> <b><span translate>FORM.LABELS.CONTACT_ADMIN</span></b>
                     </uib-alert>
 
@@ -383,7 +383,7 @@
                     ng-class="{'has-error' : DetailForm.title.$invalid && EmployeeRegistrationForm.$submitted}">
 
                     <uib-alert class="text-danger" type="danger" ng-if="EmployeeCtrl.titles.length === 0">
-                      <i class="fa fa-warning"></i>
+                      <i class="bi bi-warning"></i>
                       <span translate>FORM.LABELS.PROFESSION</span> <b><span translate>FORM.LABELS.CONTACT_ADMIN</span></b>
                     </uib-alert>
 

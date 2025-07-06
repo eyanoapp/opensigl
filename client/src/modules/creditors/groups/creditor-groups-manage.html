@@ -5,14 +5,14 @@
     <div class="col-md-8 col-md-offset-2">
       <form name="CreditorGroupManager" bh-submit="CreditorGroupCtrl.submit(CreditorGroupManager)" novalidate>
 
-        <div class="panel panel-primary">
+        <div class="card panel-primary">
 
-          <div class="panel-heading">
+          <div class="card-heading">
             <span ng-if="CreditorGroupCtrl.isUpdateState" translate>CREDITOR_GROUP.UPDATE</span>
             <span ng-if="CreditorGroupCtrl.isCreateState" translate>CREDITOR_GROUP.CREATE</span>
           </div>
 
-          <div class="panel-body">
+          <div class="card-body">
             <!-- name  -->
             <div class="form-group" ng-class="{ 'has-error' : CreditorGroupManager.$submitted && CreditorGroupManager.name.$invalid }">
               <label class="control-label">{{ "FORM.LABELS.NAME" | translate }}</label>
@@ -39,18 +39,18 @@
 
           </div>
 
-          <div class="panel-footer text-right">
+          <div class="card-footer text-right">
             <bh-loading-button loading-state="CreditorGroupManager.$loading">
               <span translate>FORM.BUTTONS.SUBMIT</span>
             </bh-loading-button>
           </div>
         </div>
 
-        <div ng-if="CreditorGroupCtrl.state.current.name === 'creditorGroups.update'" class="panel panel-warning">
-          <div class="panel-heading">
+        <div ng-if="CreditorGroupCtrl.state.current.name === 'creditorGroups.update'" class="card panel-warning">
+          <div class="card-heading">
             <span class="glyphicon glyphicon-lock"></span> <span translate> FORM.INFO.DANGER_ZONE </span>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <button class="btn btn-danger" type="button" ng-click="CreditorGroupCtrl.deleteGroup(CreditorGroupCtrl.bundle.uuid)" data-method="delete">
               <span class="glyphicon glyphicon-trash"></span> <span translate> FORM.BUTTONS.DELETE </span>
             </button>

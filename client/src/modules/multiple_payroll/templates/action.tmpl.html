@@ -8,20 +8,20 @@
     <li class="bh-dropdown-header">{{row.entity.hrreference}}</li>
     <li ng-if="row.entity.status_id === 2 || row.entity.status_id === 1">
       <a data-method="config" ng-click="grid.appScope.goToEmployeeConfig(row.entity.employee_uuid)" href>
-        <i class="fa fa-cog"></i> <span translate>FORM.BUTTONS.CONFIGURE</span>
+        <i class="bi bi-cog"></i> <span translate>FORM.BUTTONS.CONFIGURE</span>
       </a>
     </li>
 
     <li ng-if="row.entity.status_id > 1">
       <a data-method="payslip" ng-click="grid.appScope.paySlip(row.entity)" href>
-        <i class="fa fa-file-text-o"></i> <span translate>FORM.BUTTONS.PAYSLIP</span>
+        <i class="bi bi-file-text-o"></i> <span translate>FORM.BUTTONS.PAYSLIP</span>
       </a>
     </li>
 
     <!-- view linked records -->
     <li>
       <a data-method="view-transactions" href ui-sref="journal({ filters : [{ key : 'period', value : 'allTime' }, { key: 'hrEntity', value : row.entity.hrreference }, { key : 'includeNonPosted', value : 1 }]})">
-        <i class="fa fa-file-text"></i> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
+        <i class="bi bi-file-text"></i> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
       </a>
     </li>
 
@@ -29,7 +29,7 @@
 
     <li>
       <a data-method="employee" ui-sref="employeeRegistry({ filters : [{ key : 'uuid', value : row.entity.employee_uuid, displayValue: row.entity.hrreference, cacheable:false }]})" href>
-        <i class="fa fa-user"></i> <span translate>EMPLOYEE.VIEW_EMPLOYEE</span>
+        <i class="bi bi-user"></i> <span translate>EMPLOYEE.VIEW_EMPLOYEE</span>
       </a>
     </li>
   </ul>

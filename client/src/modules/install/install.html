@@ -11,12 +11,12 @@
   <p class="text-center" translate>INSTALL.DESCRIPTION</p>
 
   <!-- enterprise -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <i class="fa fa-building"></i>
+  <div class="card ">
+    <div class="card-heading">
+      <i class="bi bi-building"></i>
       <span translate>FORM.LABELS.ENTERPRISE</span>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <div class="form-group" ng-class="{ 'has-error' : InstallForm.$submitted && InstallForm.enterpriseName.$invalid }">
         <label class="control-label" translate>FORM.LABELS.ENTERPRISE</label>
         <input name="enterpriseName" type="text" class="form-control" ng-model="InstallCtrl.setup.enterprise.name" required>
@@ -44,12 +44,12 @@
 
   <!-- project -->
   <bh-hidden-field show-text="FORM.LABELS.PROJECT" hide-text="FORM.BUTTONS.CLOSE">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <i class="fa fa-cubes"></i>
+  <div class="card ">
+    <div class="card-heading">
+      <i class="bi bi-cubes"></i>
       <span translate>FORM.LABELS.PROJECT</span>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <div class="form-group" ng-class="{ 'has-error' : InstallForm.$submitted && InstallForm.projectName.$invalid }">
         <label class="control-label" translate>FORM.LABELS.PROJECT</label>
         <input name="projectName" type="text" class="form-control" ng-model="InstallCtrl.setup.project.name"/>
@@ -63,12 +63,12 @@
   </bh-hidden-field>
 
   <!-- super user -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <i class="fa fa-user"></i>
+  <div class="card ">
+    <div class="card-heading">
+      <i class="bi bi-user"></i>
       <span translate>USERS.SUPER</span>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <div class="form-group" ng-class="{ 'has-error' : InstallForm.$submitted && InstallForm.userDisplayname.$invalid }">
         <label class="control-label" translate>USERS.SUPER</label>
         <input name="userDisplayname" type="text" class="form-control" ng-model="InstallCtrl.setup.user.username" required>

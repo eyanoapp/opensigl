@@ -20,7 +20,7 @@ function StockPanelExpiredController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-minus-circle icon-expired';
+    $ctrl.display = 'bi bi-minus-circle icon-expired';
 
     StockDashboard.read({ status : 'expired' })
       .then((data) => {

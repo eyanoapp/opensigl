@@ -7,13 +7,13 @@
   class="ui-grid-cell-contents">
 
   <!-- warning state: invalid, but not initialised yet -->
-  <span ng-hide="row.entity._initialised" class="fa fa-circle-o" uib-tooltip="{{ row.entity._message | translate }}" tooltip-placement="right" tooltip-append-to-body="true"></span>
+  <span ng-hide="row.entity._initialised" class="bi bi-circle-o" uib-tooltip="{{ row.entity._message | translate }}" tooltip-placement="right" tooltip-append-to-body="true"></span>
 
   <!-- error state: invalid and initialised -->
-  <span ng-show="row.entity._initialised" class="fa fa-times-circle" uib-tooltip="{{ row.entity._message | translate }}" tooltip-placement="right" tooltip-append-to-body="true"></span>
+  <span ng-show="row.entity._initialised" class="bi bi-times-circle" uib-tooltip="{{ row.entity._message | translate }}" tooltip-placement="right" tooltip-append-to-body="true"></span>
 </div>
 
 <!-- success state: valid and initialised -->
 <div ng-show="row.entity._valid" class="bg-success ui-grid-cell-contents">
-  <span class="text-success fa fa-check-circle"></span>
+  <span class="text-success bi bi-check-circle"></span>
 </div>

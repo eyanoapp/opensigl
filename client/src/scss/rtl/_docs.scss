@@ -1,0 +1,27 @@
+[dir="rtl"] {
+  .main-docs {
+    @include media-breakpoint-up(xl) {
+      padding-right: 0;
+      padding-left: 220px;
+    }
+  }
+
+  .nav-docs {
+    right: auto;
+    left: 25px;
+
+    .nav-link {
+      padding-left: 0;
+      padding-right: 15px;
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+
+      &.active::before {
+        right: -15px;
+      }
+    }
+  }
+}

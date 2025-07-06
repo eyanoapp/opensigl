@@ -3,6 +3,6 @@ angular.module('opensigl.directives')
     return {
       restrict : 'E',
       // eslint-disable-next-line
-      template: `<p><p class="text-info"><span class="fa fa-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span></p></p>`,
+      template: `<p><p class="text-info"><span class="bi bi-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span></p></p>`,
     };
   });

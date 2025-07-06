@@ -24,7 +24,7 @@
     <div class="row" ng-if="PatientEditCtrl.unknownId">
       <div class="col-md-12">
         <div class="alert alert-danger">
-          <i class="fa fa-search"></i> <span translate>PATIENT_EDIT.PAGE_FAIL</span>
+          <i class="bi bi-search"></i> <span translate>PATIENT_EDIT.PAGE_FAIL</span>
         </div>
       </div>
     </div>
@@ -33,11 +33,11 @@
     <div class="row" ng-show="PatientEditCtrl.medical">
       <div class="col-md-5 col-md-push-7">
 
-        <div class="panel panel-default">
-          <div class="panel-heading" translate>
+        <div class="card ">
+          <div class="card-heading" translate>
             PATIENT_EDIT.FINANCIAL_INFO
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <form name="finance" novalidate>
 
               <!-- Patient Group -->
@@ -54,7 +54,7 @@
                  </ul>
 
                  <p class="text-info form-control-static" ng-if="PatientEditCtrl.finance.patientGroups.length === 0">
-                  <span class="fa fa-info-circle"></span> <span translate>FORM.LABELS.GROUPS_PATIENT_EMPTY</span>
+                  <span class="bi bi-info-circle"></span> <span translate>FORM.LABELS.GROUPS_PATIENT_EMPTY</span>
                  </p>
 
               </div>
@@ -107,11 +107,11 @@
       <div class="col-md-7 col-md-pull-5">
 
         <form name="patientDetails" bh-submit="PatientEditCtrl.updatePatient(patientDetails)" novalidate>
-          <div class="panel panel-default">
-            <div class="panel-heading" translate>
+          <div class="card ">
+            <div class="card-heading" translate>
               FORM.LABELS.PATIENT_DETAILS
             </div>
-            <div class="panel-body">
+            <div class="card-body">
 
               <!-- Copied from patient registration -->
               <!-- TODO Should this all be one page/operation - question of state complexity -->
@@ -197,7 +197,7 @@
                       required>
                       <span class="input-group-btn">
                         <button class="btn btn-default" type="button" ng-click="PatientEditCtrl.datePickerIsOpen =! PatientEditCtrl.datePickerIsOpen">
-                          <i class="fa fa-calendar-plus-o"></i>
+                          <i class="bi bi-calendar2"></i>
                         </button>
                       </span>
                     </div>
@@ -268,18 +268,18 @@
               </div>
             </div>
             <!-- Submission -->
-            <div class="panel-footer text-right" id="submission">
+            <div class="card-footer text-right" id="submission">
               <bh-loading-button loading-state="patientDetails.$loading">
                 <span translate> FORM.BUTTONS.SUBMIT_CHANGES</span>
               </bh-loading-button>
             </div>
           </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading" translate>
+          <div class="card ">
+            <div class="card-heading" translate>
               FORM.LABELS.OPTIONAL_INFO
             </div>
-            <div class="panel-body">
+            <div class="card-body">
               <div class="form-horizontal">
 
                 <div class="form-group" ng-class="{'has-error' : patientDetails.title.$invalid && patientDetails.$submitted}">
@@ -457,7 +457,7 @@
               <div class="col-md-9 col-md-offset-3">
                 <p class="text-center text-info">
                   <a href ng-click="PatientEditCtrl.scrollToSubmission()" id="submissionLink">
-                    <span class="fa fa-arrow-circle-o-up"></span> <span translate>FORM.BUTTONS.LINK_SUBMISSION</span>
+                    <span class="bi bi-arrow-circle-o-up"></span> <span translate>FORM.BUTTONS.LINK_SUBMISSION</span>
                   </a>
                 </p>
               </div>

@@ -49,11 +49,11 @@
       <label class="control-label" translate>FORM.LABELS.COLOR</label>
       <ui-select tagging name="color" ng-model="DataCollectorManagementModalCtrl.dataCollector.color">
         <ui-select-match placeholder="{{ 'FORM.PLACEHOLDERS.PICK_ONE' | translate }}">
-          <i class="fa fa-circle" style="color: {{$select.selected.value}}"></i>
+          <i class="bi bi-circle" style="color: {{$select.selected.value}}"></i>
           <span translate>{{$select.selected.name}}</span>
         </ui-select-match>
         <ui-select-choices repeat="val.value as val in DataCollectorManagementModalCtrl.colors | filter: {'name' :$select.search}">
-          <span><i class="fa fa-circle" style="color: {{val.value}}; font-sze:14px"></i> <span translate>{{ val.name }}</span></span>
+          <span><i class="bi bi-circle" style="color: {{val.value}}; font-sze:14px"></i> <span translate>{{ val.name }}</span></span>
         </ui-select>
     </div>
 
@@ -92,11 +92,11 @@
 
   <div class="modal-footer">
     <p id="data-collector-management-same" ng-if="DataCollectorManagementModalCtrl.hasNoChange" class="text-warning">
-      <i class="fa fa-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
+      <i class="bi bi-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
     </p>
 
     <p ng-if="DataCollectorManagementForm.$submitted && DataCollectorManagementForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
     </p>
 
     <button data-method="cancel" type="button" class="btn btn-default" ng-click="DataCollectorManagementModalCtrl.closeModal()" translate>

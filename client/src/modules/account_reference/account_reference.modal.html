@@ -130,11 +130,11 @@
 
   <div class="modal-footer">
     <p id="account-reference-same" ng-if="AccountReferenceForm.$submitted && AccountReferenceForm.$pristine && !AccountReferenceModalCtrl.isCreateState" class="text-warning">
-      <i class="fa fa-warning"></i> <span translate>ACCOUNT.RECORD_SAME</span>
+      <i class="bi bi-warning"></i> <span translate>ACCOUNT.RECORD_SAME</span>
     </p>
 
     <p ng-if="AccountReferenceForm.$submitted && AccountReferenceForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>ACCOUNT.REFERENCE.RECORD_ERROR</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>ACCOUNT.REFERENCE.RECORD_ERROR</span>
     </p>
 
     <button data-method="cancel" type="button" class="btn btn-default" ng-click="AccountReferenceModalCtrl.closeModal()" translate>

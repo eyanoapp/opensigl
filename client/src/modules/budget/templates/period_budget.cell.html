@@ -6,7 +6,7 @@
      }"
      >
   <span ng-if="row.entity.budget">
-    <span ng-if="grid.appScope.getPeriodBudgetLocked(col.name, row.entity.period)"><i class="fa fa-lock"></i> </span>
+    <span ng-if="grid.appScope.getPeriodBudgetLocked(col.name, row.entity.period)"><i class="bi bi-lock"></i> </span>
     <span>{{ grid.appScope.getPeriodBudget(col.name, row.entity.period) | currency: grid.appScope.enterprise.currency_id:0 }}</span>
   </span>
 </div>

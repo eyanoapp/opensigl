@@ -18,8 +18,8 @@
         ng-submit="PurchaseCtrl.submit(PurchaseOrderForm)"
         novalidate>
 
-        <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="card ">
+          <div class="card-body">
             <div class="row">
               <div class="col-md-6">
                 <bh-supplier-select
@@ -104,7 +104,7 @@
                   <label class="control-label">
                     <span translate>FORM.LABELS.PAYMENT_METHOD</span>
                     <span
-                      class="text-info fa fa-info-circle"
+                      class="text-info bi bi-info-circle"
                       uib-popover-template="'typePopover.tmpl.html'"
                       popover-placement="right"
                       popover-append-to-body="true"
@@ -267,7 +267,7 @@
         <div class="row" ng-if="PurchaseCtrl.order._hasGlobalError">
           <div class="col-xs-12">
             <div class="alert alert-danger">
-              <i class="fa fa-warning"></i> <span translate>PURCHASES.ERRORS.INVALID_ACCOUNTS</span>
+              <i class="bi bi-warning"></i> <span translate>PURCHASES.ERRORS.INVALID_ACCOUNTS</span>
             </div>
           </div>
         </div>
@@ -285,11 +285,11 @@
                 id="optimal_purchase"
                 ng-disabled="!PurchaseCtrl.order.hasSupplier() || PurchaseCtrl.optimalPurchaseLoading || PurchaseCtrl.isUpdateState">
                 <span ng-hide="PurchaseCtrl.optimalPurchaseLoading">
-                  <i class="fa fa-shopping-cart"></i>
+                  <i class="bi bi-shopping-cart"></i>
                   <span translate>FORM.BUTTONS.OPTIMAL_PURCHASE_ORDER </span>
                 </span>
                 <span ng-show="PurchaseCtrl.optimalPurchaseLoading">
-                  <span class="fa fa-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
+                  <span class="bi bi-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
                 </span>
               </button>
             </div>
@@ -305,7 +305,7 @@
               style="padding-top : 10px;"
               class="text-warning"
               ng-show="PurchaseCtrl.order.inventory.size() > 0 && PurchaseCtrl.order.inventory.available.data.length === 0">
-              <span class="fa fa-info-circle"></span>
+              <span class="bi bi-info-circle"></span>
               <span translate>FORM.INFO.ITEMS_FULL</span>
             </p>
 
@@ -313,7 +313,7 @@
               style="padding-top : 10px;"
               class="text-info"
               ng-show="!PurchaseCtrl.order.hasSupplier()">
-              <span class="fa fa-info-circle"></span>
+              <span class="bi bi-info-circle"></span>
               <span translate>FORM.INFO.NO_SUPPLIER</span>
             </p>
           </div>
@@ -360,7 +360,7 @@
             <p
               class="text-danger"
               ng-show="PurchaseCtrl.order._invalid && PurchaseOrderForm.$submitted">
-              <span class="fa fa-exclamation-circle"></span>
+              <span class="bi bi-exclamation-circle"></span>
               <span translate>FORM.ERRORS.INVALID</span>
             </p>
           </div>

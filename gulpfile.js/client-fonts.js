@@ -7,7 +7,6 @@ const path = require('path');
 const CLIENT_FOLDER = path.resolve(__dirname, '../bin/client');
 const FONT_FILES = [
   'node_modules/typeface-open-sans/files/*',
-  'node_modules/bootstrap/fonts/*',
   'node_modules/font-awesome/fonts/*',
 ];
 
@@ -35,4 +34,9 @@ function fontsUiGrid() {
     .pipe(dest(`${CLIENT_FOLDER}/css/fonts/`));
 }
 
-module.exports = parallel(fonts, fontsUiGrid);
+function fontsBootstrapIcons() {
+  return src('node_modules/bootstrap-icons/font/fonts/*', { encoding : false })
+    .pipe(dest(`${CLIENT_FOLDER}/css/fonts/`));
+}
+
+module.exports = parallel(fonts, fontsUiGrid, fontsBootstrapIcons);

@@ -27,7 +27,7 @@
       <br/>
 
       <div style="font-size:0.8em">
-        <span><i class="fa fa-certificate"></i></span>
+        <span><i class="bi bi-certificate"></i></span>
         <span>{{log.date | date : "dd/MM/yyyy HH:mm:ss" }}</span>
         <span translate>FORM.LABELS.BY</span>
         <strong>{{log.userName}}</strong>
@@ -37,7 +37,7 @@
 
   <div ng-if="!$ctrl.logs.length" class="text-center">
     <span class="text-primary" style="margin-top: 3em;">
-      <i class="fa fa-warning"></i> <span translate>TABLE.COLUMNS.EMPTY</span>
+      <i class="bi bi-warning"></i> <span translate>TABLE.COLUMNS.EMPTY</span>
     </span>
   </div>
 
@@ -45,7 +45,7 @@
 
 <div class="modal-footer">
   <a target='_blank' ng-href="/inventory/download/log/{{$ctrl.inventory.uuid}}?lang={{$ctrl.lang}}" class="btn btn-primary" data-method="exports" ng-disabled="!$ctrl.logs.length">
-    <i class="fa fa-file-excel-o"></i> <span translate>DOWNLOADS.EXCEL</span>
+    <i class="bi bi-file-excel-o"></i> <span translate>DOWNLOADS.EXCEL</span>
   </a>
 
   <button type="button" class="btn btn-default" data-method="close" ng-click="$ctrl.close()">

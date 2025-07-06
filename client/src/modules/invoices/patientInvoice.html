@@ -14,8 +14,8 @@
     <form name="InvoiceForm" bh-submit="PatientInvoiceCtrl.submit(InvoiceForm)" novalidate>
       <div class="row">
         <div class="col-xs-12">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card ">
+            <div class="card-body">
                 <div class="col-md-6">
 
                   <div class="form-group">
@@ -69,7 +69,7 @@
         <div class="row" ng-if="PatientInvoiceCtrl.supportsPrepayments && PatientInvoiceCtrl.Invoice.recipient.hasCreditorBalance">
           <div class="col-xs-12">
             <div class="alert alert-info">
-              <i class="fa fa-feed"></i> <span translate translate-values="{
+              <i class="bi bi-feed"></i> <span translate translate-values="{
                 patientBalance : PatientInvoiceCtrl.Invoice.recipient.balance,
                 patientName : PatientInvoiceCtrl.Invoice.recipient.display_name,
                 enterpriseCurrencyId : PatientInvoiceCtrl.enterprise.currency_id,
@@ -81,7 +81,7 @@
         <div ng-show="PatientInvoiceCtrl.Invoice._error" class="row">
           <div class="col-xs-12">
             <div class="alert alert-danger">
-              <i class="fa fa-warning"></i> <span
+              <i class="bi bi-warning"></i> <span
               translate
               translate-values="PatientInvoiceCtrl.Invoice._error_values"
               translate-compile>{{PatientInvoiceCtrl.Invoice._error}}</span>
@@ -102,7 +102,7 @@
                 ng-class="{ 'btn-primary' : PatientInvoiceCtrl.Invoice.hasCacheAvailable() && PatientInvoiceCtrl.Invoice.recipient }"
                 ng-click="PatientInvoiceCtrl.Invoice.readCache()"
                 ng-disabled="!PatientInvoiceCtrl.Invoice.hasCacheAvailable() || !PatientInvoiceCtrl.Invoice.recipient || PatientInvoiceCtrl.Invoice.hasRecoveredCache || InvoiceForm.$submitted">
-                <i class="fa fa-recycle"></i> <span translate>FORM.BUTTONS.RECOVER_ITEMS</span>
+                <i class="bi bi-recycle"></i> <span translate>FORM.BUTTONS.RECOVER_ITEMS</span>
               </button>
             </div>
 
@@ -117,7 +117,7 @@
               style="padding-top : 10px;"
               class="text-warning"
               ng-show="PatientInvoiceCtrl.inventory.size() > 0 && PatientInvoiceCtrl.Invoice.inventory.available.data.length === 0">
-              <span class="fa fa-info-circle"></span>
+              <span class="bi bi-info-circle"></span>
               <span translate>FORM.INFO.ITEMS_FULL</span>
             </p>
 
@@ -125,7 +125,7 @@
               style="padding-top : 10px;"
               class="text-info"
               ng-show="!PatientInvoiceCtrl.Invoice.recipient">
-              <span class="fa fa-info-circle"></span>
+              <span class="bi bi-info-circle"></span>
               <span translate>FORM.INFO.NO_RECIPIENT</span>
             </p>
           </div>
@@ -161,7 +161,7 @@
                 <h4>
                   <span translate>FORM.LABELS.INVOICING_FEES</span>
                   <span
-                    class="text-info fa fa-info-circle"
+                    class="text-info bi bi-info-circle"
                     ng-show="PatientInvoiceCtrl.Invoice.invoicingFees.length > 0"
                     uib-popover-template="'invoicingFeesPopover.tmpl.html'"
                     popover-placement="right"
@@ -173,7 +173,7 @@
                 <h4>
                   <span translate>FORM.LABELS.SUBSIDIES</span>
                   <span
-                    class="text-info fa fa-info-circle"
+                    class="text-info bi bi-info-circle"
                     ng-show="PatientInvoiceCtrl.Invoice.subsidies.length > 0"
                     uib-popover-template="'subsidiesPopover.tmpl.html'"
                     popover-placement="right"

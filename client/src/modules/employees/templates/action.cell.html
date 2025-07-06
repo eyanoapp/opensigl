@@ -8,23 +8,23 @@
     <li class="bh-dropdown-header">{{row.entity.reference}}</li>
     <li>
       <a data-method="edit-record" ui-sref="employeeEdit({uuid : row.entity.uuid})" href>
-        <span class="fa fa-edit"></span> <span translate>TABLE.COLUMNS.EDIT</span>
+        <span class="bi bi-edit"></span> <span translate>TABLE.COLUMNS.EDIT</span>
       </a>
     </li>
     <li class="divider"></li>
     <li>
       <a data-method="record" ui-sref="patientRecord({ patientUuid : row.entity.patient_uuid })" href>
-        <span class="fa fa-book"></span> <span translate>EMPLOYEE.HOSPITAL_DATA</span>
+        <span class="bi bi-book"></span> <span translate>EMPLOYEE.HOSPITAL_DATA</span>
       </a>
     </li>
     <li>
       <a data-method="financialActivities" ng-href="reports/finance/financial_patient/{{row.entity.patient_uuid}}?lang={{grid.appScope.languageKey}}" target="_blank">
-        <span class="fa fa-file-text-o"></span> <span translate>FORM.LABELS.VIEW_FINANCIAL_ACT</span>
+        <span class="bi bi-file-text-o"></span> <span translate>FORM.LABELS.VIEW_FINANCIAL_ACT</span>
       </a>
     </li>
     <li>
       <a data-method="financialActivities" ng-href="/reports/finance/employee_standing/?employee_uuid={{row.entity.uuid}}&lang={{grid.appScope.languageKey}}" target="_blank">
-        <span class="fa fa-file-text-o"></span> <span translate>REPORT.EMPLOYEE_STANDING.FINANCIAL_SITUATION_EMPLOYEE</span>
+        <span class="bi bi-file-text-o"></span> <span translate>REPORT.EMPLOYEE_STANDING.FINANCIAL_SITUATION_EMPLOYEE</span>
       </a>
     </li>
   </ul>

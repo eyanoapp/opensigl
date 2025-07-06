@@ -4,11 +4,11 @@
   <ol class="headercrumb clearfix">
     <li class="static" translate>POSTING_JOURNAL.TRANSACTION</li>
     <li class="title" translate>{{ModalCtrl.shared.trans_id}}</li>
-    <span class="badge badge-warning" ng-if="ModalCtrl.readOnly && !ModalCtrl.voucherTools.isCorrecting"><i class="fa fa-eye"></i> <span translate>POSTING_JOURNAL.VIEWING</span></span>
-    <span class="badge badge-primary" ng-if="!ModalCtrl.readOnly"><i class="fa fa-pencil"></i> <span translate>POSTING_JOURNAL.EDITING</span></span>
+    <span class="badge badge-warning" ng-if="ModalCtrl.readOnly && !ModalCtrl.voucherTools.isCorrecting"><i class="bi bi-eye"></i> <span translate>POSTING_JOURNAL.VIEWING</span></span>
+    <span class="badge badge-primary" ng-if="!ModalCtrl.readOnly"><i class="bi bi-pencil"></i> <span translate>POSTING_JOURNAL.EDITING</span></span>
 
     <!-- Voucher tools integration -->
-    <span class="badge badge-voucher-tools" ng-if="ModalCtrl.readOnly && ModalCtrl.voucherTools.isCorrecting"><i class="fa fa-repeat"></i> <span translate>POSTING_JOURNAL.CORRECTING</span></span>
+    <span class="badge badge-voucher-tools" ng-if="ModalCtrl.readOnly && ModalCtrl.voucherTools.isCorrecting"><i class="bi bi-repeat"></i> <span translate>POSTING_JOURNAL.CORRECTING</span></span>
 
     <!-- @TODO(sfount) this ol/li/span tag/ class combination is fragile, it happens to work but shouldn't be encouraged -->
     <span ng-if="ModalCtrl.readOnly && ModalCtrl.voucherTools.isCorrecting" class="pull-right">
@@ -20,7 +20,7 @@
 <div class="modal-body">
   <!-- warn user that standard users cannot edit posted transactions -->
   <div class="alert alert-warning pad-alert" ng-if="ModalCtrl.validation.blockedPostedTransactionEdit">
-    <i class="fa fa-warning"></i> <span translate>POSTING_JOURNAL.ERRORS.USER_CANNOT_EDIT_POSTED_TRANSACTION</span>
+    <i class="bi bi-warning"></i> <span translate>POSTING_JOURNAL.ERRORS.USER_CANNOT_EDIT_POSTED_TRANSACTION</span>
   </div>
 
   <!-- Record information -->
@@ -28,7 +28,7 @@
 
     <div class="row" ng-if="ModalCtrl.loadingTransaction">
       <div class="col-xs-12 text-center">
-        <span class="fa fa-circle-o-notch fa-spin"></span>
+        <span class="bi bi-circle-o-notch fa-spin"></span>
       </div>
     </div>
     <div class="row" ng-if="ModalCtrl.setupComplete">
@@ -90,7 +90,7 @@
                 type="text"
                 class="form-control"></input>
               <span class="input-group-btn">
-                <button class="btn btn-default btn-sm" ng-click="ModalCtrl.openDateEditor()"><span class="fa fa-calendar"></span></button>
+                <button class="btn btn-default btn-sm" ng-click="ModalCtrl.openDateEditor()"><span class="bi bi-calendar"></span></button>
               </span>
               </div>
             </div>
@@ -101,7 +101,7 @@
   </div>
 
   <div class="alert alert-danger pad-alert" id="validation-errored-alert" ng-if="ModalCtrl.validation.errored">
-    <i class="fa fa-exclamation-circle"></i> <span translate>{{ModalCtrl.validation.message}}</span>
+    <i class="bi bi-exclamation-circle"></i> <span translate>{{ModalCtrl.validation.message}}</span>
   </div>
 
 
@@ -121,7 +121,7 @@
   <div class="row">
       <!-- informational: this record has been edited x times  -->
     <span ng-if="ModalCtrl.hasPreviousEdits" class="text-muted pull-left" style="margin-top:5px;">
-      <i class="fa fa-info-circle"></i>
+      <i class="bi bi-info-circle"></i>
       <span translate translate-values="ModalCtrl.lastEditValues">POSTING_JOURNAL.HAS_PREVIOUS_EDITS</span>
     </span>
   </div>

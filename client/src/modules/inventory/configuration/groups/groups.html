@@ -1,8 +1,8 @@
-<div class="panel panel-default">
+<div class="card ">
 
-  <div class="panel-heading" style="display: flex; justify-content: space-between;">
+  <div class="card-heading" style="display: flex; justify-content: space-between;">
     <span>
-      <i class="fa fa-object-group"></i>
+      <i class="bi bi-object-group"></i>
       <span translate> INVENTORY.LIST_GROUP </span> ({{ GroupsCtrl.groupList.length }})
     </span>
 
@@ -10,7 +10,7 @@
       ng-click="GroupsCtrl.addInventoryGroup()"
       class="pull-right btn btn-primary btn-sm"
       type="button" data-create-group>
-      <i class="fa fa-plus"> </i> <span translate>FORM.LABELS.ADD</span>
+      <i class="bi bi-plus"> </i> <span translate>FORM.LABELS.ADD</span>
     </button>
   </div>
 
@@ -29,7 +29,7 @@
           <th></th>
           <th colspan="2">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+              <span class="input-group-addon"><i class="bi bi-filter"></i></span>
               <input
                 ng-model="GroupsCtrl.searchValue"
                 type="search"
@@ -66,7 +66,7 @@
             <a href
               ng-click="GroupsCtrl.editInventoryGroup(group.uuid)"
               data-edit-group="{{ group.code }}">
-              <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+              <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
             </a>
           </td>
           <td>
@@ -74,7 +74,7 @@
               ng-click="GroupsCtrl.deleteInventoryGroup(group.uuid)"
               class="text-danger"
               data-delete-group="{{ group.code }}">
-              <i class="fa fa-remove"></i> <span translate>FORM.BUTTONS.DELETE</span>
+              <i class="bi bi-remove"></i> <span translate>FORM.BUTTONS.DELETE</span>
             </a>
           </td>
         </tr>

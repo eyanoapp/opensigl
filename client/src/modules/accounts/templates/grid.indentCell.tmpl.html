@@ -7,15 +7,15 @@
 
     <!-- Indent accounts -->
     <span style="padding-left : {{row.treeLevel * grid.appScope.indentTitleSpace}}px;"></span>
-    <i ng-show="row.entity.locked" class="fa fa-lock"></i>
-    <i ng-show="row.entity.hidden" class="fa fa-eye-slash"></i>
+    <i ng-show="row.entity.locked" class="bi bi-lock"></i>
+    <i ng-show="row.entity.hidden" class="bi bi-eye-slash"></i>
     {{grid.getCellValue(row, col)}}
   </span>
 
   <a
     data-action="add-child"
     ng-if="row.entity.type_id == grid.appScope.Constants.accounts.TITLE" ui-sref="accounts.create({ parentId : row.entity.id })">
-    <i class="fa fa-plus-square-o"></i>
+    <i class="bi bi-plus-square-o"></i>
     <span translate>ACCOUNT.ADD_CHILD</span>
   </a>
 </div>

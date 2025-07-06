@@ -8,7 +8,7 @@
 
   <!-- show on unintialized -->
   <i
-    class="fa fa-circle-o"
+    class="bi bi-circle-o"
     style="cursor: help;"
     ng-if="!row.entity._initialised"
     uib-tooltip="{{ row.entity.__tooltip }}"
@@ -17,11 +17,11 @@
     ></i>
 
   <!-- show on initialised and valid (no errors) -->
-  <i ng-if="row.entity._initialised && !row.entity.__tooltip" class="fa fa-check-circle"></i>
+  <i ng-if="row.entity._initialised && !row.entity.__tooltip" class="bi bi-check-circle"></i>
 
   <!-- show on initialised and error cases -->
   <i
-    class="fa fa-times-circle"
+    class="bi bi-times-circle"
     style="cursor: help;"
     ng-if="row.entity._initialised && row.entity.__tooltip"
     uib-tooltip="{{ row.entity.__tooltip }}"

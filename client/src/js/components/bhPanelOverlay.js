@@ -1,7 +1,7 @@
 const bhPanelOverlayTemplate = `
-<div class="panel-overlay">
-  <div class="panel-overlay-container">
-    <span class="panel-overlay-text" ng-transclude>
+<div class="card-overlay">
+  <div class="card-overlay-container">
+    <span class="card-overlay-text" ng-transclude>
     </span>
   </div>
 </div>

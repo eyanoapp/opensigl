@@ -50,8 +50,8 @@
         <bh-add-item callback="$ctrl.addItem(numItem)" disable="true"></bh-add-item>
 
         <button ng-disabled="!$ctrl.enableAutoSuggest || $ctrl.loadingSuggest" ng-click="$ctrl.autoSuggestInventories()" type="button" class="btn btn-success">
-          <span ng-hide="$ctrl.loadingSuggest"><i class="fa fa-cog"></i> <span translate>FORM.BUTTONS.AUTO_SUGGEST</span></span>
-          <span ng-show="$ctrl.loadingSuggest"><span class="fa fa-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span></span>
+          <span ng-hide="$ctrl.loadingSuggest"><i class="bi bi-cog"></i> <span translate>FORM.BUTTONS.AUTO_SUGGEST</span></span>
+          <span ng-show="$ctrl.loadingSuggest"><span class="bi bi-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span></span>
         </button>
       </div>
 
@@ -68,9 +68,9 @@
       </div>
 
       <div style="margin-top:5px;">
-        <span style="margin-right: 10px;" class="text-success"><i class="fa fa-thumbs-up"></i>&nbsp;<span translate>REQUISITION.INVENTORY_AVAILABLE</span></span>
-        <span style="margin-right: 10px;" class="text-warning"><i class="fa fa-warning"></i>&nbsp;<span translate>REQUISITION.INVENTORY_AVAILABLE_WITH_NOT_ENOUGH_QUANTITY</span></span>
-        <span class="text-danger"><i class="fa fa-thumbs-down"></i>&nbsp;<span translate>STOCK.INVENTORY_NOT_AVAILABLE</span></span>
+        <span style="margin-right: 10px;" class="text-success"><i class="bi bi-thumbs-up"></i>&nbsp;<span translate>REQUISITION.INVENTORY_AVAILABLE</span></span>
+        <span style="margin-right: 10px;" class="text-warning"><i class="bi bi-warning"></i>&nbsp;<span translate>REQUISITION.INVENTORY_AVAILABLE_WITH_NOT_ENOUGH_QUANTITY</span></span>
+        <span class="text-danger"><i class="bi bi-thumbs-down"></i>&nbsp;<span translate>STOCK.INVENTORY_NOT_AVAILABLE</span></span>
       </div>
     </div>
 

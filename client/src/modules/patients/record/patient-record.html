@@ -13,7 +13,7 @@
   <!-- Unknown patient state -->
   <div class="container-fluid" ng-if="!PatientRecordCtrl.patient && PatientRecordCtrl.loading===false">
     <div class="alert alert-danger" id="nopatient">
-      <span class="fa fa-search"></span> <span translate>PATIENT_RECORDS.NOT_FOUND</span>
+      <span class="bi bi-search"></span> <span translate>PATIENT_RECORDS.NOT_FOUND</span>
     </div>
   </div>
 
@@ -24,13 +24,13 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="panel panel-primary">
-            <div class="panel-heading clearfix">
-              <span class="fa fa-list-alt"></span>
+          <div class="card panel-primary">
+            <div class="card-heading clearfix">
+              <span class="bi bi-list-alt"></span>
               <span translate>FORM.LABELS.PATIENT_DETAILS</span>
             </div>
 
-            <div class="panel-body">
+            <div class="card-body">
               <div class="col-sm-4">
                 <div>
 
@@ -63,7 +63,7 @@
                   <dt translate>TABLE.COLUMNS.DOB</dt>
                   <dd id="dob">{{::PatientRecordCtrl.patient.dobFormatted}}</dd>
                   <p ng-if="PatientRecordCtrl.patient.dob_unknown_date" class="text-info">
-                    <i class="fa fa-info-circle"></i>
+                    <i class="bi bi-info-circle"></i>
                     <span translate>PATIENT_RECORDS.DOB_NOT_SPECIFIED</span>
                   </p>
 
@@ -86,7 +86,7 @@
               <div class="col-sm-4">
                 <div class="avatar-thumbnail">
                   <div class="crop" ng-if="!PatientRecordCtrl.patient.avatar">
-                    <span class="fa fa-picture-o"></span>
+                    <span class="bi bi-picture-o"></span>
                   </div>
                   <div class="crop" ng-if="PatientRecordCtrl.patient.avatar">
                     <img ng-src="{{ PatientRecordCtrl.patient.avatar }}"   style="width: 100% !important; height:100%; max-height:200px" onError="this.src='assets/empty.png';" >
@@ -94,14 +94,14 @@
                 </div>
 
                 <label class="btn btn-default btn-block">
-                    <span class="fa fa-upload"></span> {{ PatientRecordCtrl.uploadButtonText | translate }}
+                    <span class="bi bi-upload"></span> {{ PatientRecordCtrl.uploadButtonText | translate }}
                     <input type="file" id="upload-patient-photo" accept="image/*" ngf-max-size="2MB" ngf-select="PatientRecordCtrl.uploadFiles($file, $invalidFiles)" style="display: none;">
                 </label>
                 <a
                   href
                   ng-click="PatientRecordCtrl.openWebcam()"
                   class="btn btn-default btn-block">
-                  <i class="fa fa-camera" aria-hidden="true"></i>
+                  <i class="bi bi-camera" aria-hidden="true"></i>
                   <span translate>FORM.LABELS.TAKE_A_PICTURE</span>
                 </a>
 
@@ -109,7 +109,7 @@
                   data-method="convert-to-employee"
                   ui-sref="patientAsEmployee({ uuid : PatientRecordCtrl.patient.uuid })"
                   class="btn btn-default btn-block">
-                  <span class="fa fa-street-view"></span>
+                  <span class="bi bi-street-view"></span>
                   <span translate>FORM.LABELS.REGISTER_EMPLOYEE_PATIENT</span>
                 </a>
 

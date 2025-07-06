@@ -2,13 +2,13 @@
 
   <div class="row">
     <div class=" col-lg-6 col-md-10 col-sm-12 col-xs-12">
-      <div class="panel panel-primary">
-        <div ng-if="FiscalManageCtrl.isCreateState" class="panel-heading" translate>FISCAL.NEW_FISCAL_YEAR</div>
-        <div ng-if="FiscalManageCtrl.isUpdateState" class="panel-heading">
-          <i ng-class="{'fa fa-lock': FiscalManageCtrl.fiscal.locked }"></i>
+      <div class="card panel-primary">
+        <div ng-if="FiscalManageCtrl.isCreateState" class="card-heading" translate>FISCAL.NEW_FISCAL_YEAR</div>
+        <div ng-if="FiscalManageCtrl.isUpdateState" class="card-heading">
+          <i ng-class="{'bi bi-lock': FiscalManageCtrl.fiscal.locked }"></i>
           {{ FiscalManageCtrl.fiscal.label }}
         </div>
-        <div class="panel-body">
+        <div class="card-body">
 
           <div class="form-group" ng-class="{ 'has-error' : FiscalForm.$submitted && FiscalForm.label.$invalid }">
             <label class="control-label" translate>FORM.LABELS.NAME</label>
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="panel-footer text-right" data-modal-footer>
+        <div class="card-footer text-right" data-modal-footer>
           <bh-loading-button loading-state="FiscalForm.$loading">
             <span translate>FORM.BUTTONS.SUBMIT</span>
           </bh-loading-button>
@@ -68,19 +68,19 @@
       <p>
         <!-- close the fiscal year  -->
         <a class="btn btn-danger" data-action="closing-fiscal-year" href ng-click="FiscalManageCtrl.closingFiscalYear()" ng-hide="FiscalManageCtrl.fiscal.locked">
-          <i class="fa fa-lock"></i>
+          <i class="bi bi-lock"></i>
           <span translate>FORM.INFO.CLOSE_FISCAL_YEAR</span>
         </a>
 
         <!-- opening balance  -->
         <a class="btn btn-default" data-action="opening-balance" ui-sref="fiscal.openingBalance({ id: FiscalManageCtrl.fiscal.id })">
-          <i class="fa fa-balance-scale"></i>
+          <i class="bi bi-balance-scale"></i>
           <span translate>FORM.INFO.VIEW_BEGINNING_BALANCE</span>
         </a>
 
         <!-- closing balance  -->
         <a class="btn btn-default" data-action="closing-balance" ui-sref="fiscal.closingBalance({ id: FiscalManageCtrl.fiscal.id })" ng-disabled="!FiscalManageCtrl.fiscal.locked" >
-          <i class="fa fa-adjust"></i>
+          <i class="bi bi-adjust"></i>
           <span translate>FORM.INFO.VIEW_CLOSING_BALANCE</span>
         </a>
       </p>

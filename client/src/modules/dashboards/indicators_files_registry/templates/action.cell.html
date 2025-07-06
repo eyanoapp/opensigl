@@ -8,14 +8,14 @@
     <li class="bh-dropdown-header">{{row.entity.service_name}} {{ row.entity.fiscal_year_label}}</li>
     <li>
       <a data-method="edit" ng-click="grid.appScope.edit(row.entity.uuid, row.entity.type_id)" href>
-        <span class="fa fa-edit"></span> <span translate>TABLE.COLUMNS.EDIT</span>
+        <span class="bi bi-edit"></span> <span translate>TABLE.COLUMNS.EDIT</span>
       </a>
     </li>
     <li class="divider"></li>
     <li>
       <a data-method="delete" ng-click="grid.appScope.remove(row.entity.uuid, row.entity.type_id)" href>
         <span class="text-danger">
-          <span class="fa fa-trash"></span> <span translate>DASHBOARD.INDICATORS_FILES.DELETE</span>
+          <span class="bi bi-trash"></span> <span translate>DASHBOARD.INDICATORS_FILES.DELETE</span>
         </span>
       </a>
     </li>

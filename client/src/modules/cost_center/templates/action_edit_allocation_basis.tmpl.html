@@ -12,13 +12,13 @@
     <li ng-show="!row.entity.is_predefined">
       <a data-method="edit-allocation-basis"
         ng-click="grid.appScope.editAllocationBasis(row.entity.id)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.LABELS.EDIT</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.LABELS.EDIT</span>
       </a>
     </li>
     <li ng-show="!row.entity.is_predefined">
       <a data-method="delete-record" ng-click="grid.appScope.deleteAllocationBasis(row.entity.id)" href>
         <span class="text-danger">
-          <i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
+          <i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
         </span>
       </a>
     </li>

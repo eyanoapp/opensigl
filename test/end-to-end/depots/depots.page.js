@@ -119,7 +119,7 @@ class DepotPage {
     await row.dropdown();
     await row.edit();
 
-    await TU.locator('[class="fa fa-eraser"]').click();
+    await TU.locator('[class="bi bi-eraser"]').click();
 
     await TU.modal.submit();
     await components.notification.hasSuccess();

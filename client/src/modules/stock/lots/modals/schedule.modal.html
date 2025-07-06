@@ -77,13 +77,13 @@
               uib-tooltip="{{lot.tooltip}}" tooltip-append-to-body="true"
             ><span class="start">{{lot.quantity}}</span><span
               ng-if="!lot.premature_expiration && !lot.truncated" style="float: right; margin-left: 4px;">0</span><span
-              ng-if="!lot.premature_expiration && lot.truncated" class="fa fa-ellipsis-h fa-pull-right ellipsis"></span></div><div
+              ng-if="!lot.premature_expiration && lot.truncated" class="bi bi-ellipsis-h fa-pull-right ellipsis"></span></div><div
               ng-if="lot.premature_expiration"
               class="lot-marker-exhausted"
               style="display: block; float: left; margin-left: 0px !important; width: {{lot.residual_width_pixels}}px !important;"
               uib-tooltip="{{lot.tooltip}}" tooltip-append-to-body="true"
             ><span class="wasted">{{lot.quantity_wasted}}</span><span
-              ng-if="lot.residual_truncated" class="fa fa-ellipsis-h fa-pull-right ellipsis"></span>
+              ng-if="lot.residual_truncated" class="bi bi-ellipsis-h fa-pull-right ellipsis"></span>
             </div>
           </td>
         </tr>

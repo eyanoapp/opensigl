@@ -10,7 +10,7 @@ graph LR;
 
 ## Running a Trial Balance
 
-The Trial Balance is a report run on selected transactions \(see the [Row Selection](/grid-features/row-selection.md) section\).  Once one or more rows are selected, use the Trial Balance in the Menu \(&lt;span class="fa fa-hamburger"&gt;&lt;/span&gt; **Menu** &gt; &lt;span class="fa fa-balance"&gt;&lt;/span&gt; **Trial Balance**\).  This action will bring up the Trial Balance modal.
+The Trial Balance is a report run on selected transactions \(see the [Row Selection](/grid-features/row-selection.md) section\).  Once one or more rows are selected, use the Trial Balance in the Menu \(&lt;span class="bi bi-hamburger"&gt;&lt;/span&gt; **Menu** &gt; &lt;span class="bi bi-balance"&gt;&lt;/span&gt; **Trial Balance**\).  This action will bring up the Trial Balance modal.
 
 <div class="bs-callout bs-callout-warning">
 <h4>Common Gotchas</h4>

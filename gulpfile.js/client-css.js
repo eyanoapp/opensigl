@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const path = require('path');
+// const path = require('path');
 const gulpif = require('gulp-if');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
-const gulpLess = require('gulp-less');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const del = require('del');
 const rev = require('gulp-rev');
@@ -12,34 +12,23 @@ const {
   src, dest, series, watch,
 } = require('gulp');
 
-const {
-  isProduction,
-  isDevelopment,
-  CLIENT_FOLDER,
-} = require('./util');
+const { isProduction, isDevelopment, CLIENT_FOLDER } = require('./util');
 
 // paths to CSS required by different libraries
 let CSS_PATHS = [
   'client/src/css/*.css',
   'node_modules/ui-select/dist/select.min.css',
   'node_modules/angular-ui-grid/ui-grid.min.css',
-  'node_modules/font-awesome/css/font-awesome.min.css',
-  'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css',
+  'node_modules/ui-bootstrap4/dist/ui-bootstrap-csp.css',
+  'node_modules/bootstrap-icons/font/bootstrap-icons.min.css',
 ];
 
 // only minify if in production mode
 if (isDevelopment) {
-  CSS_PATHS = CSS_PATHS.map(file => file.replace('.min.css', '.css'));
+  CSS_PATHS = CSS_PATHS.map((file) => file.replace('.min.css', '.css'));
 }
 
-const LESS_CONFIG = {
-  paths : [
-    path.resolve(__dirname, '../node_modules/bootstrap/less/'),
-    path.resolve(__dirname, '../client/src/less/'),
-  ],
-};
-
-const LESS_PATH = 'client/src/less/opensigl-bootstrap.less';
+const SCSS_PATH = 'client/src/scss/opensigl-bootstrap.scss';
 
 /**
  * @function cleanCSS
@@ -86,21 +75,21 @@ const compileCSS = isProduction
   : compileCSSForDevelopment;
 
 /**
- * @function compileLess
- *
+ * @function compileSass
  * @description
- * Copiles the less paths into CSS file.  Must be called
- * before the CSS compilation step.
+ * Compiles SCSS into CSS, minifies it if in production mode,
+ * and outputs it to the client CSS folder.
+ * @returns
  */
-function compileLess() {
-  return src(LESS_PATH)
-    .pipe(gulpLess(LESS_CONFIG))
+function compileSass() {
+  return src(SCSS_PATH)
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(isProduction, postcss([cssnano({ zindex : false })])))
     .pipe(dest(`${CLIENT_FOLDER}/css`));
 }
 
-const PATHS = [...CSS_PATHS, LESS_PATH];
+const PATHS = [...CSS_PATHS, SCSS_PATH];
 
-const compile = series(cleanCSS, compileLess, compileCSS);
+const compile = series(cleanCSS, compileSass, compileCSS);
 exports.watch = () => watch(PATHS, compile);
 exports.compile = compile;

@@ -51,7 +51,7 @@
                 <span class="input-group-btn">
                   <button type="button" class="btn btn-default"
                     ng-click="ReturningPatientForm.datePopupIsOpen = !ReturningPatientForm.datePopupIsOpen">
-                    <i class="fa fa-calendar-plus-o"></i>
+                    <i class="bi bi-calendar2"></i>
                   </button>
                 </span>
               </div>
@@ -59,7 +59,7 @@
               <div class="help-block text-right">
                 <p>
                   <a ng-click="ModalCtrl.toggleFullDate()" href>
-                    <i class="fa fa-circle-o" ng-class="ModalCtrl.dateIndicatorIcon"></i>
+                    <i class="bi bi-circle-o" ng-class="ModalCtrl.dateIndicatorIcon"></i>
                     <span translate>{{ModalCtrl.dateIndicatorLabel}}</span>
                   </a>
                 </p>
@@ -106,17 +106,17 @@
             <div class="row" ng-if="ModalCtrl.hasWarning">
               <div class="col-xs-12">
                 <div class="alert alert-danger" ng-if="ModalCtrl.hasNoName">
-                  <i class="fa fa-warning"></i>
+                  <i class="bi bi-warning"></i>
                   <span translate>PATIENT_REG.NAME_REQUIRED</span>
                 </div>
 
                 <div class="alert alert-danger" ng-if="ModalCtrl.noPatientsFound">
-                  <i class="fa fa-warning"></i>
+                  <i class="bi bi-warning"></i>
                   <span translate>PATIENT_REG.NO_PATIENTS_FOUND</span>
                 </div>
 
                 <div class="alert alert-warning" ng-if="ModalCtrl.hasMultiplePatients">
-                  <i class="fa fa-warning"></i>
+                  <i class="bi bi-warning"></i>
                   <span translate>PATIENT_REG.HAS_MULTIPLE_PATIENTS</span>
                 </div>
               </div>
@@ -128,9 +128,9 @@
             <div class="row" ng-if="ModalCtrl.hasWarning">
               <div class="col-xs-12">
                 <div class="alert alert-danger" ng-if="ModalCtrl.marginalMatch">
-                  <i class="fa fa-warning"></i>
+                  <i class="bi bi-warning"></i>
                   <span translate translate-values="ModalCtrl.matchScore">PATIENT_REG.MARGINAL_MATCH</span><br/>
-                  <i class="fa fa-warning"></i>
+                  <i class="bi bi-warning"></i>
                   <span translate>PATIENT_REG.VERIFY_IDENTITY</span>
                 </div>
               </div>
@@ -165,7 +165,7 @@
                   <dt translate>TABLE.COLUMNS.DOB</dt>
                   <dd>{{ModalCtrl.patient.dobFormatted}}</dd>
                   <p ng-if="ModalCtrl.patient.dob_unknown_date" class="text-info">
-                    <i class="fa fa-info-circle"></i>
+                    <i class="bi bi-info-circle"></i>
                     <span translate>PATIENT_RECORDS.DOB_NOT_SPECIFIED</span>
                   </p>
 
@@ -212,17 +212,17 @@
           <div class="row" ng-if="ModalCtrl.hasWarning">
             <div class="col-xs-12">
               <div class="alert alert-danger" ng-if="ModalCtrl.noPatientsFound">
-                <i class="fa fa-warning"></i>
+                <i class="bi bi-warning"></i>
                 <span translate>PATIENT_REG.NO_PATIENTS_FOUND</span>
               </div>
 
               <div class="alert alert-warning" ng-if="ModalCtrl.hasMultiplePatients">
-                <i class="fa fa-warning"></i>
+                <i class="bi bi-warning"></i>
                 <span translate>PATIENT_REG.HAS_MULTIPLE_PATIENTS</span>
               </div>
 
               <div class="alert alert-danger" ng-if="ModalCtrl.hasNoID">
-                <i class="fa fa-warning"></i>
+                <i class="bi bi-warning"></i>
                 <span translate>PATIENT_REG.ID_REQUIRED</span>
               </div>
             </div>
@@ -259,7 +259,7 @@
                   <dt translate>TABLE.COLUMNS.DOB</dt>
                   <dd>{{ModalCtrl.patient.dobFormatted}}</dd>
                   <p ng-if="ModalCtrl.patient.dob_unknown_date" class="text-info">
-                    <i class="fa fa-info-circle"></i>
+                    <i class="bi bi-info-circle"></i>
                     <span translate>PATIENT_RECORDS.DOB_NOT_SPECIFIED</span>
                   </p>
 

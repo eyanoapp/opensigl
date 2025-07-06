@@ -19,7 +19,7 @@ let VENDOR_FILES = [
   'node_modules/angular/angular.min.js',
   'node_modules/angular-messages/angular-messages.min.js',
   'node_modules/angular-sanitize/angular-sanitize.min.js',
-  'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
+  'node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js', // ui-bootstrap4
   'node_modules/angular-ui-grid/ui-grid.min.js',
 
   'node_modules/angular-touch/angular-touch.min.js',

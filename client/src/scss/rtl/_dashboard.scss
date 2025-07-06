@@ -1,0 +1,153 @@
+[dir="rtl"] {
+
+  ////////// Finance Monitoring //////////
+  .nav-finance-one {
+    right: auto;
+    left: 0;
+
+    a + a {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .apex-chart-two {
+    left: auto;
+    right: -20px;
+  }
+
+  .apex-chart-three {
+    left: auto;
+    right: -14px;
+  }
+
+  .card-wallet .finance-icon {
+    right: auto;
+    left: 24px;
+  }
+
+  ////////// Events Management //////////
+  .table-ratings tbody td:nth-child(3),
+  .table-ratings tbody td:last-child {
+    text-align: left;
+  }
+
+  .events-reviews .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .event-date {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .events-body .ev-item {
+    border-left: 0;
+    border-right: 2px solid #6e7985;
+  }
+
+  .events-list li.active .ev-item {
+    border-right-color: $primary;
+  }
+
+  ////////// Sales Monitoring //////////
+  .card-one .legend li {
+    &::before {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+
+    + li {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .apex-chart-one {
+    left: 0;
+    right: -10px;
+  }
+
+  .card-one .people-item .avatar {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  .table-one thead th:not(:first-child),
+  .table-one tbody td:not(:first-child) {
+    text-align: left;
+  }
+
+  .table-two thead th:not(:first-child),
+  .table-two tbody td:not(:first-child) {
+    text-align: left;
+  }
+
+  ////////// Website Analytics //////////
+  .apex-chart-nine {
+    left: 0;
+    right: 0;
+  }
+
+  .table-three tbody td:nth-child(3),
+  .table-three tbody td:last-child {
+    text-align: left;
+  }
+
+  .table-four thead tr:last-child th:not(:first-child),
+  .table-four tbody td:not(:first-child) {
+    text-align: left;
+  }
+
+  ////////// Cryptocurrency //////////
+  .crypto-item {
+    left: auto;
+    right: 15px;
+
+    .avatar {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .table-five tbody td:not(:first-child) {
+    text-align: left;
+  }
+
+  .news-img {
+    @include media-breakpoint-up(sm) {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+
+  ////////// Helpdesk Service //////////
+  .mutual-badge li + li {
+    margin-left: 0;
+    margin-right: -8px;
+  }
+
+  .mutual-badge label {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  ////////// Storage Management //////////
+  .apex-chart-eleven {
+    left: 0;
+    right: -10px;
+  }
+
+  ////////// Product Management //////////
+  .apex-chart-twelve {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .revenue-item-body span:last-child {
+    margin-left: 0;
+    margin-right: 10px;
+    text-align: left;
+  }
+}

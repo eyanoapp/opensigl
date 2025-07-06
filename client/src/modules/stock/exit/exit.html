@@ -33,7 +33,7 @@
 
     <form name="StockExitForm" bh-submit="StockCtrl.submit(StockExitForm)" novalidate>
       <!-- destination -->
-      <div class="row">
+      <div class="mb-3">
         <bh-stock-exit-type
           depot="StockCtrl.stockForm.depot"
           exit-type="StockCtrl.stockForm.details.exit_type"
@@ -69,7 +69,7 @@
           </div>
 
           <!-- message panel to display actions the user needs to take -->
-          <div class="form-group" style="min-height: 12em;">
+          <div class="form-group">
             <label class="control-label" translate>STOCK.PENDING_ACTIONS</label>
 
             <p
@@ -94,18 +94,18 @@
             </p>
 
             <p ng-if="StockCtrl.messages.length === 0" style="padding-top:0" class="form-control-static text-success">
-              <i class="fa fa-check-circle-o"></i> <span translate>STOCK.MESSAGES.SUCCESS_ALL_VALID<span>
+              <i class="bi bi-check-circle-o"></i> <span translate>STOCK.MESSAGES.SUCCESS_ALL_VALID<span>
             </p>
 
           </div>
         </div>
 
-        <div class="col-xs-6 col-md-3 panel-default">
+        <div class="col-xs-6 col-md-3 ">
           <bh-stock-out depot-uuid="StockCtrl.stockForm.depot.uuid" date="StockCtrl.stockForm.details.date">
           </bh-stock-out>
         </div>
 
-        <div class="col-xs-6 col-md-4 panel-default">
+        <div class="col-xs-6 col-md-4 ">
           <bh-stock-expired depot-uuid="StockCtrl.stockForm.depot.uuid" date="StockCtrl.stockForm.details.date">
           </bh-stock-expired>
         </div>
@@ -130,7 +130,7 @@
                 style="margin-left: 10px; vertical-align: middle;"
                 ng-click="StockCtrl.getLotByBarcode()"
                 ng-disabled="!StockCtrl.stockForm.details.exit_type">
-                <span class="fa fa-plus-circle"></span> <span translate>BARCODE.SCAN</span> <span class="fa fa-barcode"></span>
+                <span class="bi bi-plus-circle"></span> <span translate>BARCODE.SCAN</span> <span class="bi bi-barcode"></span>
               </button>
             </div>
 
@@ -144,7 +144,7 @@
                 <ul uib-dropdown-menu role="menu" class="dropdown-menu-right">
                   <li role="menuitem">
                     <a href ng-click="StockCtrl.exportGrid()">
-                      <i class="fa fa-file-excel-o"></i> <span translate>FORM.BUTTONS.EXPORT</span>
+                      <i class="bi bi-file-excel-o"></i> <span translate>FORM.BUTTONS.EXPORT</span>
                     </a>
                   </li>
                 </ul>

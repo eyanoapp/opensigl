@@ -183,11 +183,11 @@
 
   <div class="modal-footer">
     <p id="survey-form-same" ng-if="SurveyFormModalCtrl.hasNoChange" class="text-warning">
-      <i class="fa fa-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
+      <i class="bi bi-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
     </p>
 
     <p ng-if="SurveyFormForm.$submitted && SurveyFormForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
     </p>
 
     <button data-method="cancel" type="button" class="btn btn-default" ng-click="SurveyFormModalCtrl.closeModal()" translate>

@@ -8,14 +8,14 @@
     <li class="bh-dropdown-header">
       {{row.entity.reference}}
       <span ng-show="row.entity.edited" class="text-primary">
-        <i class="fa fa-pencil"></i>
+        <i class="bi bi-pencil"></i>
         <span translate>FORM.INFO.EDITED</span>
       </span>
     </li>
 
     <li>
       <a href data-method="receipt" ng-click="grid.appScope.Receipts.cash(row.entity.uuid)">
-        <i class="fa fa-file-pdf-o"></i> <span translate>TABLE.COLUMNS.RECEIPT</span>
+        <i class="bi bi-file-pdf-o"></i> <span translate>TABLE.COLUMNS.RECEIPT</span>
       </a>
     </li>
 
@@ -24,23 +24,23 @@
     <!-- view linked records -->
     <li>
       <a data-method="view-patient" href ui-sref="patientRegistry({ filters : [{ key : 'period', value : 'allTime' }, { key : 'debtor_uuid', value: row.entity.debtor_uuid, displayValue : row.entity.patientName, cacheable:false }]})">
-        <i class="fa fa-user"></i> <span translate>REPORT.VIEW_PATIENT</span>
+        <i class="bi bi-user"></i> <span translate>REPORT.VIEW_PATIENT</span>
       </a>
     </li>
     <li ng-show="!row.entity.is_caution">
       <a data-method="view-invoice" href ui-sref="invoiceRegistry({ filters : [{ key : 'period', value : 'allTime' }, { key : 'cash_uuid', value : row.entity.uuid, displayValue: row.entity.reference }]})">
-        <span class="fa fa-file-text-o"></span> <span translate>REPORT.VIEW_INVOICE</span>
+        <span class="bi bi-file-text-o"></span> <span translate>REPORT.VIEW_INVOICE</span>
       </a>
     </li>
     <li>
       <a data-method="view-voucher" href ui-sref="vouchers({ filters : [{ key : 'cash_uuid', value : row.entity.uuid, displayValue: row.entity.reference }, { key : 'period', value : 'allTime' }]})">
-        <span class="fa fa-file-text-o"></span> <span translate>REPORT.VIEW_VOUCHER</span>
+        <span class="bi bi-file-text-o"></span> <span translate>REPORT.VIEW_VOUCHER</span>
       </a>
     </li>
 
     <li>
       <a data-method="view-transaction" href ui-sref="journal({ filters : [{ key: 'record_uuid', value : row.entity.uuid, displayValue: row.entity.reference}, { key : 'period', value : 'allTime' }, { key : 'includeNonPosted', value : 1 }]})">
-        <span class="fa fa-file-text-o"></span> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
+        <span class="bi bi-file-text-o"></span> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
       </a>
     </li>
 
@@ -49,17 +49,17 @@
     <!-- reverse or remove records -->
     <li>
       <a ng-hide="row.entity.reversed" data-method="reverse-record" href ng-click="grid.appScope.cancelCash(row.entity)" ng-hide="row.entity._hasCreditNote">
-        <span class="text-danger"><i class="fa fa-clone"></i> <span translate>TABLE.COLUMNS.CANCEL_CASH</span></span>
+        <span class="text-danger"><i class="bi bi-clone"></i> <span translate>TABLE.COLUMNS.CANCEL_CASH</span></span>
       </a>
 
       <a ng-show="row.entity.reversed" href>
-        <span class="text-danger"><i class="fa fa-ban"></i> <span translate>FORM.LABELS.CANCELED</span></span>
+        <span class="text-danger"><i class="bi bi-ban"></i> <span translate>FORM.LABELS.CANCELED</span></span>
       </a>
     </li>
 
     <li bh-has-permission="grid.appScope.bhConstants.actions.DELETE_CASH_PAYMENT" ng-hide="row.entity.reversed" >
       <a data-method="delete-record" href ng-click="grid.appScope.deleteCashPayment(row.entity)">
-        <span class="text-danger"><i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
+        <span class="text-danger"><i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
       </a>
     </li>
   </ul>

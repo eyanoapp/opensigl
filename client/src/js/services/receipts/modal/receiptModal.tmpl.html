@@ -14,7 +14,7 @@
       style="padding-top : 8px"
       class="pull-right">
     <span class="text-success">
-      <span class="fa fa-check-circle-o"></span>
+      <span class="bi bi-check-circle-o"></span>
       <span translate>{{ReceiptCtrl.createdKey}}</span>
     </span>
   </div>
@@ -24,7 +24,7 @@
       style="padding-top : 8px"
       class="pull-right">
     <span class="text-success">
-      <span class="fa fa-check-circle-o"></span>
+      <span class="bi bi-check-circle-o"></span>
       <span translate>FORM.LABELS.POSTED</span>
     </span>
   </div>
@@ -32,7 +32,7 @@
 
 <!-- Temporary Loading State -->
 <div style="padding : 10px;" ng-if="!ReceiptCtrl.receipt" class="text-center">
-  <p class="text-info"><span class="fa fa-hourglass-end fa-spin"></span> <span translate>FORM.INFO.LOADING</span></p>
+  <p class="text-info"><span class="bi bi-hourglass-end fa-spin"></span> <span translate>FORM.INFO.LOADING</span></p>
 </div>
 
 <!-- ng-if used in favour of ng-switch to allow dynamic states -->
@@ -66,6 +66,6 @@
     FORM.BUTTONS.CLOSE
   </button>
   <button class="btn btn-primary btn-sm" ng-click="ReceiptCtrl.print()" data-action="print">
-    <span class="fa fa-print"></span> <span translate>FORM.BUTTONS.PRINT</span>
+    <span class="bi bi-print"></span> <span translate>FORM.BUTTONS.PRINT</span>
   </button>
 </div>

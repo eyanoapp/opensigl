@@ -33,12 +33,12 @@
           <h2 translate>STOCK.IMPORT.ABOUT_DESCRIPTION</h2>
 
           <h3 class="alert alert-success" ng-show="StockCtrl.depot.uuid">
-            <i class="fa fa-home"></i>
+            <i class="bi bi-home"></i>
             <span>{{ StockCtrl.depot.text }}</span>
           </h3>
 
           <p class="alert alert-danger" ng-hide="StockCtrl.depot.uuid">
-            <i class="fa fa-warning"></i>
+            <i class="bi bi-warning"></i>
             <span translate>STOCK.IMPORT.PLEASE_SELECT_DEPOT</span>
           </p>
 
@@ -52,7 +52,7 @@
           <div class="alert alert-info">
             <span><strong translate>STOCK.IMPORT.TEMPLATE_FILE_DESCRIPTION</strong></span>:
             <a ng-click="StockCtrl.downloadTemplate()" href>
-              <i class="fa fa-cloud-download"></i>
+              <i class="bi bi-cloud-download"></i>
               <span translate>STOCK.IMPORT.DOWNLOAD_TEMPLATE_HERE</span>
             </a>
 
@@ -92,7 +92,7 @@
               ng-model="StockCtrl.file"
               ngf-select="StockCtrl.select(StockCtrl.file)">
             <div class="help-block" data-error-message ng-show="StockCtrl.noSelectedFile">
-              <i class="fa fa-warning"></i> <span translate>INVENTORY.NO_FILE_SELECTED</span>
+              <i class="bi bi-warning"></i> <span translate>INVENTORY.NO_FILE_SELECTED</span>
             </div>
           </div>
 

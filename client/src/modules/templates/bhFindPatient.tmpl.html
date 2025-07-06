@@ -69,11 +69,11 @@
     <!-- inline notification -->
     <p class="help-block text-right" ng-show="$ctrl.showSearchView">
       <span class="text-warning" ng-show="($ctrl.noPatients && $ctrl.nameInput)">
-        <i class="fa fa-info-circle"></i>
+        <i class="bi bi-info-circle"></i>
         <span translate> FORM.INFO.PATIENT_NOT_FOUND</span>
       </span>
       <span class="text-info" ng-show="($ctrl.loadingPatients && $ctrl.nameInput)">
-        <i class="fa fa-hourglass-start fa-spin"></i>
+        <i class="bi bi-hourglass-start fa-spin"></i>
         <span translate>FORM.INFO.LOADING</span>
       </span>
     </p>
@@ -84,7 +84,7 @@
     <div class="input-group" ng-if="!$ctrl.showSearchView">
 
       <span class="input-group-addon">
-         <i class="fa fa-user"></i>
+         <i class="bi bi-user"></i>
       </span>
 
       <input ng-if="$ctrl.loadStatus=='loaded'" readonly class="form-control"
@@ -101,7 +101,7 @@
           popover-placement="bottom"
           popover-trigger="mouseenter"
           popover-append-to-body="true">
-         <span class="fa fa-info-circle"></span>
+         <span class="bi bi-info-circle"></span>
         </a>
 
         <!-- Only shown if the controller has not specified suppressReset -->
@@ -109,7 +109,7 @@
           ng-if="!$ctrl.suppressReset"
           class="btn btn-default"
           ng-click="$ctrl.reset()">
-         <i class="fa fa-refresh"></i>
+         <i class="bi bi-arrow-clockwise"></i>
         </a>
       </div>
     </div>

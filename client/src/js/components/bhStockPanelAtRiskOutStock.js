@@ -20,7 +20,7 @@ function StockPanelAtRiskOutStockController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-battery-quarter icon-out-of-stock';
+    $ctrl.display = 'bi bi-battery-quarter icon-out-of-stock';
 
     StockDashboard.read({ status : 'at_risk_out_stock' })
       .then((data) => {

@@ -3,8 +3,8 @@
     <div class="col-md-12">
       <!-- fiscal year list -->
       <div ng-repeat="fiscal in FiscalCtrl.fiscalYears | limitTo : FiscalCtrl.pageSize : (FiscalCtrl.currentPage - 1)*FiscalCtrl.pageSize track by fiscal.id" data-row="{{ $index }}" class="text-left">
-        <div class="panel panel-default" style="margin-bottom : 3px;" data-fiscal-entry>
-          <div class="panel-body">
+        <div class="card " style="margin-bottom : 3px;" data-fiscal-entry>
+          <div class="card-body">
             <h4 style="margin-top : 0px;">
               <strong>
                 <a style="text-decoration: none; color: #333; " href ui-sref="fiscal.update({id : fiscal.id})">
@@ -24,26 +24,26 @@
 
               <span class="pull-right">
                 <a style="text-decoration: none; " href data-method="update" ui-sref="fiscal.update({id : fiscal.id})">
-                  <span class="fa fa-pencil-square-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.EDIT</span>
+                  <span class="bi bi-pencil-square-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.EDIT</span>
                 </a>
 
                 <a href data-method="delete" ng-click="FiscalCtrl.del(fiscal)" class="text-danger">
-                  <span class="fa fa-trash-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.DELETE</span>
+                  <span class="bi bi-trash-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.DELETE</span>
                 </a>
               </span>
             </h4>
 
             <div class="row">
-              <span class="fa fa-calendar"></span>
+              <span class="bi bi-calendar"></span>
               {{ fiscal.start_date | date }} - {{ fiscal.end_date | date }} ({{ fiscal.number_of_months }}
               <span translate> FORM.LABELS.PERIODES </span>)
             </div>
 
             <div class="row text-lowercase">
-              <i class="fa fa-clock-o"></i> <span translate>FORM.INFO.CREATED</span> <span am-time-ago="fiscal.created_at"></span>
+              <i class="bi bi-clock-o"></i> <span translate>FORM.INFO.CREATED</span> <span am-time-ago="fiscal.created_at"></span>
               <span translate> FORM.INFO.BY </span>
               <a href="" ui-sref="users.list({ id : fiscal.user_id })" class="text-capitalize">
-                <i class="fa fa-user"></i> {{ fiscal.display_name }}
+                <i class="bi bi-user"></i> {{ fiscal.display_name }}
               </a>
             </div>
           </div>
@@ -53,7 +53,7 @@
       <!-- list status information zone -->
       <div>
         <p class="text-center" ng-show="FiscalCtrl.loadingState">
-          <span class="fa fa-circle-o-notch fa-spin"></span>
+          <span class="bi bi-circle-o-notch fa-spin"></span>
           <span translate>TABLE.COLUMNS.LOADING</span>
         </p>
         <p ng-show="(FiscalCtrl.fiscalYears.length == 0) && !FiscalCtrl.loadingError && !FiscalCtrl.loadingState"

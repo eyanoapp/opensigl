@@ -182,7 +182,7 @@
             </div>
 
             <label data-method="upload-logo" class="btn btn-default">
-              <i class="fa fa-edit"></i> {{ formItem.label }}
+              <i class="bi bi-edit"></i> {{ formItem.label }}
               <input
                 type="file"
                 accept="image/*"
@@ -200,11 +200,11 @@
 
   <div class="modal-footer">
     <p id="survey-form-same" ng-if="FillFormModalCtrl.hasNoChange" class="text-warning">
-      <i class="fa fa-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
+      <i class="bi bi-warning"></i> <span translate>FORM.INFO.NO_CHANGE</span>
     </p>
 
     <p ng-if="FillFormForm.$submitted && FillFormForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
     </p>
 
     <button data-method="cancel" type="button" class="btn btn-default" ng-click="FillFormModalCtrl.closeModal()" translate>

@@ -1,12 +1,12 @@
-<div class="panel panel-default">
+<div class="card ">
   <div class="col-sm-12">
     <p><u><span translate>DEBTOR_GROUP.CHANGE</span></u></p>
     <ul class="list-unstyled">
       <li ng-if="$ctrl.loading">
-        <span class="fa fa-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
+        <span class="bi bi-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
       </li>
       <li ng-repeat="change in $ctrl.groupChanges" ng-hide="$ctrl.loading">
-        <i class="fa fa-clock-o"></i>
+        <i class="bi bi-clock-o"></i>
         <b>{{change.group_prev}} &#8594; {{change.group_next}}</b>
         <br/>
         <span translate>FORM.LABELS.DATE</span> : {{change.created_at | date : 'medium'}}

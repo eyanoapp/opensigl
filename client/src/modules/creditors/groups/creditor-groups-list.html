@@ -2,8 +2,8 @@
   <div class="row" ng-show="CreditorGroupCtrl.creditorGroupList.length>0">
     <div class="col-md-8 col-md-offset-2">
 
-      <div class="panel panel-default" style="margin-bottom : 0px;">
-        <div class="panel-heading clearfix text-left">
+      <div class="card " style="margin-bottom : 0px;">
+        <div class="card-heading clearfix text-left">
 
           <a href ng-click="CreditorGroupCtrl.toggleFilter()">
             <span translate>TABLE.COLUMNS.FILTERING.LABEL</span> <span class="caret" ng-class="{'rotate' : CreditorGroupCtrl.filterActive}"></span>
@@ -18,7 +18,7 @@
                   <a href ng-click="CreditorGroupCtrl.setOrder(option)"><span translate>{{ option.key }}</span></a>
                 </li>
                 <li role="seperator" class="divider"></li>
-                <li><a href ng-click="CreditorGroupCtrl.setOrder()"><span class="fa fa-times" aria-hidden="true"></span><span translate> FORM.BUTTONS.CLEAR </span></a></li>
+                <li><a href ng-click="CreditorGroupCtrl.setOrder()"><span class="bi bi-times" aria-hidden="true"></span><span translate> FORM.BUTTONS.CLEAR </span></a></li>
               </ul>
             </span>
           </div>
@@ -32,21 +32,21 @@
        | orderBy   : CreditorGroupCtrl.sort.attribute: CreditorGroupCtrl.sort.reverse
        track by cg.uuid">
 
-        <div class="panel panel-default" style="margin-bottom: 5px;" data-group-entry>
-          <div class="panel-body">
+        <div class="card " style="margin-bottom: 5px;" data-group-entry>
+          <div class="card-body">
             <div class="row">
               <div class="col-md-6">
-                <h4 style="margin-top : 0px;"><span ng-if="cg.locked" class="fa fa-lock text-danger"></span> <b>{{ cg.name }}</b></h4>
+                <h4 style="margin-top : 0px;"><span ng-if="cg.locked" class="bi bi-lock text-danger"></span> <b>{{ cg.name }}</b></h4>
                 <h5 style="margin-top : 0px;"></span><span translate> FORM.LABELS.ACCOUNT_NUMBER </span> : <b>{{ cg.number }}</b></h5>
               </div>
               <div class="col-md-6 text-float-util">
                 <a data-method="update" data-update="{{cg.name}}" ui-sref="creditorGroups.update({uuid : cg.uuid})">
-                  <span class="fa fa-pencil-square-o" aria-hidden="true"></span> <span translate>CREDITOR_GROUP.UPDATE</span>
+                  <span class="bi bi-pencil-square-o" aria-hidden="true"></span> <span translate>CREDITOR_GROUP.UPDATE</span>
                 </a>
               </div>
             </div>
 
-            <span class="fa fa-bars"></span> <b>{{ cg.total_creditors }}</b> {{ 'FORM.LABELS.CREDITOR_SUBCRIBED' | translate }}
+            <span class="bi bi-bars"></span> <b>{{ cg.total_creditors }}</b> {{ 'FORM.LABELS.CREDITOR_SUBCRIBED' | translate }}
 
           </div>
         </div>

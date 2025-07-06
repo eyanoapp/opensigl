@@ -7,7 +7,7 @@ angular.module('opensigl.directives')
       template : `
       <div uib-dropdown dropdown-append-to-body data-action="open-tools">
         <a class="btn btn-default" uib-dropdown-toggle>
-          <span class="fa fa-bars"></span>
+          <span class="bi bi-bars"></span>
           <span class="hidden-xs" translate>FORM.LABELS.MENU</span>
           <span class="caret"></span>
         </a>

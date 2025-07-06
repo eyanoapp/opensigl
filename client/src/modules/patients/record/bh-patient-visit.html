@@ -1,5 +1,5 @@
-<div class="panel panel-default">
-  <div class="panel-heading clearfix">
+<div class="card ">
+  <div class="card-heading clearfix">
     <span translate>PATIENT_RECORDS.VISITS.TITLE</span> ({{$ctrl.visits.length}})
 
     <span class="pull-right">
@@ -10,10 +10,10 @@
     </span>
   </div>
 
-  <div class="panel-body" style="height : 250px; overflow-y : auto;">
+  <div class="card-body" style="height : 250px; overflow-y : auto;">
     <div class="text-center">
       <p class="text-info" ng-if="$ctrl.loaded && $ctrl.visits.length === 0">
-        <i class="fa fa-info-circle"></i> <span translate>PATIENT_RECORDS.VISITS.ORIGINAL</span>
+        <i class="bi bi-info-circle"></i> <span translate>PATIENT_RECORDS.VISITS.ORIGINAL</span>
       </p>
 
       <button id="submit-visit" class="btn btn-default" ng-click="$ctrl.admit()">
@@ -32,7 +32,7 @@
           <tr data-visit-line ng-repeat="visit in $ctrl.visits | limitTo : $ctrl.limitVisitDisplay">
 
             <td>
-              <i class="fa fa-sign-in"></i> {{visit.start_date | date}} -
+              <i class="bi bi-sign-in"></i> {{visit.start_date | date}} -
               <span ng-if="visit.end_date">
                 {{visit.end_date | date}}
                 ({{visit.totalDays}} <span translate>PATIENT_REGISTRY.DAYS</span>)
@@ -47,7 +47,7 @@
                 {{ visit.service_name }}
               </span>
               <span ng-if="visit.bed_label" class="label label-success" title="{{ visit.hrBedLocation }}">
-                <i class="fa fa-bed"></i> <span translate>{{ visit.bed_label }}</span> &nbsp;
+                <i class="bi bi-bed"></i> <span translate>{{ visit.bed_label }}</span> &nbsp;
               </span>
             </td>
           </tr>
@@ -58,11 +58,11 @@
       <div class="text-center" ng-if="$ctrl.hasOverflowVisits" style="margin-top: 1em;">
         <a href ng-click="$ctrl.toggleViewLimit()">
           <span ng-hide="$ctrl.hasExpandedView" >
-            <i class="fa fa-arrow-circle-o-down"></i> <span translate>FORM.BUTTONS.SHOW_ALL_RECORDS</span>
+            <i class="bi bi-arrow-circle-o-down"></i> <span translate>FORM.BUTTONS.SHOW_ALL_RECORDS</span>
           </span>
 
           <span ng-show="$ctrl.hasExpandedView">
-            <i class="fa fa-arrow-circle-o-up"></i> <span translate>FORM.BUTTONS.COLLAPSE_RECORDS</span>
+            <i class="bi bi-arrow-circle-o-up"></i> <span translate>FORM.BUTTONS.COLLAPSE_RECORDS</span>
           </span>
         </a>
       </div>

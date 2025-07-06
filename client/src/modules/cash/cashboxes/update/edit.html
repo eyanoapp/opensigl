@@ -45,9 +45,9 @@
                 <label translate>FORM.LABELS.CURRENCIES</label>
                 <div ng-repeat="currency in UpdateCtrl.currencies | orderBy:currency.name track by currency.id">
                   <p ng-class="{ 'text-danger' : !currency.configured }">
-                    <i class="fa fa-alert" ng-if="!currency.configured"></i> {{ currency.name }} ({{ currency.symbol}})
+                    <i class="bi bi-alert" ng-if="!currency.configured"></i> {{ currency.name }} ({{ currency.symbol}})
                     <a class="btn btn-xs btn-default" href ng-click="UpdateCtrl.configureCurrency(currency)" data-currency-id="{{ ::currency.id }}">
-                      <i class="fa fa-pencil-square-o"></i> <span translate>FORM.BUTTONS.CONFIGURE</span>
+                      <i class="bi bi-pencil-square-o"></i> <span translate>FORM.BUTTONS.CONFIGURE</span>
                     </a>
                   </p>
                   <p ng-if="!currency.configured" class="help-block" translate>
@@ -90,14 +90,14 @@
       </div>
 
       <div class="col-md-7">
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <i class="fa fa-exclamation-triangle"></i>
+        <div class="card panel-warning">
+          <div class="card-heading">
+            <i class="bi bi-exclamation-triangle"></i>
             <span translate>CASHBOX.ACTIONS</span>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <button class="btn btn-danger" type="button" ng-click="UpdateCtrl.remove(UpdateCtrl.box)" data-method="delete">
-              <i class="fa fa-trash-o"></i> <span translate>FORM.BUTTONS.DELETE</span> <span translate>CASHBOX.CASHBOX</span>
+              <i class="bi bi-trash-o"></i> <span translate>FORM.BUTTONS.DELETE</span> <span translate>CASHBOX.CASHBOX</span>
             </button>
           </div>
         </div>

@@ -1,12 +1,12 @@
 <div bh-stock-panel-require-purchase-order ng-model-options="{ updateOn: 'default' }">
-  <div class="panel panel-default">
-    <div class="panel-heading">
+  <div class="card ">
+    <div class="card-heading">
       <b><i class="{{ $ctrl.display }}"></i> <span translate> {{$ctrl.label}} </span></b>:
     </div>
 
-    <div class="panel-body" style="height : 165px; overflow-y : auto;">
+    <div class="card-body" style="height : 165px; overflow-y : auto;">
       <div class="text-center" ng-if="$ctrl.loading">
-        <span><span class="fa fa-circle-o-notch fa-spin"></span>
+        <span><span class="bi bi-circle-o-notch fa-spin"></span>
           <span translate>FORM.INFO.LOADING</span>
         </span>
       </div>

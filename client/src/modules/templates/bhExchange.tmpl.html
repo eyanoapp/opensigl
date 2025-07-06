@@ -1,19 +1,19 @@
-<div class="panel panel-default">
-  <div class="panel-heading" translate>EXCHANGE.TITLE</div>
+<div class="card ">
+  <div class="card-heading" translate>EXCHANGE.TITLE</div>
 
-  <div class="panel-body" style="height : 315px; overflow : hidden">
+  <div class="card-body" style="height : 315px; overflow : hidden">
 
     <!-- show a loading indicator while loading -->
     <p
       ng-if="$ctrl.loading"
       class="text-muted text-center">
-      <i class="fa fa-circle-o-notch fa-spin"></i>
+      <i class="bi bi-circle-o-notch fa-spin"></i>
       <span translate>FORM.INFO.LOADING</span>
     </p>
 
     <!-- button to set a new exchange rate -->
     <button id="set-exchange" class="btn btn-default btn-block" ng-click="$ctrl.setNewExchangeRate()">
-      <i class="fa fa-balance-scale"></i>
+      <i class="bi bi-balance-scale"></i>
       <span translate>FORM.BUTTONS.UPDATE</span> <span translate>EXCHANGE.EXCHANGE_RATES</span>
     </button>
 
@@ -21,7 +21,7 @@
     <p
       ng-if="!$ctrl.loading && $ctrl.rates.length === 0"
       class="text-warning">
-      <span class="fa fa-warning"></span>
+      <span class="bi bi-warning"></span>
       <span translate>EXCHANGE.SET_EXCHANGE_RATE</span>
     </p>
 
@@ -31,7 +31,7 @@
 
     <ul class="list-unstyled">
       <li data-exchange-rate-element ng-repeat="rate in $ctrl.rates | orderBy:'-date'">
-        <i class="fa fa-clock-o"></i>
+        <i class="bi bi-clock-o"></i>
           <span ng-if="rate.rate < 0.1">
             <b> <em> (1 / {{(1 / rate.rate) | number:0 }}) </em> {{ $ctrl.formatCurrency(rate.currency_id) }} </b>
           </span>

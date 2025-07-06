@@ -1,7 +1,7 @@
 <!-- card is bound to the `ng-repeat` of the bh-card-list component scope -->
 <bh-card>
   <bh-card-title>
-    <i class="fa fa-exclamation-circle text-danger" ng-if="card.number_of_users===0"></i>
+    <i class="bi bi-exclamation-circle text-danger" ng-if="card.number_of_users===0"></i>
     <b>{{card.label}}</b>
   </bh-card-title>
 
@@ -11,7 +11,7 @@
 
   <bh-card-edit>
     <a data-method="update" data-cashbox="{{card.label}}" ui-sref="cashboxes.edit({uuid : card.id})">
-      <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+      <span class="bi bi-pencil-square-o" aria-hidden="true"></span>
       <span translate>CASHBOX.CARD.MANAGE</span>
     </a>
   </bh-card-edit>
@@ -22,7 +22,7 @@
 
   <bh-card-statistic>
     <span ng-class="{'text-danger' : card.number_of_users === 0}">
-      <span class="fa fa-users" aria-hidden="true"></span>
+      <span class="bi bi-users" aria-hidden="true"></span>
       <b>{{card.number_of_users}}</b>
       <span translate> CASHBOX.CARD.USERS_WITH_ACCESS </span>
     </span>

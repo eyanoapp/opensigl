@@ -1,7 +1,7 @@
 <div data-bh-barcode-scanner>
 
   <!-- giant barcode to emphasize what this component is for -->
-  <h1 style="margin-bottom: 0;"><i class="fa fa-barcode fa-3x"></i></h1>
+  <h1 style="margin-bottom: 0;"><i class="bi bi-barcode fa-3x"></i></h1>
 
   <p ng-class="{ 'animate-flicker' : $ctrl.currentStep === $ctrl.steps.AWAIT_READ }">
     <span class="text-primary" ng-if="$ctrl.currentStep === $ctrl.steps.LOST_FOCUS">
@@ -12,20 +12,20 @@
     </span>
 
     <span class="text-primary" ng-if="$ctrl.currentStep === $ctrl.steps.AWAIT_HTTP">
-      <i class="fa fa-info-circle"></i>
+      <i class="bi bi-info-circle"></i>
       <span translate>BARCODE.AWAITING_HTTP</span>
     </span>
 
     <span class="text-success" ng-if="$ctrl.currentStep === $ctrl.steps.READ_SUCCESS">
-      <i class="fa fa-check-circle-o"></i> <span translate>BARCODE.READ_SUCCESS</span> {{ $ctrl.record.reference }}
+      <i class="bi bi-check-circle-o"></i> <span translate>BARCODE.READ_SUCCESS</span> {{ $ctrl.record.reference }}
     </span>
 
     <span class="text-danger" data-error="READ_ERROR" ng-if="$ctrl.currentStep === $ctrl.steps.READ_ERROR">
-      <i class="fa fa-danger-sign"></i> <span translate>BARCODE.READ_ERROR</span>
+      <i class="bi bi-danger-sign"></i> <span translate>BARCODE.READ_ERROR</span>
     </span>
 
     <span class="text-danger" data-error="NOT_FOUND" ng-if="$ctrl.currentStep === $ctrl.steps.NOT_FOUND">
-      <i class="fa fa-danger-sign"></i> <span translate>BARCODE.NOT_FOUND</span>
+      <i class="bi bi-danger-sign"></i> <span translate>BARCODE.NOT_FOUND</span>
     </span>
   </p>
 

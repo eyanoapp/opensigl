@@ -13,27 +13,27 @@
 
     <li>
       <a data-method="edit-record" ui-sref="users.edit({ id : row.entity.id })" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
       </a>
     </li>
     <li>
       <a data-method="depot-management" ui-sref="users.depotManagement({ id : row.entity.id })" href>
-        <i class="fa fa-cubes"></i> <span translate>FORM.BUTTONS.DEPOT_MANAGEMENT</span>
+        <i class="bi bi-cubes"></i> <span translate>FORM.BUTTONS.DEPOT_MANAGEMENT</span>
       </a>
     </li>
     <li>
       <a data-method="depot-supervision" ui-sref="users.depotSupervision({ id : row.entity.id })" href>
-        <i class="fa fa-search"></i> <span translate>FORM.BUTTONS.DEPOT_SUPERVISION</span>
+        <i class="bi bi-search"></i> <span translate>FORM.BUTTONS.DEPOT_SUPERVISION</span>
       </a>
     </li>
     <li>
       <a data-method="cashbox" ui-sref="users.cashBoxManagement({ id: row.entity.id })" href>
-        <i class="fa fa-briefcase"></i> <span translate>FORM.BUTTONS.CASHBOX_MANAGEMENT</span>
+        <i class="bi bi-briefcase"></i> <span translate>FORM.BUTTONS.CASHBOX_MANAGEMENT</span>
       </a>
     </li>
     <li>
       <a data-method="assign_roles" ng-click="grid.appScope.editRoles(row.entity)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.LABELS.EDIT_ROLE</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.LABELS.EDIT_ROLE</span>
       </a>
     </li>
     <li class="divider"></li>
@@ -41,7 +41,7 @@
     <li ng-if="!row.entity.deactivated">
       <a data-method="deactivate" ng-click="grid.appScope.activatePermissions(row.entity, 1, 'FORM.DIALOGS.CONFIRM_DEACTIVATION')" href>
         <span class="text-danger">
-          <i class="fa fa-lock"></i> <span translate>FORM.LABELS.DEACTIVATE</span>
+          <i class="bi bi-lock"></i> <span translate>FORM.LABELS.DEACTIVATE</span>
         </span>
       </a>
     </li>
@@ -49,7 +49,7 @@
     <li ng-if="row.entity.deactivated">
       <a data-method="activate" ng-click="grid.appScope.activatePermissions(row.entity, 0, 'FORM.DIALOGS.CONFIRM_ACTIVATION')" href>
         <span class="text-danger">
-          <i class="fa fa-unlock"></i><span translate>FORM.LABELS.ACTIVATE</span>
+          <i class="bi bi-unlock"></i><span translate>FORM.LABELS.ACTIVATE</span>
         </span>
       </a>
     </li>

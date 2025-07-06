@@ -7,17 +7,17 @@
       data-entity-button>
 
       <span ng-show="row.entity.hrEntity">
-        <i class="fa fa-edit"></i> {{ row.entity.hrEntity }}
+        <i class="bi bi-edit"></i> {{ row.entity.hrEntity }}
       </span>
 
       <span ng-hide="row.entity.hrEntity">
-        <i class="fa fa-plus"></i> <span translate>FORM.LABELS.ENTITY</span>
+        <i class="bi bi-plus"></i> <span translate>FORM.LABELS.ENTITY</span>
       </span>
     </a>
 
     <!--remove the entity-->
     <a ng-click="grid.appScope.removeEntity(row.entity)" ng-show="row.entity.hrEntity" class="text-danger pull-right" href="">
-      <i class="fa fa-trash"></i>
+      <i class="bi bi-trash"></i>
     </a>
   </div>
   <div ng-hide="grid.appScope.transactions.isEditing()">

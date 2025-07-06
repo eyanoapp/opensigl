@@ -65,7 +65,7 @@
 
           <div ng-if="StockCtrl.overconsumption.length" class="row">
             <div class="alert alert-danger">
-              <i class="fa fa-warning"></i> <span translate> STOCK.ERRORS.OVERCONSUMED_INVENTORIES </span>
+              <i class="bi bi-warning"></i> <span translate> STOCK.ERRORS.OVERCONSUMED_INVENTORIES </span>
               <ul>
                 <li ng-repeat="item in StockCtrl.overconsumption track by $index">
                   <span translate translate-values="item.textI18n" translate-sanitize-strategy="'sce'"> STOCK.ERRORS.OVERCONSUMED_INVENTORIES_DESCRIPTION </span>

@@ -20,7 +20,7 @@ function StockPanelAtRiskExpirationController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-exclamation-triangle icon-at-risk-of-expiring';
+    $ctrl.display = 'bi bi-exclamation-triangle icon-at-risk-of-expiring';
 
     StockDashboard.read({ status : 'at_risk_expiration' })
       .then((data) => {

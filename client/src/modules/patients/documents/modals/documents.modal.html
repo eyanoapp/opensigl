@@ -1,7 +1,7 @@
 <div class="modal-header">
   <ol class="headercrumb">
     <li>
-      <span class="fa fa-user"></span>
+      <span class="bi bi-user"></span>
       <span translate>FORM.LABELS.PATIENT</span>
     </li>
     <li class="title">{{ $ctrl.patient.reference }}</li>
@@ -50,7 +50,7 @@
           ng-model="$ctrl.file">
 
         <div class="help-block" data-error-message ng-show="$ctrl.documentError">
-          <i class="fa fa-warning"></i> <span translate>PATIENT_DOCUMENT.INVALID_DOCUMENT</span>
+          <i class="bi bi-warning"></i> <span translate>PATIENT_DOCUMENT.INVALID_DOCUMENT</span>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
           class="btn btn-danger btn-sm"
           ng-disabled="!$ctrl.file"
           ng-click="$ctrl.dismiss($ctrl.file)">
-          <span class="fa fa-trash"></span> <span translate>FORM.BUTTONS.DISMISS</span>
+          <span class="bi bi-trash"></span> <span translate>FORM.BUTTONS.DISMISS</span>
         </button>
       </div>
     </div>

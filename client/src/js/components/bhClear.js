@@ -3,7 +3,7 @@ angular.module('opensigl.components')
     template : `
       <span style="display:inline-block;" class="pull-right">
         <a data-reset-input href ng-click="$ctrl.onClear()" tabindex="-1">
-          <i class="fa fa-eraser"></i> <span translate>FORM.BUTTONS.CLEAR</span>
+          <i class="bi bi-eraser"></i> <span translate>FORM.BUTTONS.CLEAR</span>
         </a>
       </span>`,
     bindings : {

@@ -14,13 +14,13 @@
 
         <!-- patient locked indicator -->
         {{#if patient.locked}}
-          <i class="fa fa-locked"></i>
+          <i class="bi bi-locked"></i>
         {{/if}}
       </div>
   {{/header }}
 
   <!-- patient information -->
-  <span><i class="fa fa-caret-right"></i> {{translate 'PATIENT_RECORDS.VISITS.PATIENT_INFO'}}</span>
+  <span><i class="bi bi-caret-right"></i> {{translate 'PATIENT_RECORDS.VISITS.PATIENT_INFO'}}</span>
   <div class="row" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
     <div class="col-xs-12">
       <div>
@@ -29,32 +29,32 @@
         <!-- patient age/sex symbol -->
         <span>
           {{#if patient.isMale}}
-            <i class="fa fa-mars"></i>
+            <i class="bi bi-mars"></i>
           {{else}}
-            <i class="fa fa-venus"></i>
+            <i class="bi bi-venus"></i>
           {{/if}}
           {{age patient.dob}}
         </span>
 
         <!-- patient locked indicator -->
         {{#if patient.locked}}
-          <i class="fa fa-locked"></i>
+          <i class="bi bi-locked"></i>
         {{/if}}
       </div>
 
       <!-- patient identifier & registration date -->
       <div>{{patient.reference}} <span class="text-lowercase">{{translate "REPORT.SINCE"}}</span> {{date patient.registration_date}}</div>
-      <div><i class="fa fa-h-square"></i> {{patient.hospital_no}}</div>
+      <div><i class="bi bi-h-square"></i> {{patient.hospital_no}}</div>
 
       <!-- patient group information -->
-      <div><i class="fa fa-group"></i> {{patient.debtor_group_name}}</div>
+      <div><i class="bi bi-group"></i> {{patient.debtor_group_name}}</div>
 
       <!-- patient origin location information -->
-      <div><i class="fa fa-home"></i> {{location.name}}, {{location.sector_name}}, {{location.province_name}}, {{location.country_name}}</div>
+      <div><i class="bi bi-home"></i> {{location.name}}, {{location.sector_name}}, {{location.province_name}}, {{location.country_name}}</div>
     </div>
   </div>
 
-  <span><i class="fa fa-caret-right"></i> {{translate 'PATIENT_RECORDS.VISITS.VISITS_INFO'}}</span>
+  <span><i class="bi bi-caret-right"></i> {{translate 'PATIENT_RECORDS.VISITS.VISITS_INFO'}}</span>
   <section>
     <table class="table table-condensed table-report">
       <thead>
@@ -100,7 +100,7 @@
               <td colspan="5" style="padding:10px;">
                 <div class="row">
                   <div class="col-xs-12">
-                    <b><i class="fa fa-arrow-circle-o-down"></i> {{translate "PATIENT_RECORDS.VISITS.ADMISSION_DIAGNOSIS"}}:</b><br>
+                    <b><i class="bi bi-arrow-circle-o-down"></i> {{translate "PATIENT_RECORDS.VISITS.ADMISSION_DIAGNOSIS"}}:</b><br>
                     <b>{{visit.start_diagnosis_code}}</b> {{visit.start_diagnosis_label}}
                   </div>
                   <div class="col-xs-12">
@@ -117,7 +117,7 @@
               <td colspan="5" style="padding:10px;">
                 <div class="row">
                   <div class="col-xs-12">
-                    <b><i class="fa fa-arrow-circle-o-up"></i> {{translate "PATIENT_RECORDS.VISITS.DISCHARGE_DIAGNOSIS"}}:</b><br>
+                    <b><i class="bi bi-arrow-circle-o-up"></i> {{translate "PATIENT_RECORDS.VISITS.DISCHARGE_DIAGNOSIS"}}:</b><br>
                     <b>{{visit.end_diagnosis_code}}</b> {{visit.end_diagnosis_label}}
                   </div>
                   <div class="col-xs-12">

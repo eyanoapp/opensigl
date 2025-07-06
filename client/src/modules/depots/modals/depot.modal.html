@@ -168,8 +168,8 @@
         </label>
       </div>
       
-      <div class="panel panel-default" style="margin-bottom : 0px;">
-        <div class="panel-heading">
+      <div class="card " style="margin-bottom : 0px;">
+        <div class="card-heading">
           <a href ng-click="DepotModalCtrl.toggleFilter()">
             <span translate>TABLE.COLUMNS.FILTERING.LABEL</span> <span class="caret" ng-class="{'rotate' : DepotModalCtrl.filterActive}"></span>
           </a>
@@ -185,12 +185,12 @@
               <input type="checkbox" id="{{depot.uuid}}" ng-model="depot._checked" ng-change="DepotModalCtrl.setNodeValue(depot.children, depot)" />
               <span translate>{{depot.text}}</span>
             </label>
-            <span class="fa fa-arrow-left" role="button" ng-click="DepotModalCtrl.setRootValue(depot)"></span>
+            <span class="bi bi-arrow-left" role="button" ng-click="DepotModalCtrl.setRootValue(depot)"></span>
           </div>
         </div>
       </div>
       <div ng-if="DepotModalCtrl.loading" class="row text-center">
-        <span class="fa fa-circle-o-notch fa-spin"></span>
+        <span class="bi bi-circle-o-notch fa-spin"></span>
         <span translate>FORM.INFO.LOADING</span>
       </div>
     </div>

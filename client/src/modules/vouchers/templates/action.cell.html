@@ -8,13 +8,13 @@
     <li class="bh-dropdown-header">
       {{row.entity.reference}}
       <span ng-show="row.entity.edited" class="text-primary">
-        <i class="fa fa-pencil"></i>
+        <i class="bi bi-pencil"></i>
         <span translate>FORM.INFO.EDITED</span>
       </span>
     </li>
     <li>
       <a data-method="receipt" href ng-click="grid.appScope.showReceipt(row.entity.uuid)">
-        <i class="fa fa-file-pdf-o"></i> <span translate>TABLE.COLUMNS.RECEIPT</span>
+        <i class="bi bi-file-pdf-o"></i> <span translate>TABLE.COLUMNS.RECEIPT</span>
       </a>
     </li>
 
@@ -23,13 +23,13 @@
     <!-- view linked records -->
     <li>
       <a data-method="view-transaction" href ui-sref="journal({ filters : [{ key : 'period', value : 'allTime' },{ key: 'record_uuid', value : row.entity.uuid, displayValue: row.entity.reference}, { key : 'includeNonPosted', value : 1 }]})">
-        <i class="fa fa-file-text-o"></i> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
+        <i class="bi bi-file-text-o"></i> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
       </a>
     </li>
 
     <li ng-show="row.entity.isStockMovement">
       <a data-method="view-stock-movements" ui-sref="stockMovements({ filters : [{ key : 'voucherReference', value : row.entity.reference, displayValue: row.entity.reference, cacheable:false }, { key : 'period', value : 'allTime', cacheable:false }]})" href>
-        <span class="fa fa-list-alt"></span> <span translate>STOCK.STOCK_MOVEMENT</span>
+        <span class="bi bi-list-alt"></span> <span translate>STOCK.STOCK_MOVEMENT</span>
       </a>
     </li>
 
@@ -37,20 +37,20 @@
 
     <li>
       <a data-method="reverse-record" href ng-click="grid.appScope.reverseVoucher(row.entity)">
-        <span class="text-danger"><i class="fa fa-clone"></i> <span translate>FORM.BUTTONS.REVERSE_RECORD</span></span>
+        <span class="text-danger"><i class="bi bi-clone"></i> <span translate>FORM.BUTTONS.REVERSE_RECORD</span></span>
       </a>
     </li>
 
     <li ng-show="row.entity.reference_uuid">
       <a data-method="view-voucher" href ui-sref="vouchers({ filters : [{ key : 'uuid', value : row.entity.reference_uuid, displayValue: row.entity.reference }, { key : 'period', value : 'allTime' }]})">
-        <span class="fa fa-file-text-o"></span> <span translate>REPORT.VIEW_VOUCHER</span>
+        <span class="bi bi-file-text-o"></span> <span translate>REPORT.VIEW_VOUCHER</span>
       </a>
     </li>
 
     <!-- delete voucher record -->
     <li bh-has-permission="grid.appScope.bhConstants.actions.DELETE_VOUCHER">
       <a data-method="delete-record" href ng-click="grid.appScope.deleteVoucher(row.entity)">
-        <span class="text-danger"><i class="fa fa-trash-o"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
+        <span class="text-danger"><i class="bi bi-trash-o"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
       </a>
     </li>
   </ul>

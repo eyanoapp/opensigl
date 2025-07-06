@@ -42,11 +42,11 @@
 
   <div class="modal-footer">
     <p id="break-even-reference-same" ng-if="ConfigurationAnalysisToolsForm.$submitted && ConfigurationAnalysisToolsForm.$pristine && !ConfigurationAnalysisToolsModalCtrl.isCreateState" class="text-warning">
-      <i class="fa fa-warning"></i> <span translate>FORM.INFO.RECORD_SAME</span>
+      <i class="bi bi-warning"></i> <span translate>FORM.INFO.RECORD_SAME</span>
     </p>
 
     <p ng-if="ConfigurationAnalysisToolsForm.$submitted && ConfigurationAnalysisToolsForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>FORM.ERRORS.GENERIC</span>
     </p>
 
     <button data-method="cancel" type="button" class="btn btn-default" ng-click="ConfigurationAnalysisToolsModalCtrl.closeModal()" translate>

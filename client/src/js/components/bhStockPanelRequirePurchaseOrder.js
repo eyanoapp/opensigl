@@ -20,7 +20,7 @@ function StockPanelRequirePurchaseOrderController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-shopping-cart text-success';
+    $ctrl.display = 'bi bi-shopping-cart text-success';
 
     StockDashboard.read({ status : 'require_po' })
       .then((data) => {

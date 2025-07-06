@@ -6,8 +6,8 @@
       popover-trigger="'mouseenter'"
       popover-append-to-body="true"
       popover-placement="'left'">
-      <i ng-if="row.entity.inventory.hasEnoughQuantity" class="fa fa-thumbs-up text-success"></i>
-      <i ng-if="!row.entity.inventory.hasEnoughQuantity" class="fa fa-warning text-warning"></i>
+      <i ng-if="row.entity.inventory.hasEnoughQuantity" class="bi bi-thumbs-up text-success"></i>
+      <i ng-if="!row.entity.inventory.hasEnoughQuantity" class="bi bi-warning text-warning"></i>
     </div>
     <div
       ng-if="!row.entity.inventory.isAvailable"
@@ -15,7 +15,7 @@
       popover-trigger="'mouseenter'"
       popover-append-to-body="true"
       popover-placement="'left'">
-      <i class="fa fa-thumbs-down text-danger"></i>
+      <i class="bi bi-thumbs-down text-danger"></i>
     </div>
   </div>
 </div>

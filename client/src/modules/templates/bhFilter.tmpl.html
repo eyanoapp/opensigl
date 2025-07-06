@@ -1,6 +1,7 @@
 <span data="filter">
-  <span class="label" ng-class="{ 'label-primary' : $ctrl.filter._isDefault, 'label-emphasize' : !$ctrl.filter._isDefault }">
-    <i class="fa fa-filter"></i>
+  <span class="label border p-1" ng-class="{ 'bg-primary-subtle' : $ctrl.filter._isDefault, 'bg-light' : !$ctrl.filter._isDefault }">
+    <i ng-if="$ctrl.filter._isDefault" class="bi bi-lock"></i>
+    <i ng-if="!$ctrl.filter._isDefault" class="bi bi-filter"></i>
 
     <span translate>{{$ctrl.filter._label}}</span>
     <span>{{$ctrl.filter.comparitorLabel}}</span>
@@ -10,10 +11,9 @@
     <a
        href
        ng-if="!$ctrl.filter._isDefault"
-       ng-click="$ctrl.onRemove({ filter: $ctrl.filter._key })"
-       class="filter-text-link">
+       ng-click="$ctrl.onRemove({ filter: $ctrl.filter._key })">
 
-      <i class="fa fa-close"></i>
+      <i class="bi bi-x"></i>
     </a>
   </span>
 </span>

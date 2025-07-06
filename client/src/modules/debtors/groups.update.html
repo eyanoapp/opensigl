@@ -1,6 +1,6 @@
 <div class="container-fluid" ng-form="debtorGroup" novalidate>
   <div class="row" ng-if="GroupUpdateCtrl.$loading">
-    <i class="fa fa-circle-o-notch fa-spin"></i> <span translate>DEBTOR_GROUP.LOADING</span>
+    <i class="bi bi-circle-o-notch fa-spin"></i> <span translate>DEBTOR_GROUP.LOADING</span>
   </div>
 
   <div ng-if="GroupUpdateCtrl.$loaded">
@@ -59,7 +59,7 @@
             ng-class="{'has-error' : debtorGroup.max_debt.$invalid && debtorGroup.$submitted}">
 
             <label class="control-label" translate>FORM.LABELS.MAX_DEBT</label>
-            <p class="text-info"><span class="fa fa-info-circle" aria-hidden="true"></span> <span translate>FORM.LABELS.MAX_DEBT_INFO</span></p>
+            <p class="text-info"><span class="bi bi-info-circle" aria-hidden="true"></span> <span translate>FORM.LABELS.MAX_DEBT_INFO</span></p>
             <input type="number" ng-model="GroupUpdateCtrl.group.max_debt" autocomplete="off" name="max_debt" class="form-control" bh-integer required>
 
             <div class="help-block" ng-messages="debtorGroup.max_debt.$error" ng-show="debtorGroup.$submitted">
@@ -106,11 +106,11 @@
 
             <ui-select tagging name="color" ng-model="GroupUpdateCtrl.group.color">
               <ui-select-match placeholder="{{ 'FORM.PLACEHOLDERS.PICK_ONE' | translate }}">
-                <i class="fa fa-circle" style="color: {{$select.selected.value}}"></i>
+                <i class="bi bi-circle" style="color: {{$select.selected.value}}"></i>
                 <span translate>{{$select.selected.name}}</span>
               </ui-select-match>
               <ui-select-choices repeat="val.value as val in GroupUpdateCtrl.colors | filter: {'name' :$select.search}">
-                <span><i class="fa fa-circle" style="color: {{val.value}}; font-sze:14px"></i> <span translate>{{ val.name }}</span></span>
+                <span><i class="bi bi-circle" style="color: {{val.value}}; font-sze:14px"></i> <span translate>{{ val.name }}</span></span>
               </ui-select-choices>
             </ui-select>
           </div>
@@ -143,12 +143,12 @@
 
         <hr class="visible-sm"></hr>
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <span class="fa fa-book" aria-hidden="true"></span>
+        <div class="card ">
+          <div class="card-heading">
+            <span class="bi bi-book" aria-hidden="true"></span>
             <span translate>DEBTOR_GROUP.CONVENTION.TITLE</span>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <h5><b translate>DEBTOR_GROUP.CONVENTION.TITLE</b></h5>
             <p translate>DEBTOR_GROUP.CONVENTION.DESCRIPTION</p>
             <div class="checkbox">
@@ -176,12 +176,12 @@
           </div>
         </div>
 
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <span class="fa fa-book" aria-hidden="true"></span>
+        <div class="card ">
+          <div class="card-heading">
+            <span class="bi bi-book" aria-hidden="true"></span>
             <span translate>DEBTOR_GROUP.POLICIES.TITLE</span>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
 
             <div class="row">
               <div class="col-md-12">
@@ -215,7 +215,7 @@
               <div class="col-md-12">
                 <h5><b translate>DEBTOR_GROUP.POLICIES.DISCOUNTS.TITLE</b></h5>
                 <p ng-if="GroupUpdateCtrl.group.apply_discounts===false" class="text-info">
-                  <span class="fa fa-info-circle" aria-hidden="true"></span>
+                  <span class="bi bi-info-circle" aria-hidden="true"></span>
                   <span translate>DEBTOR_GROUP.POLICIES.DISCOUNTS.INFO</span>
                 </p>
                 <div class="checkbox">
@@ -230,7 +230,7 @@
               <div class="col-md-12">
                 <h5><b translate>DEBTOR_GROUP.POLICIES.INVOICING_FEES.TITLE</b></h5>
                 <p ng-if="GroupUpdateCtrl.group.apply_invoicing_fees===false" class="text-info">
-                  <span class="fa fa-info-circle" aria-hidden="true"></span>
+                  <span class="bi bi-info-circle" aria-hidden="true"></span>
                   <span translate>DEBTOR_GROUP.POLICIES.INVOICING_FEES.INFO</span>
                 </p>
                 <div class="checkbox">
@@ -244,18 +244,18 @@
           </div>
         </div>
 
-        <div class="panel panel-default" ng-if="GroupUpdateCtrl.state.current.name==='debtorGroups.update'">
-          <div class="panel-heading">
-            <i class="fa fa-list-alt"></i>
+        <div class="card " ng-if="GroupUpdateCtrl.state.current.name==='debtorGroups.update'">
+          <div class="card-heading">
+            <i class="bi bi-list-alt"></i>
             <span translate>DEBTOR_GROUP.SUBSCRIPTIONS</span>
           </div>
 
-          <div class="panel-body">
+          <div class="card-body">
             <div class="form-group">
               <label translate>DEBTOR_GROUP.POLICIES.INVOICING_FEES.TITLE</label>
 
               <p class="text-info form-control-static" ng-if="GroupUpdateCtrl.group.invoicingFees.length === 0">
-                <i class="fa fa-info-circle"></i>
+                <i class="bi bi-info-circle"></i>
                 <span translate>DEBTOR_GROUP.POLICIES.INVOICING_FEES.EMPTY</span>
               </p>
               <ul>
@@ -274,7 +274,7 @@
               <label>{{ "DEBTOR_GROUP.POLICIES.SUBSIDIES.TITLE" | translate }}</label>
 
               <p class="text-info form-control-static" ng-if="GroupUpdateCtrl.group.subsidies.length === 0">
-              <i class="fa fa-info-circle"></i> {{ "DEBTOR_GROUP.POLICIES.SUBSIDIES.EMPTY" | translate }}
+              <i class="bi bi-info-circle"></i> {{ "DEBTOR_GROUP.POLICIES.SUBSIDIES.EMPTY" | translate }}
               </p>
               <ul>
                 <li
@@ -291,11 +291,11 @@
           </div>
         </div>
 
-        <div ng-if="GroupUpdateCtrl.state.current.name === 'debtorGroups.update'" class="panel panel-warning">
-          <div class="panel-heading">
+        <div ng-if="GroupUpdateCtrl.state.current.name === 'debtorGroups.update'" class="card panel-warning">
+          <div class="card-heading">
             <span class="glyphicon glyphicon-lock"></span> <span translate>FORM.INFO.DANGER_ZONE</span>
           </div>
-          <div class="panel-body">
+          <div class="card-body">
             <button class="btn btn-danger" type="button" ng-click="GroupUpdateCtrl.deleteGroup(GroupUpdateCtrl.group.uuid)" data-method="delete">
               <span class="glyphicon glyphicon-trash"></span> <span translate>DEBTOR_GROUP.DELETE</span>
             </button>

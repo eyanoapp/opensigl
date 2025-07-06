@@ -4,7 +4,7 @@ const template = `
     ng-click="$ctrl.onClick()"
     data-method="search"
     class="btn btn-default">
-    <span class="fa fa-search"></span> <span class="hidden-xs" translate>FORM.BUTTONS.SEARCH</span>
+    <span class="bi bi-search"></span> <span class="hidden-xs" translate>FORM.BUTTONS.SEARCH</span>
   </button>
 </div>
 `;

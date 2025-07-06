@@ -79,7 +79,7 @@
 
     <div ng-if="!UserModalCtrl.isCreateState" class="form-group">
       <button id="user-edit-password" type="button" class="btn btn-warning btn-block" ng-click="UserModalCtrl.editPassword()">
-        <i class="fa fa-lock"></i> <span translate>FORM.BUTTONS.UPDATE_PASSWORD</span>
+        <i class="bi bi-lock"></i> <span translate>FORM.BUTTONS.UPDATE_PASSWORD</span>
       </button>
     </div>
 
@@ -156,7 +156,7 @@
 
   <div class="modal-footer">
     <p ng-if="UserForm.$submitted && UserForm.$invalid" class="text-danger">
-      <i class="fa fa-exclamation-triangle"></i> <span translate>FORM.ERRORS.RECORD_ERROR</span>
+      <i class="bi bi-exclamation-triangle"></i> <span translate>FORM.ERRORS.RECORD_ERROR</span>
     </p>
 
     <button id="user-cancel" type="button" class="btn btn-default" ng-click="UserModalCtrl.closeModal()" translate>

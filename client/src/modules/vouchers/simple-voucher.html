@@ -9,14 +9,14 @@
       <div class="toolbar-item">
         <div uib-dropdown dropdown-append-to-body data-action="open-tools">
           <a class="btn btn-default" uib-dropdown-toggle>
-            <span class="fa fa-bars"></span> <span class="hidden-xs" translate>FORM.LABELS.MENU</span> <span class="caret"></span>
+            <span class="bi bi-bars"></span> <span class="hidden-xs" translate>FORM.LABELS.MENU</span> <span class="caret"></span>
           </a>
           <ul uib-dropdown-menu role="menu" class="dropdown-menu-right">
             <li role="menuitem">
               <!-- Without binding an object through simpleVouchers.barcode the state transition -->
               <!-- is not respected unless the /barcode route has already been loaded -->
               <a href ui-sref="simpleVouchers.barcode({})" data-action="patient-invoice-debt-transfer">
-                <i class="fa fa-barcode"></i> <span translate>VOUCHERS.SIMPLE.TRANSFER_PATIENT_INVOICE_AMOUNT</span>
+                <i class="bi bi-barcode"></i> <span translate>VOUCHERS.SIMPLE.TRANSFER_PATIENT_INVOICE_AMOUNT</span>
               </a>
             </li>
           </ul>
@@ -32,13 +32,13 @@
 
       <div class="col-md-6">
 
-        <div class="panel panel-primary">
-          <div class="panel-heading">
+        <div class="card panel-primary">
+          <div class="card-heading">
             <span translate>VOUCHERS.SIMPLE.TITLE</span>
           </div>
 
           <form name="SimpleVoucherForm" bh-submit="SimpleVoucherCtrl.submit(SimpleVoucherForm)" novalidate ng-disabled="SimpleVoucherForm.$loading">
-            <div class="panel-body">
+            <div class="card-body">
 
               <bh-date-editor
                 date-value="SimpleVoucherCtrl.Voucher.details.date"
@@ -125,7 +125,7 @@
               </bh-currency-input>
             </div>
 
-            <div class="panel-footer text-right">
+            <div class="card-footer text-right">
               <button type="button" class="btn btn-default" ng-click="SimpleVoucherCtrl.clear()">
                 <span translate>FORM.BUTTONS.CLEAR</span>
               </button>

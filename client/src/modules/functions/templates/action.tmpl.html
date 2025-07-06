@@ -8,14 +8,14 @@
     <li class="bh-dropdown-header">{{row.entity.fonction_txt}}</li>
     <li>
       <a data-method="edit-record" ui-sref="functions.edit({ id : row.entity.id })" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
       </a>
     </li>
     <li class="divider"></li>
     <li>
       <a data-method="delete-record" ng-click="grid.appScope.deleteFunction(row.entity)" href>
         <span class="text-danger">
-          <i class="fa fa-trash"></i> <span translate>PROFESSION.DELETE</span>
+          <i class="bi bi-trash"></i> <span translate>PROFESSION.DELETE</span>
         </span>
       </a>
     </li>

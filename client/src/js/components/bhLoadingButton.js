@@ -8,7 +8,7 @@ angular.module('opensigl.components')
         ng-disabled="$ctrl.loadingState || $ctrl.disabled"
         data-method="submit">
         <span ng-show="$ctrl.loadingState">
-          <span class="fa fa-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
+          <span class="bi bi-circle-o-notch fa-spin"></span> <span translate>FORM.INFO.LOADING</span>
         </span>
        <span ng-hide="$ctrl.loadingState" ng-transclude><span translate>FORM.BUTTONS.SUBMIT</span></span>
      </button>`.trim(),

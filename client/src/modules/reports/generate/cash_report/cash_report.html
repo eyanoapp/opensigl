@@ -15,12 +15,12 @@
 
   <div class="row" style="margin-top : 10px">
     <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
+      <div class="card ">
+        <div class="card-heading">
           <span translate>REPORT.UTIL.OPTIONS</span>
         </div>
 
-        <div class="panel-body">
+        <div class="card-body">
           <form name="ConfigForm" bh-submit="ReportConfigCtrl.preview(ConfigForm)" novalidate>
             <!-- report format seletion -->
             <div class="form-group" ng-class="{ 'has-error' : ConfigForm.$submitted && ConfigForm.reportFormat.$invalid }">
@@ -44,7 +44,7 @@
             <!-- report type selection  -->
             <div class="form-group" ng-class="{ 'has-error' : ConfigForm.$submitted && ConfigForm.type.$invalid }">
               <label class="control-label">
-                <i class="fa fa-briefcase"></i> <span translate> FORM.SELECT.REPORT_TYPE</span>
+                <i class="bi bi-briefcase"></i> <span translate> FORM.SELECT.REPORT_TYPE</span>
               </label>
               <select
                 class="form-control"

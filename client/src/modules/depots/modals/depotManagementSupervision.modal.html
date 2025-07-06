@@ -28,8 +28,8 @@
       </label>
     </div>
     
-    <div class="panel panel-default" style="margin-bottom : 0px;">
-      <div class="panel-heading">
+    <div class="card " style="margin-bottom : 0px;">
+      <div class="card-heading">
         <a href ng-click="ModalCtrl.toggleFilter()">
           <span translate>TABLE.COLUMNS.FILTERING.LABEL</span> <span class="caret" ng-class="{'rotate' : ModalCtrl.filterActive}"></span>
         </a>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div ng-if="ModalCtrl.loading" class="row text-center">
-      <span class="fa fa-circle-o-notch fa-spin"></span>
+      <span class="bi bi-circle-o-notch fa-spin"></span>
       <span translate>FORM.INFO.LOADING</span>
     </div>
   </div>

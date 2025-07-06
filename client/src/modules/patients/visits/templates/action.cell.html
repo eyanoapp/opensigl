@@ -8,18 +8,18 @@
     <li class="bh-dropdown-header">{{row.entity.reference}} - {{row.entity.display_name}}</li>
     <li>
       <a data-method="record" ui-sref="patientRecord({ patientUuid : row.entity.patient_uuid })" href>
-        <span class="fa fa-book"></span> <span translate>PATIENT_RECORDS.VISITS.PATIENT_INFO</span>
+        <span class="bi bi-book"></span> <span translate>PATIENT_RECORDS.VISITS.PATIENT_INFO</span>
       </a>
     </li>
     <li class="divider"></li>
     <li>
       <a ng-if="row.entity.bed_label && row.entity.is_open" data-method="transfer" ng-click="grid.appScope.openTransferModal(row.entity)" href>
-        <span class="fa fa-exchange"></span> <span translate>PATIENT_RECORDS.TRANSFER.TITLE</span>
+        <span class="bi bi-exchange"></span> <span translate>PATIENT_RECORDS.TRANSFER.TITLE</span>
       </a>
     </li>
     <li>
       <a ng-if="row.entity.is_open" data-method="discharge" ng-click="grid.appScope.openPatientDischargeModal(row.entity)" href>
-        <span class="fa fa-toggle-right"></span> <span translate>PATIENT_RECORDS.VISITS.DISCHARGE</span>
+        <span class="bi bi-toggle-right"></span> <span translate>PATIENT_RECORDS.VISITS.DISCHARGE</span>
       </a>
     </li>
   </ul>

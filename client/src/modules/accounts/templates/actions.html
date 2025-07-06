@@ -10,7 +10,7 @@
     <li>
       <a href data-method="edit-record"
         ui-sref="accounts.edit({id : row.entity.id})">
-        <i class="fa fa-edit"></i>
+        <i class="bi bi-edit"></i>
         <span translate>TABLE.COLUMNS.EDIT</span>
       </a>
     </li>
@@ -19,7 +19,7 @@
 
     <li ng-if="row.entity.type_id !== grid.appScope.Constants.accounts.TITLE">
       <a ng-href="/reports/finance/account_report/?{{ grid.appScope.openAccountReport(row.entity.id) }}" ng-attr-download="{{ REPORT.ACCOUNT | translate }}">
-        <span class="fa fa-file-pdf-o"></span> <span translate>REPORT.ACCOUNT</span>
+        <span class="bi bi-file-pdf-o"></span> <span translate>REPORT.ACCOUNT</span>
       </a>
     </li>
 
@@ -30,12 +30,12 @@
         ng-click="grid.appScope.toggleLockAccount(row.entity.id)">
 
         <span ng-if="row.entity.locked">
-          <i class="fa fa-unlock"></i>
+          <i class="bi bi-unlock"></i>
           <span translate>FORM.BUTTONS.UNLOCK</span>
         </span>
 
         <span ng-if="!row.entity.locked">
-          <i class="fa fa-lock"></i>
+          <i class="bi bi-lock"></i>
           <span translate>FORM.BUTTONS.LOCK</span>
         </span>
       </a>
@@ -46,12 +46,12 @@
         ng-click="grid.appScope.toggleHideAccount(row.entity.id)">
 
         <span ng-if="row.entity.hidden">
-          <i class="fa fa-eye"></i>
+          <i class="bi bi-eye"></i>
           <span translate>FORM.BUTTONS.UNHIDE</span>
         </span>
 
         <span ng-if="!row.entity.hidden">
-          <i class="fa fa-eye-slash"></i>
+          <i class="bi bi-eye-slash"></i>
           <span translate>FORM.BUTTONS.HIDE</span>
         </span>
       </a>
@@ -62,7 +62,7 @@
     <li>
       <a href data-method="delete-record" ng-click="grid.appScope.remove(row.entity.id)">
         <span class="text-danger">
-          <i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
+          <i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
         </span>
       </a>
     </li>

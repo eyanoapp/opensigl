@@ -1,7 +1,7 @@
-<div class="panel panel-default">
-  <div class="panel-heading" style="display: flex; justify-content: space-between;">
+<div class="card ">
+  <div class="card-heading" style="display: flex; justify-content: space-between;">
     <span>
-      <i class="fa fa-list"></i>
+      <i class="bi bi-list"></i>
       <span translate>INVENTORY.LIST_UNIT</span> ({{ UnitsCtrl.unitList.length }})
     </span>
 
@@ -9,7 +9,7 @@
       ng-click="UnitsCtrl.addInventoryUnit()"
       class="btn btn-primary btn-sm"
       type="button"
-      data-create-unit><i class="fa fa-plus"></i> <span translate>FORM.BUTTONS.ADD</span>
+      data-create-unit><i class="bi bi-plus"></i> <span translate>FORM.BUTTONS.ADD</span>
     </button>
   </div>
 
@@ -26,7 +26,7 @@
           <td></td>
           <td>
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+              <span class="input-group-addon"><i class="bi bi-filter"></i></span>
               <input
                 ng-model="UnitsCtrl.searchValue"
                 type="search"
@@ -47,7 +47,7 @@
             <a href ng-click="UnitsCtrl.editInventoryUnit(unit.id)"
               ng-disabled="unit.predefined" ng-hide="unit.predefined"
               data-edit-unit="{{ unit.abbr }}">
-              <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+              <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
             </a>
           </td>
           <td>
@@ -55,7 +55,7 @@
               ng-disabled="unit.predefined" ng-hide="unit.predefined"
               data-delete-unit="{{ unit.abbr }}"
               class="text-danger">
-              <i class="fa fa-remove"></i> <span translate>FORM.BUTTONS.DELETE</span>
+              <i class="bi bi-remove"></i> <span translate>FORM.BUTTONS.DELETE</span>
             </a>
           </td>
         </tr>

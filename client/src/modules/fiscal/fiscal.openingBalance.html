@@ -2,7 +2,7 @@
   <div class="col-md-12 clearfix" style="margin-bottom: 0.5em;">
     <div class="pull-left">
       <a href id="export" class="btn btn-default" ng-click="FiscalOBCtrl.export()">
-        <i class="fa fa-file-excel-o"></i> <span translate>FORM.BUTTONS.EXPORT_AS_EXCEL</span>
+        <i class="bi bi-file-excel-o"></i> <span translate>FORM.BUTTONS.EXPORT_AS_EXCEL</span>
       </a>
     </div>
 
@@ -16,10 +16,10 @@
 <div class="row">
   <div class="col-md-12">
     <form name="OpeningAccountForm" bh-submit="FiscalOBCtrl.submit(OpeningAccountForm)" novalidate>
-      <div class="panel panel-primary">
+      <div class="card panel-primary">
 
         <!-- heading  -->
-        <div class="panel-heading">
+        <div class="card-heading">
           <span translate>FISCAL.OPENING_BALANCE</span>
           <strong>{{ FiscalOBCtrl.fiscal.label }}</strong>
         </div>
@@ -30,7 +30,7 @@
         </section>
 
         <!-- footer  -->
-        <div ng-if="!FiscalOBCtrl.previousFiscalYearExist" class="panel-footer clearfix">
+        <div ng-if="!FiscalOBCtrl.previousFiscalYearExist" class="card-footer clearfix">
           <span ng-class="{'text-success': FiscalOBCtrl.balanced, 'text-danger': !FiscalOBCtrl.balanced}" ng-show="OpeningAccountForm.$submitted">
             <i class="fa" ng-class="{'fa-check': FiscalOBCtrl.balanced, 'fa-warning': !FiscalOBCtrl.balanced}"></i>
             <span data-status="balanced" ng-show="FiscalOBCtrl.balanced" translate>ACCOUNT.BALANCED</span>

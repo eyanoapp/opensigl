@@ -13,23 +13,23 @@
     <li class="bh-dropdown-header">{{row.entity.label}}</li>
     <li>
       <a data-method="edit-record" ng-click="grid.appScope.createUpdateRoleModal(row.entity)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
       </a>
     </li>
     <li>
       <a data-method="edit-permissions" ng-click="grid.appScope.updateRolePermissionsModal(row.entity)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT_PERMISSIONS</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT_PERMISSIONS</span>
       </a>
     </li>
     <li>
       <a data-method="edit-actions" ng-click="grid.appScope.updateRoleActionsModal(row.entity)" href>
-        <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.ACTIONS</span>
+        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.ACTIONS</span>
       </a>
     </li>
     <li class="divider"></li>
     <li>
       <a data-method="link-users" ui-sref="users.list({filters : [{ key : 'role_uuid', displayValue: row.entity.label, value : row.entity.uuid }] })" href>
-        <i class="fa fa-user"></i> <span translate>USERS.VIEW_USERS</span>
+        <i class="bi bi-user"></i> <span translate>USERS.VIEW_USERS</span>
       </a>
     </li>
 
@@ -38,7 +38,7 @@
     <li>
       <a data-method="delete-record" ng-click="grid.appScope.remove(row.entity.uuid)" href>
         <span class="text-danger">
-          <i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
+          <i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
         </span>
       </a>
     </li>

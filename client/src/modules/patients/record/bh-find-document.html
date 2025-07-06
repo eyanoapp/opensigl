@@ -1,6 +1,6 @@
 <!-- Patient details informations  -->
 <div class="document-section" ng-if="$ctrl.session.enablePatientDetails">
-  <b><i class="fa fa-universal-access"></i> {{ $ctrl.session.patient.reference }} / </b>
+  <b><i class="bi bi-universal-access"></i> {{ $ctrl.session.patient.reference }} / </b>
   {{ $ctrl.session.patient.display_name }}
 </div>
 
@@ -8,7 +8,7 @@
 <div class="document-section" ng-if="$ctrl.session.enableSearch">
   <div class="input-group">
     <span class="input-group-addon">
-      <i class="fa fa-search"></i>
+      <i class="bi bi-search"></i>
     </span>
     <input
       ng-model="$ctrl.searchByName"
@@ -19,10 +19,10 @@
 </div>
 
 <!-- Documents  -->
-<div class="panel panel-default clearfix">
+<div class="card  clearfix">
 
   <!-- heading  -->
-  <div class="panel-heading" ng-if="$ctrl.session.enableOptionBar">
+  <div class="card-heading" ng-if="$ctrl.session.enableOptionBar">
     <div class="right btn-group">
       <button
         type="button"
@@ -30,7 +30,7 @@
         class="btn btn-sm btn-default"
         data-document-action="thumbnail"
         ng-click="$ctrl.switchDisplay('thumbnail')">
-        <i class="fa fa-file-image-o"></i>
+        <i class="bi bi-file-image-o"></i>
       </button>
 
       <button
@@ -39,7 +39,7 @@
         class="btn btn-sm btn-default"
         data-document-action="list"
         ng-click="$ctrl.switchDisplay('list')">
-        <i class="fa fa-list"></i>
+        <i class="bi bi-list"></i>
       </button>
 
       <button
@@ -48,7 +48,7 @@
         class="btn btn-sm btn-default"
         data-document-action="add"
         ng-click="$ctrl.addDocument()">
-        <i class="fa fa-plus"></i>
+        <i class="bi bi-plus"></i>
       </button>
     </div>
 
@@ -59,7 +59,7 @@
   </div>
 
   <!-- content  -->
-  <div class="panel-body" style="overflow: auto; height: {{ $ctrl.session.height }}">
+  <div class="card-body" style="overflow: auto; height: {{ $ctrl.session.height }}">
 
     <!-- list of documents  -->
     <ng-switch on="$ctrl.session.display">
@@ -68,7 +68,7 @@
         <div class="document media col-xs-12"
           ng-repeat="doc in $ctrl.session.patientDocuments | filter: $ctrl.searchByName">
           <a class="media-left">
-            <i class="fa fa-3x" ng-class="{{ 'doc.icon' }}"></i>
+            <i class="bi bi-3x" ng-class="{{ 'doc.icon' }}"></i>
           </a>
           <div class="media-body">
 
@@ -79,7 +79,7 @@
                 translate-attr="{ title : 'PATIENT_DOCUMENT.DOWNLOAD' }"
                 type="button"
                 class="btn btn-sm btn-default">
-                <i class="fa fa-download"></i>
+                <i class="bi bi-download"></i>
               </a>
 
               <button
@@ -87,7 +87,7 @@
                 translate-attr="{ title : 'FORM.BUTTONS.DELETE' }"
                 type="button"
                 class="btn btn-sm btn-danger">
-                <i class="fa fa-trash"></i>
+                <i class="bi bi-trash"></i>
               </button>
             </div>
 
@@ -95,11 +95,11 @@
             <h4 class="media-heading">{{ doc.label }}</h4>
 
             <!-- file size  -->
-            <i class="fa fa-file-o"></i>
+            <i class="bi bi-file-o"></i>
             {{ doc.type }} (~{{ doc.size | bytes }}) |
 
             <!-- date and author  -->
-            <i class="fa fa-calendar-o"></i>
+            <i class="bi bi-calendar-o"></i>
             {{ doc.timestamp | date }}, <span translate>FORM.LABELS.BY</span>
             {{ doc.display_name }}
           </div>
@@ -129,7 +129,7 @@
                 translate-attr="{ title : 'PATIENT_DOCUMENT.DOWNLOAD' }"
                 type="button"
                 class="btn btn-sm btn-default">
-                <i class="fa fa-download"></i>
+                <i class="bi bi-download"></i>
               </a>
 
               <button
@@ -137,18 +137,18 @@
                 translate-attr="{ title : 'FORM.BUTTONS.DELETE' }"
                 type="button"
                 class="btn btn-sm btn-danger">
-                <i class="fa fa-trash"></i>
+                <i class="bi bi-trash"></i>
               </button>
             </div>
 
             <h4 style="margin:0; padding:0">{{ doc.label }}</h4>
 
             <!-- file size  -->
-            <i class="fa fa-file-o"></i>
+            <i class="bi bi-file-o"></i>
             {{ doc.type }} (~{{ doc.size | bytes }}) <br>
 
             <!-- author  -->
-            <i class="fa fa-calendar-o"></i>
+            <i class="bi bi-calendar-o"></i>
             {{ doc.timestamp | date }}, <span translate>FORM.LABELS.BY</span>
             {{ doc.display_name }}
 
@@ -161,7 +161,7 @@
     <!-- no result  -->
     <div ng-if="!$ctrl.session.patientDocuments.length">
       <p class="text-center text-info">
-        <i class="fa fa-info-circle"></i> <span translate>PATIENT_DOCUMENT.NO_DOCUMENT</span>
+        <i class="bi bi-info-circle"></i> <span translate>PATIENT_DOCUMENT.NO_DOCUMENT</span>
       </p>
     </div>
 

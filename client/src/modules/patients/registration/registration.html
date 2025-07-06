@@ -8,7 +8,7 @@
       <div class="toolbar">
         <div class="toolbar-item">
           <button type="button" data-method="lookup-patient" class="btn btn-default" ng-click="PatientRegCtrl.lookupReturningPatient()">
-            <i class="fa fa-search"></i>
+            <i class="bi bi-search"></i>
             <span class="hidden-xs" translate>PATIENT_REG.LOOKUP_RETURNING_PATIENT</span>
           </button>
         </div>
@@ -30,9 +30,9 @@
           <!-- Patient Details Form -->
           <div class="form-horizontal" ng-form="DetailForm">
             <div class="col-md-7">
-              <div class="panel panel-primary">
-                <div class="panel-heading" translate>PATIENT_REG.PATIENT_DETAILS</div>
-                  <div class="panel-body">
+              <div class="card panel-primary">
+                <div class="card-heading" translate>PATIENT_REG.PATIENT_DETAILS</div>
+                  <div class="card-body">
 
                     <!-- Last Name -->
                     <bh-input-text
@@ -93,7 +93,7 @@
                           required>
                           <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="PatientRegCtrl.datePopupIsOpen = !PatientRegCtrl.datePopupIsOpen">
-                              <i class="fa fa-calendar-plus-o"></i>
+                              <i class="bi bi-calendar2"></i>
                             </button>
                           </span>
                         </div>
@@ -101,7 +101,7 @@
                         <div class="help-block text-right">
                           <p>
                             <a ng-click="PatientRegCtrl.toggleFullDate()" href>
-                              <i class="fa fa-circle-o" ng-class="PatientRegCtrl.dateIndicatorIcon"></i>
+                              <i class="bi bi-circle-o" ng-class="PatientRegCtrl.dateIndicatorIcon"></i>
                               <span translate>{{PatientRegCtrl.dateIndicatorLabel}}</span>
                             </a>
                           </p>
@@ -174,7 +174,7 @@
                     </div>
                   </div>
 
-                <div class="panel-footer text-right">
+                <div class="card-footer text-right">
                   <bh-loading-button loading-state="PatientRegistrationForm.$loading">
                     <span translate>FORM.BUTTONS.REGISTER_PATIENT</span>
                   </bh-loading-button>
@@ -185,9 +185,9 @@
 
         <!-- Optional Information Form -->
         <div class="col-md-5">
-          <div class="panel panel-default">
-            <div class="panel-heading" translate> FORM.LABELS.OPTIONAL_INFO</div>
-            <div class="panel-body">
+          <div class="card ">
+            <div class="card-heading" translate> FORM.LABELS.OPTIONAL_INFO</div>
+            <div class="card-body">
               <div class="form-horizontal" ng-form="OptionalForm">
                 <bh-input-text
                   label="FORM.LABELS.TITLE"

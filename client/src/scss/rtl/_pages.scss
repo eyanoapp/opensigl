@@ -1,0 +1,114 @@
+[dir="rtl"] {
+  ////////// Profile //////////
+  .media-profile .media-img {
+    margin-right: 0;
+    margin-left: 25px;
+  }
+
+  .profile-item > i {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .card-post .link-more {
+    right: auto;
+    left: -5px;
+  }
+
+  .post-header .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .experience-icon {
+    @include media-breakpoint-up(md) {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  .experience-body ul {
+    padding-left: 0;
+    padding-right: 13px;
+  }
+
+  .interest-icon {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .mutual-group li + li {
+    margin-left: 0;
+    margin-right: -10px;
+  }
+
+  .people-item .avatar {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .list-contact-info li i {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  ////////// Activity //////////
+  .activity-group {
+    margin-left: 0;
+    margin-right: 15px;
+    border-left: 0;
+    border-right: 2px solid $border-color;
+  }
+
+  .activity-date {
+    padding-left: 0;
+    padding-right: 40px;
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .activity-item {
+    padding-left: 0;
+    padding-right: 40px;
+
+    &::before {
+      left: auto;
+      right: -17px;
+    }
+  }
+
+  ////////// Events //////////
+  .event-icon {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  ////////// Settings //////////
+  .setting-item .table a + a {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  .card-app .card-logo {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .setting-item .table th:not(:first-child),
+  .setting-item .table td:not(:first-child) {
+    text-align: left;
+  }
+
+  ////////// Auth //////////
+  .card-sign .btn i,
+  .card-sign .ui-datepicker-buttonpane button i,
+  .ui-datepicker-buttonpane .card-sign button i,
+  .card-sign .gridjs-pages button i,
+  .gridjs-pages .card-sign button i {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}

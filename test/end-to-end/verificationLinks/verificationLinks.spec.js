@@ -36,7 +36,7 @@ test.describe('Check Inter-Registry Links', () => {
   // skip until we can re-write the tests to find debtor groups based on name.
   test('Checks the link between Debtor Groups -> Patient Registry', async () => {
     await TU.navigate('/#!/debtors/groups');
-    await TU.locator('a [class="fa fa-bars"]').nth(1).click();
+    await TU.locator('a [class="bi bi-bars"]').nth(1).click();
 
     await GU.expectRowCount('patient-registry', [6, 8]);
   });

@@ -13,12 +13,12 @@
     <li class="bh-dropdown-header">{{item.trans_id}}</li>
     <li>
       <a data-method="edit-record" ng-click="grid.appScope.updateDistribution(row.treeNode.children)" href>
-        <span class="fa fa-edit"></span> <span translate> FORM.LABELS.EDIT </span>
+        <span class="bi bi-edit"></span> <span translate> FORM.LABELS.EDIT </span>
       </a>
     </li>
     <li>
       <a data-method="view-transaction" href ui-sref="journal({ filters : [{ key: 'record_uuid', value : item.record_uuid, displayValue: item.hrRecord}, { key : 'period', value : 'allTime' }, { key : 'includeNonPosted', value : 1 }]})">
-        <span class="fa fa-file-text-o"></span> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
+        <span class="bi bi-file-text-o"></span> <span translate>TRANSACTIONS.VIEW_TRANSACTIONS</span>
       </a>
       </a>
     </li>

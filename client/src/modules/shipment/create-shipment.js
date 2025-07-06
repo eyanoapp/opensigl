@@ -57,7 +57,7 @@ function CreateShipmentController(
       field : '_selected',
       width : 25,
       headerCellTemplate : `
-        <div style="text-align: center;"><i class="fa fa-check" style="margin: 0; vertical-align: bottom;"></i></div>`,
+        <div style="text-align: center;"><i class="bi bi-check" style="margin: 0; vertical-align: bottom;"></i></div>`,
       cellTemplate : 'modules/shipment/templates/checkbox.tmpl.html',
       enableSorting : false,
       visible : false,

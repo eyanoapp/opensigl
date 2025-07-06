@@ -23,24 +23,24 @@
         <!-- enterprise form  -->
         <div class="col-md-6">
             <!-- enterprise main info  -->
-            <div class="panel panel-primary">
-              <div class="panel-heading">
+            <div class="card panel-primary">
+              <div class="card-heading">
                 <b>
-                  <i class="fa fa-building"></i> <span translate>TREE.ENTERPRISE</span> :
+                  <i class="bi bi-building"></i> <span translate>TREE.ENTERPRISE</span> :
                   <span class="text-uppercase" ng-if="EnterpriseCtrl.enterprise.name">
                     {{ EnterpriseCtrl.enterprise.name }}
                   </span>
                 </b>
               </div>
 
-              <div class="panel-body">
+              <div class="card-body">
 
                 <!-- logo aligned in the center -->
                 <div class="form-group">
                   <div class="enterprise-logo-editing">
                     <div class="logo" ng-if="!EnterpriseCtrl.enterprise.logo">
                       <span ng-if="!EnterpriseCtrl.hasThumbnail">
-                        <i class="fa fa-3x fa-file-image-o"></i>
+                        <i class="bi bi-3x fa-file-image-o"></i>
                       </span>
                       <span ng-if="EnterpriseCtrl.hasThumbnail">
                         <img ngf-thumbnail="{{ 'EnterpriseCtrl.thumbnail' }}" style="width: 100px !important; height: 100px !important;">
@@ -58,7 +58,7 @@
 
                   <div class="text-center">
                     <label data-method="upload-logo" class="btn btn-default">
-                      <i class="fa fa-edit"></i> <span translate>ENTERPRISE.UPDATE_LOGO</span>
+                      <i class="bi bi-edit"></i> <span translate>ENTERPRISE.UPDATE_LOGO</span>
                       <input
                         type="file"
                         name="logo"
@@ -119,7 +119,7 @@
                 </bh-account-select>
               </div>
 
-              <div class="panel-footer text-right" id="submission">
+              <div class="card-footer text-right" id="submission">
                 <bh-loading-button loading-state="EnterpriseForm.$loading">
                   <span translate>FORM.BUTTONS.UPDATE</span>
                 </bh-loading-button>
@@ -127,13 +127,13 @@
             </div>
 
             <!-- enterprise optional info  -->
-            <div class="panel panel-default">
+            <div class="card ">
 
-              <div class="panel-heading">
-                <i class="fa fa-info-circle"></i> <span translate>TREE.ENTERPRISE</span> (<span translate>FORM.LABELS.OPTIONAL_INFO</span>)
+              <div class="card-heading">
+                <i class="bi bi-info-circle"></i> <span translate>TREE.ENTERPRISE</span> (<span translate>FORM.LABELS.OPTIONAL_INFO</span>)
               </div>
 
-              <div class="panel-body">
+              <div class="card-body">
 
                 <div class="form-group" ng-class="{ 'has-error' : EnterpriseForm.$submitted && EnterpriseForm.address.$invalid }">
                   <label class="control-label" translate>
@@ -202,7 +202,7 @@
 
                 <p class="text-center text-info">
                   <a href ng-click="EnterpriseCtrl.scrollToSubmission()" id="submissionLink">
-                    <span class="fa fa-arrow-circle-o-up"></span> <span translate>FORM.BUTTONS.LINK_SUBMISSION</span>
+                    <span class="bi bi-arrow-circle-o-up"></span> <span translate>FORM.BUTTONS.LINK_SUBMISSION</span>
                   </a>
                 </p>
 
@@ -214,44 +214,44 @@
         <div class="col-md-6">
 
           <!-- project section -->
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <b><i class="fa fa-cube"></i> <span translate>TREE.PROJECT</span></b>
+          <div class="card panel-primary">
+            <div class="card-heading">
+              <b><i class="bi bi-cube"></i> <span translate>TREE.PROJECT</span></b>
             </div>
 
             <ul class="list-group" id="projectList">
               <li class="list-group-item clearfix" data-project="{{ ::p.abbr }}" ng-repeat="p in EnterpriseCtrl.projects track by p.id">
                 <span>
-                  <i class="fa fa-hospital-o"></i> {{ p.name }} ({{ p.abbr }})
+                  <i class="bi bi-hospital-o"></i> {{ p.name }} ({{ p.abbr }})
                 </span>
 
                 <span class="pull-right">
                   <a data-method="update" ng-click="EnterpriseCtrl.editProject(p.id)" href style="padding: 0 5px;">
-                    <i class="fa fa-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+                    <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
                   </a>
 
                   <a data-method="delete" ng-click="EnterpriseCtrl.deleteProject(p.id, p.name)" class="text-danger" style="padding: 0 5px;" href>
-                    <i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
+                    <i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
                   </a>
                 </span>
               </li>
             </ul>
 
-            <div class="panel-footer text-right">
+            <div class="card-footer text-right">
               <button type="button" class="btn btn-default"
                 data-method="create"
                 ng-click="EnterpriseCtrl.addProject()">
-                <i class="fa fa-plus"></i> <span translate>FORM.LABELS.ADD</span>
+                <i class="bi bi-plus"></i> <span translate>FORM.LABELS.ADD</span>
               </button>
             </div>
           </div>
 
           <!-- enterprise options section -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <i class="fa fa-cogs"></i> <span translate>ENTERPRISE.SETTINGS.TITLE</span>
+          <div class="card ">
+            <div class="card-heading">
+              <i class="bi bi-cogs"></i> <span translate>ENTERPRISE.SETTINGS.TITLE</span>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
 
               <bh-yes-no-radios
                 label="ENTERPRISE.SETTINGS.ENABLE_PRICE_LOCK_LABEL"

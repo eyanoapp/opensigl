@@ -1,0 +1,27 @@
+/** 
+ * ==========================================================
+ * Bootstrap 5 Custom Styles
+ * ==========================================================
+ */
+
+.card-heading {
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin: 1em 0;
+}
+
+.btn-default {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+  color: #212529;
+}
+.btn-default:hover {
+  background-color: #e2e6ea;
+  border-color: #adb5bd;
+}

@@ -60,6 +60,7 @@ function LoginController(AppCache, Session, Languages, Projects, Helpdesk, Notif
     .then(handleLanguages);
 
   function handleLanguages(languages) {
+    console.log('Languages', languages);
     vm.languages = languages;
   }
 

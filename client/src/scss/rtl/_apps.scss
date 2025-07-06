@@ -1,0 +1,422 @@
+[dir="rtl"] {
+  ////////// File Manager //////////
+  .main-file-manager {
+    overflow: hidden;
+
+    &.show {
+      @include media-breakpoint-down(lg) {
+        .file-sidebar {
+          right: 0;
+          border-right: 0;
+          border-left: 1px solid rgba($border-color, .6);
+        }
+
+        .file-content { transform: translateX(-230px); }
+      }
+    }
+  }
+
+  .file-sidebar {
+    left: auto;
+    right: -230px;
+
+    @include media-breakpoint-up(lg) {
+      right: 0;
+      border-right: 0;
+      border-left: 1px solid rgba($border-color, .6);
+    }
+  }
+
+  .file-content {
+    @include media-breakpoint-up(lg) {
+      left: 0;
+      right: 230px;
+    }
+  }
+
+  .card-file .dropdown-file {
+    right: auto;
+    left: 10px;
+  }
+
+  .card-folder .dropdown-file {
+    right: auto;
+    left: 5px;
+  }
+
+  .card-folder .card-body > i {
+    @include media-breakpoint-up(sm) {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .page-app .dropdown-item i {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .table-files {
+    .media-icon {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+
+    thead th:nth-child(2),
+    thead th:nth-child(3),
+    tbody td:nth-child(2),
+    tbody td:nth-child(3) {
+      text-align: left;
+    }
+  }
+
+  .menu-file-manager {
+    margin-right: 0;
+    margin-left: 10px;
+
+    i { transform: rotate(180deg); }
+  }
+
+  ////////// Email //////////
+  .main-email {
+    overflow: hidden;
+
+    &.show {
+      @include media-breakpoint-down(md) {
+        .email-sidebar {
+          left: auto;
+          right: 0;
+          border-right: 0;
+          border-left: 1px solid rgba($border-color, .6);
+        }
+
+        .email-list {
+          transform: translateX(-230px);
+        }
+      }
+    }
+  }
+
+  .email-sidebar {
+    left: auto;
+    right: -230px;
+
+    @include media-breakpoint-up(md) {
+      right: 0;
+      border-right: 0;
+      border-left: 1px solid rgba($border-color, .6);
+    }
+  }
+
+  .email-list {
+    left: auto;
+    right: 0;
+
+    @include media-breakpoint-up(md) {
+      right: 230px;
+      border-right: 0;
+      border-left: 1px solid rgba($border-color, .6);
+    }
+  }
+
+  .email-content {
+    @include media-breakpoint-up(md) {
+      left: 0;
+      right: 230px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 0;
+      right: 230px + 340px;
+    }
+  }
+
+  .email-item .avatar {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .email-item-date {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .email-item-star {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  .card-attachment .card-icon {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .compose {
+    right: auto;
+    left: 0;
+  }
+
+  .compose-header {
+    .nav { margin-left: 0; }
+
+    .nav-link + .nav-link {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+
+  .email-menu {
+    margin-right: 0;
+    margin-left: 10px;
+
+    i { transform: rotate(180deg); }
+  }
+
+  ////////// Calendar //////////
+  .main-calendar {
+    overflow: hidden;
+
+    &.show {
+      @include media-breakpoint-down(xl) {
+        .calendar-sidebar {
+          left: auto;
+          right: 0;
+        }
+
+        .calendar-body {
+          transform: translateX(-300px);
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .calendar-sidebar {
+    left: auto;
+    right: -300px;
+
+    @include media-breakpoint-up(xl) {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .nav-calendar span {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .modal-event .date-item i {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .calendar-body {
+    @include media-breakpoint-up(xl) {
+      left: 0;
+      right: 300px;
+      padding-right: 0;
+      padding-left: 20px;
+    }
+  }
+
+  ////////// Chat //////////
+  .chat-sidebar {
+    left: auto;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: inherit;
+    border-top-right-radius: inherit;
+
+    @include media-breakpoint-up(md) {
+      border-right: 0;
+      border-left: 1px solid rgba($border-color, .6);
+    }
+
+    .sidebar-header {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top-right-radius: inherit;
+    }
+  }
+
+  .chat-body {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 0;
+      margin-right: 280px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 0;
+      margin-right: 300px;
+    }
+  }
+
+  .chat-group,
+  .contact-group {
+    .chat-item-body,
+    .contact-item-body {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+
+  .chat-group .chat-item.unread .chat-item-body h6::after {
+    right: auto;
+    left: -12px;
+  }
+
+  .chat-body-header .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .msg-item .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .msg-box .form-control,
+  .msg-box .gridjs-input {
+    padding-right: .6rem;
+    padding-left: 24px;
+  }
+
+  .msg-send {
+    right: auto;
+    left: 8px;
+  }
+
+  ////////// Contacts //////////
+  .contact-sidebar {
+    @include media-breakpoint-up(xl) {
+      padding-right: 0;
+      padding-left: 12px;
+      margin-right: 0;
+      margin-left: 12px;
+    }
+
+    .nav-sidebar .nav-link small {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .contact-list {
+    left: auto;
+    right: 0;
+
+    @include media-breakpoint-up(md) {
+      border-right: 0;
+      border-left: 1px solid rgba($border-color, .6);
+    }
+  }
+
+  .contact-content {
+    @include media-breakpoint-up(md) {
+      margin-left: 0;
+      margin-right: 280px;
+    }
+  }
+
+  .contact-list-header {
+    @include media-breakpoint-up(xl) {
+      padding-left: 10px;
+    }
+  }
+
+  ////////// Tasks Manager //////////
+  .card-task .card-footer .nav-link + .nav-link {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  ////////// Media Gallery //////////
+  .music-player .media-music .media-img {
+    @include media-breakpoint-up(lg) {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+  .music-headline > div {
+    @include media-breakpoint-up(lg) {
+      left: auto;
+      right: 25px;
+    }
+  }
+
+  .table-music {
+    tbody td {
+      &:first-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-left-width: 0;
+        border-right-width: 1px;
+        padding-left: .5rem;
+        padding-right: 15px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-right-width: 0;
+        border-left-width: 1px;
+      }
+    }
+  }
+
+  .media-music .media-img {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .nav-classic {
+    i {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+
+    .badge {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .music-volume {
+    margin-left: 0;
+    margin-right: 10px;
+
+    a {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
+
+  .app-video {
+    .carousel-control-prev {
+      left: 20px;
+      right: auto;
+    }
+
+    .carousel-control-next {
+      right: auto;
+      left: 60px;
+    }
+  }
+
+  .video-player .nav-link + .nav-link {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}

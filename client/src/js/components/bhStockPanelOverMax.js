@@ -20,7 +20,7 @@ function StockPanelOverMaxController(StockDashboard, Notify) {
 
   $ctrl.$onInit = function onInit() {
     $ctrl.loading = true;
-    $ctrl.display = 'fa fa-minus-square text-info';
+    $ctrl.display = 'bi bi-minus-square text-info';
 
     StockDashboard.read({ status : 'over_max' })
       .then((data) => {

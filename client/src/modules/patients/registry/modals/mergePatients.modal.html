@@ -22,7 +22,7 @@
             ng-repeat="p in MergePatientsModalCtrl.patients"
             ng-click="MergePatientsModalCtrl.selectPatient(p.uuid)">
             <span ng-show="MergePatientsModalCtrl.selected === p.uuid" class="badge">
-              <i class="fa fa-check"></i>
+              <i class="bi bi-check"></i>
             </span>
             <span>
               <strong>{{ p.reference }}</strong> - <span>{{ p.display_name }}</span>, <i>{{ p.patientAge }}</i> <br>

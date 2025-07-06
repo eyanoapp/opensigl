@@ -14,17 +14,17 @@
 
   <div class="row" style="margin-top : 10px">
     <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
+      <div class="card ">
+        <div class="card-heading">
           <span translate>REPORT.UTIL.OPTIONS</span>
         </div>
 
-        <div class="panel-body">
+        <div class="card-body">
           <form name="ConfigForm" bh-submit="ReportConfigCtrl.preview(ConfigForm)" novalidate>
 
             <div ng-if="ReportConfigCtrl.configurationsAreMissing" style="margin-bottom: 1em;">
               <p class="alert alert-danger text-capitalize" style="padding: 6px 0;">
-                <i class="fa fa-exclamation-triangle"></i>
+                <i class="bi bi-exclamation-triangle"></i>
                 <span style="font-size: 1.25em;" translate> FORM.INFO.THE_NECESSARY_CONFIG_MISSING </span>
               </p>
               <p class="text-center">

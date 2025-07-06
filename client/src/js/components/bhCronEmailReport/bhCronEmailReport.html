@@ -1,12 +1,12 @@
 <section data-element="cron-email-report" ng-if="$ctrl.isEmailFeatureEnabled">
   <!-- form -->
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <i class="fa fa-envelope-o"></i>
+  <div class="card panel-info">
+    <div class="card-heading">
+      <i class="bi bi-envelope-o"></i>
       <span translate>CRON.AUTO_EMAIL_REPORT</span>
     </div>
     <form name="CronForm" bh-submit="$ctrl.submit(CronForm)" novalidate>
-      <div class="panel-body">
+      <div class="card-body">
         <!-- label -->
         <bh-input-text
           key="label"
@@ -47,9 +47,9 @@
   </div>
 
   <!-- table -->
-  <div ng-if="$ctrl.list.length" class="panel panel-info">
-    <div class="panel-heading">
-      <i class="fa fa-clock-o"></i>
+  <div ng-if="$ctrl.list.length" class="card panel-info">
+    <div class="card-heading">
+      <i class="bi bi-clock-o"></i>
       <span translate>CRON.SAVED_AUTO_REPORT</span>
     </div>
     <table class="table table-condensed">
@@ -61,13 +61,13 @@
           <td><span ng-if="item.next_send"><span translate>CRON.NEXT</span><br> {{ item.next_send | date:'dd MMMM yyyy, hh:mm' }}</span></td>
           <td>
             <a class="text-info" ng-if="!$ctrl.sendingPending" href ng-click="$ctrl.send(item.id)">
-              <i class="fa fa-send"></i> <span translate>CRON.SEND</span>
+              <i class="bi bi-send"></i> <span translate>CRON.SEND</span>
             </a>
-            <i ng-if="$ctrl.sendingPending" class="fa fa-circle-o-notch fa-spin"></i>
+            <i ng-if="$ctrl.sendingPending" class="bi bi-circle-o-notch fa-spin"></i>
           </td>
           <td>
             <a class="text-danger" href ng-click="$ctrl.remove(item.id)">
-              <i class="fa fa-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
+              <i class="bi bi-trash"></i> <span translate>FORM.BUTTONS.DELETE</span>
             </a>
           </td>
         </tr>

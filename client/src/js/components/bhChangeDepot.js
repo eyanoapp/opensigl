@@ -2,7 +2,7 @@ angular.module('opensigl.directives')
   .component('bhChangeDepot', {
     template : `
     <a href="" ng-click="$ctrl.changeDepot()" data-action="change-depot">
-      <i class="fa fa-archive"></i> <span translate>DEPOT.CHANGE</span>
+      <i class="bi bi-archive"></i> <span translate>DEPOT.CHANGE</span>
     </a>`,
     controller : bhChangeDepotController,
     bindings    : {

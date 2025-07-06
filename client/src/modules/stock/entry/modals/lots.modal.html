@@ -23,7 +23,7 @@
             popover-placement="right"
             popover-trigger="'mouseenter'"
             popover-append-to-body="true">
-              <i class="text-primary fa fa-info-circle"></i>
+              <i class="text-primary bi bi-info-circle"></i>
             </span>
 
             <input
@@ -42,7 +42,7 @@
             popover-placement="right"
             popover-trigger="'mouseenter'"
             popover-append-to-body="true">
-              <i class="text-primary fa fa-info-circle"></i>
+              <i class="text-primary bi bi-info-circle"></i>
             </span>
             <input
               class="form-control"
@@ -62,7 +62,7 @@
             popover-placement="right"
             popover-trigger="'mouseenter'"
             popover-append-to-body="true">
-              <i class="text-primary fa fa-info-circle"></i>
+              <i class="text-primary bi bi-info-circle"></i>
             </span>
             <div ng-if="$ctrl.isCostEditable" class="input-group">
               <input
@@ -111,7 +111,7 @@
         <div class="form-group">
           <label translate>STOCK.UNIT_COST</label>
           <span ng-if="$ctrl.stockLine.wacValue" class="text-primary">
-            <i class="fa fa-info-circle"></i>&nbsp;
+            <i class="bi bi-info-circle"></i>&nbsp;
             <span translate>STOCK.WAC_NOTIFICATION</span> : <b>{{ $ctrl.wacValue | currency: $ctrl.currencyId }}</b>
           </span>
 
@@ -131,7 +131,7 @@
             <span class="input-group-addon">{{ $ctrl.currency.symbol }}</span>
           </div>
 
-          <div ng-if="$ctrl.stockLine.wac" class="text-primary"><i class="fa fa-info-circle"></i>&nbsp;<span translate>STOCK.USE_OF_STOCK_WAC</span></div>
+          <div ng-if="$ctrl.stockLine.wac" class="text-primary"><i class="bi bi-info-circle"></i>&nbsp;<span translate>STOCK.USE_OF_STOCK_WAC</span></div>
 
         </div>
       </uib-tab>
@@ -245,7 +245,7 @@
 
     <div ng-if="$ctrl.errors.length > 0" class="alert alert-danger" style="margin-top: 10px;">
       <p ng-repeat="error in $ctrl.errors">
-        <b><i class="fa fa-warning"></i></b> <span translate>{{error}}</span>
+        <b><i class="bi bi-warning"></i></b> <span translate>{{error}}</span>
       </p>
     </div>
   </div>
