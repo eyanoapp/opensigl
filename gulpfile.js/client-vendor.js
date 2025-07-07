@@ -14,6 +14,7 @@ const {
 
 let VENDOR_FILES = [
   'node_modules/jquery/dist/jquery.min.js', // jquery
+  'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // bootstrap
 
   // Angular
   'node_modules/angular/angular.min.js',
@@ -34,8 +35,8 @@ let VENDOR_FILES = [
   'node_modules/angular-translate-loader-url/angular-translate-loader-url.min.js',
   'node_modules/angular-dynamic-locale/dist/tmhDynamicLocale.min.js',
 
+  // Angular File Upload
   'node_modules/ng-file-upload/dist/ng-file-upload.min.js',
-
   'node_modules/ngstorage/ngStorage.min.js', // ng-storage
   'node_modules/webcam/dist/webcam.min.js', // webcam directive
 

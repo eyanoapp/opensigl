@@ -29,26 +29,26 @@
 
             <li role="menuitem">
               <a href data-method="clear-state" ng-click="GeneralLedgerCtrl.clearGridState()">
-                <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+                <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
               </a>
             </li>
 
             <li role="separator" class="divider"></li>
             <li role="menuitem">
               <a ng-href="/reports/finance/general_ledger/?{{ GeneralLedgerCtrl.download('pdf', GeneralLedgerCtrl.filters, GeneralLedgerCtrl.fiscalYearLabel) }}" download="{{GeneralLedgerCtrl.fiscalYearLabel | translate }}">
-                <span class="bi bi-file-pdf-o"></span> <span translate>DOWNLOADS.PDF</span>
+                <span class="bi bi-filetype-pdf"></span> <span translate>DOWNLOADS.PDF</span>
               </a>
             </li>
 
             <li role="menuitem">
               <a ng-href="/reports/finance/general_ledger/?{{ GeneralLedgerCtrl.download('csv', GeneralLedgerCtrl.filters, GeneralLedgerCtrl.fiscalYearLabel) }}" download="{{ GeneralLedgerCtrl.fiscalYearLabel | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.CSV</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.CSV</span>
               </a>
             </li>
 
             <li role="menuitem">
               <a ng-href="/reports/finance/general_ledger/?{{ GeneralLedgerCtrl.download('xlsx', GeneralLedgerCtrl.filters, GeneralLedgerCtrl.fiscalYearLabel, GeneralLedgerCtrl.displayNames, true) }}" download="{{GeneralLedgerCtrl.fiscalYearLabel | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
               </a>
             </li>
 

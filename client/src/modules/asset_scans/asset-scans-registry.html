@@ -25,7 +25,7 @@
 
           <bh-dropdown-menu-item>
             <a href data-method="clear-state" ng-click="ScansCtrl.clearGridState()">
-              <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+              <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
             </a>
           </bh-dropdown-menu-item>
 
@@ -33,19 +33,19 @@
 
           <bh-dropdown-menu-item>
             <a data-method="export-pdf" ng-href="/asset/scans/reports/?{{ ScansCtrl.download('pdf') }}" download="{{ 'TREE.ASSET_MANAGEMENT.TITLE' | translate }}">
-              <span class="bi bi-file-pdf-o"></span> <span translate>DOWNLOADS.PDF</span>
+              <span class="bi bi-filetype-pdf"></span> <span translate>DOWNLOADS.PDF</span>
             </a>
           </bh-dropdown-menu-item>
 
           <bh-dropdown-menu-item>
             <a data-method="export-csv" ng-href="/asset/scans/reports/?{{ ScansCtrl.download('csv') }}" download="{{ 'TREE.ASSET_MANAGEMENT.TITLE' | translate }}">
-              <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.CSV</span>
+              <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.CSV</span>
             </a>
           </bh-dropdown-menu-item>
 
           <bh-dropdown-menu-item>
             <a data-method="export-excel" ng-href="/asset/scans/reports/?{{ ScansCtrl.download('xlsx') }}" download="{{ 'TREE.ASSET_MANAGEMENT.TITLE' | translate }}">
-              <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+              <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
             </a>
           </bh-dropdown-menu-item>
         </bh-dropdown-menu>

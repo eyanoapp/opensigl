@@ -10,7 +10,7 @@
     <li>
       <a href data-method="edit-record"
         ui-sref="accounts.edit({id : row.entity.id})">
-        <i class="bi bi-edit"></i>
+        <i class="bi bi-pencil-square"></i>
         <span translate>TABLE.COLUMNS.EDIT</span>
       </a>
     </li>
@@ -19,7 +19,7 @@
 
     <li ng-if="row.entity.type_id !== grid.appScope.Constants.accounts.TITLE">
       <a ng-href="/reports/finance/account_report/?{{ grid.appScope.openAccountReport(row.entity.id) }}" ng-attr-download="{{ REPORT.ACCOUNT | translate }}">
-        <span class="bi bi-file-pdf-o"></span> <span translate>REPORT.ACCOUNT</span>
+        <span class="bi bi-filetype-pdf"></span> <span translate>REPORT.ACCOUNT</span>
       </a>
     </li>
 

@@ -12,17 +12,17 @@
     </li>
     <li>
       <a ng-click="grid.appScope.shipmentDocument(row.entity.uuid)" href>
-        <i class="bi bi-file-pdf-o"></i> <span translate>SHIPMENT.DOCUMENT</span>
+        <i class="bi bi-filetype-pdf"></i> <span translate>SHIPMENT.DOCUMENT</span>
       </a>
     </li>
     <li ng-if="!row.entity.isAtDepot">
       <a ng-click="grid.appScope.shipmentManifest(row.entity.uuid)" href>
-        <i class="bi bi-file-pdf-o"></i> <span translate>SHIPMENT.MANIFEST</span>
+        <i class="bi bi-filetype-pdf"></i> <span translate>SHIPMENT.MANIFEST</span>
       </a>
     </li>
     <li>
       <a ng-click="grid.appScope.shipmentGoodsReceivedNote(row.entity.uuid)" href>
-        <i class="bi bi-file-pdf-o"></i> <span translate>SHIPMENT.GOODS_RECEIVED_NOTE</span>
+        <i class="bi bi-filetype-pdf"></i> <span translate>SHIPMENT.GOODS_RECEIVED_NOTE</span>
       </a>
     </li>
     <li class="divider" ng-if="row.entity.isAtDepot"></li>
@@ -81,7 +81,7 @@
     <li>
       <a ng-click="grid.appScope.getShipmentBarcode(row.entity.uuid)" href>
         <span class="">
-          <i class="bi bi-barcode"></i> <span translate>BARCODE.BARCODE</span>
+          <i class="bi bi-upc-scan"></i> <span translate>BARCODE.BARCODE</span>
         </span>
       </a>
     </li>

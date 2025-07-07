@@ -130,7 +130,7 @@
                 style="margin-left: 10px; vertical-align: middle;"
                 ng-click="StockCtrl.getLotByBarcode()"
                 ng-disabled="!StockCtrl.stockForm.details.exit_type">
-                <span class="bi bi-plus-circle"></span> <span translate>BARCODE.SCAN</span> <span class="bi bi-barcode"></span>
+                <span class="bi bi-plus-circle"></span> <span translate>BARCODE.SCAN</span> <span class="bi bi-upc-scan"></span>
               </button>
             </div>
 
@@ -144,7 +144,7 @@
                 <ul uib-dropdown-menu role="menu" class="dropdown-menu-right">
                   <li role="menuitem">
                     <a href ng-click="StockCtrl.exportGrid()">
-                      <i class="bi bi-file-excel-o"></i> <span translate>FORM.BUTTONS.EXPORT</span>
+                      <i class="bi bi-filetype-xlsx"></i> <span translate>FORM.BUTTONS.EXPORT</span>
                     </a>
                   </li>
                 </ul>
@@ -171,7 +171,7 @@
 
       <!-- footer -->
       <div class="row" style="margin-top: 5px; margin-bottom:5px;">
-        <div class="col-md-12 text-right">
+        <div class="d-flex flex-row justify-content-end gap-2">
           <button class="btn btn-default" ng-click="StockCtrl.clear()" type="button" data-method="clear" translate>
             FORM.BUTTONS.CLEAR
           </button>

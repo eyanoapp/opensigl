@@ -1,116 +1,63 @@
-<div class="flex-header">
-  <div class="opensigl-title">
-    <ol class="headercrumb">
-      <li class="static text-uppercase" translate>HOME.OpenSIGL</li>
-      <li class="title">{{ HomeCtrl.enterprise.name }}</li>
+<div class="p-3 px-lg-4">
+  <div>
+    <ol class="breadcrumb fs-sm mb-1">
+      <li class="breadcrumb-item"><a href="#" translate>HOME.OpenSIGL</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ HomeCtrl.enterprise.name }}</li>
     </ol>
+    <h4 class="main-title mb-0">Bienvenue {{ HomeCtrl.user.display_name }}</h4>
   </div>
-</div>
 
-<div class="flex-content">
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="card  segment ima-stat-card">
-          <div class="card-body text-center">
-            <div class="ui statistic">
-              <div class="value">
-                {{ HomeCtrl.enterprise.name }}
-              </div>
-              <div class="uilabel">
-                <i class="bi bi-user"></i> <span translate>HOME.CONNECTED_USER</span>: {{ HomeCtrl.user.display_name }}
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4">
-
-        <div class="card  segment ima-stat-card">
-          <div class="card-body text-center">
-            <div class="segment-title" translate>FORM.LABELS.PROJECT</div>
-            <div class="ui huge statistic">
-              <div class="value">
-                {{HomeCtrl.project.abbr}}
-              </div>
-              <div class="uilabel">
-                {{HomeCtrl.project.name}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-
-        <div class="card  segment ima-stat-card">
-          <div class="card-body text-center">
-            <div class="segment-title" translate>EXCHANGE.ENTERPRISE_CURRENCY</div>
-            <div class="ui huge statistic">
-              <div class="value">{{ HomeCtrl.enterprise.currencySymbol }}</div>
-              <div class="uilabel">{{ HomeCtrl.enterprise.currencyLabel }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col-md-4">
-
-        <div class="card  segment ima-stat-card">
-          <div class="card-body text-center" style="min-height: 124px;">
-            <div class="segment-title" translate>TABLE.COLUMNS.EXCHANGE_RATE</div>
-            <div 
-              ng-repeat="row in HomeCtrl.correctDisplay"
-              class="col-sm-12" title="{{ HomeCtrl.primaryExchange.rate}} ({{ currency.symbol }})">
-
-              <div class="exchange-rate">
-              {{ row.curerency_rate | limitTo:HomeCtrl.EXCHANGE_RATE_DISPLAY_SIZE }} {{ row.curerency_symbol }} = 
-               {{row.entreprice_currency}} {{row.entreprice_currency_symbol}}
-              </div>
-
-              <div><span translate>HOME.EXCHANGE_SET</span> {{ row.curerency_date }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card  segment">
+  <div class="d-flex flex-column justify-content-center gap-3">
+    <div class="row g-3">
+      <div class="col-6 col-xl-3">
+        <div class="card card-one border">
           <div class="card-body">
-            <div class="segment-title" translate>FISCAL.FISCAL_YEAR</div>
-
-            <div style="margin-top : 12px">
+            <label class="card-title fs-sm fw-medium mb-1" translate>FORM.LABELS.PROJECT</label>
+            <h3 class="card-value mb-1"><i class="bi bi-house"></i> {{HomeCtrl.project.abbr}}</h3>
+            <small><span class="d-inline-flex text-primary"><i class="bi bi-house"></i></span> {{HomeCtrl.project.name}}</small>
+            <small><span class="d-inline-flex text-primary"><i class="bi bi-building"></i></span> {{ HomeCtrl.enterprise.name }}</small>
+          </div><!-- card-body -->
+        </div><!-- card-one -->
+      </div><!-- col -->
+      <div class="col-6 col-xl-3">
+        <div class="card card-one border">
+          <div class="card-body">
+            <label class="card-title fs-sm fw-medium mb-1" translate>EXCHANGE.ENTERPRISE_CURRENCY</label>
+            <h3 class="card-value mb-1"><i class="bi bi-cash"></i> {{ HomeCtrl.enterprise.currencySymbol }}</h3>
+            <small><span class="d-inline-flex text-success"><i class="bi bi-cash"></i></span> {{ HomeCtrl.enterprise.currencyLabel }}</small>
+          </div><!-- card-body -->
+        </div><!-- card-one -->
+      </div><!-- col -->
+      <div class="col-6 col-xl-3" ng-repeat="row in HomeCtrl.correctDisplay">
+        <div class="card card-one border">
+          <div class="card-body">
+            <label class="card-title fs-sm fw-medium mb-1" translate>TABLE.COLUMNS.EXCHANGE_RATE</label>
+            <h3 class="card-value mb-1"><i class="bi bi-graph-up-arrow"></i> 
+              {{ row.curerency_rate | limitTo:HomeCtrl.EXCHANGE_RATE_DISPLAY_SIZE }} {{ row.curerency_symbol }} = 
+              {{row.entreprice_currency}} {{row.entreprice_currency_symbol}}
+            </h3>
+            <small><span translate>HOME.EXCHANGE_SET</span> {{ row.curerency_date }}</small>
+          </div><!-- card-body -->
+        </div><!-- card-one -->
+      </div><!-- col -->
+      <div class="col-xl-12">
+        <div class="card card-one border">
+          <div class="card-header">
+            <h6 class="card-title" translate>FISCAL.FISCAL_YEAR</h6>
+          </div><!-- card-header -->
+          <div class="card-body">
             <div class="progress" style="margin-bottom:0px;">
-              <div class="bg-ima-blue progress-bar" role="progressbar" style="width:{{HomeCtrl.year.percentage}}%; color: white">
+              <div class="bg-primary progress-bar" role="progressbar" style="width:{{HomeCtrl.year.percentage}}%; color: white">
                 {{ HomeCtrl.today | date }} | <span translate>FORM.LABELS.WEEK</span> {{ HomeCtrl.today | date:'w' }}
               </div>
             </div>
-
-            <!-- Ensure column padding is appropriate -->
-            <div class="row">
-              <div class="col-xs-6">
-                {{ HomeCtrl.year.start_date | date }}
-              </div>
-              <div class="col-xs-6 text-right">
-                {{ HomeCtrl.year.end_date | date }}
-              </div>
+            <div class="d-flex flex-row justify-content-between">
+              <div>{{ HomeCtrl.year.start_date | date }}</div>
+              <div>{{ HomeCtrl.year.end_date | date }}</div>
             </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
     </div>
-
   </div>
 </div>

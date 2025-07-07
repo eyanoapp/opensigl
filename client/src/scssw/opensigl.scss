@@ -1,0 +1,258 @@
+// borders
+$grid-gutter-width: 10px;
+$border-radius-base: 2px;
+$border-radius-small: $border-radius-base !default;
+
+// offsets
+$expanded-offset:  260px;
+$collapsed-offset: 56px;
+$nav-height:       51px;
+
+/* turn off horizontal resizing */
+textarea {
+  resize: vertical;
+  max-height: 250px;
+}
+
+/**
+ * This overrides the `width` specification added by bootstrap at different
+ * screen sizes for the .container class. As the Tree navigation pushes the view
+ * if it is expanded BHIMA cannot gaurantee there is enough space for these widths,
+ * overriding this with max-width doesn't force the container to the specified size
+ */
+@media (min-width: 768px) {
+  .container {
+    max-width : 730px;
+    width : auto;
+  }
+}
+
+@media (min-width : 992px) {
+  .container {
+    max-width : 950px;
+    width : auto;
+  }
+}
+
+@media (min-width : 1200px) {
+  .container {
+    max-width : 1150px;
+    width : auto;
+  }
+}
+
+/**
+ * Slightly pad the bottom of elements.  Useful for the floating columns on top
+ * of each other on small screens.
+ */
+.pad-bottom {
+  padding-bottom : calc(2 * $grid-gutter-width / 2);
+}
+
+
+/* PDF report styles */
+.table-report {
+  font-size: 0.9em;
+}
+
+.table-report > thead > th {
+  font-size: 1.2em;
+}
+
+.table-report > tbody > tr > td,
+.table-report > tbody > tr > th,
+.table-report > thead > tr > th,
+.table-report > tfoot > tr > th,
+.table-report > tfoot > tr > td {
+  padding: 2px;
+}
+
+.table-report {
+  margin-bottom : 0;
+}
+
+.table-report > tbody > tr > td,
+.table-report > tbody > tr > th {
+  border: 1px solid black;
+}
+
+.table-report > thead > tr > th {
+  border-bottom: 1px solid #000;
+}
+.table-report > tfoot > tr > th {
+  border-top: 1px solid #000 !important;
+}
+
+.pills span {
+  margin : 1px 2px;
+}
+
+.pills span:first {
+  margin-left: 0;
+}
+
+/* hack to get ui-selects to overflow over bootstrap's modals with */
+/* append-to-body="true" */
+body > .ui-select-bootstrap.open {
+  z-index: 1100;
+}
+
+.ui-grid-exporter-csv-link {
+  display : none;
+}
+
+.pad-alert {
+  border-radius : 0px;
+  padding-left : 10px;
+  padding-right : 10px;
+  padding-top : 10px;
+  padding-bottom : 10px;
+  margin-bottom : 10px;
+}
+
+/**/
+.strength-meter {
+  position: relative;
+  height: 3px;
+  background: #DDD;
+  margin: 10px auto 20px;
+  border-radius: 3px;
+}
+
+.strength-meter:before,
+.strength-meter:after {
+  content: '';
+  height: inherit;
+  background: transparent;
+  display: block;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 0 5px;
+  position: absolute;
+  width: 80px;
+  z-index: 10;
+}
+
+.strength-meter:before {
+  left: 70px;
+}
+
+.strength-meter:after {
+  right: 70px;
+}
+
+.strength-meter-fill {
+  background: transparent;
+  height: inherit;
+  position: absolute;
+  width: 0;
+  border-radius: inherit;
+  transition: width 0.5s ease-in-out, background 0.25s;
+}
+
+.strength-meter-fill[data-strength='0'] {
+  background: darkred;
+  width: 20%;
+}
+
+.strength-meter-fill[data-strength='1'] {
+  background: orangered;
+  width: 40%;
+}
+
+.strength-meter-fill[data-strength='2'] {
+  background: orange;
+  width: 60%;
+}
+
+.strength-meter-fill[data-strength='3'] {
+  background: yellowgreen;
+  width: 80%;
+}
+
+.strength-meter-fill[data-strength='4'] {
+  background: green;
+  width: 100%;
+}
+
+/* hack to get ui-grid to stop coloring inputs */
+div.ui-grid-cell .form-group input.form-control.ng-invalid {
+  border : 1px solid #ccc;
+}
+
+div.ui-grid-cell .form-group.has-error input.ng-invalid {
+  border : 1px solid #fc8f8f;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* note: panels must have position:relative set on them */
+.panel-overlay {
+  top: 0;
+  left: 0;
+  right : 0;
+  bottom : 0;
+  background-color: rgba(255,255,255, 0.95);
+  position : absolute;
+  z-index: 1000;
+}
+
+.panel-overlay-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.panel-overlay-text {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link {
+  cursor: pointer;
+}
+
+/* modal notify component */
+.bh-modal-notify {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.bh-modal-notify > i {
+  cursor: pointer;
+}
+
+/* extends .dropdown-header with .text-ellipsis and max-width */
+.bh-dropdown-header {
+	color: #777;
+	display: block;
+	font-size: 12px;
+	line-height: 1.42857143;
+  max-width:250px;
+	overflow: hidden;
+	padding: 3px 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

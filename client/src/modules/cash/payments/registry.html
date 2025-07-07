@@ -28,30 +28,30 @@
 
             <li role="menuitem">
               <a href data-method="clear-state" ng-click="CPRCtrl.clearGridState()">
-                <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+                <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
               </a>
             </li>
 
             <li role="separator" class="divider"></li>
             <li role="menuitem">
               <a ng-href="/reports/finance/cash/?{{ CPRCtrl.download('pdf') }}" download="{{ 'CASH_REGISTRY.TITLE' | translate }}">
-                <span class="bi bi-file-pdf-o"></span> <span translate>DOWNLOADS.PDF</span>
+                <span class="bi bi-filetype-pdf"></span> <span translate>DOWNLOADS.PDF</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/finance/cash/?{{ CPRCtrl.download('csv') }}" download="{{ 'CASH_REGISTRY.TITLE' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.CSV</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.CSV</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/finance/cash/?{{ CPRCtrl.download('xlsx') }}" download="{{ 'CASH_REGISTRY.TITLE' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
               </a>
             </li>
             <li role="separator" class="divider" bh-require-enterprise-setting="barcodes"></li>
             <li role="menuitem" bh-require-enterprise-setting="barcodes">
               <a href ng-click="CPRCtrl.openBarcodeScanner()" data-action="scan-barcode">
-                <span class="bi bi-barcode"></span> <span translate>BARCODE.SCAN_BARCODE</span>
+                <span class="bi bi-upc-scan"></span> <span translate>BARCODE.SCAN_BARCODE</span>
               </a>
             </li>
           </ul>

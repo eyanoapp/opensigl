@@ -9,7 +9,7 @@
 
     <li>
       <a data-method="edit-record" ng-click="grid.appScope.editDepot(row.entity.uuid)" href>
-        <i class="bi bi-edit"></i> <span translate>FORM.BUTTONS.EDIT</span>
+        <i class="bi bi-pencil-square"></i> <span translate>FORM.BUTTONS.EDIT</span>
       </a>
     </li>
     <li>
@@ -19,20 +19,20 @@
           { key : 'depot_uuid', value : row.entity.uuid, displayValue : row.entity.text, cacheable: false },
           { key : 'limit', value : 1000, cacheable: false }
         ]})" href>
-        <i class="bi bi-th-list"></i> <span translate>INVENTORY.VIEW_ARTICLES_IN_STOCK</span>
+        <i class="bi bi-list-columns-reverse"></i> <span translate>INVENTORY.VIEW_ARTICLES_IN_STOCK</span>
       </a>
     </li>
     <li>
       <a href
         data-method="add-dependant-depot"
         ui-sref="depots.create({ parentUuid : row.entity.uuid })" href>
-        <i class="bi bi-cube"></i> <span translate>DEPOT.ADD_SUB_DEPOT</span>
+        <i class="bi bi-box"></i> <span translate>DEPOT.ADD_SUB_DEPOT</span>
       </a>
     </li>
 
     <li bh-has-permission="grid.appScope.bhConstants.actions.CAN_EDIT_ROLES">
       <a data-method="depot-management" ng-click="grid.appScope.managementDepot(row.entity.uuid)" href>
-        <i class="bi bi-user"></i> <span translate>DEPOT.ADD_MANAGER</span>
+        <i class="bi bi-person"></i> <span translate>DEPOT.ADD_MANAGER</span>
       </a>
     </li>
 

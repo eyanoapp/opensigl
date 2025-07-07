@@ -31,7 +31,7 @@
           </bh-dropdown-menu-item>
           <bh-dropdown-menu-item>
             <a href="" ng-click="StockCtrl.generateAssetBarcodes()">
-              <i class="bi bi-barcode"></i>
+              <i class="bi bi-upc-scan"></i>
               <span translate>STOCK.GENERATE_TAG_NUMBERS</span>
             </a>
           </bh-dropdown-menu-item>
@@ -147,7 +147,7 @@
           </p>
         </div>
         <div class="col-md-6">
-          <div class="text-right">
+          <div class="d-flex flex-row justify-content-end gap-2">
             <button
               class="btn btn-default"
               ng-click="StockCtrl.reset(StockEntryForm)"

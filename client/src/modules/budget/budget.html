@@ -30,7 +30,7 @@
 
             <li role="menuitem">
               <a href data-method="clear-state" ng-click="BudgetCtrl.clearGridState()">
-                <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+                <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
               </a>
             </li>
 
@@ -46,20 +46,20 @@
             <li role="menuitem">
               <a ng-href="/reports/budget/?{{ BudgetCtrl.exportToQueryString('pdf') }}"
                  download="{{ 'BUDGET.EXPORT.REPORT_PDF' | translate }}">
-                <span class="bi bi-file-pdf-o"></span> <span translate>BUDGET.EXPORT.REPORT_PDF</span>
+                <span class="bi bi-filetype-pdf"></span> <span translate>BUDGET.EXPORT.REPORT_PDF</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/budget/?{{ BudgetCtrl.exportToQueryString('csv') }}"
                  download="{{ 'BUDGET.EXPORT.DATA_CSV' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>BUDGET.EXPORT.DATA_CSV</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>BUDGET.EXPORT.DATA_CSV</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/budget/?{{ BudgetCtrl.downloadExcelQueryString() }}"
                  translate-attr="{'download': 'BUDGET.EXPORT.EXCEL'}"
                  target='_blank'>
-                <span class="bi bi-file-excel-o"></span> <span translate>BUDGET.EXPORT.EXCEL</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>BUDGET.EXPORT.EXCEL</span>
               </a>
             </li>
 

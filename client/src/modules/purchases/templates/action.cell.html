@@ -18,7 +18,7 @@
         href
         data-method="document"
         ng-click="grid.appScope.getDocument(row.entity.uuid)">
-        <i class="bi bi-file-pdf-o"></i> <span translate>FORM.LABELS.DOCUMENT</span>
+        <i class="bi bi-filetype-pdf"></i> <span translate>FORM.LABELS.DOCUMENT</span>
       </a>
     </li>
 
@@ -26,7 +26,7 @@
 
     <li ng-if="row.entity.status_id === grid.appScope.status.WAITING_CONFIRMATION">
       <a href data-method="edit-record" ui-sref="purchasesUpdate({ uuid : row.entity.uuid })" >
-        <i class="bi bi-edit"></i><span translate>FORM.LABELS.EDIT</span>
+        <i class="bi bi-pencil-square"></i><span translate>FORM.LABELS.EDIT</span>
       </a>
     </li>
 
@@ -37,13 +37,13 @@
         ng-click="grid.appScope.editStatus(row.entity)"
         data-edit-metadata="{{ row.entity.uuid }}"
         data-method="edit-status">
-        <i class="bi bi-edit"></i><span translate>FORM.LABELS.EDIT_STATUS</span>
+        <i class="bi bi-pencil-square"></i><span translate>FORM.LABELS.EDIT_STATUS</span>
       </a>
     </li>
 
     <li>
       <a ng-href="{{ grid.appScope.openPurchaseDetailedAnalysisReport(row.entity) }}" target="_blank">
-        <span class="bi bi-file-pdf-o"></span> <span translate>REPORT.PURCHASE_ORDER_ANALYSIS.TITLE</span>
+        <span class="bi bi-filetype-pdf"></span> <span translate>REPORT.PURCHASE_ORDER_ANALYSIS.TITLE</span>
       </a>
     </li>
 

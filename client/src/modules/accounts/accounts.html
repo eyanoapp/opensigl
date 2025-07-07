@@ -14,17 +14,17 @@
           <ul uib-dropdown-menu role="menu" class="dropdown-menu-right">
             <li role="menuitem">
               <a ng-href="/reports/finance/accounts/chart/?{{ AccountsCtrl.Accounts.download('pdf') }}" download="{{ 'ACCOUNT.TITLE' | translate }}">
-                <span class="bi bi-file-pdf-o"></span> <span translate>DOWNLOADS.PDF</span>
+                <span class="bi bi-filetype-pdf"></span> <span translate>DOWNLOADS.PDF</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/finance/accounts/chart/?{{ AccountsCtrl.Accounts.download('csv') }}" download="{{ 'ACCOUNT.TITLE' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.CSV</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.CSV</span>
               </a>
             </li>
             <li role="menuitem">
               <a ng-href="/reports/finance/accounts/chart/?{{ AccountsCtrl.Accounts.download('xlsx') }}" download="{{ 'ACCOUNT.TITLE' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
               </a>
             </li>
             <li class="divider"></li>

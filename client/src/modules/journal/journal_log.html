@@ -17,12 +17,12 @@
             <ul uib-dropdown-menu role="menu" class="dropdown-menu-right">
               <li role="menuitem">
                 <a href data-method="export" id="export" ng-click="JournalLogCtrl.exportFile()" translate-attr="{'download': 'DOWNLOADS.CSV'}" >
-                  <i class="bi bi-file-excel-o"></i> <span translate>DOWNLOADS.CSV</span>
+                  <i class="bi bi-filetype-xlsx"></i> <span translate>DOWNLOADS.CSV</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a target='_blank' ng-click="JournalLogCtrl.setStartDownload()" ng-href="{{JournalLogCtrl.downloadExcel()}}" translate-attr="{'download': 'DOWNLOADS.EXCEL'}" >
-                  <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+                  <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
                 </a>
               </li>
             </ul>

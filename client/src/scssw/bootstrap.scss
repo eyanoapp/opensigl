@@ -1,0 +1,25 @@
+/**
+  * OpenSIGL Bootstrap SCSS
+  * This file is the main entry point for the OpenSIGL Bootstrap styles.
+  * It imports all necessary styles and components.
+  */
+
+// Bootstrap Framework
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// AdminLTE Configuration
+// ---------------------------------------------------
+@import "variables";
+@import "variables-dark";
+@import "mixins";
+
+// AdiminLTE Parts
+// ---------------------------------------------------
+@import "parts/core";
+@import "parts/components";
+@import "parts/extra-components";
+@import "parts/pages";
+@import "parts/miscellaneous";
+
+// AdminLTE Accessibility Styles - WCAG 2.1 AA Compliance
+@import "accessibility";

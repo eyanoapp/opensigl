@@ -1,0 +1,116 @@
+<div class="page-sign">
+  <div class="card card-sign">
+    <div class="card-header">
+      <div class="d-flex flex-row align-items-center justify-content-between mb-4">
+        <img
+          src="assets/opensigl.png"
+          alt="OpenSIGL Logo"
+          class="img-fluid"
+          width="80"
+          height="80"
+        />
+        <div uib-dropdown>
+          <a class="btn btn-default btn-xs text-muted" uib-dropdown-toggle>
+            <i class="bi bi-globe"></i>
+            <span class="caret"></span>
+          </a>
+          <ul role="menu" uib-dropdown-menu>
+            <li role="menuitem" ng-repeat="(key, lang) in $ctrl.languages">
+              <a ng-click="$ctrl.languageService.set(key)" lang="{{key}}" href>
+                {{ lang.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="card-title" translate>AUTH.LOGIN</h3>
+      <p class="card-text">Welcome back! Please signin to continue.</p>
+    </div>
+    <!-- card-header -->
+    <div class="card-body">
+      <form name="LoginForm" bh-submit="$ctrl.login(LoginForm)" novalidate>
+        <div
+          class="input-group mb-3"
+          ng-class="{ 'has-error' : LoginForm.$submitted && LoginForm.username.$invalid }"
+        >
+          <input
+            name="username"
+            type="text"
+            class="form-control"
+            ng-model="$ctrl.credentials.username"
+            translate-attr="{ placeholder: 'FORM.PLACEHOLDERS.USERNAME' }"
+            autofocus
+            autocomplete="off"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-person"></span>
+          </div>
+        </div>
+
+        <div
+          class="input-group mb-3"
+          ng-class="{ 'has-error' : LoginForm.$submitted && LoginForm.password.$invalid }"
+        >
+          <input
+            name="password"
+            type="password"
+            ng-model="$ctrl.credentials.password"
+            class="form-control"
+            translate-attr="{ placeholder: 'FORM.PLACEHOLDERS.PASSWORD' }"
+            autocomplete="nope"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-lock"></span>
+          </div>
+        </div>
+
+        <div
+          class="form-group"
+          ng-class="{ 'has-error' : LoginForm.$submitted && LoginForm.project.$invalid }"
+        >
+          <label class="control-label" translate> FORM.LABELS.PROJECT </label>
+          <div class="input-group mb-3">
+            <select
+              name="project"
+              class="form-control"
+              ng-model="$ctrl.credentials.project"
+              ng-options="proj.id as proj.name for proj in $ctrl.projects"
+              required
+            >
+              <option value="" disabled translate>FORM.SELECT.PROJECT</option>
+            </select>
+            <div class="input-group-text">
+              <span class="bi bi-house"></span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="form-group"
+          ng-class="{ 'has-error' : LoginForm.$submitted && LoginForm.$invalid }"
+        >
+          <bh-loading-button loading-state="LoginForm.$loading">
+            <span translate>FORM.BUTTONS.CONNECTION</span>
+          </bh-loading-button>
+
+          <!-- client-side validation error: requires username, password, and project -->
+          <p
+            class="help-block"
+            ng-if="LoginForm.$submitted && LoginForm.$invalid"
+            style="margin-top: 10px"
+          >
+            <i class="bi bi-exclamation-circle"></i>
+            <span translate>FORM.ERRORS.MISSING</span>
+          </p>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      Don't have an account? <a href="sign-up.html">Create an Account</a>
+    </div>
+    <!-- card-footer -->
+  </div>
+  <!-- card -->
+</div>

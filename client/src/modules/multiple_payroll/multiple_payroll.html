@@ -28,7 +28,7 @@
 
             <li role="menuitem">
               <a href data-method="clear-state" ng-click="MultiplePayrollCtrl.clearGridState()">
-                <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+                <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
               </a>
             </li>
 
@@ -58,20 +58,20 @@
             <li role="separator" class="divider"></li>
             <li role="menuitem">
               <a data-method="view-payslip" ng-click="MultiplePayrollCtrl.viewPaySlip()" href>
-                <i class="bi bi-file-pdf-o"></i> <span translate>FORM.BUTTONS.PAYROLL_PAYSLIPS</span>
+                <i class="bi bi-filetype-pdf"></i> <span translate>FORM.BUTTONS.PAYROLL_PAYSLIPS</span>
               </a>
             </li>
             <li role="separator" class="divider"></li>
             <!-- pdf-->
             <li role="menuitem">
               <a data-method="view-payslip" ng-click="MultiplePayrollCtrl.viewPaySlipReport()" href>
-                <i class="bi bi-file-pdf-o"></i> <span translate>FORM.BUTTONS.REPORT_PDF</span>
+                <i class="bi bi-filetype-pdf"></i> <span translate>FORM.BUTTONS.REPORT_PDF</span>
               </a>
             </li>
             <!-- excel-->
             <li role="menuitem">
               <a href="/reports/payroll/payslip/?{{ MultiplePayrollCtrl.download('xls') }}" download="{{ 'FORM.BUTTONS.PAYROLL_PAYSLIPS' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>FORM.BUTTONS.REPORT_XLS</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>FORM.BUTTONS.REPORT_XLS</span>
               </a>
             </li>
             <li role="separator" class="divider"></li>
@@ -83,7 +83,7 @@
             <!-- excel-->
             <li role="menuitem">
               <a href="/reports/payroll/payslip/?socialCharge=true&{{ MultiplePayrollCtrl.download('xls') }}" download="{{ 'FORM.BUTTONS.PAYROLL_PAYSLIPS' | translate }}">
-                <span class="bi bi-file-excel-o"></span> <span translate>FORM.BUTTONS.REPORT_SOCIAL_CHARGES_XLS</span>
+                <span class="bi bi-filetype-xlsx"></span> <span translate>FORM.BUTTONS.REPORT_SOCIAL_CHARGES_XLS</span>
               </a>
             </li>
           </ul>

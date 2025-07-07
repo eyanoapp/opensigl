@@ -160,7 +160,7 @@ class ReportManager {
 
     // check if the enterprise has a logo, and normalize the path to absolute
     // Use the IMA application icon as the default logo if nothing else exists
-    const logoPath = metadata.enterprise?.logo || './client/assets/IMAicon.png';
+    const logoPath = metadata.enterprise?.logo || './client/assets/opensigl.png';
     metadata.enterprise.logopath = path.isAbsolute(logoPath)
       ? logoPath
       : path.resolve(logoPath);

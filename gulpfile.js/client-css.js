@@ -28,7 +28,11 @@ if (isDevelopment) {
   CSS_PATHS = CSS_PATHS.map((file) => file.replace('.min.css', '.css'));
 }
 
-const SCSS_PATH = 'client/src/scss/opensigl-bootstrap.scss';
+// paths to SCSS files that need to be compiled
+const SCSS_PATHS = [
+  'client/src/scss/bootstrap.scss',
+  'client/src/scss/opensigl.scss',
+];
 
 /**
  * @function cleanCSS
@@ -82,13 +86,14 @@ const compileCSS = isProduction
  * @returns
  */
 function compileSass() {
-  return src(SCSS_PATH)
+  return src(SCSS_PATHS)
     .pipe(sass().on('error', sass.logError))
+    .pipe(concat('opensigl-theme.min.css'))
     .pipe(gulpif(isProduction, postcss([cssnano({ zindex : false })])))
     .pipe(dest(`${CLIENT_FOLDER}/css`));
 }
 
-const PATHS = [...CSS_PATHS, SCSS_PATH];
+const PATHS = [...CSS_PATHS, SCSS_PATHS];
 
 const compile = series(cleanCSS, compileSass, compileCSS);
 exports.watch = () => watch(PATHS, compile);

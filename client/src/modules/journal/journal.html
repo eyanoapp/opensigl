@@ -30,7 +30,7 @@
 
               <li role="menuitem">
                 <a href data-method="clear-state" ng-click="JournalCtrl.clearGridState()">
-                  <i class="bi bi-close"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
+                  <i class="bi bi-x"></i> <span translate>FORM.BUTTONS.CLEAR_GRID_CONFIGURATION</span>
                 </a>
               </li>
 
@@ -49,12 +49,12 @@
               </li>
               <li role="menuitem">
                 <a href data-method="export" id="export" ng-click="JournalCtrl.exportFile()" translate-attr="{'download': 'DOWNLOADS.CSV'}" >
-                  <i class="bi bi-file-excel-o"></i> <span translate>DOWNLOADS.CSV</span>
+                  <i class="bi bi-filetype-xlsx"></i> <span translate>DOWNLOADS.CSV</span>
                 </a>
               </li>
               <li role="menuitem">
                 <a target='_blank' ng-href="/reports/finance/journal?{{JournalCtrl.downloadExcel()}}" translate-attr="{'download': 'DOWNLOADS.EXCEL'}" >
-                  <span class="bi bi-file-excel-o"></span> <span translate>DOWNLOADS.EXCEL</span>
+                  <span class="bi bi-filetype-xlsx"></span> <span translate>DOWNLOADS.EXCEL</span>
                 </a>
               </li>
             </ul>
