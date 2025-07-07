@@ -13,6 +13,9 @@ OsLayoutController.$inject = ['SessionService'];
 function OsLayoutController(Session) {
   const $ctrl = this;
 
+  $ctrl.user = Session.user;
+  $ctrl.logout = Session.logout;
+
   $ctrl.getEnterpriseLogo = () => {
     return Session.enterprise && Session.enterprise.logo
       ? Session.enterprise.logo

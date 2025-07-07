@@ -26,6 +26,14 @@
   color: #fff;
 }
 
+.opensigl-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+
 .headercrumb {
   padding: 8px 0px;
   list-style: none;

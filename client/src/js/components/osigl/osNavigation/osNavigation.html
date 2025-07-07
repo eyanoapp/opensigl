@@ -1,0 +1,46 @@
+<div class="nav-group" ng-repeat="unit in $ctrl.units track by unit.id" ng-class="{ 'show' : unit.open }">
+  <a 
+    class="nav-label" 
+    ng-click="$ctrl.toggleUnit(unit)"
+    data-unit-key="{{ ::unit.key }}" 
+    id="SidebarNavigation_Unit_{{::unit.key}}"
+    translate>{{ unit.key }}</a>
+  <ul ng-if="$ctrl.isOpen(unit)" class="nav nav-sidebar">
+    <li class="nav-item" ng-repeat="child in unit.children track by child.id">
+      <!-- sub folder -->
+      <a
+        class="nav-link"
+        ng-class="{ 'has-sub' : $ctrl.isParentNode(child) }"
+        ng-click="$ctrl.toggleUnit(child)"
+        ng-if="$ctrl.isParentNode(child)"
+        data-unit-key="{{ ::child.key }}"
+        id="SidebarNavigation_Child_{{::child.key}}">
+        <i class="bi bi-folder2"></i> <span translate>{{ child.key }}</span>
+      </a>
+
+      <nav ng-if="$ctrl.isOpen(child)">
+        <!-- sub folder children -->
+        <a ng-repeat="subchild in child.children track by subchild.id"
+          class="nav-sub-link"
+          ng-click="$ctrl.navigate(subchild)"
+          ng-class="{ 'bg-primary text-white' : subchild.selected }"
+          data-unit-key="{{ ::subchild.key }}"
+          id="SidebarNavigation_Subchild_{{::subchild.key}}">
+          <span class="tree-title" translate>{{subchild.key}}</span>
+        </a>
+      </nav>
+
+      <!-- plain link -->
+      <a
+        class="nav-link"
+        ng-class="{ 'bg-primary text-white' : child.selected }"
+        ng-click="$ctrl.navigate(child)"
+        ng-if="$ctrl.isChildNode(child)"
+        data-unit-key="{{ ::child.key }}"
+        id="SidebarNavigation_Child_{{::child.key}}">
+        <i class="bi bi-file-earmark"></i> <span translate>{{ child.key }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- nav-group -->
