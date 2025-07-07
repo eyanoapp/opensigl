@@ -21,6 +21,7 @@ let CSS_PATHS = [
   'node_modules/angular-ui-grid/ui-grid.min.css',
   'node_modules/ui-bootstrap4/dist/ui-bootstrap-csp.css',
   'node_modules/bootstrap-icons/font/bootstrap-icons.min.css',
+  'node_modules/remixicon/fonts/remixicon.css',
 ];
 
 // only minify if in production mode

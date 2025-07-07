@@ -16,6 +16,10 @@ let VENDOR_FILES = [
   'node_modules/jquery/dist/jquery.min.js', // jquery
   'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', // bootstrap
 
+  // UI dependencies
+  'node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js',
+  'node_modules/apexcharts/dist/apexcharts.min.js',
+
   // Angular
   'node_modules/angular/angular.min.js',
   'node_modules/angular-messages/angular-messages.min.js',

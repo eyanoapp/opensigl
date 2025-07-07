@@ -39,4 +39,15 @@ function fontsBootstrapIcons() {
     .pipe(dest(`${CLIENT_FOLDER}/css/fonts/`));
 }
 
-module.exports = parallel(fonts, fontsUiGrid, fontsBootstrapIcons);
+function fontsRemixIcons() {
+  const remixFonts = [
+    'node_modules/remixicon/fonts/*.ttf',
+    'node_modules/remixicon/fonts/*.woff',
+    'node_modules/remixicon/fonts/*.woff2',
+    'node_modules/remixicon/fonts/*.svg',
+  ];
+  return src(remixFonts, { encoding : false })
+    .pipe(dest(`${CLIENT_FOLDER}/css/`));
+}
+
+module.exports = parallel(fonts, fontsUiGrid, fontsBootstrapIcons, fontsRemixIcons);
