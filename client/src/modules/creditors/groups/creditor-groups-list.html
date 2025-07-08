@@ -1,62 +1,71 @@
-<div class="container">
-  <div class="row" ng-show="CreditorGroupCtrl.creditorGroupList.length>0">
-    <div class="col-md-8 col-md-offset-2">
-
-      <div class="card " style="margin-bottom : 0px;">
-        <div class="card-heading clearfix text-left">
-
-          <a href ng-click="CreditorGroupCtrl.toggleFilter()">
-            <span translate>TABLE.COLUMNS.FILTERING.LABEL</span> <span class="caret" ng-class="{'rotate' : CreditorGroupCtrl.filterActive}"></span>
-          </a>
-
-          <div class="pull-right">
-            <span class="label label-primary" ng-if="CreditorGroupCtrl.sort"><span translate>{{CreditorGroupCtrl.sort.key }}</span></span>
-            <span uib-dropdown>
-              <a href uib-dropdown-toggle> <span translate>TABLE.COLUMNS.SORTING.LABEL</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu-right" uib-dropdown-menu>
-                <li ng-repeat="option in CreditorGroupCtrl.sortOptions">
-                  <a href ng-click="CreditorGroupCtrl.setOrder(option)"><span translate>{{ option.key }}</span></a>
-                </li>
-                <li role="seperator" class="divider"></li>
-                <li><a href ng-click="CreditorGroupCtrl.setOrder()"><span class="bi bi-times" aria-hidden="true"></span><span translate> FORM.BUTTONS.CLEAR </span></a></li>
-              </ul>
-            </span>
-          </div>
-        </div>
-
-        <input ng-model="CreditorGroupCtrl.filter" ng-show="CreditorGroupCtrl.filterActive" class="form-control" placeholder="{{'FORM.PLACEHOLDERS.FILTER_NAME' | translate }}" style="border-radius: 0"/>
-      </div>
-
-      <div ng-repeat="cg in CreditorGroupCtrl.creditorGroupList
-       | filter    : {name : CreditorGroupCtrl.filter}
-       | orderBy   : CreditorGroupCtrl.sort.attribute: CreditorGroupCtrl.sort.reverse
-       track by cg.uuid">
-
-        <div class="card " style="margin-bottom: 5px;" data-group-entry>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <h4 style="margin-top : 0px;"><span ng-if="cg.locked" class="bi bi-lock text-danger"></span> <b>{{ cg.name }}</b></h4>
-                <h5 style="margin-top : 0px;"></span><span translate> FORM.LABELS.ACCOUNT_NUMBER </span> : <b>{{ cg.number }}</b></h5>
-              </div>
-              <div class="col-md-6 text-float-util">
-                <a data-method="update" data-update="{{cg.name}}" ui-sref="creditorGroups.update({uuid : cg.uuid})">
-                  <span class="bi bi-pencil-square-o" aria-hidden="true"></span> <span translate>CREDITOR_GROUP.UPDATE</span>
+<div>
+  <div class="table-responsive">
+    <table class="table table-files">
+      <thead>
+        <tr>
+          <th>Groupe créditeur</th>
+          <th>Compte</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="cg in CreditorGroupCtrl.creditorGroupList | filter    : {name : CreditorGroupCtrl.filter} | orderBy   : CreditorGroupCtrl.sort.attribute: CreditorGroupCtrl.sort.reverse track by cg.uuid" data-row="{{ $index }}">
+          <td>
+            <div class="media">
+              <div class="media-icon primary"><i class="bi bi-folder2"></i></div>
+              <h6 class="file-name">
+                <a data-method="update" data-update="{{cg.name}}" ui-sref="creditorGroups.update({uuid : cg.uuid})" class="text-primary text-bold">
+                  {{cg.name}}
+                </a>
+                <span ng-if="cg.locked" class="bi bi-lock text-danger"></span>
+                <div class="mt-1">
+                  <span class="bi bi-bars"></span> <b>{{ cg.total_creditors }}</b> {{ 'FORM.LABELS.CREDITOR_SUBCRIBED' | translate }}
+                </div>
+              </h6>
+            </div><!-- media -->
+          </td>
+          <td>
+            <span translate> FORM.LABELS.ACCOUNT_NUMBER </span> : <b>{{cg.number}}</b>
+          </td>
+          <td>
+            <div class="dropdown-file">
+              <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a data-method="update" data-update="{{cg.name}}" ui-sref="creditorGroups.update({uuid : cg.uuid})" data-toggle="modal" class="dropdown-item details">
+                  <i class="ri-information-line"></i> <span translate>FORM.BUTTONS.EDIT</span>
+                </a>
+                <a href data-method="delete" ng-click="CreditorGroupCtrl.del(fiscal)" class="dropdown-item text-danger">
+                  <i class="ri-delete-bin-line"></i> <span translate>FORM.BUTTONS.DELETE</span>
                 </a>
               </div>
-            </div>
+            </div><!-- dropdown -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- table-responsive -->
 
-            <span class="bi bi-bars"></span> <b>{{ cg.total_creditors }}</b> {{ 'FORM.LABELS.CREDITOR_SUBCRIBED' | translate }}
-
-          </div>
-        </div>
-      </div>
-
-    </div>
+  <!-- list status information zone -->
+  <div>
+    <p class="text-center" ng-show="CreditorGroupCtrl.loadingState">
+      <span class="bi bi-circle-o-notch fa-spin"></span>
+      <span translate>TABLE.COLUMNS.LOADING</span>
+    </p>
+    <p ng-show="(CreditorGroupCtrl.debtorGroups.length == 0) && !CreditorGroupCtrl.loadingError && !CreditorGroupCtrl.loadingState"
+      class="text-center text-danger" translate>
+      FORM.LABELS.NO_CASHBOXES_REGISTRED
+    </p>
   </div>
 
-  <div class="row" ng-show=" CreditorGroupCtrl.creditorGroupList.length==0">
-    <br>
-    <p class="text-danger" translate>CREDITOR_GROUP.NO_CREDITOR_GROUP</p>
+  <!-- list pagination -->
+  <div uib-pagination
+    total-items="CreditorGroupCtrl.debtorGroups.length"
+    ng-model='CreditorGroupCtrl.currentPage'
+    items-per-page='CreditorGroupCtrl.pageSize'
+    next-text="&rsaquo;"
+    previous-text="&lsaquo;"
+    first-text="&lsaquo;&lsaquo;"
+    last-text="&rsaquo;&rsaquo;"
+    boundary-links="true">
   </div>
 </div>

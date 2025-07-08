@@ -1,20 +1,25 @@
-<div class="card ">
-
-  <div class="card-heading" style="display: flex; justify-content: space-between;">
-    <span>
-      <i class="bi bi-object-group"></i>
-      <span translate> INVENTORY.LIST_GROUP </span> ({{ GroupsCtrl.groupList.length }})
-    </span>
-
-    <button
-      ng-click="GroupsCtrl.addInventoryGroup()"
-      class="pull-right btn btn-primary btn-sm"
-      type="button" data-create-group>
-      <i class="bi bi-plus"> </i> <span translate>FORM.LABELS.ADD</span>
-    </button>
-  </div>
-
-  <section style="height: 300px; overflow: auto;">
+<div class="card card-one">
+  <div class="card-header">
+    <h6 class="card-title"><span translate> INVENTORY.LIST_GROUP </span> ({{ GroupsCtrl.groupList.length }})</h6>
+    <nav class="nav nav-icon nav-icon-sm ms-auto">
+      <button
+        ng-click="GroupsCtrl.addInventoryGroup()"
+        class="btn btn-primary btn-sm"
+        type="button"
+        data-create-unit><i class="bi bi-plus"></i> <span translate>FORM.BUTTONS.ADD</span>
+      </button>
+    </nav>
+  </div><!-- card-header -->
+  <div class="card-body">
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-filter"></i></span>
+      <input
+        ng-model="GroupsCtrl.searchValue"
+        type="search"
+        class="form-control input-sm"
+        style="display: inline"
+        translate-attr="{ placeholder: 'FORM.LABELS.SEARCH' }">
+    </div>
     <table class="table table-condensed">
       <thead>
         <tr>
@@ -27,17 +32,8 @@
         </tr>
         <tr>
           <th></th>
-          <th colspan="2">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="bi bi-filter"></i></span>
-              <input
-                ng-model="GroupsCtrl.searchValue"
-                type="search"
-                class="form-control input-sm"
-                style="display: inline"
-                translate-attr="{ placeholder: 'FORM.LABELS.SEARCH' }">
-            </div>
-          </th>
+          <th></th>
+          <th></th>
           <th></th>
           <th class="text-center"><small translate> FORM.LABELS.SALE </small></th>
           <th class="text-center"><small translate> FORM.LABELS.STOCK </small></th>
@@ -80,5 +76,5 @@
         </tr>
       </tbody>
     </table>
-  </section>
-</div>
+  </div><!-- card-body -->
+</div><!-- card -->

@@ -8,25 +8,24 @@
        style="margin-bottom:0">
     <label class="control-label">
       <span translate>{{ $ctrl.label }}</span>
-      <span ng-if="$ctrl.selected" class="label label-warning" translate>{{ $ctrl.selected }}</span>
+      <span ng-if="$ctrl.selected" class="ml-2 bg-primary text-white p-1" translate>{{ $ctrl.selected }}</span>
     </label>
   </div>
 
-  <ul class="list-inline">
-    <li ng-repeat="view in $ctrl.options">
-      <a ng-click="$ctrl.search(view)" data-date-range="{{ ::view.range }}" href>
+  <div class="d-flex flex-row align-items-center justify-content-between mt-2">
+    <div class="d-flex flex-row align-items-center gap-1">
+      <a class="border px-2" ng-click="$ctrl.search(view)" ng-repeat="view in $ctrl.options" data-date-range="{{ ::view.range }}" href>
         <span translate>{{ ::view.translateKey }}</span>
       </a>
-    </li>
-
-    <li class="pull-right" ng-if="$ctrl.canClear">
+    </div>
+    <div ng-if="$ctrl.canClear">
       <a href ng-click="$ctrl.clear()" tabindex="-1">
         <i class="bi bi-eraser"></i> <span translate>FORM.BUTTONS.CLEAR</span>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 
-  <div class="row" date-id="$ctrl.dateId" data-bh-date-interval>
+  <div class="d-flex flex-row align-items-center justify-content-between gap-1" date-id="$ctrl.dateId" data-bh-date-interval>
     <div class="form-group col-md-5"
 	       ng-class="{ 'has-error' : DateIntervalForm.$submitted && DateIntervalForm.dateFrom.$invalid }">
       <div class="input-group">

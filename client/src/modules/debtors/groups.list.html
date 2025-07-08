@@ -1,110 +1,93 @@
-<div class="container text-center">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="card " style="margin-bottom : 0px;">
-        <div class="card-heading clearfix" style="text-align : left">
-
-          <a href ng-click="GroupCtrl.toggleFilter()">
-            <span translate>TABLE.COLUMNS.FILTERING.LABEL</span> <span class="caret" ng-class="{'rotate' : GroupCtrl.filterActive}"></span>
-          </a>
-
-          <div class="pull-right">
-            <span class="label label-primary" ng-if="GroupCtrl.sort"><span translate>{{GroupCtrl.sort.key }}</span></span>
-            <span uib-dropdown>
-              <a href uib-dropdown-toggle> <span translate>TABLE.COLUMNS.SORTING.LABEL</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu-right textflow" uib-dropdown-menu>
-                <li ng-repeat="option in GroupCtrl.sortOptions">
-                  <a href ng-click="GroupCtrl.setOrder(option)"><span translate>{{ option.key }}</span></a>
-                </li>
-                <li role="seperator" class="divider"></li>
-                <li><a href ng-click="GroupCtrl.setOrder()"><span class="bi bi-times" aria-hidden="true"></span><span translate> FORM.BUTTONS.CLEAR </span></a></li>
-              </ul>
-            </span>
-          </div>
-        </div>
-
-        <input ng-model="GroupCtrl.filter" ng-show="GroupCtrl.filterActive" class="form-control" placeholder="{{'FORM.PLACEHOLDERS.FILTER_NAME' | translate }}" style="border-radius: 0"/>
-      </div>
-
-      <!-- Pagination rule -->
-      <!-- | limitTo   : GroupCtrl.pageSize : (GroupCtrl.currentPage-1)*GroupCtrl.pageSize -->
-      <div
-        ng-repeat=
-        "debtorGroup in GroupCtrl.debtorGroups
-          | filter    : {name : GroupCtrl.filter}
-          | orderBy   : GroupCtrl.sort.attribute:GroupCtrl.sort.reverse
-          track by debtorGroup.uuid ">
-
-        <div class="card " style="margin-bottom : 3px !important;" data-group-entry="{{ debtorGroup.uuid }}">
-          <div class="card-body text-left">
-            <div class="row">
-              <div class="col-md-6">
-                <h4 style="margin-top : 0px;">
-                  <i class="bi bi-circle" style="color: {{ debtorGroup.color }}"></i> <b>{{debtorGroup.name}}</b>
-                  <span ng-if="debtorGroup.locked" class="bi bi-lock text-danger"></span>
-                </h4>
-                <h4>
-                  <span ng-if="debtorGroup.is_insolvent" class="bi bi-exclamation-triangle text-danger"></span>
+<div>
+  <div class="table-responsive">
+    <table class="table table-files">
+      <thead>
+        <tr>
+          <th>Groupe débiteur</th>
+          <th>Compte</th>
+          <th>Membres</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="debtorGroup in GroupCtrl.debtorGroups | filter: {name : GroupCtrl.filter} | orderBy: GroupCtrl.sort.attribute:GroupCtrl.sort.reverse track by debtorGroup.uuid " data-row="{{ $index }}">
+          <td>
+            <div class="media">
+              <div class="media-icon primary"><i class="bi bi-folder2"></i></div>
+              <h6 class="file-name">
+                <a href ui-sref="debtorGroups.update({uuid : debtorGroup.uuid})" class="text-primary text-bold">
+                  {{debtorGroup.name}}
+                </a>
+                <span ng-if="debtorGroup.locked" class="bi bi-lock text-danger"></span>
+                <div class="mt-1">
                   <span ng-if="debtorGroup.is_insolvent" class="text-warning" translate>
                     DEBTOR_GROUP.POLICIES.INSOLVENT
                   </span>
-                  <span ng-if="debtorGroup.is_convention" class="bi bi-university text-primary"></span>
-                  <span ng-if="debtorGroup.is_convention" class="text-primary" translate>
+                  <span ng-if="debtorGroup.is_convention" class="bi bi-university"></span>
+                  <span ng-if="debtorGroup.is_convention" translate>
                     DEBTOR_GROUP.POLICIES.CONVENTIONED
                   </span>
                   <span ng-if="debtorGroup.is_non_client_debtor_groups" class="bi bi-home text-success"></span>
                   <span ng-if="debtorGroup.is_non_client_debtor_groups" class="text-success" translate>
                     DEBTOR_GROUP.POLICIES.NOT_ASSIMILATED_CLIENT
                   </span>
-                </h4>
-                <h5 style="margin-top : 0px;"></span><span translate> FORM.LABELS.ACCOUNT_NUMBER </span> : <b>{{debtorGroup.account_number}}</b></h5>
-              </div>
-              <div class="col-md-6 text-float-util">
-                <a data-method="update" ui-sref="debtorGroups.update({uuid : debtorGroup.uuid})" class=""><span class="bi bi-pencil-square-o" aria-hidden="true"></span> <span translate>DEBTOR_GROUP.EDIT</span></a>
-              </div>
-            </div>
-            <div class="row" ng-if="debtorGroup.note">
-              <div class="col-md-9">
-                <h5 class="no-top-margin">{{ debtorGroup.note }}</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-9">
-                <div class="row">
-                  <div class="col-md-6 textflow">
-                    <span class="bi bi-clock-o" aria-hidden="true"></span> <span translate> FORM.LABELS.CREATED </span> <span am-time-ago="debtorGroup.created_at"></span>
-                  </div>
-
-                  <div class="col-md-6">
-                    <a ui-sref="patientRegistry({
-                      filters : [
-                        { key : 'debtor_group_uuid', value : debtorGroup.uuid, displayValue: debtorGroup.name },
-                        { key : 'period', value : 'allTime' }
-                      ]})">
-                      <span class="bi bi-bars" aria-hidden="true"></span> <b>{{debtorGroup.total_debtors}}</b> <span translate> DEBTOR_GROUP.DEBTOR.SUBSCRIBED </span>
-                    </a>
-                  </div>
                 </div>
-              </div>
+              </h6>
+            </div><!-- media -->
+          </td>
+          <td>
+            <span translate> FORM.LABELS.ACCOUNT_NUMBER </span> : <b>{{debtorGroup.account_number}}</b>
+          </td>
+          <td>
+            <div>
+              <a ui-sref="patientRegistry({
+                filters : [
+                  { key : 'debtor_group_uuid', value : debtorGroup.uuid, displayValue: debtorGroup.name },
+                  { key : 'period', value : 'allTime' }
+                ]})">
+                <span class="bi bi-people" aria-hidden="true"></span> <b>{{debtorGroup.total_debtors}}</b> <span translate> DEBTOR_GROUP.DEBTOR.SUBSCRIBED </span>
+              </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </td>
+          <td>
+            <div class="dropdown-file">
+              <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a href data-method="update" data-debtorGroup="{{debtorGroup.label}}" ui-sref="debtorGroups.update({uuid : debtorGroup.uuid})" data-toggle="modal" class="dropdown-item details">
+                  <i class="ri-information-line"></i> <span translate>FORM.BUTTONS.EDIT</span>
+                </a>
+                <a href data-method="delete" ng-click="GroupCtrl.del(fiscal)" class="dropdown-item text-danger">
+                  <i class="ri-delete-bin-line"></i> <span translate>FORM.BUTTONS.DELETE</span>
+                </a>
+              </div>
+            </div><!-- dropdown -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- table-responsive -->
 
-    <!-- Pagination component -->
-    <!-- @TODO resolve user experience with paginating and filtering (reducing total number of items) -->
-    <!-- <div class="row"> -->
-    <!--   <div class="col-md-8 col-md-offset-2"> -->
-    <!--     <ul uib-pagination -->
-    <!--       total-items="GroupCtrl.debtorGroups.length" -->
-    <!--       items-per-page="GroupCtrl.pageSize" -->
-    <!--       ng-model="GroupCtrl.currentPage" -->
-    <!--       previous-text="&lsaquo;" -->
-    <!--       next-text="&rsaquo;" -->
-    <!--       boundary-link-numbers="true"> -->
-    <!--     </ul> -->
-    <!--   </div> -->
-    <!-- </div> -->
+  <!-- list status information zone -->
+  <div>
+    <p class="text-center" ng-show="GroupCtrl.loadingState">
+      <span class="bi bi-circle-o-notch fa-spin"></span>
+      <span translate>TABLE.COLUMNS.LOADING</span>
+    </p>
+    <p ng-show="(GroupCtrl.debtorGroups.length == 0) && !GroupCtrl.loadingError && !GroupCtrl.loadingState"
+      class="text-center text-danger" translate>
+      FORM.LABELS.NO_CASHBOXES_REGISTRED
+    </p>
+  </div>
+
+  <!-- list pagination -->
+  <div uib-pagination
+    total-items="GroupCtrl.debtorGroups.length"
+    ng-model='GroupCtrl.currentPage'
+    items-per-page='GroupCtrl.pageSize'
+    next-text="&rsaquo;"
+    previous-text="&lsaquo;"
+    first-text="&lsaquo;&lsaquo;"
+    last-text="&rsaquo;&rsaquo;"
+    boundary-links="true">
   </div>
 </div>

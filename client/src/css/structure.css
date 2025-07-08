@@ -47,6 +47,27 @@
   gap: 5px;
 }
 
+
+.text-info {
+  color: var(--primary-color) !important;
+}
+
+.container-fluid {
+  width: 100% !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+/**
+ * Application styles
+ * These styles are used to fix UI in the OpenSIGL application
+ */
+
+.text-vertical {
+  transform : rotate(-90deg);
+  color : #707070;
+}
+
 .headercrumb {
   padding: 8px 0px;
   list-style: none;
@@ -78,15 +99,862 @@ ol.headercrumb {
   color: #828080;
 }
 
-.flex-header {
-  background-color: none;
+/* Disabling elements if there is no valid user session */
+.disable .session >  * {
+  color : #D2D2D2 !important;
+}
+
+.disable .session:hover {
+  color : #D2D2D2;
+  background-color : transparent !important;
+  cursor : default;
+}
+
+.fixedColumn {
+  float : left;
+  position : relative;
 }
 
 /**
- * ==========================================
- * Fix theme colors
- * ==========================================
+ * Styles used for printing, receipts and reports
+ * @todo move this to less
  */
-.text-info {
-  color: var(--primary-color) !important;
+.bh-modal-content {
+  position : relative;
+  padding : 15px;
+
+  /** @todo review this */
+  height : 50vh;
+  overflow-y : auto;
 }
+
+.receipt {
+  width : 100%
+}
+
+/* Report tables */
+.total-row > td {
+  font-weight : bold;
+}
+
+@media print {
+  body * {
+    visibility : hidden;
+  }
+
+  /* Style required to fix single page overflow problem */
+  /* .flex-continar : height (cannot be 100%) */
+  .flex-container {
+    height : inherit;
+  }
+
+  /* .modal : overflow (cannot be hidden) */
+  .modal-open .modal {
+    overflow-x : initial;
+    overflow-y : initial;
+  }
+
+  .modal {
+    overflow : initial;
+  }
+
+  .bh-print, .bh-print * {
+    visibility : visible;
+  }
+
+  .bh-print {
+    position : absolute;
+    left : 0;
+    top : 0;
+  }
+
+  .bh-print-expand {
+    overflow: auto;
+    height: initial;
+  }
+
+  .bh-modal-content {
+    position : initial;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+.animate-flicker {
+   -webkit-animation: flickerAnimation 0.75s infinite;
+   -moz-animation: flickerAnimation 0.75s infinite;
+   -o-animation: flickerAnimation 0.75s infinite;
+    animation: flickerAnimation 0.75s infinite;
+}
+
+growl-notification.fading.ng-move{
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+growl-notification.fading.ng-leave {
+    opacity: 1;
+
+    /* this time adjusts the length of the fadeout animation*/
+    -webkit-transition: 0s linear all;
+    transition: 0s linear all;
+}
+
+growl-notification.fading.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+/** Temporary utility styles */
+.textflow {
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+}
+.rotate {
+  transform : rotate(180deg);
+}
+
+.notification-success {
+  border-left : 5px solid #638638;
+  background-color : #77A13F;
+  color : #fff;
+}
+
+.notification-danger {
+  background-color : #f2dede;
+  border-left : 5px solid #a94442;
+  color : #a94442;
+}
+
+.notification-info {
+  color : var(--primary-color);
+  background-color : #64BDEE;
+  border-left : 5px solid var(--primary-color);
+}
+
+.notification-warn {
+  color : #8a6d3b;
+  background-color : #fcf8e3;
+  border-left : 5px solid #8a6d3b;
+}
+
+.notification-error {
+  color : #fff;
+  background-color : #d9534f;
+  border-left : #fff;
+}
+
+.notification-icon {
+  display : inline-block;
+  vertical-align : top;
+}
+
+.notification-message {
+  display : inline-block;
+  text-overflow : ellipsis;
+  overflow : hidden;
+  white-space : nowrap;
+  max-width : calc(100% - 50px);
+}
+
+.form-warning {
+  color : #ff0000 !important;
+}
+
+.form-indent {
+  margin-left : 1.5em;
+}
+
+form.exchange-warning {
+  margin: 20px;
+  padding: 20px;
+}
+
+form.exchange-warning .modal-header,
+form.exchange-warning .modal-body {
+  background-color: #ffcccc;
+}
+form.exchange-warning .modal-footer {
+  padding-bottom: 0;
+}
+
+form.exchange-warning h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+form.exchange-warning .modal-footer {
+  background-color: transparent;
+}
+
+p.missing-exchange-rate {
+  font-weight: bold;
+  background-color: #ffcccc;
+}
+
+/* 'Card' Utility class */
+.text-float-util {
+  text-align : right;
+}
+
+@media (max-width: 992px) {
+  .text-float-util {
+    text-align : left;
+  }
+}
+
+/* static pages that do not require header overflow */
+.flex-header.static {
+  box-shadow : none;
+}
+
+.icon-spacer {
+  margin-left: 18px;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-clear {
+  font-weight : normal !important;
+}
+
+.text-action {
+  cursor : pointer;
+  text-decoration: none !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.bg-gray {
+  background-color: #efefef;
+}
+
+/* Fix for ui-select multiselect close icon */
+.ui-select-multiple.ui-select-bootstrap .ui-select-match .close {
+  line-height: 1;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-tall {
+  max-height: 80vh;
+}
+
+/* 403 and 404 error pages */
+.content-error {
+  margin-top : calc(50vh - 190px);
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+/* @TODO Move all panel/ panel-body styles into segment */
+.segment {
+  margin-bottom : 5px;
+}
+
+.segment-title {
+  position : absolute;
+  top : 3px;
+  left : 10px;
+  text-align : left;
+  color : #a8a8a8;
+}
+
+.progress-bar {
+  transition : none;
+}
+
+.progress-bar.ima-blue {
+  background-color : var(--primary-color);
+}
+
+/* properly deal with ui-selects inside ui-grids */
+.ui-select-bootstrap > .ui-select-choices.ui-grid-ui-select {
+  width: initial;
+}
+
+/* fix weird double-line on grid footers */
+.ui-grid-footer-panel {
+  border-bottom: none;
+}
+
+.bh-filter-bar {
+  min-height : 35px;
+  padding-top : 7px;
+  max-height: initial;
+}
+
+.bh-card-list {
+  margin-bottom: 0px;
+}
+
+.bh-card {
+  margin-bottom: 3px;
+}
+
+.text-menu-item {
+  display : inline-block;
+  margin-right : 10px;
+}
+
+a[disabled] {
+  pointer-events: none;
+  cursor: default;
+}
+
+.tab-body {
+  padding : 10px;
+  max-height : 360px;
+  min-height : 360px;
+  overflow : auto;
+}
+
+.filter-list {
+  display : inline-block;
+
+  /* Remove large bottom margin offsetting filter bars */
+  margin-bottom : 5px;
+}
+
+.filter-list > li {
+  padding : 0px;
+}
+
+.filter-list li:first-child {
+  padding-left : 5px;
+}
+
+.filter-text-link {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.strike {
+  text-decoration : line-through;
+}
+
+.reversed {
+  text-decoration : line-through;
+  background-color: #ffb3b3 !important;
+}
+
+.negative {
+  background-color: #ffb3b3 !important;
+}
+
+.expired {
+  background-color: #ff000083 !important;
+}
+
+.icon-expired {
+  color: #FF7B7B !important;
+}
+
+.at-risk-of-stock-out {
+  background-color: #ffff6686 !important;
+}
+
+.icon-at-risk-of-stock-out {
+  color: #FFFF00 !important;
+}
+
+.at-risk-of-expiring {
+  background-color: #ff880191 !important;
+}
+
+.icon-at-risk-of-expiring {
+  color: #FFB766 !important;
+}
+
+.out-of-stock-status {
+  color: black !important;
+  background-color: red !important;
+}
+
+.critical-stock-status {
+  color: black !important;;
+  background-color: #FFB766 !important;
+}
+
+.low-stock-status {
+  color: black !important;;
+  background-color: #FFFF00 !important;
+}
+
+.unused-stock-status {
+  color: black !important;
+  background-color: #FF00FF !important;
+}
+
+.out-of-stock {
+  /* text-decoration : line-through; */
+  background-color: #cc00ff8f !important;
+}
+
+.icon-out-of-stock {
+  color: #E067FF !important;
+}
+
+tr.selected-lot,
+tr.selected-lot.td {
+  background-color: #9cd195 !important;
+}
+
+td.center {
+  text-align: center;
+}
+
+.legend {
+  border:1px solid black;
+  height:2.1ex;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:2.1ex;
+}
+
+.dropdown-menu {
+  z-index : 9999;
+}
+
+.show-on-small-screen {
+  display: none;
+}
+
+@media (max-width: 500px) {
+
+  /*---------------------------
+      show only on small screen
+  -----------------------------*/
+
+  .show-on-small-screen {
+    display: block;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+  }
+}
+
+/* -------------------------------------
+    Grid Toolbar
+--------------------------------------- */
+.grid-toolbar {
+  display: flex;
+  align-items: flex-start;
+}
+
+.grid-toolbar-item {
+  display: inline-flex;
+  padding-right: 5px;
+}
+
+/* -------------------------------------
+    Segment Statistic Card
+--------------------------------------- */
+.ima-stat-card .ui.statistic > .value, .exchange-rate {
+  color: var(--primary-color);
+}
+
+.ima-stat-card .ui.statistic > .ui-hidable-label {
+  color: black;
+}
+
+.ima-stat-card-reversed {
+  background-color: var(--primary-color);
+}
+.ima-stat-card-reversed .ui.statistic > .value,
+.ima-stat-card-reversed .ui.statistic > .ui-hidable-label {
+  color: white;
+}
+
+.exchange-rate {
+  font-size: 19px !important;
+}
+.voucher-tools-top-spacer {
+  margin-top: 20px;
+}
+
+.voucher-tools-bottom-spacer {
+  margin-bottom: 10px;
+}
+
+.label-voucher-tools {
+  background-color: #9d1cd2;
+}
+
+.badge-voucher-tools {
+  background-color: #9d1cd2;
+  border-radius: 2px;
+}
+
+.voucher-tools-underline {
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+.voucher-tools-header {
+  display: flex;
+}
+
+
+.voucher-tools-header-element:last-child {
+  flex-grow: 1;
+}
+
+.voucher-tools-container {
+  border : 1px solid rgb(46, 109, 164);
+  border : 1px solid rgba(46, 109, 164, 0.8);
+  box-shadow: 0 1px 1px #bdbdbd;
+  padding : 15px;
+}
+
+
+/* ---------------------------------------------
+    Enterprise Logo Style
+---------------------------------------------- */
+.enterprise-logo-editing {
+  display: block;
+  min-height: 100px;
+  text-align: center;
+}
+.enterprise-logo-editing > .logo {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 1px solid #efefef;
+  color: #efefef;
+  text-align: center;
+  line-height: 100px;
+  margin-bottom: 5px;
+}
+
+.lot-width {
+  width: 30%;
+}
+
+/* lock certain items of the checkbox tree when disabled */
+[data-bh-checkbox-tree] input[type="checkbox"][disabled],
+[data-bh-checkbox-tree] input[type="checkbox"][disabled] + span {
+  cursor: not-allowed;
+  font-style: italic;
+}
+
+[data-bh-checkbox-tree] input[type="checkbox"][disabled] + span:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  content : "\f023";
+  padding-right: 5px;
+  text-rendering: auto;
+}
+
+/* Log Styles */
+.log-row {
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+}
+
+/* ---------------------------------------------
+    Styles for lot schedule table
+---------------------------------------------- */
+
+table.lot-schedule {
+  padding: 0 10px;
+}
+
+table.lot-schedule th.year {
+  border-bottom: 0;
+}
+
+table.lot-schedule th.month {
+  font-size: 12px;
+  padding: 2px 1px;
+  border-top: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+}
+
+table.lot-schedule th.reorder {
+  background-color: #ffaaaa;
+  border-right: 0;
+}
+
+table.lot-schedule tr.lot-schedule th {
+  padding-top: 0;
+}
+
+table.lot-schedule tr.selected {
+  background-color: #ddeeff;
+}
+
+table.lot-schedule div.lot-marker,
+table.lot-schedule div.lot-marker-exhausted {
+  border: 1px solid black;
+  background-color: #aaffaa;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0;
+}
+
+table.lot-schedule div.lot-marker-exhausted {
+  border-left: 0;
+  background-color: #ffaaaa;
+}
+
+table.lot-schedule div.lot-marker span.start {
+  color: black;
+  padding-left: 1px;
+}
+
+table.lot-schedule div.lot-marker-exhausted span.wasted {
+  color: #990000;
+  padding-left: 2px;
+}
+
+table.lot-schedule div.lot-marker span.ellipsis,
+table.lot-schedule div.lot-marker-exhausted span.ellipsis {
+  font-size: 125%;
+  line-height: 80%;
+  margin-top: 0.3ex;
+  margin-right: 4px;
+}
+
+table.lot-schedule .wrap {
+  width: 4em;
+}
+
+table.lot-schedule .right {
+  text-align: right;
+}
+
+.wrappingColHeader * div {
+   overflow-wrap: normal;
+   overflow: visible;
+   white-space: normal;
+}
+
+form.NoSubmitButton div.modal-footer button.btn-primary {
+  display: none;
+}
+
+/* --------------------------------------------------------
+ stepper
+ --------------------------------------------------------- */
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .stepper-item {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 5px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 5px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 5px solid var(--primary-color);
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item.completed.active::after {
+  border-bottom: 5px solid #ccc;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+/* -------------------- lots modal grid -------------------- */
+.lots-modal-grid {
+  min-height: calc(320px);
+}
+/* -------------------- end lots modal grid ---------------- */
+
+/* -------------------- budget -------------------- */
+
+.budget-title {
+  font-weight : bold;
+}
+
+.budget-income {
+  color: #007F00;
+}
+
+.budget-expense {
+  color: #7F0000;
+}
+
+.budget-total-expenses {
+  font-weight: bold;
+  background-color: #ffafaf;
+}
+
+.budget-total-expenses-large {
+  font-weight: bold;
+  font-size: 120%;
+  text-transform: uppercase;
+  background-color: #ffafaf;
+}
+
+.budget-total-income {
+  font-weight: bold;
+  background-color: #afffaf;
+}
+
+.budget-total-income-large {
+  font-weight: bold;
+  font-size: 120%;
+  text-transform: uppercase;
+  background-color: #afffaf;
+}
+
+
+.budget-total-summary {
+  font-weight: bold;
+  background-color: #cfcfcf;
+}
+
+.budget-total-summary-large {
+  font-weight: bold;
+  font-size: 120%;
+  text-transform: uppercase;
+  background-color: #cfcfcf;
+}
+
+.budget-edit-td {
+  padding-bottom: 0 !important;
+  vertical-align: middle !important;
+}
+
+/* -------------------- end budget -------------------- */

@@ -1,12 +1,81 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <bh-card-list
-        data="CashCtrl.cashboxes"
-        sort-name="label"
-        sort-size="number_of_users"
-        template="modules/cash/cashboxes/cashbox.card.html">
-      </bh-card-list>
-    </div>
+<div>
+  <div class="table-responsive">
+    <table class="table table-files">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Type</th>
+          <th>Projet</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="cashbox in CashCtrl.cashboxes | limitTo : CashCtrl.pageSize : (CashCtrl.currentPage - 1)*CashCtrl.pageSize track by cashbox.id" data-row="{{ $index }}">
+          <td>
+            <div class="media">
+              <div class="media-icon primary"><i class="bi bi-folder2"></i></div>
+              <h6 class="file-name">
+                <a href ui-sref="cashboxes.edit({uuid : cashbox.id})" class="text-primary text-bold">
+                  {{cashbox.label}}
+                </a>
+                <i class="bi bi-exclamation-circle text-danger" ng-if="cashbox.number_of_users===0"></i>
+              </h6>
+            </div><!-- media -->
+          </td>
+          <td>
+            <label class="label label-default" ng-class="{'label-primary' : !cashbox.is_auxiliary}" translate>
+              {{cashbox.is_auxiliary ? "CASHBOX.CARD.AUXILIARY_CASHBOX" : "CASHBOX.CARD.PRIMARY_CASHBOX"}}
+            </label>
+          </td>
+          <td>
+            <span>{{cashbox.project_name}} ({{cashbox.project_abbr}})</span>
+            <small class="d-block">
+              <span ng-class="{'text-danger' : cashbox.number_of_users === 0, 'text-info' : cashbox.number_of_users > 0}'}">
+                <span class="bi bi-people" aria-hidden="true"></span>
+                <b>{{cashbox.number_of_users}}</b>
+                <span translate> CASHBOX.CARD.USERS_WITH_ACCESS </span>
+              </span>
+            </small>
+          </td>
+          <td>
+            <div class="dropdown-file">
+              <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a href data-method="update" data-cashbox="{{cashbox.label}}" ui-sref="cashboxes.edit({uuid : cashbox.id})" data-toggle="modal" class="dropdown-item details">
+                  <i class="ri-information-line"></i> <span translate>FORM.BUTTONS.EDIT</span>
+                </a>
+                <a href data-method="delete" ng-click="CashCtrl.del(fiscal)" class="dropdown-item text-danger">
+                  <i class="ri-delete-bin-line"></i> <span translate>FORM.BUTTONS.DELETE</span>
+                </a>
+              </div>
+            </div><!-- dropdown -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- table-responsive -->
+
+  <!-- list status information zone -->
+  <div>
+    <p class="text-center" ng-show="CashCtrl.loadingState">
+      <span class="bi bi-circle-o-notch fa-spin"></span>
+      <span translate>TABLE.COLUMNS.LOADING</span>
+    </p>
+    <p ng-show="(CashCtrl.cashboxes.length == 0) && !CashCtrl.loadingError && !CashCtrl.loadingState"
+      class="text-center text-danger" translate>
+      FORM.LABELS.NO_CASHBOXES_REGISTRED
+    </p>
+  </div>
+
+  <!-- list pagination -->
+  <div uib-pagination
+    total-items="CashCtrl.cashboxes.length"
+    ng-model='CashCtrl.currentPage'
+    items-per-page='CashCtrl.pageSize'
+    next-text="&rsaquo;"
+    previous-text="&lsaquo;"
+    first-text="&lsaquo;&lsaquo;"
+    last-text="&rsaquo;&rsaquo;"
+    boundary-links="true">
   </div>
 </div>

@@ -8,7 +8,7 @@ angular.module('opensigl.components')
     },
     template :
       `<bh-loading-button button-class="btn-default" loading-state="$ctrl.$loading" ng-click="$ctrl.print()" disabled="$ctrl.disabled">
-        <span><i class="bi bi-print"></i> <span translate>FORM.BUTTONS.PRINT</span></span>
+        <span><i class="bi bi-printer"></i> <span translate>FORM.BUTTONS.PRINT</span></span>
       </bh-loading-button>
       <iframe ng-src="{{$ctrl.src}}" id="{{$ctrl.embeddedContentId}}" style="display : none"></iframe>`,
     controller : bhPDFPrintController,
@@ -25,7 +25,7 @@ angular.module('opensigl.components')
     transclude : true,
     template   :
       `<a href ng-click="$ctrl.print()">
-        <span ng-if="!$ctrl.$loading"><i class="bi bi-print"></i> <span translate>{{ $ctrl.buttonText }}</span></span>
+        <span ng-if="!$ctrl.$loading"><i class="bi bi-printer"></i> <span translate>{{ $ctrl.buttonText }}</span></span>
         <span ng-if="$ctrl.$loading">
           <i class="bi bi-spin fa-circle-o-notch"></i> <span translate>FORM.INFO.LOADING</span>
         </span>

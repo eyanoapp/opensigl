@@ -1,79 +1,85 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <!-- fiscal year list -->
-      <div ng-repeat="fiscal in FiscalCtrl.fiscalYears | limitTo : FiscalCtrl.pageSize : (FiscalCtrl.currentPage - 1)*FiscalCtrl.pageSize track by fiscal.id" data-row="{{ $index }}" class="text-left">
-        <div class="card " style="margin-bottom : 3px;" data-fiscal-entry>
-          <div class="card-body">
-            <h4 style="margin-top : 0px;">
-              <strong>
-                <a style="text-decoration: none; color: #333; " href ui-sref="fiscal.update({id : fiscal.id})">
+<div>
+  <div class="table-responsive">
+    <table class="table table-files">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Periode</th>
+          <th>Creation</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="fiscal in FiscalCtrl.fiscalYears | limitTo : FiscalCtrl.pageSize : (FiscalCtrl.currentPage - 1)*FiscalCtrl.pageSize track by fiscal.id" data-row="{{ $index }}">
+          <td>
+            <div class="media">
+              <div class="media-icon primary"><i class="bi bi-folder2"></i></div>
+              <h6 class="file-name">
+                <a href ui-sref="fiscal.update({id : fiscal.id})">
                   {{fiscal.label}}
                 </a>
-              </strong>
-              <span ng-show="fiscal.locked" style="color : #ABABAB;">[<span translate> FORM.INFO.CLOSED </span>]</span>
-
-              <span ng-if="fiscal.id === FiscalCtrl.previousFiscalYearId" class="label label-warning" translate>
-                FORM.INFO.PREVIOUS
-              </span>
-
-              <span ng-if="fiscal.id === FiscalCtrl.currentFiscalYearId" class="label label-primary" translate>
-                FORM.INFO.CURRENT
-              </span>
-
-
-              <span class="pull-right">
-                <a style="text-decoration: none; " href data-method="update" ui-sref="fiscal.update({id : fiscal.id})">
-                  <span class="bi bi-pencil-square-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.EDIT</span>
+                <span ng-show="fiscal.locked" class="text-muted">[<span translate> FORM.INFO.CLOSED </span>]</span>
+                <span ng-if="fiscal.id === FiscalCtrl.previousFiscalYearId" class="label label-warning" translate>
+                  FORM.INFO.PREVIOUS
+                </span>
+                <span ng-if="fiscal.id === FiscalCtrl.currentFiscalYearId" class="label label-primary" translate>
+                  FORM.INFO.CURRENT
+                </span>
+              </h6>
+            </div><!-- media -->
+          </td>
+          <td>
+            <span class="bi bi-calendar"></span>
+            {{ fiscal.start_date | date }} - {{ fiscal.end_date | date }} ({{ fiscal.number_of_months }}
+            <span translate> FORM.LABELS.PERIODES </span>)
+          </td>
+          <td>
+            <i class="bi bi-clock-o"></i> <span translate>FORM.INFO.CREATED</span> <span am-time-ago="fiscal.created_at"></span>
+            <span translate> FORM.INFO.BY </span>
+            <a href="" ui-sref="users.list({ id : fiscal.user_id })" class="text-capitalize">
+              <i class="bi bi-person"></i> {{ fiscal.display_name }}
+            </a>
+          </td>
+          <td>
+            <div class="dropdown-file">
+              <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a href data-method="update" ui-sref="fiscal.update({id : fiscal.id})" data-toggle="modal" class="dropdown-item details">
+                  <i class="ri-information-line"></i> <span translate>FORM.BUTTONS.EDIT</span>
                 </a>
-
-                <a href data-method="delete" ng-click="FiscalCtrl.del(fiscal)" class="text-danger">
-                  <span class="bi bi-trash-o"></span> <span class="hidden-xs" translate>FORM.BUTTONS.DELETE</span>
+                <a href data-method="delete" ng-click="FiscalCtrl.del(fiscal)" class="dropdown-item text-danger">
+                  <i class="ri-delete-bin-line"></i> <span translate>FORM.BUTTONS.DELETE</span>
                 </a>
-              </span>
-            </h4>
+              </div>
+            </div><!-- dropdown -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- table-responsive -->
 
-            <div class="row">
-              <span class="bi bi-calendar"></span>
-              {{ fiscal.start_date | date }} - {{ fiscal.end_date | date }} ({{ fiscal.number_of_months }}
-              <span translate> FORM.LABELS.PERIODES </span>)
-            </div>
+  <!-- list status information zone -->
+  <div>
+    <p class="text-center" ng-show="FiscalCtrl.loadingState">
+      <span class="bi bi-circle-o-notch fa-spin"></span>
+      <span translate>TABLE.COLUMNS.LOADING</span>
+    </p>
+    <p ng-show="(FiscalCtrl.fiscalYears.length == 0) && !FiscalCtrl.loadingError && !FiscalCtrl.loadingState"
+      class="text-center text-danger" translate>
+      FORM.LABELS.NO_FISCALYEAR_REGISTERED
+    </p>
+  </div>
 
-            <div class="row text-lowercase">
-              <i class="bi bi-clock-o"></i> <span translate>FORM.INFO.CREATED</span> <span am-time-ago="fiscal.created_at"></span>
-              <span translate> FORM.INFO.BY </span>
-              <a href="" ui-sref="users.list({ id : fiscal.user_id })" class="text-capitalize">
-                <i class="bi bi-user"></i> {{ fiscal.display_name }}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- list status information zone -->
-      <div>
-        <p class="text-center" ng-show="FiscalCtrl.loadingState">
-          <span class="bi bi-circle-o-notch fa-spin"></span>
-          <span translate>TABLE.COLUMNS.LOADING</span>
-        </p>
-        <p ng-show="(FiscalCtrl.fiscalYears.length == 0) && !FiscalCtrl.loadingError && !FiscalCtrl.loadingState"
-          class="text-center text-danger" translate>
-          FORM.LABELS.NO_FISCALYEAR_REGISTERED
-        </p>
-      </div>
-
-      <!-- list pagination -->
-      <div uib-pagination
-        total-items="FiscalCtrl.fiscalYears.length"
-        ng-model='FiscalCtrl.currentPage'
-        items-per-page='FiscalCtrl.pageSize'
-        next-text="&rsaquo;"
-        previous-text="&lsaquo;"
-        first-text="&lsaquo;&lsaquo;"
-        last-text="&rsaquo;&rsaquo;"
-        boundary-links="true">
-      </div>
-    </div>
+  <!-- list pagination -->
+  <div uib-pagination
+    total-items="FiscalCtrl.fiscalYears.length"
+    ng-model='FiscalCtrl.currentPage'
+    items-per-page='FiscalCtrl.pageSize'
+    next-text="&rsaquo;"
+    previous-text="&lsaquo;"
+    first-text="&lsaquo;&lsaquo;"
+    last-text="&rsaquo;&rsaquo;"
+    boundary-links="true">
   </div>
 </div>
 

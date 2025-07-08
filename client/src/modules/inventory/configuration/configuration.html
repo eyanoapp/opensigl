@@ -7,23 +7,17 @@
   </div>
 </div>
 
-<div class="flex-content">
-  <div class="container-fluid">
-
-    <!-- inventory groups  -->
+<uib-tabset active="active">
+  <uib-tab index="0">
+    <uib-tab-heading translate>INVENTORY.LIST_GROUP</uib-tab-heading>
     <div ui-view="groups"></div>
-
-    <div class="row">
-      <!-- inventory types  -->
-      <div class="col-md-6 col-xs-12">
-        <div ui-view="types"></div>
-      </div>
-
-      <!-- inventory units  -->
-      <div class="col-md-6 col-xs-12">
-        <div ui-view="units"></div>
-      </div>
-    </div>
-
-  </div>
-</div>
+  </uib-tab>
+  <uib-tab index="1">
+    <uib-tab-heading translate>INVENTORY.LIST_TYPE</uib-tab-heading>
+    <div ui-view="types"></div>
+  </uib-tab>
+  <uib-tab index="2">
+    <uib-tab-heading translate>INVENTORY.LIST_UNIT</uib-tab-heading>
+    <div ui-view="units"></div>
+  </uib-tab>
+</uib-tabset>
