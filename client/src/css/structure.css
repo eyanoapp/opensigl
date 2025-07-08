@@ -34,6 +34,19 @@
   font-family: sans-serif;
 }
 
+.opensigl-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.opensigl-title > .toolbar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .headercrumb {
   padding: 8px 0px;
   list-style: none;
@@ -63,4 +76,17 @@ ol.headercrumb {
 .headercrumb > .static {
   text-decoration: none;
   color: #828080;
+}
+
+.flex-header {
+  background-color: none;
+}
+
+/**
+ * ==========================================
+ * Fix theme colors
+ * ==========================================
+ */
+.text-info {
+  color: var(--primary-color) !important;
 }

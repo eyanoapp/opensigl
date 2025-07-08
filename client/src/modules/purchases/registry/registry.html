@@ -6,6 +6,8 @@
     </ol>
 
     <div class="toolbar">
+      <bh-filter-toggle on-toggle="PurchaseRegistryCtrl.toggleInlineFilter()"></bh-filter-toggle>
+      <bh-search-button on-click="PurchaseRegistryCtrl.search()"></bh-search-button>
       <div class="toolbar-item">
         <div uib-dropdown dropdown-append-to-body data-action="open-tools">
           <a class="btn btn-default" uib-dropdown-toggle>
@@ -55,11 +57,6 @@
           </ul>
         </div>
       </div>
-
-      <bh-search-button on-click="PurchaseRegistryCtrl.search()"></bh-search-button>
-
-      <bh-filter-toggle on-toggle="PurchaseRegistryCtrl.toggleInlineFilter()">
-      </bh-filter-toggle>
     </div>
   </div>
 </div>
@@ -71,22 +68,18 @@
   </bh-filters>
 </div>
 
-<div class="flex-content">
-  <div class="container-fluid">
-    <div
-      id="purchase-registry"
-      class="grid-full-height-with-filters"
-      ui-grid="PurchaseRegistryCtrl.uiGridOptions"
-      ui-grid-auto-resize
-      ui-grid-resize-columns
-      ui-grid-move-columns
-      ui-grid-save-state>
+<div
+  id="purchase-registry"
+  class="grid-full-height-with-filters"
+  ui-grid="PurchaseRegistryCtrl.uiGridOptions"
+  ui-grid-auto-resize
+  ui-grid-resize-columns
+  ui-grid-move-columns
+  ui-grid-save-state>
 
-      <bh-grid-loading-indicator
-        loading-state="PurchaseRegistryCtrl.loading"
-        empty-state="PurchaseRegistryCtrl.uiGridOptions.data.length === 0"
-        error-state="PurchaseRegistryCtrl.hasError">
-      </bh-grid-loading-indicator>
-    </div>
-  </div>
+  <bh-grid-loading-indicator
+    loading-state="PurchaseRegistryCtrl.loading"
+    empty-state="PurchaseRegistryCtrl.uiGridOptions.data.length === 0"
+    error-state="PurchaseRegistryCtrl.hasError">
+  </bh-grid-loading-indicator>
 </div>

@@ -1,6 +1,5 @@
 <div class="flex-header">
   <div class="opensigl-title">
-
     <ol class="headercrumb">
       <li class="static" translate>TREE.REPORTS</li>
       <li ng-hide="ReportCtrl.isArchive()" class="title" translate>{{ ReportCtrl.SavedReports.current.title_key }}</li>
@@ -28,8 +27,4 @@
   </div>
 </div>
 
-<div class="flex-content">
-  <div class="container-fluid">
-    <div ui-view></div>
-  </div>
-</div>
+<div ui-view></div>

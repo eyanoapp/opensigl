@@ -9,7 +9,7 @@ SET collation_database = 'utf8mb4_unicode_ci';
 SET CHARACTER SET utf8mb4, CHARACTER_SET_CONNECTION = utf8mb4;
 
 -- units
-INSERT INTO unit VALUES
+INSERT INTO unit (`id`, `name`, `key`, `description`, `parent`, `path`) VALUES
   (0,'Root','TREE.ROOT','The unseen root node',NULL,'/root'),
   (1,'Admin','TREE.ADMIN','The Administration Super-Category',0,'/ADMIN_FOLDER'),
   (2,'Enterprise','TREE.ENTERPRISE','Manage the registered enterprises from here',1,'/enterprises'),

@@ -1792,6 +1792,7 @@ CREATE TABLE `unit` (
   `description` text NOT NULL,
   `parent` SMALLINT(6) DEFAULT 0,
   `path` tinytext,
+  `icon` VARCHAR(30) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unit_1` (`name`, `key`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET = utf8mb4 DEFAULT COLLATE = utf8mb4_unicode_ci;
