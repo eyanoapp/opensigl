@@ -45,13 +45,13 @@
   width:  100%;
 
   /* this is full height minus the header crumb*/
-  height : calc(100vh - 65px);
+  height : calc(100vh - 65px - 90px);
 }
 
 /* this is full height minus the header crumb and filters*/
 .grid-full-height-with-filters {
   width:  100%;
-  height : calc(100vh - 106px);
+  height : calc(100vh - 106px - 90px);
 }
 
 
@@ -77,7 +77,7 @@
   width:  100%;
 
   /* this is full height minus the header crumb and util bar */
-  height : calc(100vh - 65px - 35px);
+  height : calc(100vh - 200px);
 }
 
 .grid-error {

@@ -70,13 +70,13 @@
           <dt translate>PATIENT_RECORDS.FINANCES.FIRST_TRANSACTION</dt>
           <dd>
             {{ $ctrl.data.aggregates.since | date:$ctrl.DATE_FORMAT }}
-            (<span am-time-ago="$ctrl.data.aggregates.since"></span> <i class="bi bi-clock-o"></i>)
+            (<span am-time-ago="$ctrl.data.aggregates.since"></span> <i class="bi bi-clock-history"></i>)
           </dd>
 
           <dt translate>PATIENT_RECORDS.FINANCES.LAST_TRANSACTION</dt>
           <dd>
             {{ $ctrl.data.aggregates.until | date:$ctrl.DATE_FORMAT }}
-            (<span am-time-ago="$ctrl.data.aggregates.until"></span> <i class="bi bi-clock-o"></i>)
+            (<span am-time-ago="$ctrl.data.aggregates.until"></span> <i class="bi bi-clock-history"></i>)
           </dd>
         </dl>
 

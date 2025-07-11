@@ -29,7 +29,7 @@
 
     <li ng-show="row.entity.isStockMovement">
       <a data-method="view-stock-movements" ui-sref="stockMovements({ filters : [{ key : 'voucherReference', value : row.entity.reference, displayValue: row.entity.reference, cacheable:false }, { key : 'period', value : 'allTime', cacheable:false }]})" href>
-        <span class="bi bi-list-alt"></span> <span translate>STOCK.STOCK_MOVEMENT</span>
+        <span class="bi bi-list-ol"></span> <span translate>STOCK.STOCK_MOVEMENT</span>
       </a>
     </li>
 
@@ -50,7 +50,7 @@
     <!-- delete voucher record -->
     <li bh-has-permission="grid.appScope.bhConstants.actions.DELETE_VOUCHER">
       <a data-method="delete-record" href ng-click="grid.appScope.deleteVoucher(row.entity)">
-        <span class="text-danger"><i class="bi bi-trash-o"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
+        <span class="text-danger"><i class="bi bi bi-trash3"></i> <span translate>FORM.BUTTONS.DELETE_RECORD</span></span>
       </a>
     </li>
   </ul>

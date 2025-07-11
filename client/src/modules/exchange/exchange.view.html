@@ -32,7 +32,7 @@
 
     <ul class="list-unstyled">
       <li data-exchange-rate-element ng-repeat="rate in ExchangeCtrl.rates | orderBy:'-date'">
-        <i class="bi bi-clock-o"></i> <b>{{ rate.rate }} {{ ExchangeCtrl.formatCurrency(rate.currency_id) }} </b>
+        <i class="bi bi-clock-history"></i> <b>{{ rate.rate }} {{ ExchangeCtrl.formatCurrency(rate.currency_id) }} </b>
         <span translate>EXCHANGE.RATE_SET</span> <span am-time-ago="rate.date"></span>.
         <br />
         <span class="icon-spacer text-muted"><i>{{rate.date | date : 'medium'}}</i></span>

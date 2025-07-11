@@ -1,7 +1,8 @@
 <div class="ui-grid-cell-contents text-right" uib-dropdown dropdown-append-to-body uib-dropdown-toggle ng-if="!row.groupHeader">
   <a href>
-    <span data-method="action" translate>FORM.BUTTONS.ACTIONS</span>
-    <span class="caret"></span>
+    <span data-method="action" translate>
+      <i class="bi bi-three-dots-vertical"></i>
+    </span>
   </a>
 
   <ul class="dropdown-menu-right" bh-dropdown-menu-auto-dropup uib-dropdown-menu>
@@ -57,7 +58,7 @@
 
     <li>
       <a data-method="view-scan-history" ng-click="grid.appScope.showAssetScans(row.entity)" href>
-        <i class="bi bi-list-alt"></i> <span translate>ASSET.SHOW_ASSET_SCANS</span>
+        <i class="bi bi-list-ol"></i> <span translate>ASSET.SHOW_ASSET_SCANS</span>
       </a>
     </li>
 
@@ -65,7 +66,7 @@
 
     <li ng-if="row.entity.assignment_uuid">
       <a data-method="receipt" href ng-click="grid.appScope.showAssignmentReceipt(row.entity.assignment_uuid)">
-        <span><i class="bi bi-file-o"></i> <span translate>ASSET.DOCUMENT</span></span>
+        <span><i class="bi bi-file-earmark"></i> <span translate>ASSET.DOCUMENT</span></span>
       </a>
     </li>
 
@@ -83,7 +84,7 @@
 
     <li>
       <a data-method="view-assignment-history" ng-click="grid.appScope.openHistoricModal(row.entity.uuid, row.entity.depot_uuid)" href>
-        <i class="bi bi-clock-o"></i> <span translate>ASSET.ASSIGNMENT_HISTORY</span>
+        <i class="bi bi-clock-history"></i> <span translate>ASSET.ASSIGNMENT_HISTORY</span>
       </a>
     </li>
 

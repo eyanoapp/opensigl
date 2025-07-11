@@ -195,6 +195,28 @@
     "VOUCHER_REGISTRY" : "Voucher Registry",
     "WARD_CONFIGURATION" : "Settings",
     "WARD" : "Ward Management",
-    "WEEKEND_CONFIGURATION" : "Weekend Configuration"
+    "WEEKEND_CONFIGURATION" : "Weekend Configuration",
+    "MODULES" : {
+      "TITLE" : "Modules",
+      "LOGISTICS" : "Logistics",
+      "STOCK_MANAGEMENT" : "Stock Management",
+      "INVENTORY_MANAGEMENT" : "Inventory Management",
+      "PROCUREMENT" : "Purchasing",
+      "SALES" : "Sales",
+      "FINANCES" : "Finances",
+      "FINANCES_AND_ACCOUNTING" : "Finances and Accounting",
+      "PAYROLL" : "Payroll",
+      "ACCOUNTING" : "Accounting",
+      "ASSET_MANAGEMENT": "Asset Management",
+      "CONTACTS": "Contacts",
+      "SIGL": "SIGL",
+      "SIGL_SETTINGS": "SIGL Settings",
+      "COST_CENTERS": "Cost Centers",
+      "HOSPITAL": "Hospital",
+      "HOSPITAL_RECORDS": "Hospital Records",
+      "HOSPITAL_WARDS": "Wards",
+      "HOSPITAL_FORMS": "Forms",
+      "SETTINGS": "Settings"
+    }
   }
 }

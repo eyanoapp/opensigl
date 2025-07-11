@@ -15,9 +15,8 @@
 }
 
 :root {
-  --primary-color: #566db4;
+  --primary-color: #506FD9;
 }
-
 .primary {
   color: var(--primary-color);
 }
@@ -47,7 +46,6 @@
   gap: 5px;
 }
 
-
 .text-info {
   color: var(--primary-color) !important;
 }
@@ -56,6 +54,18 @@
   width: 100% !important;
   padding-right: 0px !important;
   padding-left: 0px !important;
+}
+
+.bh-dropdown-header {
+	color: #777;
+	display: block;
+	font-size: 12px;
+	line-height: 1.42857143;
+  max-width:250px;
+	overflow: hidden;
+	padding: 3px 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 /**
@@ -137,47 +147,6 @@ ol.headercrumb {
   font-weight : bold;
 }
 
-@media print {
-  body * {
-    visibility : hidden;
-  }
-
-  /* Style required to fix single page overflow problem */
-  /* .flex-continar : height (cannot be 100%) */
-  .flex-container {
-    height : inherit;
-  }
-
-  /* .modal : overflow (cannot be hidden) */
-  .modal-open .modal {
-    overflow-x : initial;
-    overflow-y : initial;
-  }
-
-  .modal {
-    overflow : initial;
-  }
-
-  .bh-print, .bh-print * {
-    visibility : visible;
-  }
-
-  .bh-print {
-    position : absolute;
-    left : 0;
-    top : 0;
-  }
-
-  .bh-print-expand {
-    overflow: auto;
-    height: initial;
-  }
-
-  .bh-modal-content {
-    position : initial;
-  }
-}
-
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -242,27 +211,54 @@ ol.headercrumb {
     animation: flickerAnimation 0.75s infinite;
 }
 
-growl-notification.fading.ng-move{
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+/* ============================ growl-notification ============================= */
+growl-notification {
+  z-index: 10000 !important;
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+growl-notification button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+growl-notification.fading.ng-move{
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 growl-notification.fading.ng-leave {
-    opacity: 1;
+  opacity: 1;
 
-    /* this time adjusts the length of the fadeout animation*/
-    -webkit-transition: 0s linear all;
-    transition: 0s linear all;
+  /* this time adjusts the length of the fadeout animation*/
+  -webkit-transition: 0s linear all;
+  transition: 0s linear all;
 }
 
 growl-notification.fading.ng-leave.ng-leave-active {
     opacity: 0;
 }
+/* ============================ end growl-notification ============================= */
 
 /** Temporary utility styles */
 .textflow {
@@ -616,25 +612,6 @@ td.center {
 .grid-toolbar-item {
   display: inline-flex;
   padding-right: 5px;
-}
-
-/* -------------------------------------
-    Segment Statistic Card
---------------------------------------- */
-.ima-stat-card .ui.statistic > .value, .exchange-rate {
-  color: var(--primary-color);
-}
-
-.ima-stat-card .ui.statistic > .ui-hidable-label {
-  color: black;
-}
-
-.ima-stat-card-reversed {
-  background-color: var(--primary-color);
-}
-.ima-stat-card-reversed .ui.statistic > .value,
-.ima-stat-card-reversed .ui.statistic > .ui-hidable-label {
-  color: white;
 }
 
 .exchange-rate {

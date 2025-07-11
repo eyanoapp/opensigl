@@ -165,7 +165,7 @@ INSERT INTO unit (`id`, `name`, `key`, `description`, `parent`, `path`) VALUES
   (303, 'Cost Centers Balance Report','TREE.COST_CENTER_INCOME_EXPENSE_REPORT','Report of cc balance', 286,'/reports/cost_center_income_and_expense'),
   (304, '[SETTINGS] Settings', 'TREE.PAYROLL_SETTINGS', 'Payroll Settings', 57, '/payroll/setting'),
   (305, 'Avg Medical Costs Per Patient', 'TREE.AVERAGE_MED_COST_REPORT', 'Report of avg med costs', 282, '/reports/avg_med_costs_per_patient'),
-  (307, 'Asset Management', 'TREE.ASSET_MANAGEMENT.TITLE', 'Asset Management', 160, '/ASSET_MANAGEMENT_FOLDER'),
+  (307, 'Asset Management', 'TREE.ASSET_MANAGEMENT.TITLE', 'Asset Management', 0, '/ASSET_MANAGEMENT_FOLDER'),
   (308, 'Assets Registry', 'TREE.ASSETS_REGISTRY', 'Assets Registry', 307, '/assets'),
   (309, 'Asset Shipment', 'SHIPMENT.SHIPMENTS', 'Asset Shipment', 0, '/SHIPMENT_FOLDER'),
   (310, 'New Shipment', 'SHIPMENT.NEW_SHIPMENT', 'New Shipment', 309, '/shipments/create'),
@@ -180,6 +180,35 @@ INSERT INTO unit (`id`, `name`, `key`, `description`, `parent`, `path`) VALUES
   (319, 'Budget Management', 'TREE.BUDGET', '', 5, '/budget'),
   (320, 'Budget Report','TREE.BUDGET_REPORT','',281,'/reports/budget_report'),
   (321, 'Funding Source','TREE.FUNDING_SOURCES','',1,'/funding_sources');
+
+-- core OpenSIGL units
+-- INSERT INTO `unit` (`id`, `name`, `key`, `description`, `parent`, `path`, `icon`) VALUES
+--   (322, 'SIGL', 'TREE.MODULES.SIGL', 'SIGL', 0, 'MODULE_FOLDER', 'bi bi-boxes'),
+--   (323, 'Procurement', 'TREE.MODULES.PROCUREMENT', 'Procurement', 322, '/modules/procurement', 'bi bi-cash-coin'),
+--   (324, 'Logistics', 'TREE.MODULES.LOGISTICS', 'Logistics', 322, '/modules/logistics', 'bi bi-box-seam'),
+--   (325, 'Stock', 'TREE.MODULES.STOCK_MANAGEMENT', 'Stocks', 322, '/modules/stocks', 'bi bi-inboxes'),
+--   (326, 'Assets', 'TREE.MODULES.ASSET_MANAGEMENT', 'Assets', 322, '/modules/assets', 'bi bi-boxes'),
+--   (327, 'Contacts', 'TREE.MODULES.CONTACTS', 'Contacts', 322, '/modules/contacts', 'bi bi-person-vcard'),
+--   (328, 'SIGL settings', 'TREE.MODULES.SIGL_SETTINGS', 'SIGL settings', 322, '/modules/sigl_settings', 'bi bi-database-fill-gear')
+-- ;
+
+-- core finances and accounting units
+-- INSERT INTO `unit` (`id`, `name`, `key`, `description`, `parent`, `path`, `icon`) VALUES
+--   (340, 'Finances And Accounting', 'TREE.MODULES.FINANCES_AND_ACCOUNTING', 'Finances & Accounting', 0, 'MODULE_FOLDER', 'bi bi-bank2'),
+--   (341, 'Accounting', 'TREE.MODULES.ACCOUNTING', 'Accounting', 340, '/modules/accounting', 'bi bi-cash-coin'),
+--   (342, 'Sales', 'TREE.MODULES.SALES', 'Sales', 340, '/modules/sales', 'bi bi-receipt'),
+--   (343, 'Costs centers', 'TREE.MODULES.COST_CENTERS', 'Costs centers', 340, '/modules/cost_centers', 'bi bi-inboxes'),
+--   (344, 'Finances settings', 'TREE.MODULES.SETTINGS', 'Finance Settings', 340, '/modules/finance_settings', 'bi bi-database-fill-gear')
+-- ;
+
+-- core hospitals units
+-- INSERT INTO `unit` (`id`, `name`, `key`, `description`, `parent`, `path`, `icon`) VALUES
+--   (350, 'Hospital', 'TREE.MODULES.HOSPITAL', 'Hospital', 0, 'MODULE_FOLDER', 'bi bi-h-square'),
+--   (351, 'Hospital Records', 'TREE.MODULES.HOSPITAL_RECORDS', 'Hospital Records', 350, '/modules/hospital_records', 'bi bi-people'),
+--   (352, 'Hospital Wards', 'TREE.MODULES.HOSPITAL_WARDS', 'Hospital Wards', 350, '/modules/hospital_wards', 'bi bi-building'),
+--   (353, 'Hospital Forms', 'TREE.MODULES.HOSPITAL_FORMS', 'Hospital Forms', 350, '/modules/hospital_forms', 'bi bi-file-earmark-medical'),
+--   (354, 'Hospital settings', 'TREE.MODULES.SETTINGS', 'Hospital Settings', 350, '/modules/finance_settings', 'bi bi-database-fill-gear')
+-- ;
 
 -- Reserved system account type /client_debts
 INSERT IGNORE INTO `account_category` VALUES

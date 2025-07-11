@@ -28,13 +28,13 @@
 
             <li role="menuitem">
               <a href data-action="generic-expense" ng-click="ComplexVoucherCtrl.openGenericIncomeModal()">
-                <i class="bi bi-level-down"></i> <span translate>VOUCHERS.GLOBAL.GENERIC_INCOME</span>
+                <i class="bi bi-graph-up-arrow"></i> <span translate>VOUCHERS.GLOBAL.GENERIC_INCOME</span>
               </a>
             </li>
 
             <li role="menuitem">
               <a href data-action="generic-income" ng-click="ComplexVoucherCtrl.openGenericExpenseModal()">
-                <i class="bi bi-level-up"></i> <span translate>VOUCHERS.GLOBAL.GENERIC_EXPENSE</span>
+                <i class="bi bi-graph-down-arrow"></i> <span translate>VOUCHERS.GLOBAL.GENERIC_EXPENSE</span>
               </a>
             </li>
 
@@ -46,19 +46,19 @@
 
             <li role="menuitem">
               <a href data-action="support-patient" ng-click="ComplexVoucherCtrl.openSupportPatientModal()">
-                <i class="bi bi-wpforms"></i> <span translate>VOUCHERS.GLOBAL.SUPPORT_FORM</span>
+                <i class="bi bi-person-raised-hand"></i> <span translate>VOUCHERS.GLOBAL.SUPPORT_FORM</span>
               </a>
             </li>
 
             <li role="menuitem">
               <a href data-action="payment-employee" ng-click="ComplexVoucherCtrl.openPaymentEmployees()">
-                <i class="bi bi-user-secret"></i> <span translate>VOUCHERS.GLOBAL.PAYMENT_EMPLOYEES</span>
+                <i class="bi bi-cash-coin"></i> <span translate>VOUCHERS.GLOBAL.PAYMENT_EMPLOYEES</span>
               </a>
             </li>
 
             <li role="menuitem">
               <a href data-action="advance-loans-installments" ng-click="ComplexVoucherCtrl.openAdvancesLoansInstallments()">
-                <i class="bi bi-money"></i> <span translate>VOUCHERS.GLOBAL.ADVANCES_LOANS_INSTALLMENTS</span>
+                <i class="bi bi-cash"></i> <span translate>VOUCHERS.GLOBAL.ADVANCES_LOANS_INSTALLMENTS</span>
               </a>
             </li>            
 
@@ -73,104 +73,96 @@
 
 <div class="flex-content">
   <div class="container-fluid">
-    <form name="ComplexVoucherForm" bh-submit="ComplexVoucherCtrl.submit(ComplexVoucherForm)" novalidate>
+    <form class="d-flex flex-column gap-2" name="ComplexVoucherForm" bh-submit="ComplexVoucherCtrl.submit(ComplexVoucherForm)" novalidate>
 
       <!-- description -->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card ">
-            <div class="card-body">
+      <div class="card ">
+        <div class="card-body">
+          <div class="row">
+            <!-- left  -->
+            <div class="col-md-6">
+              <bh-date-editor
+                date-value="ComplexVoucherCtrl.Voucher.details.date"
+                on-change="ComplexVoucherCtrl.Voucher.onDateChange(date)">
+              </bh-date-editor>
 
-              <!-- left  -->
-              <div class="col-md-6">
-                <bh-date-editor
-                  date-value="ComplexVoucherCtrl.Voucher.details.date"
-                  on-change="ComplexVoucherCtrl.Voucher.onDateChange(date)">
-                </bh-date-editor>
-
-                <div
-                  class="form-group"
-                  ng-class="{ 'has-error' : ComplexVoucherForm.$submitted && ComplexVoucherForm.description.$invalid }">
-                  <label class="control-label" translate>FORM.LABELS.DESCRIPTION</label>
-                  <textarea
-                    class="form-control"
-                    name="description"
-                    ng-model="ComplexVoucherCtrl.Voucher.details.description"
-                    translate-attr="{ placeholder : 'FORM.PLACEHOLDERS.DESCRIPTION' }"
-                    required>
-                  </textarea>
-                  <div class="help-block" ng-messages="ComplexVoucherForm.description.$error" ng-show="ComplexVoucherForm.$submitted">
-                    <div ng-messages-include="modules/templates/messages.tmpl.html"></div>
-                  </div>
+              <div
+                class="form-group"
+                ng-class="{ 'has-error' : ComplexVoucherForm.$submitted && ComplexVoucherForm.description.$invalid }">
+                <label class="control-label" translate>FORM.LABELS.DESCRIPTION</label>
+                <textarea
+                  class="form-control"
+                  name="description"
+                  ng-model="ComplexVoucherCtrl.Voucher.details.description"
+                  translate-attr="{ placeholder : 'FORM.PLACEHOLDERS.DESCRIPTION' }"
+                  required>
+                </textarea>
+                <div class="help-block" ng-messages="ComplexVoucherForm.description.$error" ng-show="ComplexVoucherForm.$submitted">
+                  <div ng-messages-include="modules/templates/messages.tmpl.html"></div>
                 </div>
-
               </div>
 
-              <!-- right  -->
-              <div class="col-md-6">
+            </div>
 
-                <div class="form-group" ng-class="{ 'has-error' : ComplexVoucherForm.$submitted && ComplexVoucherForm.type_id.$invalid }">
-                  <label class="control-label" translate>
-                    FORM.LABELS.TRANSACTION_TYPE
-                  </label>
+            <!-- right  -->
+            <div class="col-md-6">
 
-                  <!-- Select a Transaction Type -->
-                  <ui-select
-                    name="type_id"
-                    ng-model="ComplexVoucherCtrl.Voucher.details.type_id"
-                    required="true"
-                    on-select="ComplexVoucherCtrl.Voucher.validate()">
+              <div class="form-group" ng-class="{ 'has-error' : ComplexVoucherForm.$submitted && ComplexVoucherForm.type_id.$invalid }">
+                <label class="control-label" translate>
+                  FORM.LABELS.TRANSACTION_TYPE
+                </label>
 
-                    <ui-select-match placeholder="{{ 'FORM.SELECT.TRANSACTION_TYPE' | translate }}">
-                      <span translate>{{ $select.selected.text }}</span>
-                    </ui-select-match>
+                <!-- Select a Transaction Type -->
+                <ui-select
+                  name="type_id"
+                  ng-model="ComplexVoucherCtrl.Voucher.details.type_id"
+                  required="true"
+                  on-select="ComplexVoucherCtrl.Voucher.validate()">
 
-                    <ui-select-choices
-                      ui-select-focus-patch
-                      repeat="item.id as item in ComplexVoucherCtrl.types | filter: { plainText : $select.search }"
-                      group-by= "ComplexVoucherCtrl.groupTransactionByType">
-                      <div ng-bind-html="item.plainText | highlight: $select.search"></div>
-                    </ui-select-choices>
-                  </ui-select>
+                  <ui-select-match placeholder="{{ 'FORM.SELECT.TRANSACTION_TYPE' | translate }}">
+                    <span translate>{{ $select.selected.text }}</span>
+                  </ui-select-match>
 
-                  <div class="help-block" ng-messages="ComplexVoucherForm.type_id.$error" ng-show="ComplexVoucherForm.$submitted">
-                    <div ng-messages-include="modules/templates/messages.tmpl.html"></div>
-                  </div>
+                  <ui-select-choices
+                    ui-select-focus-patch
+                    repeat="item.id as item in ComplexVoucherCtrl.types | filter: { plainText : $select.search }"
+                    group-by= "ComplexVoucherCtrl.groupTransactionByType">
+                    <div ng-bind-html="item.plainText | highlight: $select.search"></div>
+                  </ui-select-choices>
+                </ui-select>
+
+                <div class="help-block" ng-messages="ComplexVoucherForm.type_id.$error" ng-show="ComplexVoucherForm.$submitted">
+                  <div ng-messages-include="modules/templates/messages.tmpl.html"></div>
                 </div>
-
-                <bh-currency-select
-                  on-change="ComplexVoucherCtrl.onCurrencyChange(currency)"
-                  currency-id="ComplexVoucherCtrl.Voucher.details.currency_id">
-                </bh-currency-select>
               </div>
+
+              <bh-currency-select
+                on-change="ComplexVoucherCtrl.onCurrencyChange(currency)"
+                currency-id="ComplexVoucherCtrl.Voucher.details.currency_id">
+              </bh-currency-select>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row" style="margin-bottom : 5px;">
-        <div class="col-md-12">
-          <!-- "Add number of grid rows" input-group -->
-          <bh-add-item
-            disable="ComplexVoucherCtrl.Voucher.details.currency_id"
-            callback="ComplexVoucherCtrl.Voucher.addItems(numItem)">
-          </bh-add-item>
-        </div>
-      </div>
+      <!-- "Add number of grid rows" input-group -->
+      <bh-add-item
+        disable="ComplexVoucherCtrl.Voucher.details.currency_id"
+        callback="ComplexVoucherCtrl.Voucher.addItems(numItem)">
+      </bh-add-item>
 
       <!-- the grid  -->
       <div id="voucherGridId" ui-grid="ComplexVoucherCtrl.gridOptions" ui-grid-auto-resize>
       </div>
 
-
-      <div class="row" style="margin-top: 5px;">
+      <div class="row">
         <div class="col-md-6">
           <p ng-if="ComplexVoucherCtrl.Voucher._error" class="text-danger">
             <i class="bi bi-warning"></i> <span translate>{{ ComplexVoucherCtrl.Voucher._error }}</span>
           </p>
         </div>
 
-        <div class="col-md-6 text-right">
+        <div class="col-md-6 d-flex flex-row justify-content-end gap-2">
           <button class="btn btn-default" ng-click="ComplexVoucherCtrl.clear(ComplexVoucherForm)" type="button">
             <span translate>FORM.BUTTONS.CLEAR</span>
           </button>

@@ -52,7 +52,7 @@
     <li ng-if="row.entity.isReady">
       <a ng-click="grid.appScope.gotoStockExit(row.entity.uuid)" href>
         <span class="">
-          <i class="bi bi-list-alt"></i> <span translate>SHIPMENT.EXIT_STOCK_FOR_SHIPMENT</span>
+          <i class="bi bi-list-ol"></i> <span translate>SHIPMENT.EXIT_STOCK_FOR_SHIPMENT</span>
         </span>
       </a>
     </li>
@@ -66,7 +66,7 @@
     <li ng-if="row.entity.inTransit || row.entity.isDelivered || row.entity.isPartial">
       <a ng-click="grid.appScope.gotoStockEntry(row.entity.uuid)" href>
         <span class="">
-          <i class="bi bi-list-alt"></i> <span translate>SHIPMENT.ENTER_STOCK_FOR_SHIPMENT</span>
+          <i class="bi bi-list-ol"></i> <span translate>SHIPMENT.ENTER_STOCK_FOR_SHIPMENT</span>
         </span>
       </a>
     </li>

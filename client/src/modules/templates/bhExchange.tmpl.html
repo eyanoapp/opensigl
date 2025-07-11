@@ -31,7 +31,7 @@
 
     <ul class="list-unstyled">
       <li data-exchange-rate-element ng-repeat="rate in $ctrl.rates | orderBy:'-date'">
-        <i class="bi bi-clock-o"></i>
+        <i class="bi bi-clock-history"></i>
           <span ng-if="rate.rate < 0.1">
             <b> <em> (1 / {{(1 / rate.rate) | number:0 }}) </em> {{ $ctrl.formatCurrency(rate.currency_id) }} </b>
           </span>

@@ -3,7 +3,22 @@
  * Bootstrap 5 Custom Styles
  * ==========================================================
  */
-
+:root {
+  --primary-color: #506FD9;
+}
+.ui-select-choices-row.active > a {
+  background-color: var(--primary-color) !important;
+}
+.dropdown-menu li > a {
+  display: block;
+}
+.dropdown-menu li:hover > a {
+  background-color: #dce2f7;
+}
+.dropdown-menu li.divider {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 .card-heading {
   padding: 0.5rem 1rem;
   background-color: #f8f9fa;
@@ -11,15 +26,12 @@
   font-weight: bold;
   font-size: 1rem;
 }
-
 .form-group {
   margin: 1em 0;
 }
-
 .dropdown-toggle::after {
   all: unset;
 }
-
 .btn-default {
   background-color: #f8f9fa;
   border-color: #ced4da;

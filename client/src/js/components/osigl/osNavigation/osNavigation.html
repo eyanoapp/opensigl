@@ -38,7 +38,9 @@
         ng-if="$ctrl.isChildNode(child)"
         data-unit-key="{{ ::child.key }}"
         id="SidebarNavigation_Child_{{::child.key}}">
-        <i class="bi bi-file-earmark"></i> <span translate>{{ child.key }}</span>
+        <i ng-if="!child.icon" class="bi bi-file-earmark"></i> 
+        <i ng-if="child.icon" class="{{ ::child.icon }}"></i> 
+        <span translate>{{ child.key }}</span>
       </a>
     </li>
   </ul>

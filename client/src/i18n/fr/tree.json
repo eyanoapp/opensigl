@@ -195,6 +195,28 @@
     "WARD" : "Gestion des pavillons",
     "WARD_CONFIGURATION" : "Configurations",
     "WEEKEND_CONFIGURATION":"Configuration des weekend",
-    "JOURNAL_LOG":"Journal historique"
+    "JOURNAL_LOG":"Journal historique",
+    "MODULES" : {
+      "TITLE" : "Modules",
+      "LOGISTICS" : "Logistique",
+      "STOCK_MANAGEMENT" : "Gestion des stocks",
+      "INVENTORY_MANAGEMENT" : "Gestion des Inventaires",
+      "PROCUREMENT" : "Achats",
+      "SALES" : "Ventes",
+      "FINANCES" : "Finances",
+      "FINANCES_AND_ACCOUNTING" : "Finances et Comptabilité",
+      "PAYROLL" : "Paie",
+      "ACCOUNTING" : "Comptabilité",
+      "ASSET_MANAGEMENT": "Gestion des immobilisations",
+      "CONTACTS": "Gestion des contacts",
+      "SIGL": "SIGL",
+      "SIGL_SETTINGS": "Paramètres SIGL",
+      "COST_CENTERS": "Centres de coût",
+      "HOSPITAL": "Hôpital",
+      "HOSPITAL_RECORDS": "Enregistrements",
+      "HOSPITAL_WARDS": "Gestion des pavillons",
+      "HOSPITAL_FORMS": "Gestion des formulaires",
+      "SETTINGS": "Paramètres"
+    }
   }
 }

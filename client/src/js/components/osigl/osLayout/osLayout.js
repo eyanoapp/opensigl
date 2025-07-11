@@ -19,7 +19,7 @@ function OsLayoutController(Session) {
   $ctrl.getEnterpriseLogo = () => {
     return Session.enterprise && Session.enterprise.logo
       ? Session.enterprise.logo
-      : 'assets/icon.png';
+      : 'assets/opensigl.png';
   };
 
   $ctrl.$onInit = function onInit() {

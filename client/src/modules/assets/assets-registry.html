@@ -7,6 +7,55 @@
 
     <div class="toolbar">
       <div class="toolbar-item">
+        <a href data-method="create-asset-scan" class="btn btn-primary"
+          ng-click="AssetsCtrl.newAssetScan()">
+          <span class="bi bi-upc-scan"></span> <span class="hidden-xs" translate>BARCODE.SCAN</span>
+        </a>
+      </div>
+      <div class="toolbar-item">
+        <a ui-sref="stockAssets.createAssignment"
+          data-method="create-record"
+          class="btn btn-primary">
+          <span class="bi bi-plus-circle"></span> <span class="hidden-xs" translate>ASSET.ASSIGN</span>
+        </a>
+      </div>
+      
+      <bh-search-button on-click="AssetsCtrl.search()"></bh-search-button>
+
+      <div class="toolbar-item">
+        <div class="btn-group" uib-dropdown>
+          <a class="btn btn-default"
+            ng-class="{ 'btn-info' : AssetsCtrl.grouped }"
+            ng-click="AssetsCtrl.toggleGroup(AssetsCtrl.selectedGroup.value)"
+            ng-disabled="!AssetsCtrl.selectedGroup.label">
+            <span>
+              <i class="bi bi-object-group"></i>
+              <span ng-hide="AssetsCtrl.selectedGroup.label" translate>STOCK.GROUPING</span>
+              <span ng-show="AssetsCtrl.selectedGroup.label" translate>
+                {{ AssetsCtrl.selectedGroup.label }}
+              </span>
+            </span>
+          </a>
+          <a class="btn btn-default" uib-dropdown-toggle>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li ng-repeat="option in AssetsCtrl.groupingBox">
+              <a href ng-click="AssetsCtrl.selectGroup(option)">
+                <span translate>{{ option.label }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- inline filter -->
+      <bh-filter-toggle
+        on-toggle="AssetsCtrl.toggleInlineFilter()">
+      </bh-filter-toggle>
+
+      <!-- menu -->
+      <div class="toolbar-item">
         <div uib-dropdown dropdown-append-to-body data-action="open-menu">
           <a class="btn btn-default" uib-dropdown-toggle>
             <span class="bi bi-bars"></span>
@@ -71,56 +120,6 @@
 
         </div>
       </div>
-
-      <bh-search-button on-click="AssetsCtrl.search()"></bh-search-button>
-
-      <div class="toolbar-item">
-        <div class="btn-group" uib-dropdown>
-          <a class="btn btn-default"
-            ng-class="{ 'btn-info' : AssetsCtrl.grouped }"
-            ng-click="AssetsCtrl.toggleGroup(AssetsCtrl.selectedGroup.value)"
-            ng-disabled="!AssetsCtrl.selectedGroup.label">
-            <span>
-              <i class="bi bi-object-group"></i>
-              <span ng-hide="AssetsCtrl.selectedGroup.label" translate>STOCK.GROUPING</span>
-              <span ng-show="AssetsCtrl.selectedGroup.label" translate>
-                {{ AssetsCtrl.selectedGroup.label }}
-              </span>
-            </span>
-          </a>
-          <a class="btn btn-default" uib-dropdown-toggle>
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-            <li ng-repeat="option in AssetsCtrl.groupingBox">
-              <a href ng-click="AssetsCtrl.selectGroup(option)">
-                <span translate>{{ option.label }}</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- inline filter -->
-      <bh-filter-toggle
-        on-toggle="AssetsCtrl.toggleInlineFilter()">
-      </bh-filter-toggle>
-
-      <div class="toolbar-item" style="margin-right: 1em;">
-        <a ui-sref="stockAssets.createAssignment"
-          data-method="create-record"
-          class="btn btn-success">
-          <span class="bi bi-plus"></span> <span class="hidden-xs" translate>ASSET.ASSIGN</span>
-        </a>
-      </div>
-
-      <div class="toolbar-item" style="margin-right: 1em;">
-        <a href data-method="create-asset-scan" class="btn btn-success"
-          ng-click="AssetsCtrl.newAssetScan()">
-          <span class="bi bi-plus"></span> <span class="hidden-xs" translate>BARCODE.SCAN</span>
-        </a>
-      </div>
-
     </div>
   </div>
 </div>
